@@ -1,0 +1,93 @@
+/* TestimonialsSection.css */
+
+.testimonials {
+    padding-block: var(--spacing-24);
+    background-color: var(--color-bg);
+}
+
+.testimonials__container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: var(--spacing-6);
+}
+
+.testimonials__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-8);
+    margin-top: var(--spacing-12);
+}
+
+.testimonial-card {
+    padding: var(--spacing-8);
+    background: var(--gradient-card);
+    border: 1px solid var(--color-bg-border);
+    border-radius: var(--radius-2xl);
+    position: relative;
+}
+
+.testimonial-card__quote-icon {
+    position: absolute;
+    top: var(--spacing-6);
+    right: var(--spacing-8);
+    font-size: 3rem;
+    opacity: 0.1;
+    color: var(--color-primary);
+}
+
+.testimonial-card__rating {
+    display: flex;
+    gap: var(--spacing-1);
+    margin-bottom: var(--spacing-4);
+    color: var(--color-accent);
+}
+
+.testimonial-card__content {
+    font-style: italic;
+    font-size: var(--text-base);
+    line-height: 1.8;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-6);
+}
+
+.testimonial-card__author {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+}
+
+.testimonial-card__avatar {
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-bg-border);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.testimonial-card__info {}
+
+.testimonial-card__name {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
+    line-height: 1.2;
+}
+
+.testimonial-card__role {
+    font-size: var(--text-xs);
+    color: var(--color-text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+    .testimonials__grid {
+        grid-template-columns: 1fr;
+    }
+}

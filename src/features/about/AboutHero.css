@@ -1,0 +1,27 @@
+/* AboutHero.css */
+
+.about-hero {
+    padding-block: var(--spacing-32) var(--spacing-16);
+    background: var(--gradient-hero);
+    text-align: center;
+}
+
+.about-hero__container {
+    width: 100%;
+    max-width: var(--container-narrow);
+    margin-inline: auto;
+    padding-inline: var(--spacing-6);
+}
+
+.about-hero__title {
+    font-family: var(--font-heading);
+    font-size: clamp(var(--text-4xl), 5vw, var(--text-6xl));
+    margin-bottom: var(--spacing-6);
+    color: var(--color-text);
+}
+
+.about-hero__text {
+    font-size: var(--text-lg);
+    line-height: 1.8;
+    color: var(--color-text-muted);
+}

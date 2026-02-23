@@ -1,0 +1,44 @@
+/* FeaturedProducts.css */
+
+.featured {
+    background-color: var(--color-bg);
+    padding-block: var(--spacing-24);
+}
+
+.featured__container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: var(--spacing-6);
+}
+
+.featured__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--spacing-6);
+    margin-bottom: var(--spacing-12);
+}
+
+.featured__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-6);
+}
+
+@media (max-width: 1024px) {
+    .featured__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .featured__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured__header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

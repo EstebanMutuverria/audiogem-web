@@ -1,0 +1,62 @@
+/* ContactInfo.css */
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+}
+
+.contact-info__item {
+    display: flex;
+    gap: var(--spacing-4);
+}
+
+.contact-info__icon {
+    width: 54px;
+    height: 54px;
+    background-color: var(--color-bg-surface);
+    border: 1px solid var(--color-bg-border);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.contact-info__content {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-xl);
+}
+
+.contact-info__label {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary-light);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--spacing-1);
+}
+
+.contact-info__value {
+    font-size: var(--text-lg);
+    color: var(--color-text);
+    line-height: 1.4;
+}
+
+.contact-info__map {
+    margin-top: var(--spacing-4);
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-bg-border);
+    border-radius: var(--radius-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-faint);
+    font-size: var(--text-sm);
+}

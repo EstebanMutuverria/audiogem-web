@@ -1,0 +1,46 @@
+/* CategoryFilter.css */
+
+.filter {
+    margin-bottom: var(--spacing-12);
+}
+
+.filter__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-3);
+    justify-content: center;
+}
+
+.filter__btn {
+    padding: var(--spacing-2) var(--spacing-6);
+    background-color: var(--color-bg-surface);
+    border: 1px solid var(--color-bg-border);
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-muted);
+    transition: all var(--transition-fast);
+}
+
+.filter__btn:hover {
+    border-color: var(--color-primary-light);
+    color: var(--color-text);
+}
+
+.filter__btn--active {
+    background: var(--gradient-primary);
+    border-color: var(--color-primary);
+    color: var(--color-white);
+    box-shadow: var(--shadow-glow);
+}
+
+@media (max-width: 640px) {
+    .filter__list {
+        gap: var(--spacing-2);
+    }
+
+    .filter__btn {
+        padding-inline: var(--spacing-4);
+        font-size: var(--text-xs);
+    }
+}
