@@ -19,7 +19,7 @@ const CATEGORY_ICONS = {
  * @param {Object} props.product - Objeto de producto de productsData.js
  */
 const ProductCard = ({ product }) => {
-    const { name, category, brand, image, description, badge } = product;
+    const { name, category, brand, image, description, badge, price } = product;
     const icon = CATEGORY_ICONS[category] ?? '🎵';
 
     return (
@@ -41,6 +41,7 @@ const ProductCard = ({ product }) => {
             <div className="product-card__body">
                 <span className="product-card__category">{category}</span>
                 <h3 className="product-card__name">{name}</h3>
+                <span className="product-card__price">{price}</span>
                 <p className="product-card__description">{description}</p>
                 <div className="product-card__footer">
                     <span className="product-card__brand">{brand}</span>

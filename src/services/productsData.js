@@ -6,6 +6,14 @@
  */
 
 import estereo_b52 from '../assets/estereo_b52-rm-2025bt.jpeg';
+import rackera_2y2_para_pote from '../assets/rackera-2y2-para-pote.jpeg';
+import pote_taramps_400x4 from '../assets/pote_taramps_400x4.jpeg';
+import estereo_crown_mustang from '../assets/estereo-crown-mustang.jpeg'
+import estereo_infinity_tech from '../assets/estereo-infinity-tech.jpeg'
+import estereo_philco from '../assets/estereo-philco.jpeg'
+import rackera_2medios_2super from '../assets/rackera-2medios-2supertweeter.jpeg'
+import rackera_4drivers5041 from '../assets/rackera-4drivers5041.jpeg'
+import rackera_curva_completa_estereo from '../assets/rackera-curva-completa-estereo.jpeg'
 
 export const CATEGORIES = [
     {
@@ -44,7 +52,7 @@ export const CATEGORIES = [
         color: '#adb5bd',
     },
     {
-        id: 6,
+        id: 'rackeras',
         label: 'Rackeras',
         description: 'Rackeras para un sonido envolvente.',
         icon: '🎛️',
@@ -61,91 +69,100 @@ export const FEATURED_PRODUCTS = [
         image: estereo_b52,
         description: 'Receptor de audio digital con Bluetooth.',
         badge: 'Más vendido',
+        price: '$70.000'
     },
     {
         id: 2,
-        name: 'JL Audio C2-650',
-        category: 'parlantes',
-        brand: 'JL Audio',
-        image: null,
-        description: 'Altavoces coaxiales de 6.5" con tweeter de seda. Respuesta en frecuencia excepcional para su tamaño.',
-        badge: 'Top calidad',
+        name: 'Rackera 2 drivers y 2 tweeters',
+        category: 'rackeras',
+        brand: 'Jharo',
+        image: rackera_2y2_para_pote,
+        description: 'Rackera 2 drivers Jahro 250 watts y 2 super tweeters Jahro',
+        badge: 'Más vendido',
+        price: '$160.000'
     },
     {
         id: 3,
-        name: 'Kenwood KFC-XW1200F',
-        category: 'subwoofers',
-        brand: 'Kenwood',
-        image: null,
-        description: 'Subwoofer de 12" con potencia máxima de 1200W. Graves profundos con una instalación sencilla.',
+        name: 'Taramps 400.4',
+        category: 'potencias',
+        brand: 'Taramps',
+        image: pote_taramps_400x4,
+        description: 'Potencia Taramps 400x4 4 canales 400 watts RMS',
         badge: 'Oferta',
+        price: '$110.000'
     },
     {
         id: 4,
-        name: 'Rockford Fosgate R500X1D',
-        category: 'potencias',
-        brand: 'Rockford Fosgate',
-        image: null,
-        description: 'Amplificador monocanal Clase D de 500W RMS. Ideal para alimentar subwoofers exigentes.',
-        badge: 'Premium',
+        name: 'Estereo Crown Mustang DMR-3000BT',
+        category: 'estereos',
+        brand: 'Crown Mustang',
+        image: estereo_crown_mustang,
+        description: 'Estereo Crown Mustang con Bluetooth, USB, MP3',
+        badge: null,
+        price: '$65.000'
     },
     {
         id: 5,
-        name: 'Alpine UTE-73BT',
+        name: 'Estereo Infinity Tech',
         category: 'estereos',
-        brand: 'Alpine',
-        image: null,
-        description: 'Receptor de audio digital con Bluetooth, Apple CarPlay y Android Auto inalámbrico.',
-        badge: 'Nuevo',
+        brand: 'Infinity Tech',
+        image: estereo_infinity_tech,
+        description: 'Estereo Infinity Tech con Bluetooth, USB, MP3',
+        badge: 'Oferta',
+        price: '$40.000'
     },
     {
         id: 6,
-        name: 'JBL Stage 3 8023',
-        category: 'parlantes',
-        brand: 'JBL',
-        image: null,
-        description: 'Altavoces de 8" para puerta trasera. Diseñados para reproducir medios y agudos con claridad.',
-        badge: null,
+        name: 'Estereo philco CSP2950BT',
+        category: 'estereos',
+        brand: 'Philco',
+        image: estereo_philco,
+        description: 'Estereo Philco con Bluetooth, USB, Manos Libres',
+        badge: 'Nuevo',
+        price: '$60.000'
     },
 ];
 
 export const ALL_PRODUCTS = [
     ...FEATURED_PRODUCTS,
-    {
-        id: 7,
-        name: 'Sony XAV-AX5500',
-        category: 'estereos',
-        brand: 'Sony',
-        image: null,
-        description: 'Pantalla táctil de 6.95" con Apple CarPlay, Android Auto, WebLink Cast y Bluetooth.',
-        badge: null,
-    },
+    /*     {
+            id: 7,
+            name: 'Sony XAV-AX5500',
+            category: 'estereos',
+            brand: 'Sony',
+            image: null,
+            description: 'Pantalla táctil de 6.95" con Apple CarPlay, Android Auto, WebLink Cast y Bluetooth.',
+            badge: null,
+        }, */
     {
         id: 8,
-        name: 'Focal Access 165 A1',
-        category: 'parlantes',
-        brand: 'Focal',
-        image: null,
-        description: 'Sistema de 2 vías separadas de 6.5". Cono de fibra de vidrio tejida y tweeter de aluminio/magnesio.',
-        badge: 'Premium',
+        name: 'Rackera 2 medios de 8" y 2 super tweeters Jahro',
+        category: 'rackeras',
+        brand: 'Jahro',
+        image: rackera_2medios_2super,
+        description: 'Rackera 2 medios de 8" marca Jahro y 2 super tweeters Jahro',
+        badge: null,
+        price: '$140.000'
     },
     {
         id: 9,
-        name: 'Kicker CompRT 10"',
-        category: 'subwoofers',
-        brand: 'Kicker',
-        image: null,
-        description: 'Subwoofer delgado de 10" ideal para instalaciones donde el espacio es limitado. 400W RMS.',
+        name: 'Rackera 4 drivers Jahro 5041"',
+        category: 'rackeras',
+        brand: 'Jahro',
+        image: rackera_4drivers5041,
+        description: 'Rackera 4 drivers Jahro 5041 de 150 watts',
         badge: null,
+        price: '$125.000'
     },
     {
         id: 10,
-        name: 'Alpine MRX-M110',
-        category: 'potencias',
-        brand: 'Alpine',
-        image: null,
-        description: 'Amplificador monocanal de 1100W RMS con tecnología High Current. Eficiencia Clase D.',
-        badge: null,
+        name: 'Rackera 2 drivers, 2 medios y 2 tweeters',
+        category: 'rackeras',
+        brand: 'Jahro',
+        image: rackera_curva_completa_estereo,
+        description: 'Rackera 2 drivers, 2 medios y 2 tweeters marca Jahro',
+        badge: 'Más vendido',
+        price: '$170.000'
     },
     {
         id: 11,
