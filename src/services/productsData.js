@@ -43,6 +43,13 @@ export const CATEGORIES = [
         icon: '🔧',
         color: '#adb5bd',
     },
+    {
+        id: 6,
+        label: 'Rackeras',
+        description: 'Rackeras para un sonido envolvente.',
+        icon: '🎛️',
+        color: '#4cc9f0',
+    },
 ];
 
 export const FEATURED_PRODUCTS = [
