@@ -8,7 +8,6 @@
     background: var(--gradient-hero);
     overflow: hidden;
     padding-top: var(--navbar-height);
-    margin-top: 30px;
 }
 
 /* Glow ambiental */

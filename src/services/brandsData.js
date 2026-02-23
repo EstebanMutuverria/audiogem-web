@@ -14,4 +14,8 @@ export const BRANDS = [
     { id: 8, name: 'Blauline', logo: null, country: 'Argentina' },
     { id: 9, name: 'Kicker', logo: null, country: 'EE.UU.' },
     { id: 10, name: 'Taramps', logo: null, country: 'Brasil' },
+    { id: 11, name: 'Jharo', logo: null, country: 'Argentina' },
+    { id: 12, name: 'Bomber', logo: null, country: 'Brasil' },
+    { id: 13, name: 'Philco', logo: null, country: 'Argentina' },
+    { id: 14, name: 'Infinity Tech', logo: null, country: 'Argentina' },
 ];

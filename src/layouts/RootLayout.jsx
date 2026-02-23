@@ -9,6 +9,7 @@ import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import ScrollToTop from '../components/layout/ScrollToTop';
 import FloatingWhatsApp from '../components/ui/FloatingWhatsApp';
+import './RootLayout.css';
 
 const RootLayout = () => {
     return (

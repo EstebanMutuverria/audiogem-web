@@ -10,9 +10,9 @@ import './HeroSection.css';
 import { LuAudioLines } from "react-icons/lu";
 
 const STATS = [
-    { number: '+200', label: 'Productos' },
-    { number: '+10', label: 'Marcas top' },
-    { number: '+5k', label: 'Clientes' },
+    { number: '+100', label: 'Productos' },
+    { number: '+10', label: 'Marcas' },
+    { number: '+3k', label: 'Clientes' },
 ];
 const HeroSection = () => {
     return (
@@ -43,7 +43,7 @@ const HeroSection = () => {
                             Ver productos
                         </Button>
                         <Button to="/contacto" variant="secondary" size="lg">
-                            Consultanos
+                            Contactanos
                         </Button>
                     </div>
 

@@ -14,7 +14,7 @@ const CONTACT_ITEMS = [
     {
         icon: '📞',
         label: 'Teléfono / WhatsApp',
-        value: '+54 011 6008-1534',
+        value: '+54 011 6008-1534 / +54 011 6996-6209',
     },
     {
         icon: '✉️',

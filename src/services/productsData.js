@@ -14,6 +14,12 @@ import estereo_philco from '../assets/estereo-philco.jpeg'
 import rackera_2medios_2super from '../assets/rackera-2medios-2supertweeter.jpeg'
 import rackera_4drivers5041 from '../assets/rackera-4drivers5041.jpeg'
 import rackera_curva_completa_estereo from '../assets/rackera-curva-completa-estereo.jpeg'
+import rackera_2driver_2bomber_2tweeter from '../assets/rackera-2driver-2bomber-2tweeter.jpeg'
+import kit_instalacion_infinity_tech from '../assets/kit-de-cables-infinity-4g.jpeg'
+import rackera_2y2_chica from '../assets/rackera-2y2-chica.jpeg'
+import rackera_2driver_26x9pioneer from '../assets/rackera-2driver-26x9pioneer.jpeg'
+import rackera_2parlantes_2tweeter_jahro from '../assets/rackera-2parlantes-2tweeter-jahro.jpeg'
+
 
 export const CATEGORIES = [
     {
@@ -57,6 +63,13 @@ export const CATEGORIES = [
         description: 'Rackeras para un sonido envolvente.',
         icon: '🎛️',
         color: '#4cc9f0',
+    },
+    {
+        id: 'componentes',
+        label: 'Componentes',
+        description: 'Componentes para un sonido de alta calidad.',
+        icon: '📯',
+        color: '#4cc953',
     },
 ];
 
@@ -166,20 +179,52 @@ export const ALL_PRODUCTS = [
     },
     {
         id: 11,
-        name: 'Kit instalación 4 GA',
+        name: 'Kit instalación Infinity Tech 4 GA',
         category: 'accesorios',
-        brand: 'Stinger',
-        image: null,
+        brand: 'Infinity Tech',
+        image: kit_instalacion_infinity_tech,
         description: 'Kit de cableado completo calibre 4 GA. Incluye cable de poder, tierra, señal RCA y fusible.',
         badge: null,
+        price: '$25.000'
     },
     {
         id: 12,
-        name: 'Cable RCA Prolink 5m',
-        category: 'accesorios',
-        brand: 'Monster',
-        image: null,
-        description: 'Cable RCA de alta fidelidad, blindaje doble para eliminar interferencias. 5 metros.',
+        name: 'Rackera 2 drivers, 2 parlantes y 2 tweeters',
+        category: 'rackeras',
+        brand: 'Bomber',
+        image: rackera_2driver_2bomber_2tweeter,
+        description: 'Rackera 2 drivers Jahro, 2 parlantes Bomber de 6" y 2 tweeters marca Jahro',
+        badge: 'Oferta',
+        price: '$75.000'
+    },
+    {
+        id: 13,
+        name: 'Rackera 2 driver y 2 tweeters Jahro',
+        category: 'rackeras',
+        brand: 'Jharo',
+        image: rackera_2y2_chica,
+        description: 'Rackera 2 drivers Jahro 5041 de 150 watts y 2 tweeters Jahro',
+        badge: 'Más vendido',
+        price: '$80.000'
+    },
+    {
+        id: 14,
+        name: 'Rackera 2 drivers y 2 parlantes 6x9 Pioneer',
+        category: 'rackeras',
+        brand: 'Pioneer',
+        image: rackera_2driver_26x9pioneer,
+        description: 'Rackera 2 drivers Jahro 5041 de 150 watts y 2 parlantes Pioneer 6x9',
         badge: null,
+        price: '$160.000'
+    },
+    {
+        id: 15,
+        name: 'Rackera 2 parlantes Jahro y 2 tweeters Jahro',
+        category: 'rackeras',
+        brand: 'Jahro',
+        image: rackera_2parlantes_2tweeter_jahro,
+        description: 'Rackera 2 parlantes de 6" marca Jahro y 2 tweeters marca Jahro',
+        badge: null,
+        price: '$80.000'
     },
 ];
