@@ -19,6 +19,21 @@ import kit_instalacion_infinity_tech from '../assets/kit-de-cables-infinity-4g.j
 import rackera_2y2_chica from '../assets/rackera-2y2-chica.jpeg'
 import rackera_2driver_26x9pioneer from '../assets/rackera-2driver-26x9pioneer.jpeg'
 import rackera_2parlantes_2tweeter_jahro from '../assets/rackera-2parlantes-2tweeter-jahro.jpeg'
+import super_tweeter_blauline from '../assets/supertweeter-blauline.jpeg'
+import cable_y_griega from '../assets/cable-y-griega.jpeg'
+import capacitores_tweeter from '../assets/capacitores-tweeter.jpeg'
+import capacitores_driver from '../assets/capacitores-driver.jpeg'
+import difusores_de_aluminio from '../assets/difusores-de-aluminio.jpeg'
+import pote_taramps_800x4 from '../assets/pote-taramps-800x4.jpeg'
+import medios_de_8_jahro from '../assets/medios-de-8-jahro.jpeg'
+import driver_jbl_250 from '../assets/driver-jbl-250.jpeg'
+import difusores_de_plastico_cortos from '../assets/difusores-de-plastico-cortos.jpeg'
+import subwoofer_pioneer_12p from '../assets/subwoofer-pioneer-12p.jpeg'
+import rackera_curva_completa_para_pote_bala from '../assets/rackera-curva-completa-para-pote-bala.jpeg'
+import parlantes_bomber_6x9_con_caja from '../assets/parlantes-bomber-6x9-con-caja.jpeg'
+import parlantes_jahro_6p from '../assets/parlantes-jahro-6p.jpeg'
+import parlantes_jahro_5p from '../assets/parlantes-jahro-5p.jpeg'
+import parlantes_jahro_4p from '../assets/parlantes-jahro-4p.jpeg'
 
 
 export const CATEGORIES = [
@@ -226,5 +241,155 @@ export const ALL_PRODUCTS = [
         description: 'Rackera 2 parlantes de 6" marca Jahro y 2 tweeters marca Jahro',
         badge: null,
         price: '$80.000'
+    },
+    {
+        id: 16,
+        name: 'Super Tweeter Blauline BT-304',
+        category: 'componentes',
+        brand: 'Blauline',
+        image: super_tweeter_blauline,
+        description: 'Super Tweeter Blauline 1.8 Super Bullet',
+        badge: null,
+        price: '$30.000'
+    },
+    {
+        id: 17,
+        name: 'Cable y Griega',
+        category: 'accesorios',
+        brand: null,
+        image: cable_y_griega,
+        description: 'Cable y Griega - 1 rca hembra a 2 rca macho',
+        badge: null,
+        price: '$5.000'
+    },
+    {
+        id: 18,
+        name: 'Capacitores para Tweeter',
+        category: 'accesorios',
+        brand: null,
+        image: capacitores_tweeter,
+        description: 'Capacitores para Tweeter',
+        badge: null,
+        price: '$2.500'
+    },
+    {
+        id: 19,
+        name: 'Capacitores para Driver',
+        category: 'accesorios',
+        brand: null,
+        image: capacitores_driver,
+        description: 'Capacitores para Driver',
+        badge: null,
+        price: '$2.500'
+    },
+    {
+        id: 20,
+        name: 'Difusores de Aluminio',
+        category: 'accesorios',
+        brand: null,
+        image: difusores_de_aluminio,
+        description: 'Difusores de Aluminio para Driver',
+        badge: null,
+        price: '$37.000'
+    },
+    {
+        id: 21,
+        name: 'Potencia Taramps 800x4',
+        category: 'potencias',
+        brand: 'Taramps',
+        image: pote_taramps_800x4,
+        description: 'Potencia Taramps 800x4 4 canales 800 watts RMS',
+        badge: null,
+        price: '$180.000'
+    },
+    {
+        id: 22,
+        name: 'Medio de 8" Jahro',
+        category: 'componentes',
+        brand: 'Jahro',
+        image: medios_de_8_jahro,
+        description: 'Medio de 8" marca Jahro',
+        badge: null,
+        price: '$32.000'
+    },
+    {
+        id: 23,
+        name: 'Driver JBL 250',
+        category: 'componentes',
+        brand: 'JBL',
+        image: driver_jbl_250,
+        description: 'Driver JBL 250',
+        badge: 'Recomendado',
+        price: '$80.000'
+    },
+    {
+        id: 24,
+        name: 'Difusores de Plástico Cortos',
+        category: 'accesorios',
+        brand: null,
+        image: difusores_de_plastico_cortos,
+        description: 'Difusores de Plástico Cortos',
+        badge: null,
+        price: '$3.800'
+    },
+    {
+        id: 25,
+        name: 'Subwoofer Pioneer 12"',
+        category: 'subwoofers',
+        brand: 'Pioneer',
+        image: subwoofer_pioneer_12p,
+        description: 'Subwoofer Pioneer 12" doble bobina TS-W312D4 1600w Max / 500w RMS',
+        badge: null,
+        price: '$205.000'
+    },
+    {
+        id: 26,
+        name: 'Rackera Curva 2 medios bala, 2 drivers 250 y 2 super tweeters',
+        category: 'rackeras',
+        brand: null,
+        image: rackera_curva_completa_para_pote_bala,
+        description: 'Rackera Curva 2 medios bala infinity tech, 2 drivers 250 y 2 super tweeters',
+        badge: null,
+        price: '$290.000'
+    },
+    {
+        id: 27,
+        name: 'Parlantes Bomber 6x9 con Cajas individuales (el par)',
+        category: 'parlantes',
+        brand: 'Bomber',
+        image: parlantes_bomber_6x9_con_caja,
+        description: 'Parlantes Bomber 6x9 75 watts rms c/u cuatriaxiales con Cajas individuales',
+        badge: null,
+        price: '$75.000'
+    },
+    {
+        id: 28,
+        name: 'Parlantes Jahro 6" (el par)',
+        category: 'parlantes',
+        brand: 'Jahro',
+        image: parlantes_jahro_6p,
+        description: 'Parlantes Jahro 6"',
+        badge: 'Oferta',
+        price: '$30.000'
+    },
+    {
+        id: 29,
+        name: 'Parlantes Jahro 5" (el par)',
+        category: 'parlantes',
+        brand: 'Jahro',
+        image: parlantes_jahro_5p,
+        description: 'Parlantes Jahro 5"',
+        badge: null,
+        price: '$29.000'
+    },
+    {
+        id: 30,
+        name: 'Parlantes Jahro 4" (el par)',
+        category: 'parlantes',
+        brand: 'Jahro',
+        image: parlantes_jahro_4p,
+        description: 'Parlantes Jahro 4"',
+        badge: null,
+        price: '$28.000'
     },
 ];

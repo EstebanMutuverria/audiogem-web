@@ -19,8 +19,7 @@ const CategoriesSection = () => {
                     <div className="divider divider--center" />
                     <h2 className="section-title">Todo lo que necesitás</h2>
                     <p className="section-subtitle">
-                        Desde el receptor hasta el último centímetro de cable. Tenemos todo para
-                        construir el sistema de audio perfecto para tu vehículo.
+                        Encontrá todo lo que necesitás para armar el sistema de audio perfecto para tu vehículo.
                     </p>
                 </div>
 
