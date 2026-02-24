@@ -5,13 +5,18 @@
 
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import './GallerySection.css';
+import foto_1 from '../../assets/gallery_section_pictures/foto-1.jpeg';
+import foto_2 from '../../assets/gallery_section_pictures/foto-2.jpeg';
+import foto_3 from '../../assets/gallery_section_pictures/foto-3.jpeg';
+import foto_4 from '../../assets/gallery_section_pictures/foto-4.jpeg';
+import foto_5 from '../../assets/gallery_section_pictures/foto-5.jpeg';
 
 const GALLERY_ITEMS = [
-    { id: 1, caption: 'Instalación Premium', size: 'large' },
-    { id: 2, caption: 'Detalle de Cableado', size: 'small' },
-    { id: 3, caption: 'Showroom Principal', size: 'small' },
-    { id: 4, caption: 'Bajos Potentes', size: 'small' },
-    { id: 5, caption: 'Ajuste de Audio', size: 'small' },
+    { id: 1, image: foto_1, caption: 'Calidad Premium', size: 'large' },
+    { id: 2, image: foto_2, caption: 'Excelentes componentes', size: 'small' },
+    { id: 3, image: foto_3, caption: 'Potencia y Calidad', size: 'small' },
+    { id: 4, image: foto_4, caption: 'Variedad de productos', size: 'small' },
+    { id: 5, image: foto_5, caption: 'Accesorios de calidad', size: 'small' },
 ];
 
 const GallerySection = () => {
@@ -23,9 +28,9 @@ const GallerySection = () => {
                 <div className="section-header section-header--center">
                     <span className="section-label">Galería</span>
                     <div className="divider divider--center" />
-                    <h2 className="section-title">Nuestras Instalaciones</h2>
+                    <h2 className="section-title">Nuestros Productos</h2>
                     <p className="section-subtitle">
-                        Echa un vistazo a la calidad de nuestro trabajo y la variedad de productos en stock.
+                        Echa un vistazo a la calidad de nuestros productos.
                     </p>
                 </div>
 
@@ -47,7 +52,7 @@ const GallerySection = () => {
                                     fontSize: '3rem'
                                 }}
                             >
-                                📸
+                                <img src={item.image} alt={item.caption} />
                             </div>
                             <div className="gallery__overlay">
                                 <span className="gallery__caption">{item.caption}</span>

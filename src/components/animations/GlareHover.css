@@ -1,0 +1,48 @@
+/* GlareHover.css */
+
+.glare-hover {
+    position: relative;
+    overflow: hidden;
+    border-radius: inherit;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.glare-hover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(var(--gh-angle),
+            hsla(0, 0%, 100%, 0) 60%,
+            var(--gh-rgba) 70%,
+            hsla(0, 0%, 100%, 0),
+            hsla(0, 0%, 100%, 0) 100%);
+    transition: transform var(--gh-duration) ease;
+    background-size: var(--gh-size) var(--gh-size);
+    background-repeat: no-repeat;
+    /* Posición inicial fuera del botón */
+    transform: translate(-100%, -100%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.glare-hover:hover::before {
+    /* Movimiento del brillo al pasar el mouse */
+    transform: translate(100%, 100%);
+}
+
+.glare-hover__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.glare-hover--play-once:hover::before {
+    transition: transform var(--gh-duration) ease;
+    transform: translate(100%, 100%);
+}

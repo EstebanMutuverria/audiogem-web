@@ -6,6 +6,7 @@
 
 import { Link } from 'react-router-dom';
 import './Button.css';
+import GlareHover from '../animations/GlareHover';
 
 /**
  * @param {Object} props
@@ -25,10 +26,29 @@ const Button = ({
     className = '',
     ...rest
 }) => {
+    const sizePadding = {
+        sm: 'var(--spacing-2) var(--spacing-4)',
+        md: 'var(--spacing-3) var(--spacing-6)',
+        lg: 'var(--spacing-4) var(--spacing-8)',
+    }[size];
+
+    const content = variant === 'primary' ? (
+        <GlareHover
+            glareColor="#ffffff"
+            glareOpacity={0.4}
+            glareSize={200}
+            transitionDuration={800}
+            style={{ padding: sizePadding }}
+        >
+            {children}
+        </GlareHover>
+    ) : children;
+
     const classes = [
         'btn',
         `btn--${variant}`,
         size !== 'md' ? `btn--${size}` : '',
+        variant === 'primary' ? 'btn--has-glare' : '',
         className,
     ]
         .filter(Boolean)
@@ -37,7 +57,7 @@ const Button = ({
     if (to) {
         return (
             <Link to={to} className={classes} {...rest}>
-                {children}
+                {content}
             </Link>
         );
     }
@@ -45,14 +65,14 @@ const Button = ({
     if (href) {
         return (
             <a href={href} className={classes} target="_blank" rel="noreferrer" {...rest}>
-                {children}
+                {content}
             </a>
         );
     }
 
     return (
         <button className={classes} {...rest}>
-            {children}
+            {content}
         </button>
     );
 };

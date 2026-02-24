@@ -5,36 +5,44 @@
  * sin necesidad de tocar ningún componente.
  */
 
-import estereo_b52 from '../assets/estereo_b52-rm-2025bt.jpeg';
-import rackera_2y2_para_pote from '../assets/rackera-2y2-para-pote.jpeg';
-import pote_taramps_400x4 from '../assets/pote_taramps_400x4.jpeg';
-import estereo_crown_mustang from '../assets/estereo-crown-mustang.jpeg'
-import estereo_infinity_tech from '../assets/estereo-infinity-tech.jpeg'
-import estereo_philco from '../assets/estereo-philco.jpeg'
-import rackera_2medios_2super from '../assets/rackera-2medios-2supertweeter.jpeg'
-import rackera_4drivers5041 from '../assets/rackera-4drivers5041.jpeg'
-import rackera_curva_completa_estereo from '../assets/rackera-curva-completa-estereo.jpeg'
-import rackera_2driver_2bomber_2tweeter from '../assets/rackera-2driver-2bomber-2tweeter.jpeg'
-import kit_instalacion_infinity_tech from '../assets/kit-de-cables-infinity-4g.jpeg'
-import rackera_2y2_chica from '../assets/rackera-2y2-chica.jpeg'
-import rackera_2driver_26x9pioneer from '../assets/rackera-2driver-26x9pioneer.jpeg'
-import rackera_2parlantes_2tweeter_jahro from '../assets/rackera-2parlantes-2tweeter-jahro.jpeg'
-import super_tweeter_blauline from '../assets/supertweeter-blauline.jpeg'
-import cable_y_griega from '../assets/cable-y-griega.jpeg'
-import capacitores_tweeter from '../assets/capacitores-tweeter.jpeg'
-import capacitores_driver from '../assets/capacitores-driver.jpeg'
-import difusores_de_aluminio from '../assets/difusores-de-aluminio.jpeg'
-import pote_taramps_800x4 from '../assets/pote-taramps-800x4.jpeg'
-import medios_de_8_jahro from '../assets/medios-de-8-jahro.jpeg'
-import driver_jbl_250 from '../assets/driver-jbl-250.jpeg'
-import difusores_de_plastico_cortos from '../assets/difusores-de-plastico-cortos.jpeg'
-import subwoofer_pioneer_12p from '../assets/subwoofer-pioneer-12p.jpeg'
-import rackera_curva_completa_para_pote_bala from '../assets/rackera-curva-completa-para-pote-bala.jpeg'
-import parlantes_bomber_6x9_con_caja from '../assets/parlantes-bomber-6x9-con-caja.jpeg'
-import parlantes_jahro_6p from '../assets/parlantes-jahro-6p.jpeg'
-import parlantes_jahro_5p from '../assets/parlantes-jahro-5p.jpeg'
-import parlantes_jahro_4p from '../assets/parlantes-jahro-4p.jpeg'
-
+import estereo_b52 from '../assets/products_section_pictures/estereo_b52-rm-2025bt.jpeg';
+import rackera_2y2_para_pote from '../assets/products_section_pictures/rackera-2y2-para-pote.jpeg';
+import pote_taramps_400x4 from '../assets/products_section_pictures/pote_taramps_400x4.jpeg';
+import estereo_crown_mustang from '../assets/products_section_pictures/estereo-crown-mustang.jpeg'
+import estereo_infinity_tech from '../assets/products_section_pictures/estereo-infinity-tech.jpeg'
+import estereo_philco from '../assets/products_section_pictures/estereo-philco.jpeg'
+import rackera_2medios_2super from '../assets/products_section_pictures/rackera-2medios-2supertweeter.jpeg'
+import rackera_4drivers5041 from '../assets/products_section_pictures/rackera-4drivers5041.jpeg'
+import rackera_curva_completa_estereo from '../assets/products_section_pictures/rackera-curva-completa-estereo.jpeg'
+import rackera_2driver_2bomber_2tweeter from '../assets/products_section_pictures/rackera-2driver-2bomber-2tweeter.jpeg'
+import kit_instalacion_infinity_tech from '../assets/products_section_pictures/kit-de-cables-infinity-4g.jpeg'
+import rackera_2y2_chica from '../assets/products_section_pictures/rackera-2y2-chica.jpeg'
+import rackera_2driver_26x9pioneer from '../assets/products_section_pictures/rackera-2driver-26x9pioneer.jpeg'
+import rackera_2parlantes_2tweeter_jahro from '../assets/products_section_pictures/rackera-2parlantes-2tweeter-jahro.jpeg'
+import super_tweeter_blauline from '../assets/products_section_pictures/supertweeter-blauline.jpeg'
+import cable_y_griega from '../assets/products_section_pictures/cable-y-griega.jpeg'
+import capacitores_tweeter from '../assets/products_section_pictures/capacitores-tweeter.jpeg'
+import capacitores_driver from '../assets/products_section_pictures/capacitores-driver.jpeg'
+import difusores_de_aluminio from '../assets/products_section_pictures/difusores-de-aluminio.jpeg'
+import pote_taramps_800x4 from '../assets/products_section_pictures/pote-taramps-800x4.jpeg'
+import medios_de_8_jahro from '../assets/products_section_pictures/medios-de-8-jahro.jpeg'
+import driver_jbl_250 from '../assets/products_section_pictures/driver-jbl-250.jpeg'
+import difusores_de_plastico_cortos from '../assets/products_section_pictures/difusores-de-plastico-cortos.jpeg'
+import subwoofer_pioneer_12p from '../assets/products_section_pictures/subwoofer-pioneer-12p.jpeg'
+import rackera_curva_completa_para_pote_bala from '../assets/products_section_pictures/rackera-curva-completa-para-pote-bala.jpeg'
+import parlantes_bomber_6x9_con_caja from '../assets/products_section_pictures/parlantes-bomber-6x9-con-caja.jpeg'
+import parlantes_jahro_6p from '../assets/products_section_pictures/parlantes-jahro-6p.jpeg'
+import parlantes_jahro_5p from '../assets/products_section_pictures/parlantes-jahro-5p.jpeg'
+import parlantes_jahro_4p from '../assets/products_section_pictures/parlantes-jahro-4p.jpeg'
+import medios_de_6_jahro from '../assets/products_section_pictures/medios-de-6-jahro.jpeg'
+import driver_jahro_5041 from '../assets/products_section_pictures/driver-jahro-5041.jpeg'
+import driver_jbl_trio from '../assets/products_section_pictures/driver-jbl-trio.jpeg'
+import controles_stetsom from '../assets/products_section_pictures/controles-stetsom.jpeg'
+import tweeter_jbl_st400_trio from '../assets/products_section_pictures/tweeter-jbl-st400-trio.jpeg'
+import tweeter_jbl_st200 from '../assets/products_section_pictures/tweeter-jbl-st200.jpeg'
+import woofer_12p_triton from '../assets/products_section_pictures/woofer-12p-triton.jpeg'
+import woofer_12p_triton_850rms from '../assets/products_section_pictures/woofer-12p-triton-850rms.jpeg'
+import driver_jahro_5042 from '../assets/products_section_pictures/driver-jahro-5042.jpeg'
 
 export const CATEGORIES = [
     {
@@ -53,7 +61,7 @@ export const CATEGORIES = [
     },
     {
         id: 'subwoofers',
-        label: 'Subwoofers',
+        label: 'Subwoofers/Woofers',
         description: 'Graves profundos y presentes que transforman tu experiencia.',
         icon: '💥',
         color: '#3f37c9',
@@ -81,8 +89,8 @@ export const CATEGORIES = [
     },
     {
         id: 'componentes',
-        label: 'Componentes',
-        description: 'Componentes para un sonido de alta calidad.',
+        label: 'Drivers/Tweeters/Medios',
+        description: 'Drivers, Tweeters y Medios para un sonido de alta calidad.',
         icon: '📯',
         color: '#4cc953',
     },
@@ -164,17 +172,17 @@ export const ALL_PRODUCTS = [
         }, */
     {
         id: 8,
-        name: 'Rackera 2 medios de 8" y 2 super tweeters Jahro',
+        name: 'Rackera 2 medios de 8 pulgadas y 2 super tweeters Jahro',
         category: 'rackeras',
         brand: 'Jahro',
         image: rackera_2medios_2super,
-        description: 'Rackera 2 medios de 8" marca Jahro y 2 super tweeters Jahro',
+        description: 'Rackera 2 medios de 8 pulgadas marca Jahro y 2 super tweeters Jahro',
         badge: null,
         price: '$140.000'
     },
     {
         id: 9,
-        name: 'Rackera 4 drivers Jahro 5041"',
+        name: 'Rackera 4 drivers Jahro 5041',
         category: 'rackeras',
         brand: 'Jahro',
         image: rackera_4drivers5041,
@@ -304,21 +312,21 @@ export const ALL_PRODUCTS = [
     },
     {
         id: 22,
-        name: 'Medio de 8" Jahro',
+        name: 'Medio de 8 pulgadas Jahro',
         category: 'componentes',
         brand: 'Jahro',
         image: medios_de_8_jahro,
-        description: 'Medio de 8" marca Jahro',
+        description: 'Medio de 8 pulgadas marca Jahro',
         badge: null,
         price: '$32.000'
     },
     {
         id: 23,
-        name: 'Driver JBL 250',
+        name: 'Driver JBL D250-X',
         category: 'componentes',
         brand: 'JBL',
         image: driver_jbl_250,
-        description: 'Driver JBL 250',
+        description: 'Driver JBL D250-X',
         badge: 'Recomendado',
         price: '$80.000'
     },
@@ -334,11 +342,11 @@ export const ALL_PRODUCTS = [
     },
     {
         id: 25,
-        name: 'Subwoofer Pioneer 12"',
+        name: 'Subwoofer Pioneer 12 pulgadas',
         category: 'subwoofers',
         brand: 'Pioneer',
         image: subwoofer_pioneer_12p,
-        description: 'Subwoofer Pioneer 12" doble bobina TS-W312D4 1600w Max / 500w RMS',
+        description: 'Subwoofer Pioneer 12 pulgadas doble bobina TS-W312D4 1600w Max / 500w RMS',
         badge: null,
         price: '$205.000'
     },
@@ -364,32 +372,122 @@ export const ALL_PRODUCTS = [
     },
     {
         id: 28,
-        name: 'Parlantes Jahro 6" (el par)',
+        name: 'Parlantes Jahro 6 pulgadas (el par)',
         category: 'parlantes',
         brand: 'Jahro',
         image: parlantes_jahro_6p,
-        description: 'Parlantes Jahro 6"',
+        description: 'Parlantes Jahro 6 pulgadas',
         badge: 'Oferta',
         price: '$30.000'
     },
     {
         id: 29,
-        name: 'Parlantes Jahro 5" (el par)',
+        name: 'Parlantes Jahro 5 pulgadas (el par)',
         category: 'parlantes',
         brand: 'Jahro',
         image: parlantes_jahro_5p,
-        description: 'Parlantes Jahro 5"',
+        description: 'Parlantes Jahro 5 pulgadas',
         badge: null,
         price: '$29.000'
     },
     {
         id: 30,
-        name: 'Parlantes Jahro 4" (el par)',
+        name: 'Parlantes Jahro 4 pulgadas (el par)',
         category: 'parlantes',
         brand: 'Jahro',
         image: parlantes_jahro_4p,
-        description: 'Parlantes Jahro 4"',
+        description: 'Parlantes Jahro 4 pulgadas',
         badge: null,
         price: '$28.000'
+    },
+    {
+        id: 31,
+        name: 'Medios de 6" Jahro',
+        category: 'componentes',
+        brand: 'Jahro',
+        image: medios_de_6_jahro,
+        description: 'Medios de 6" marca Jahro',
+        badge: null,
+        price: '$27.000'
+    },
+    {
+        id: 32,
+        name: 'Driver Jahro 5041',
+        category: 'componentes',
+        brand: 'Jahro',
+        image: driver_jahro_5041,
+        description: 'Driver Jahro 5041 de 150 watts',
+        badge: null,
+        price: '$22.000'
+    },
+    {
+        id: 33,
+        name: 'Driver JBL Trio',
+        category: 'componentes',
+        brand: 'JBL',
+        image: driver_jbl_trio,
+        description: 'Driver JBL D250 Trio de 200w rms',
+        badge: 'Top Calidad',
+        price: '$135.000'
+    },
+    {
+        id: 34,
+        name: 'Controlador de Sonido Stetsom',
+        category: 'accesorios',
+        brand: 'Stetsom',
+        image: controles_stetsom,
+        description: 'Controlador de Sonido Stetsom',
+        badge: 'Nuevo',
+        price: '$50.000'
+    },
+    {
+        id: 35,
+        name: 'Tweeter JBL ST400 Trio',
+        category: 'componentes',
+        brand: 'JBL',
+        image: tweeter_jbl_st400_trio,
+        description: 'Tweeter JBL ST400 Trio de 200w rms',
+        badge: 'Top Calidad',
+        price: '$110.000'
+    },
+    {
+        id: 36,
+        name: 'Tweeter JBL ST200',
+        category: 'componentes',
+        brand: 'JBL',
+        image: tweeter_jbl_st200,
+        description: 'Tweeter JBL ST200 de 100w rms',
+        badge: null,
+        price: '$55.000'
+    },
+    {
+        id: 37,
+        name: 'Woofer Triton 12 Pulgadas 620rms',
+        category: 'subwoofers',
+        brand: 'Triton',
+        image: woofer_12p_triton,
+        description: 'Woofer Triton 12 Pulgadas TR 620 8 ohm 620w Rms 1240w pmpo',
+        badge: null,
+        price: '$250.000'
+    },
+    {
+        id: 38,
+        name: 'Woofer Triton 12 Pulgadas 850rms',
+        category: 'subwoofers',
+        brand: 'Triton',
+        image: woofer_12p_triton_850rms,
+        description: 'Woofer Triton Medio Grave 850w Rms 8 Ohm Tr 850 Negro',
+        badge: null,
+        price: '$340.000'
+    },
+    {
+        id: 39,
+        name: 'Driver Jahro 5042 200w MAX',
+        category: 'componentes',
+        brand: 'Jahro',
+        image: driver_jahro_5042,
+        description: 'Driver Jahro 5042 250 watts max 400w Rms',
+        badge: null,
+        price: '$47.000'
     },
 ];
