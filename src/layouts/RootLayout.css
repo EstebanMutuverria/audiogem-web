@@ -1,5 +1,9 @@
+main {
+    margin-top: 20px;
+}
+
 @media (max-width: 768px) {
     main {
-        margin-top: var(--navbar-height);
+        margin-top: 15px;
     }
 }
