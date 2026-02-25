@@ -43,55 +43,60 @@ import tweeter_jbl_st200 from '../assets/products_section_pictures/tweeter-jbl-s
 import woofer_12p_triton from '../assets/products_section_pictures/woofer-12p-triton.jpeg'
 import woofer_12p_triton_850rms from '../assets/products_section_pictures/woofer-12p-triton-850rms.jpeg'
 import driver_jahro_5042 from '../assets/products_section_pictures/driver-jahro-5042.jpeg'
+import pote_sound_digital_400x4 from '../assets/products_section_pictures/pote-sound-digital-400x4.jpeg'
+import pote_sound_digital_800x4 from '../assets/products_section_pictures/pote-sound-digital-800x4.jpeg'
+
+
+import icon_categories from '../assets/icon-productsdata-categories/Success.png'
 
 export const CATEGORIES = [
     {
         id: 'estereos',
         label: 'Estéreos',
         description: 'Receptores multimedia con Bluetooth, USB y pantallas táctiles.',
-        icon: '🎵',
+        icon: icon_categories,
         color: '#4895ef',
     },
     {
         id: 'parlantes',
         label: 'Parlantes',
         description: 'Altavoces coaxiales y separados para un sonido envolvente.',
-        icon: '🔊',
+        icon: icon_categories,
         color: '#4cc9f0',
     },
     {
         id: 'subwoofers',
         label: 'Subwoofers/Woofers',
         description: 'Graves profundos y presentes que transforman tu experiencia.',
-        icon: '💥',
+        icon: icon_categories,
         color: '#3f37c9',
     },
     {
         id: 'potencias',
         label: 'Potencias',
         description: 'Amplificadores de alta potencia para un audio sin distorsión.',
-        icon: '⚡',
+        icon: icon_categories,
         color: '#ced4da',
     },
     {
         id: 'accesorios',
         label: 'Accesorios',
         description: 'Cables, conectores, kits de instalación y todo lo necesario.',
-        icon: '🔧',
+        icon: icon_categories,
         color: '#adb5bd',
     },
     {
         id: 'rackeras',
         label: 'Rackeras',
         description: 'Rackeras para un sonido envolvente.',
-        icon: '🎛️',
+        icon: icon_categories,
         color: '#4cc9f0',
     },
     {
         id: 'componentes',
         label: 'Drivers/Tweeters/Medios',
         description: 'Drivers, Tweeters y Medios para un sonido de alta calidad.',
-        icon: '📯',
+        icon: icon_categories,
         color: '#4cc953',
     },
 ];
@@ -489,5 +494,25 @@ export const ALL_PRODUCTS = [
         description: 'Driver Jahro 5042 250 watts max 400w Rms',
         badge: null,
         price: '$47.000'
+    },
+    {
+        id: 40,
+        name: 'Potencia Sound Digital 400x4',
+        category: 'potencias',
+        brand: 'Sound Digital',
+        image: pote_sound_digital_400x4,
+        description: 'Potencia Sound Digital 400x4 400w Rms 4 canales',
+        badge: null,
+        price: '$100.000'
+    },
+    {
+        id: 41,
+        name: 'Potencia Sound Digital 800x4',
+        category: 'potencias',
+        brand: 'Sound Digital',
+        image: pote_sound_digital_800x4,
+        description: 'Potencia Sound Digital 800x4 800w Rms 4 canales',
+        badge: null,
+        price: '$170.000'
     },
 ];

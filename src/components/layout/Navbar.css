@@ -111,11 +111,12 @@
     letter-spacing: 0.03em;
     transition: opacity var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
     text-decoration: none;
+    transition: all var(--transition-base);
 }
 
 .navbar__cta:hover {
     opacity: 0.9;
-    transform: translateY(-1px);
+    transform: scale(1.05);
     box-shadow: var(--shadow-glow);
 }
 

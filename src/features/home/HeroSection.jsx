@@ -39,10 +39,10 @@ const HeroSection = () => {
                     </p>
 
                     <div className="hero__actions">
-                        <Button to="/productos" size="lg">
+                        <Button to="/productos" size="md">
                             Ver productos
                         </Button>
-                        <Button to="/contacto" variant="secondary" size="lg">
+                        <Button to="/contacto" variant="secondary" size="md">
                             Contactanos
                         </Button>
                     </div>

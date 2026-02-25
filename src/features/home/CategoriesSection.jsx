@@ -31,7 +31,7 @@ const CategoriesSection = () => {
                             className="category-card"
                             aria-label={`Ver ${cat.label}`}
                         >
-                            <span className="category-card__icon">{cat.icon}</span>
+                            <img src={cat.icon} className="category-card__icon" alt={cat.label} />
                             <span className="category-card__label">{cat.label}</span>
                             <span className="category-card__desc">{cat.description}</span>
                         </Link>

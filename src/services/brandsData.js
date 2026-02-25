@@ -16,4 +16,5 @@ export const BRANDS = [
     { id: 10, name: 'Infinity Tech', logo: null, country: 'Argentina' },
     { id: 11, name: 'Sound Digital', logo: null, country: 'Brasil' },
     { id: 12, name: 'Stetsom', logo: null, country: 'Brasil' },
+    { id: 13, name: 'Triton', logo: null, country: 'Argentina' },
 ];
