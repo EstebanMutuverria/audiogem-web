@@ -33,6 +33,7 @@
 .btn--primary {
     background: var(--gradient-primary);
     color: var(--color-white);
+    border: transparent;
 }
 
 .btn--primary:hover {
