@@ -134,33 +134,33 @@ export const FEATURED_PRODUCTS = [
     },
     {
         id: 4,
-        name: 'Estereo Crown Mustang DMR-3000BT',
-        category: 'estereos',
-        brand: 'Crown Mustang',
-        image: estereo_crown_mustang,
-        description: 'Estereo Crown Mustang con Bluetooth, USB, MP3',
-        badge: null,
-        price: '$65.000'
+        name: 'Tweeter JBL ST400 Trio',
+        category: 'componentes',
+        brand: 'JBL',
+        image: tweeter_jbl_st400_trio,
+        description: 'Tweeter JBL ST400 Trio de 200w rms',
+        badge: 'Top Calidad',
+        price: '$110.000'
     },
     {
         id: 5,
-        name: 'Estereo Infinity Tech',
-        category: 'estereos',
-        brand: 'Infinity Tech',
-        image: estereo_infinity_tech,
-        description: 'Estereo Infinity Tech con Bluetooth, USB, MP3',
-        badge: 'Oferta',
-        price: '$40.000'
+        name: 'Driver JBL D250-X',
+        category: 'componentes',
+        brand: 'JBL',
+        image: driver_jbl_250,
+        description: 'Driver JBL D250-X',
+        badge: 'Recomendado',
+        price: '$80.000'
     },
     {
         id: 6,
-        name: 'Estereo philco CSP2950BT',
-        category: 'estereos',
-        brand: 'Philco',
-        image: estereo_philco,
-        description: 'Estereo Philco con Bluetooth, USB, Manos Libres',
-        badge: 'Nuevo',
-        price: '$60.000'
+        name: 'Rackera 2 driver y 2 tweeters Jahro',
+        category: 'rackeras',
+        brand: 'Jharo',
+        image: rackera_2y2_chica,
+        description: 'Rackera 2 drivers Jahro 5041 de 150 watts y 2 tweeters Jahro',
+        badge: 'Más vendido',
+        price: '$80.000'
     },
 ];
 
@@ -227,13 +227,13 @@ export const ALL_PRODUCTS = [
     },
     {
         id: 13,
-        name: 'Rackera 2 driver y 2 tweeters Jahro',
-        category: 'rackeras',
-        brand: 'Jharo',
-        image: rackera_2y2_chica,
-        description: 'Rackera 2 drivers Jahro 5041 de 150 watts y 2 tweeters Jahro',
-        badge: 'Más vendido',
-        price: '$80.000'
+        name: 'Estereo philco CSP2950BT',
+        category: 'estereos',
+        brand: 'Philco',
+        image: estereo_philco,
+        description: 'Estereo Philco con Bluetooth, USB, Manos Libres',
+        badge: 'Nuevo',
+        price: '$60.000'
     },
     {
         id: 14,
@@ -327,13 +327,13 @@ export const ALL_PRODUCTS = [
     },
     {
         id: 23,
-        name: 'Driver JBL D250-X',
-        category: 'componentes',
-        brand: 'JBL',
-        image: driver_jbl_250,
-        description: 'Driver JBL D250-X',
-        badge: 'Recomendado',
-        price: '$80.000'
+        name: 'Estereo Infinity Tech',
+        category: 'estereos',
+        brand: 'Infinity Tech',
+        image: estereo_infinity_tech,
+        description: 'Estereo Infinity Tech con Bluetooth, USB, MP3',
+        badge: 'Oferta',
+        price: '$40.000'
     },
     {
         id: 24,
@@ -446,16 +446,6 @@ export const ALL_PRODUCTS = [
         price: '$50.000'
     },
     {
-        id: 35,
-        name: 'Tweeter JBL ST400 Trio',
-        category: 'componentes',
-        brand: 'JBL',
-        image: tweeter_jbl_st400_trio,
-        description: 'Tweeter JBL ST400 Trio de 200w rms',
-        badge: 'Top Calidad',
-        price: '$110.000'
-    },
-    {
         id: 36,
         name: 'Tweeter JBL ST200',
         category: 'componentes',
@@ -464,6 +454,16 @@ export const ALL_PRODUCTS = [
         description: 'Tweeter JBL ST200 de 100w rms',
         badge: null,
         price: '$55.000'
+    },
+    {
+        id: 35,
+        name: 'Estereo Crown Mustang DMR-3000BT',
+        category: 'estereos',
+        brand: 'Crown Mustang',
+        image: estereo_crown_mustang,
+        description: 'Estereo Crown Mustang con Bluetooth, USB, MP3',
+        badge: null,
+        price: '$65.000'
     },
     {
         id: 37,
