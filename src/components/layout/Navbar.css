@@ -107,7 +107,7 @@
     color: var(--color-white);
     font-size: var(--text-sm);
     font-weight: var(--font-weight-semibold);
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-lg);
     letter-spacing: 0.03em;
     transition: opacity var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
     text-decoration: none;

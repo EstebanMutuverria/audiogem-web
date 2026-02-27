@@ -1,0 +1,40 @@
+/* TextShimmer.css */
+
+.text-shimmer {
+    /* Variables de color adaptadas a la paleta Midnight & Silver */
+    --ts-base-color: var(--color-primary-light);
+    /* Color base sutil */
+    --ts-glow-color: var(--color-white);
+    /* Color del resplandor (blanco/plata) */
+
+    /* Gradiente dinámico calculado con el spread */
+    --ts-bg: linear-gradient(90deg,
+            transparent calc(50% - var(--ts-spread)),
+            var(--ts-glow-color),
+            transparent calc(50% + var(--ts-spread)));
+
+    position: relative;
+    display: inline-block;
+
+    /* Configuración del fondo para el recorte de texto */
+    background-image: var(--ts-bg), linear-gradient(var(--ts-base-color), var(--ts-base-color));
+    background-size: 250% 100%, auto;
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    /* Animación nativa en GPU */
+    animation: shimmerSlide var(--ts-duration) linear infinite;
+}
+
+@keyframes shimmerSlide {
+    0% {
+        background-position: 100% center;
+    }
+
+    100% {
+        background-position: 0% center;
+    }
+}

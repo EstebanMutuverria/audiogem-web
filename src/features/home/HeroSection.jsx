@@ -6,6 +6,7 @@
 
 import Button from '../../components/ui/Button';
 import ElectricBorder from '../../components/animations/ElectricBorder';
+import TextShimmer from '../../components/animations/TextShimmer';
 import './HeroSection.css';
 import { LuAudioLines } from "react-icons/lu";
 
@@ -24,7 +25,9 @@ const HeroSection = () => {
                 <div className="hero__content">
                     <div className="hero__label">
                         <span>🏆</span>
-                        Especialistas en audio vehicular
+                        <TextShimmer as="span" duration={2.5}>
+                            Especialistas en audio vehicular
+                        </TextShimmer>
                     </div>
 
                     <h1 className="hero__title">

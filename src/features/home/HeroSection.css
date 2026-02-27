@@ -79,7 +79,6 @@
     border-radius: var(--radius-full);
     font-size: var(--text-xs);
     font-weight: var(--font-weight-semibold);
-    color: var(--color-primary-light);
     text-transform: uppercase;
     letter-spacing: 0.15em;
     margin-bottom: var(--spacing-6);
@@ -126,7 +125,6 @@
     border-top: 1px solid var(--color-bg-border);
 }
 
-.hero__stat {}
 
 .hero__stat-number {
     display: block;
