@@ -45,6 +45,9 @@ import woofer_12p_triton_850rms from '../assets/products_section_pictures/woofer
 import driver_jahro_5042 from '../assets/products_section_pictures/driver-jahro-5042.jpeg'
 import pote_sound_digital_400x4 from '../assets/products_section_pictures/pote-sound-digital-400x4.jpeg'
 import pote_sound_digital_800x4 from '../assets/products_section_pictures/pote-sound-digital-800x4.jpeg'
+import adaptador_imp_jahro from '../assets/products_section_pictures/adaptador-imp-jahro.jpeg'
+import adaptador_imp_blauline from '../assets/products_section_pictures/adaptador-imp-blauline.jpeg'
+import parlantes_pioneer_300w from '../assets/products_section_pictures/parlantes-pioneer-300w.jpeg'
 
 
 import icon_categories from '../assets/icon-productsdata-categories/Success.png'
@@ -383,7 +386,7 @@ export const ALL_PRODUCTS = [
         image: parlantes_jahro_6p,
         description: 'Parlantes Jahro 6 pulgadas',
         badge: 'Oferta',
-        price: '$30.000'
+        price: '$29.999'
     },
     {
         id: 29,
@@ -393,7 +396,7 @@ export const ALL_PRODUCTS = [
         image: parlantes_jahro_5p,
         description: 'Parlantes Jahro 5 pulgadas',
         badge: null,
-        price: '$29.000'
+        price: '$29.999'
     },
     {
         id: 30,
@@ -443,7 +446,7 @@ export const ALL_PRODUCTS = [
         image: controles_stetsom,
         description: 'Controlador de Sonido Stetsom',
         badge: 'Nuevo',
-        price: '$50.000'
+        price: '$49.999'
     },
     {
         id: 36,
@@ -503,7 +506,7 @@ export const ALL_PRODUCTS = [
         image: pote_sound_digital_400x4,
         description: 'Potencia Sound Digital 400x4 400w Rms 4 canales',
         badge: null,
-        price: '$100.000'
+        price: '$99.999'
     },
     {
         id: 41,
@@ -515,4 +518,34 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$170.000'
     },
+    {
+        id: 42,
+        name: 'Adaptador de Impedancia Jahro',
+        category: 'accesorios',
+        brand: 'Jahro',
+        image: adaptador_imp_jahro,
+        description: 'Adaptador Conversor De Impedancia Regulable Jahro',
+        badge: null,
+        price: '$14.500'
+    },
+    {
+        id: 43,
+        name: 'Adaptador de Impedancia Blauline',
+        category: 'accesorios',
+        brand: 'Blauline',
+        image: adaptador_imp_blauline,
+        description: 'Adaptador De Impedancia 4 Canales Salida Remoto Blauline',
+        badge: null,
+        price: '$25.000'
+    },
+    {
+        id: 44,
+        name: 'Parlantes Pioneer 300W MAX',
+        category: 'parlantes',
+        brand: 'Pioneer',
+        image: parlantes_pioneer_300w,
+        description: 'Pioneer TS G1620F Negro 6.5 Pulgadas Potencia Máxima 300W',
+        badge: null,
+        price: '$80.000'
+    }
 ];
