@@ -48,6 +48,7 @@ import pote_sound_digital_800x4 from '../assets/products_section_pictures/pote-s
 import adaptador_imp_jahro from '../assets/products_section_pictures/adaptador-imp-jahro.jpeg'
 import adaptador_imp_blauline from '../assets/products_section_pictures/adaptador-imp-blauline.jpeg'
 import parlantes_pioneer_300w from '../assets/products_section_pictures/parlantes-pioneer-300w.jpeg'
+import rackera_curva_completa_para_pote from '../assets/products_section_pictures/rackera-curva-completa-para-pote.jpeg'
 
 
 import icon_categories from '../assets/icon-productsdata-categories/Success.png'
@@ -547,5 +548,15 @@ export const ALL_PRODUCTS = [
         description: 'Pioneer TS G1620F Negro 6.5 Pulgadas Potencia Máxima 300W',
         badge: null,
         price: '$80.000'
+    },
+    {
+        id: 45,
+        name: 'Rackera Curva 2 Medios de 8 pulgadas, 2 Drivers 250 y 2 Super Tweeters',
+        category: 'rackeras',
+        brand: null,
+        image: rackera_curva_completa_para_pote,
+        description: 'Rackera Curva 2 Medios de 8 pulgadas, 2 Drivers 250 y 2 Super Tweeters',
+        badge: null,
+        price: '$260.000'
     }
 ];
