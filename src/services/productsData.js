@@ -210,11 +210,11 @@ export const ALL_PRODUCTS = [
     },
     {
         id: 11,
-        name: 'Kit instalación Infinity Tech 4 GA',
+        name: 'Kit instalación Infinity Tech 8 GA',
         category: 'accesorios',
         brand: 'Infinity Tech',
         image: kit_instalacion_infinity_tech,
-        description: 'Kit de cableado completo calibre 4 GA. Incluye cable de poder, tierra, señal RCA y fusible.',
+        description: 'Kit de cableado completo calibre 8 GA. Incluye cable de poder, tierra, señal RCA y fusible.',
         badge: null,
         price: '$25.000'
     },
