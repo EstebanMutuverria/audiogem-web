@@ -33,3 +33,10 @@
     opacity: 1;
     transform: translateY(0);
 }
+
+@media (max-width: 768px) {
+    .button-to-top {
+        right: 25px;
+        bottom: calc(var(--spacing-6) + 64px + var(--spacing-2));
+    }
+}
