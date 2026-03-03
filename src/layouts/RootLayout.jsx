@@ -10,6 +10,7 @@ import Footer from '../components/layout/Footer';
 import ScrollToTop from '../components/layout/ScrollToTop';
 import FloatingWhatsApp from '../components/ui/FloatingWhatsApp';
 import './RootLayout.css';
+import ButtonToTop from '../components/ui/ButtonToTop';
 
 const RootLayout = () => {
     return (
@@ -20,6 +21,7 @@ const RootLayout = () => {
                 <Outlet />
             </main>
             <FloatingWhatsApp />
+            <ButtonToTop />
             <Footer />
         </>
     );
