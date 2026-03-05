@@ -5,6 +5,7 @@
  */
 
 import './ProductCard.css';
+import StarBorder from '../animations/StarBorder';
 
 const CATEGORY_ICONS = {
     estereos: '🎵',
@@ -45,9 +46,19 @@ const ProductCard = ({ product }) => {
                 <p className="product-card__description">{description}</p>
                 <div className="product-card__footer">
                     <span className="product-card__brand">{brand}</span>
-                    <a href="https://wa.me/1160081534" className="product-card__action">
-                        Consultar →
-                    </a>
+                    <StarBorder
+                        as="a"
+                        href="https://wa.me/1160081534"
+                        className="product-card__action"
+                        color="#4895ef"
+                        speed="4s"
+                        thickness={1}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Consultar por ${name} vía WhatsApp`}
+                    >
+                        <span className="product-card__action-inner">Consultar →</span>
+                    </StarBorder>
                 </div>
             </div>
         </article>

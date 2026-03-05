@@ -1,0 +1,70 @@
+/* StarBorder.css
+   BEM interno: star-border-container / star-border__gradient / star-border__inner
+   El .inner-content visual lo define cada uso mediante className o estilos del padre.
+*/
+
+.star-border-container {
+    display: inline-block;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    /* Necesario para que el text-decoration del :hover del padre no se propague */
+    text-decoration: none;
+}
+
+/* ── Gradients animados ─────────────────────────────── */
+.star-border__gradient {
+    position: absolute;
+    width: 300%;
+    height: 50%;
+    opacity: 0.7;
+    border-radius: 50%;
+    /* will-change reduce el repaint en GPU */
+    will-change: transform, opacity;
+}
+
+.star-border__gradient--bottom {
+    bottom: -12px;
+    right: -250%;
+    animation: star-border-bottom linear infinite alternate;
+    z-index: 0;
+}
+
+.star-border__gradient--top {
+    top: -12px;
+    left: -250%;
+    animation: star-border-top linear infinite alternate;
+    z-index: 0;
+}
+
+/* ── Contenido interno ──────────────────────────────── */
+.star-border__inner {
+    position: relative;
+    z-index: 1;
+    /* El padding, color y fuente lo hereda/sobreescribe el className que pase el padre */
+}
+
+/* ── Keyframes ──────────────────────────────────────── */
+@keyframes star-border-bottom {
+    0% {
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-100%, 0%);
+        opacity: 0;
+    }
+}
+
+@keyframes star-border-top {
+    0% {
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(100%, 0%);
+        opacity: 0;
+    }
+}
