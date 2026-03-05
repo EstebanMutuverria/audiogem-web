@@ -49,6 +49,8 @@ import adaptador_imp_jahro from '../assets/products_section_pictures/adaptador-i
 import adaptador_imp_blauline from '../assets/products_section_pictures/adaptador-imp-blauline.jpeg'
 import parlantes_pioneer_300w from '../assets/products_section_pictures/parlantes-pioneer-300w.jpeg'
 import rackera_curva_completa_para_pote from '../assets/products_section_pictures/rackera-curva-completa-para-pote.jpeg'
+import voltimetro_taramps from '../assets/products_section_pictures/voltimetro-taramps.jpeg'
+import cable_rca_svart_4mm_1m from '../assets/products_section_pictures/cable-rca-svart-4mm-1m.jpeg'
 
 
 import icon_categories from '../assets/icon-productsdata-categories/Success.png'
@@ -558,5 +560,25 @@ export const ALL_PRODUCTS = [
         description: 'Rackera Curva 2 Medios de 8 pulgadas, 2 Drivers 250 y 2 Super Tweeters',
         badge: null,
         price: '$260.000'
+    },
+    {
+        id: 46,
+        name: 'Voltimetro automotivo Taramps',
+        category: 'accesorios',
+        brand: 'Taramps',
+        image: voltimetro_taramps,
+        description: 'Voltimetro automotivo Taramps VTR 1000',
+        badge: null,
+        price: '$27.000'
+    },
+    {
+        id: 47,
+        name: 'Cable RCA Svart 4mm 1m',
+        category: 'accesorios',
+        brand: 'Svart',
+        image: cable_rca_svart_4mm_1m,
+        description: 'Cable RCA Svart 4mm 1m',
+        badge: null,
+        price: '$17.000'
     }
 ];
