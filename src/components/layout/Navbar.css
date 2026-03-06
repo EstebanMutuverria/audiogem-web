@@ -9,17 +9,17 @@
     height: var(--navbar-height);
     display: flex;
     align-items: center;
-    background-color: rgba(10, 10, 15, 0.85);
+    background-color: transparent;
+    border-bottom: 1px solid transparent;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid transparent;
     transition: border-color var(--transition-base), background-color var(--transition-base);
-    box-shadow: var(--shadow-lg);
 }
 
 .navbar--scrolled {
-    border-bottom-color: var(--color-bg-border);
     background-color: rgba(10, 10, 15, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 }
 
 .navbar__container {
