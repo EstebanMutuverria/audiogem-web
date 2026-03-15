@@ -135,8 +135,8 @@ export const FEATURED_PRODUCTS = [
         brand: 'Taramps',
         image: pote_taramps_400x4,
         description: 'Potencia Taramps 400x4 4 canales 400 watts RMS',
-        badge: 'Oferta',
-        price: '$110.000'
+        badge: 'Mas vendido',
+        price: '$100.000'
     },
     {
         id: 4,
@@ -508,8 +508,8 @@ export const ALL_PRODUCTS = [
         brand: 'Sound Digital',
         image: pote_sound_digital_400x4,
         description: 'Potencia Sound Digital 400x4 400w Rms 4 canales',
-        badge: null,
-        price: '$99.999'
+        badge: 'Oferta',
+        price: '$100.000'
     },
     {
         id: 41,
