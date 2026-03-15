@@ -51,7 +51,7 @@ const ProductCard = ({ product }) => {
                         href="https://wa.me/1160081534"
                         className="product-card__action"
                         color="#4895ef"
-                        speed="4s"
+                        speed="3s"
                         thickness={1}
                         target="_blank"
                         rel="noopener noreferrer"
