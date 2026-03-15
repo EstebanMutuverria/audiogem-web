@@ -313,11 +313,11 @@ export const ALL_PRODUCTS = [
     },
     {
         id: 21,
-        name: 'Potencia Taramps 800x4',
+        name: 'Potencia Taramps 800.4',
         category: 'potencias',
         brand: 'Taramps',
         image: pote_taramps_800x4,
-        description: 'Potencia Taramps 800x4 4 canales 800 watts RMS',
+        description: 'Potencia Taramps 800.4 4 canales 800 watts RMS',
         badge: null,
         price: '$180.000'
     },
@@ -503,21 +503,21 @@ export const ALL_PRODUCTS = [
     },
     {
         id: 40,
-        name: 'Potencia Sound Digital 400x4',
+        name: 'Potencia Sound Digital 400.4',
         category: 'potencias',
         brand: 'Sound Digital',
         image: pote_sound_digital_400x4,
-        description: 'Potencia Sound Digital 400x4 400w Rms 4 canales',
+        description: 'Potencia Sound Digital 400.4 400w Rms 4 canales',
         badge: 'Oferta',
         price: '$100.000'
     },
     {
         id: 41,
-        name: 'Potencia Sound Digital 800x4',
+        name: 'Potencia Sound Digital 800.4',
         category: 'potencias',
         brand: 'Sound Digital',
         image: pote_sound_digital_800x4,
-        description: 'Potencia Sound Digital 800x4 800w Rms 4 canales',
+        description: 'Potencia Sound Digital 800.4 800w Rms 4 canales',
         badge: null,
         price: '$170.000'
     },
