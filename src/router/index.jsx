@@ -8,6 +8,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import RootLayout from '../layouts/RootLayout';
 import PageLoader from '../components/ui/PageLoader';
+import ErrorBoundary from '../components/ui/ErrorBoundary';
 
 // Lazy loading de páginas
 const HomePage = lazy(() => import('../pages/HomePage'));
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <RootLayout />,
+        errorElement: <ErrorBoundary />,
         children: [
             {
                 index: true,
