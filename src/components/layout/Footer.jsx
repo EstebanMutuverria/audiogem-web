@@ -5,7 +5,7 @@
 
 import { Link } from 'react-router-dom';
 import './Footer.css';
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaTiktok } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -51,13 +51,13 @@ const Footer = () => {
                                 <FaInstagram />
                             </a>
                             <a
-                                href="/"
-                                target="_self"
+                                href="https://www.tiktok.com/@audio_gem"
+                                target="_blank"
                                 rel="noreferrer"
                                 className="footer__social-link"
-                                aria-label="Facebook"
+                                aria-label="Tiktok"
                             >
-                                <FaFacebook />
+                                <FaTiktok />
                             </a>
                             <a
                                 href="https://wa.me/1160081534"
