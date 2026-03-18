@@ -11,7 +11,7 @@ const ProductCatalog = ({ products }) => {
         <div className="catalog">
             <div className="catalog__grid">
                 {products.length > 0 ? (
-                    products.map((product) => (
+                    products.filter((product) => product.state === true).map((product) => (
                         <ProductCard key={product.id} product={product} />
                     ))
                 ) : (

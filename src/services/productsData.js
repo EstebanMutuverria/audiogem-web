@@ -51,6 +51,8 @@ import parlantes_pioneer_300w from '../assets/products_section_pictures/parlante
 import rackera_curva_completa_para_pote from '../assets/products_section_pictures/rackera-curva-completa-para-pote.jpeg'
 import voltimetro_taramps from '../assets/products_section_pictures/voltimetro-taramps.jpeg'
 import cable_rca_svart_4mm_1m from '../assets/products_section_pictures/cable-rca-svart-4mm-1m.jpeg'
+import adaptador_imp_maverick from '../assets/products_section_pictures/adaptador-imp-maverick.jpeg'
+import rackera_2driver5041_2medios_6p_audiopipe from '../assets/products_section_pictures/rackera-2driver5041-2medios-6p-audiopipe.jpeg'
 
 
 import icon_categories from '../assets/icon-productsdata-categories/Success.png'
@@ -116,7 +118,8 @@ export const FEATURED_PRODUCTS = [
         image: estereo_b52,
         description: 'Receptor de audio digital con Bluetooth.',
         badge: 'Más vendido',
-        price: '$70.000'
+        price: '$70.000',
+        state: true
     },
     {
         id: 2,
@@ -126,7 +129,8 @@ export const FEATURED_PRODUCTS = [
         image: rackera_2y2_para_pote,
         description: 'Rackera 2 drivers Jahro 250 watts y 2 super tweeters Jahro',
         badge: 'Más vendido',
-        price: '$160.000'
+        price: '$160.000',
+        state: true
     },
     {
         id: 3,
@@ -136,7 +140,8 @@ export const FEATURED_PRODUCTS = [
         image: pote_taramps_400x4,
         description: 'Potencia Taramps 400x4 4 canales 400 watts RMS',
         badge: 'Mas vendido',
-        price: '$100.000'
+        price: '$100.000',
+        state: true
     },
     {
         id: 4,
@@ -146,7 +151,8 @@ export const FEATURED_PRODUCTS = [
         image: tweeter_jbl_st400_trio,
         description: 'Tweeter JBL ST400 Trio de 200w rms',
         badge: 'Top Calidad',
-        price: '$110.000'
+        price: '$110.000',
+        state: true
     },
     {
         id: 5,
@@ -156,7 +162,8 @@ export const FEATURED_PRODUCTS = [
         image: driver_jbl_250,
         description: 'Driver JBL D250-X',
         badge: 'Recomendado',
-        price: '$80.000'
+        price: '$80.000',
+        state: true
     },
     {
         id: 6,
@@ -166,21 +173,24 @@ export const FEATURED_PRODUCTS = [
         image: rackera_2y2_chica,
         description: 'Rackera 2 drivers Jahro 5041 de 150 watts y 2 tweeters Jahro',
         badge: 'Más vendido',
-        price: '$80.000'
+        price: '$80.000',
+        state: true
     },
 ];
 
 export const ALL_PRODUCTS = [
     ...FEATURED_PRODUCTS,
-    /*     {
-            id: 7,
-            name: 'Sony XAV-AX5500',
-            category: 'estereos',
-            brand: 'Sony',
-            image: null,
-            description: 'Pantalla táctil de 6.95" con Apple CarPlay, Android Auto, WebLink Cast y Bluetooth.',
-            badge: null,
-        }, */
+    {
+        id: 7,
+        name: 'Sony XAV-AX5500',
+        category: 'estereos',
+        brand: 'Sony',
+        image: null,
+        description: 'Pantalla táctil de 6.95" con Apple CarPlay, Android Auto, WebLink Cast y Bluetooth.',
+        badge: null,
+        price: '$140.000',
+        state: false
+    },
     {
         id: 8,
         name: 'Rackera 2 medios de 8 pulgadas y 2 super tweeters Jahro',
@@ -189,7 +199,8 @@ export const ALL_PRODUCTS = [
         image: rackera_2medios_2super,
         description: 'Rackera 2 medios de 8 pulgadas marca Jahro y 2 super tweeters Jahro',
         badge: null,
-        price: '$140.000'
+        price: '$140.000',
+        state: true
     },
     {
         id: 9,
@@ -199,7 +210,8 @@ export const ALL_PRODUCTS = [
         image: rackera_4drivers5041,
         description: 'Rackera 4 drivers Jahro 5041 de 150 watts',
         badge: null,
-        price: '$125.000'
+        price: '$125.000',
+        state: true
     },
     {
         id: 10,
@@ -209,7 +221,8 @@ export const ALL_PRODUCTS = [
         image: rackera_curva_completa_estereo,
         description: 'Rackera 2 drivers, 2 medios y 2 tweeters marca Jahro',
         badge: 'Más vendido',
-        price: '$170.000'
+        price: '$170.000',
+        state: true
     },
     {
         id: 11,
@@ -219,7 +232,8 @@ export const ALL_PRODUCTS = [
         image: kit_instalacion_infinity_tech,
         description: 'Kit de cableado completo calibre 8 GA. Incluye cable de poder, tierra, señal RCA y fusible.',
         badge: null,
-        price: '$25.000'
+        price: '$25.000',
+        state: true
     },
     {
         id: 12,
@@ -229,7 +243,8 @@ export const ALL_PRODUCTS = [
         image: rackera_2driver_2bomber_2tweeter,
         description: 'Rackera 2 drivers Jahro, 2 parlantes Bomber de 6" y 2 tweeters marca Jahro',
         badge: 'Oferta',
-        price: '$75.000'
+        price: '$75.000',
+        state: true
     },
     {
         id: 13,
@@ -239,7 +254,8 @@ export const ALL_PRODUCTS = [
         image: estereo_philco,
         description: 'Estereo Philco con Bluetooth, USB, Manos Libres',
         badge: 'Nuevo',
-        price: '$60.000'
+        price: '$60.000',
+        state: true
     },
     {
         id: 14,
@@ -249,7 +265,8 @@ export const ALL_PRODUCTS = [
         image: rackera_2driver_26x9pioneer,
         description: 'Rackera 2 drivers Jahro 5041 de 150 watts y 2 parlantes Pioneer 6x9',
         badge: null,
-        price: '$160.000'
+        price: '$160.000',
+        state: true
     },
     {
         id: 15,
@@ -259,7 +276,8 @@ export const ALL_PRODUCTS = [
         image: rackera_2parlantes_2tweeter_jahro,
         description: 'Rackera 2 parlantes de 6" marca Jahro y 2 tweeters marca Jahro',
         badge: null,
-        price: '$80.000'
+        price: '$80.000',
+        state: true
     },
     {
         id: 16,
@@ -269,7 +287,8 @@ export const ALL_PRODUCTS = [
         image: super_tweeter_blauline,
         description: 'Super Tweeter Blauline 1.8 Super Bullet',
         badge: null,
-        price: '$30.000'
+        price: '$30.000',
+        state: true
     },
     {
         id: 17,
@@ -279,7 +298,8 @@ export const ALL_PRODUCTS = [
         image: cable_y_griega,
         description: 'Cable y Griega - 1 rca hembra a 2 rca macho',
         badge: null,
-        price: '$5.000'
+        price: '$5.000',
+        state: true
     },
     {
         id: 18,
@@ -289,7 +309,8 @@ export const ALL_PRODUCTS = [
         image: capacitores_tweeter,
         description: 'Capacitores para Tweeter',
         badge: null,
-        price: '$2.500'
+        price: '$2.500',
+        state: true
     },
     {
         id: 19,
@@ -299,7 +320,8 @@ export const ALL_PRODUCTS = [
         image: capacitores_driver,
         description: 'Capacitores para Driver',
         badge: null,
-        price: '$2.500'
+        price: '$2.500',
+        state: true
     },
     {
         id: 20,
@@ -309,7 +331,8 @@ export const ALL_PRODUCTS = [
         image: difusores_de_aluminio,
         description: 'Difusores de Aluminio para Driver',
         badge: null,
-        price: '$37.000'
+        price: '$37.000',
+        state: true
     },
     {
         id: 21,
@@ -319,7 +342,8 @@ export const ALL_PRODUCTS = [
         image: pote_taramps_800x4,
         description: 'Potencia Taramps 800.4 4 canales 800 watts RMS',
         badge: null,
-        price: '$180.000'
+        price: '$180.000',
+        state: true
     },
     {
         id: 22,
@@ -329,7 +353,8 @@ export const ALL_PRODUCTS = [
         image: medios_de_8_jahro,
         description: 'Medio de 8 pulgadas marca Jahro',
         badge: null,
-        price: '$32.000'
+        price: '$32.000',
+        state: true
     },
     {
         id: 23,
@@ -339,7 +364,8 @@ export const ALL_PRODUCTS = [
         image: estereo_infinity_tech,
         description: 'Estereo Infinity Tech con Bluetooth, USB, MP3',
         badge: 'Oferta',
-        price: '$40.000'
+        price: '$40.000',
+        state: true
     },
     {
         id: 24,
@@ -349,7 +375,8 @@ export const ALL_PRODUCTS = [
         image: difusores_de_plastico_cortos,
         description: 'Difusores de Plástico Cortos',
         badge: null,
-        price: '$3.800'
+        price: '$3.800',
+        state: true
     },
     {
         id: 25,
@@ -359,7 +386,8 @@ export const ALL_PRODUCTS = [
         image: subwoofer_pioneer_12p,
         description: 'Subwoofer Pioneer 12 pulgadas doble bobina TS-W312D4 1600w Max / 500w RMS',
         badge: null,
-        price: '$205.000'
+        price: '$205.000',
+        state: true
     },
     {
         id: 26,
@@ -369,7 +397,8 @@ export const ALL_PRODUCTS = [
         image: rackera_curva_completa_para_pote_bala,
         description: 'Rackera Curva 2 medios bala infinity tech, 2 drivers 250 y 2 super tweeters',
         badge: null,
-        price: '$290.000'
+        price: '$290.000',
+        state: true
     },
     {
         id: 27,
@@ -379,7 +408,8 @@ export const ALL_PRODUCTS = [
         image: parlantes_bomber_6x9_con_caja,
         description: 'Parlantes Bomber 6x9 75 watts rms c/u cuatriaxiales con Cajas individuales',
         badge: null,
-        price: '$75.000'
+        price: '$75.000',
+        state: true
     },
     {
         id: 28,
@@ -389,7 +419,8 @@ export const ALL_PRODUCTS = [
         image: parlantes_jahro_6p,
         description: 'Parlantes Jahro 6 pulgadas',
         badge: 'Oferta',
-        price: '$29.999'
+        price: '$29.999',
+        state: true
     },
     {
         id: 29,
@@ -399,7 +430,8 @@ export const ALL_PRODUCTS = [
         image: parlantes_jahro_5p,
         description: 'Parlantes Jahro 5 pulgadas',
         badge: null,
-        price: '$29.999'
+        price: '$29.999',
+        state: true
     },
     {
         id: 30,
@@ -409,7 +441,8 @@ export const ALL_PRODUCTS = [
         image: parlantes_jahro_4p,
         description: 'Parlantes Jahro 4 pulgadas',
         badge: null,
-        price: '$28.000'
+        price: '$28.000',
+        state: true
     },
     {
         id: 31,
@@ -419,7 +452,8 @@ export const ALL_PRODUCTS = [
         image: medios_de_6_jahro,
         description: 'Medios de 6" marca Jahro',
         badge: null,
-        price: '$27.000'
+        price: '$27.000',
+        state: true
     },
     {
         id: 32,
@@ -429,7 +463,8 @@ export const ALL_PRODUCTS = [
         image: driver_jahro_5041,
         description: 'Driver Jahro 5041 de 150 watts',
         badge: null,
-        price: '$22.000'
+        price: '$22.000',
+        state: true
     },
     {
         id: 33,
@@ -439,7 +474,8 @@ export const ALL_PRODUCTS = [
         image: driver_jbl_trio,
         description: 'Driver JBL D250 Trio de 200w rms',
         badge: 'Top Calidad',
-        price: '$135.000'
+        price: '$135.000',
+        state: true
     },
     {
         id: 34,
@@ -449,7 +485,8 @@ export const ALL_PRODUCTS = [
         image: controles_stetsom,
         description: 'Controlador de Sonido Stetsom',
         badge: 'Nuevo',
-        price: '$49.999'
+        price: '$49.999',
+        state: true
     },
     {
         id: 36,
@@ -459,7 +496,8 @@ export const ALL_PRODUCTS = [
         image: tweeter_jbl_st200,
         description: 'Tweeter JBL ST200 de 100w rms',
         badge: null,
-        price: '$55.000'
+        price: '$55.000',
+        state: true
     },
     {
         id: 35,
@@ -469,7 +507,8 @@ export const ALL_PRODUCTS = [
         image: estereo_crown_mustang,
         description: 'Estereo Crown Mustang con Bluetooth, USB, MP3',
         badge: null,
-        price: '$65.000'
+        price: '$65.000',
+        state: true
     },
     {
         id: 37,
@@ -479,7 +518,8 @@ export const ALL_PRODUCTS = [
         image: woofer_12p_triton,
         description: 'Woofer Triton 12 Pulgadas TR 620 8 ohm 620w Rms 1240w pmpo',
         badge: null,
-        price: '$250.000'
+        price: '$250.000',
+        state: true
     },
     {
         id: 38,
@@ -489,7 +529,8 @@ export const ALL_PRODUCTS = [
         image: woofer_12p_triton_850rms,
         description: 'Woofer Triton Medio Grave 850w Rms 8 Ohm Tr 850 Negro',
         badge: null,
-        price: '$340.000'
+        price: '$340.000',
+        state: true
     },
     {
         id: 39,
@@ -499,7 +540,8 @@ export const ALL_PRODUCTS = [
         image: driver_jahro_5042,
         description: 'Driver Jahro 5042 250 watts max 400w Rms',
         badge: null,
-        price: '$47.000'
+        price: '$47.000',
+        state: true
     },
     {
         id: 40,
@@ -509,7 +551,8 @@ export const ALL_PRODUCTS = [
         image: pote_sound_digital_400x4,
         description: 'Potencia Sound Digital 400.4 400w Rms 4 canales',
         badge: 'Oferta',
-        price: '$100.000'
+        price: '$100.000',
+        state: true
     },
     {
         id: 41,
@@ -519,7 +562,8 @@ export const ALL_PRODUCTS = [
         image: pote_sound_digital_800x4,
         description: 'Potencia Sound Digital 800.4 800w Rms 4 canales',
         badge: null,
-        price: '$170.000'
+        price: '$170.000',
+        state: true
     },
     {
         id: 42,
@@ -529,7 +573,8 @@ export const ALL_PRODUCTS = [
         image: adaptador_imp_jahro,
         description: 'Adaptador Conversor De Impedancia Regulable Jahro',
         badge: null,
-        price: '$14.500'
+        price: '$14.500',
+        state: true
     },
     {
         id: 43,
@@ -539,7 +584,8 @@ export const ALL_PRODUCTS = [
         image: adaptador_imp_blauline,
         description: 'Adaptador De Impedancia 4 Canales Salida Remoto Blauline',
         badge: null,
-        price: '$25.000'
+        price: '$25.000',
+        state: true
     },
     {
         id: 44,
@@ -549,7 +595,8 @@ export const ALL_PRODUCTS = [
         image: parlantes_pioneer_300w,
         description: 'Pioneer TS G1620F Negro 6.5 Pulgadas Potencia Máxima 300W',
         badge: null,
-        price: '$80.000'
+        price: '$80.000',
+        state: true
     },
     {
         id: 45,
@@ -559,7 +606,8 @@ export const ALL_PRODUCTS = [
         image: rackera_curva_completa_para_pote,
         description: 'Rackera Curva 2 Medios de 8 pulgadas, 2 Drivers 250 y 2 Super Tweeters',
         badge: null,
-        price: '$260.000'
+        price: '$260.000',
+        state: true
     },
     {
         id: 46,
@@ -569,7 +617,8 @@ export const ALL_PRODUCTS = [
         image: voltimetro_taramps,
         description: 'Voltimetro automotivo Taramps VTR 1000',
         badge: null,
-        price: '$27.000'
+        price: '$27.000',
+        state: true
     },
     {
         id: 47,
@@ -579,6 +628,30 @@ export const ALL_PRODUCTS = [
         image: cable_rca_svart_4mm_1m,
         description: 'Cable RCA Svart 4mm 1m',
         badge: null,
-        price: '$17.000'
-    }
+        price: '$17.000',
+        state: true
+    },
+    {
+        id: 48,
+        name: 'Adaptador de Impedancia Maverick',
+        category: 'accesorios',
+        brand: 'Maverick',
+        image: adaptador_imp_maverick,
+        description: 'Adaptador de Impedancia Maverick universal',
+        badge: null,
+        price: '$14.500',
+        state: true
+    },
+    {
+        id: 49,
+        name: 'Rackera 2 Drivers Jahro y 2 Medios de 6 pulgadas AudioPipe',
+        category: 'rackeras',
+        brand: null,
+        image: rackera_2driver5041_2medios_6p_audiopipe,
+        description: 'Rackera 2 Drivers Jahro 5041, 2 Medios de 6 pulgadas AudioPipe 250W MAX',
+        badge: null,
+        price: '$165.000',
+        state: true
+    },
+
 ];
