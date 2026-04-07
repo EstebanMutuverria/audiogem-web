@@ -53,7 +53,11 @@ import voltimetro_taramps from '../assets/products_section_pictures/voltimetro-t
 import cable_rca_svart_4mm_1m from '../assets/products_section_pictures/cable-rca-svart-4mm-1m.jpeg'
 import adaptador_imp_maverick from '../assets/products_section_pictures/adaptador-imp-maverick.jpeg'
 import rackera_2driver5041_2medios_6p_audiopipe from '../assets/products_section_pictures/rackera-2driver5041-2medios-6p-audiopipe.jpeg'
-
+import parlantes_bomber_5pulgadas from '../assets/products_section_pictures/parlantes-bomber-5pulgadas.jpeg'
+import parlantes_pioneer_6_coma_5_pulgadas_280w from '../assets/products_section_pictures/parlantes-pioneer-6.5pulgadas-280w.jpeg'
+import rackera_2_6x9_pioneer_2_supertweeter_jahro from '../assets/products_section_pictures/rackera-2-6x9-pioneer-2-supertweeter-jahro.jpeg'
+import rackera_2driver_2tweeter_arwen from '../assets/products_section_pictures/rackera-2driver-2tweeter-arwen.jpeg'
+import tweeter_bala_ds18_pro_twx2 from '../assets/products_section_pictures/tweeter-bala-ds18-pro-twx2.jpeg'
 
 import icon_categories from '../assets/icon-productsdata-categories/Success.png'
 
@@ -140,7 +144,7 @@ export const FEATURED_PRODUCTS = [
         image: pote_taramps_400x4,
         description: 'Potencia Taramps 400x4 4 canales 400 watts RMS',
         badge: 'Mas vendido',
-        price: '$100.000',
+        price: '$90.000',
         state: true
     },
     {
@@ -386,7 +390,7 @@ export const ALL_PRODUCTS = [
         image: subwoofer_pioneer_12p,
         description: 'Subwoofer Pioneer 12 pulgadas doble bobina TS-W312D4 1600w Max / 500w RMS',
         badge: null,
-        price: '$205.000',
+        price: '$200.000',
         state: true
     },
     {
@@ -406,7 +410,7 @@ export const ALL_PRODUCTS = [
         category: 'parlantes',
         brand: 'Bomber',
         image: parlantes_bomber_6x9_con_caja,
-        description: 'Parlantes Bomber 6x9 75 watts rms c/u cuatriaxiales con Cajas individuales',
+        description: 'Parlantes Bomber 6x9 con Cajas individuales',
         badge: null,
         price: '$75.000',
         state: true
@@ -653,5 +657,60 @@ export const ALL_PRODUCTS = [
         price: '$165.000',
         state: true
     },
+    {
+        id: 50,
+        name: 'Parlantes Bomber 5 pulgadas',
+        category: 'parlantes',
+        brand: 'Bomber',
+        image: parlantes_bomber_5pulgadas,
+        description: 'Parlantes Bomber 5 pulgadas 65W RMS',
+        badge: null,
+        price: '$50.000',
+        state: true
+    },
+    {
+        id: 51,
+        name: 'Parlantes Pioneer 6.5 pulgadas 280W MAX',
+        category: 'parlantes',
+        brand: 'Pioneer',
+        image: parlantes_pioneer_6_coma_5_pulgadas_280w,
+        description: 'Parlantes Pioneer 6.5 pulgadas 280W MAX',
+        badge: null,
+        price: '$68.000',
+        state: true
+    },
+    {
+        id: 52,
+        name: 'Rackera 2 6x9 Pioneer y 2 Super Tweeter Jahro',
+        category: 'rackeras',
+        brand: null,
+        image: rackera_2_6x9_pioneer_2_supertweeter_jahro,
+        description: 'Rackera 2 6x9 Pioneer de 500W MAX y 2 Super Tweeter Jahro',
+        badge: null,
+        price: '$170.000',
+        state: true
+    },
+    {
+        id: 53,
+        name: 'Rackera 2 Drivers y 2 Tweeter Arwen',
+        category: 'rackeras',
+        brand: null,
+        image: rackera_2driver_2tweeter_arwen,
+        description: 'Rackera 2 Drivers y 2 Tweeter Arwen',
+        badge: null,
+        price: '$85.000',
+        state: true
+    },
+    {
+        id: 54,
+        name: 'Tweeter Bala DS18 Pro TWX2 (el par)',
+        category: 'componentes',
+        brand: 'DS18',
+        image: tweeter_bala_ds18_pro_twx2,
+        description: 'Tweeter Bala DS18 Pro TWX2 de 3.78 pulgadas',
+        badge: null,
+        price: '$70.000',
+        state: true
+    }
 
 ];
