@@ -4,10 +4,13 @@
  * - Sticky con efecto glassmorphism al hacer scroll
  * - NavLink de React Router para estilo "active" automático
  * - Menú hamburguesa en móvil
+ * - Botón "Soy Admin" para autenticar y ver precios base
  */
 
 import { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import { useAdmin } from '../../context/AdminContext';
+import AdminLoginModal from '../ui/AdminLoginModal';
 import './Navbar.css';
 
 const NAV_LINKS = [
@@ -20,6 +23,8 @@ const NAV_LINKS = [
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const { isAdmin, logout } = useAdmin();
 
     // Detecta scroll para agregar sombra al navbar
     useEffect(() => {
@@ -30,6 +35,14 @@ const Navbar = () => {
 
     // Cierra el menú móvil al cambiar de ruta
     const closeMenu = () => setIsMenuOpen(false);
+
+    const handleAdminClick = () => {
+        if (isAdmin) {
+            logout();
+        } else {
+            setIsModalOpen(true);
+        }
+    };
 
     return (
         <>
@@ -58,10 +71,24 @@ const Navbar = () => {
                         ))}
                     </nav>
 
-                    {/* CTA desktop */}
-                    <Link to="/contacto" className="navbar__cta">
-                        Consultanos
-                    </Link>
+                    {/* Acciones desktop */}
+                    <div className="navbar__actions">
+                        <button
+                            className={`navbar__admin-btn ${isAdmin ? 'navbar__admin-btn--active' : ''}`}
+                            onClick={handleAdminClick}
+                            aria-label={isAdmin ? 'Cerrar sesión de administrador' : 'Acceder como administrador'}
+                            title={isAdmin ? 'Sesión admin activa — click para cerrar sesión' : 'Soy Admin'}
+                        >
+                            <span className="navbar__admin-btn-icon">{isAdmin ? '🔓' : '🔐'}</span>
+                            <span className="navbar__admin-btn-label">
+                                {isAdmin ? 'Admin activo' : 'Soy Admin'}
+                            </span>
+                        </button>
+
+                        <Link to="/contacto" className="navbar__cta">
+                            Consultanos
+                        </Link>
+                    </div>
 
                     {/* Hamburguesa móvil */}
                     <button
@@ -98,7 +125,23 @@ const Navbar = () => {
                 <Link to="/contacto" className="navbar__mobile-cta" onClick={closeMenu}>
                     Consultanos
                 </Link>
+                {/* Botón admin en menú móvil */}
+                <button
+                    className={`navbar__mobile-admin-btn ${isAdmin ? 'navbar__mobile-admin-btn--active' : ''}`}
+                    onClick={() => {
+                        closeMenu();
+                        handleAdminClick();
+                    }}
+                >
+                    {isAdmin ? '🔓 Cerrar sesión admin' : '🔐 Soy Admin'}
+                </button>
             </nav>
+
+            {/* Modal de autenticación */}
+            <AdminLoginModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+            />
         </>
     );
 };

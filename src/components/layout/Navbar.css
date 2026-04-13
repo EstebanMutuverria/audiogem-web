@@ -100,6 +100,13 @@
     width: calc(100% - var(--spacing-8));
 }
 
+/* Acciones agrupadas (admin btn + CTA) */
+.navbar__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+}
+
 /* CTA Button */
 .navbar__cta {
     padding: var(--spacing-2) var(--spacing-5);
@@ -109,7 +116,6 @@
     font-weight: var(--font-weight-semibold);
     border-radius: var(--radius-lg);
     letter-spacing: 0.03em;
-    transition: opacity var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
     text-decoration: none;
     transition: all var(--transition-base);
 }
@@ -118,6 +124,53 @@
     opacity: 0.9;
     transform: scale(1.05);
     box-shadow: var(--shadow-glow);
+}
+
+/* Botón Admin (desktop) */
+.navbar__admin-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-2) var(--spacing-4);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    color: var(--color-text-muted);
+    font-size: var(--text-xs);
+    font-weight: var(--font-weight-semibold);
+    font-family: var(--font-body);
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    white-space: nowrap;
+}
+
+.navbar__admin-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: var(--color-text);
+}
+
+.navbar__admin-btn--active {
+    background: rgba(244, 162, 97, 0.1);
+    border-color: rgba(244, 162, 97, 0.4);
+    color: #f4a261;
+    box-shadow: 0 0 12px rgba(244, 162, 97, 0.15);
+}
+
+.navbar__admin-btn--active:hover {
+    background: rgba(244, 162, 97, 0.18);
+    border-color: rgba(244, 162, 97, 0.6);
+    color: #f4a261;
+}
+
+.navbar__admin-btn-icon {
+    font-size: 0.9rem;
+    line-height: 1;
+}
+
+.navbar__admin-btn-label {
+    line-height: 1;
 }
 
 /* Hamburger menu (mobile) */
@@ -197,13 +250,40 @@
     text-decoration: none;
 }
 
+/* Botón Admin (móvil) */
+.navbar__mobile-admin-btn {
+    margin-top: var(--spacing-2);
+    padding: var(--spacing-3) var(--spacing-4);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-medium);
+    font-family: var(--font-body);
+    cursor: pointer;
+    text-align: left;
+    transition: all var(--transition-fast);
+}
+
+.navbar__mobile-admin-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--color-text);
+}
+
+.navbar__mobile-admin-btn--active {
+    background: rgba(244, 162, 97, 0.1);
+    border-color: rgba(244, 162, 97, 0.35);
+    color: #f4a261;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .navbar__nav {
         display: none;
     }
 
-    .navbar__cta {
+    .navbar__actions {
         display: none;
     }
 

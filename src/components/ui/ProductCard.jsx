@@ -6,6 +6,7 @@
 
 import './ProductCard.css';
 import StarBorder from '../animations/StarBorder';
+import { useAdmin } from '../../context/AdminContext';
 
 const CATEGORY_ICONS = {
     estereos: '🎵',
@@ -20,8 +21,9 @@ const CATEGORY_ICONS = {
  * @param {Object} props.product - Objeto de producto de productsData.js
  */
 const ProductCard = ({ product }) => {
-    const { name, category, brand, image, description, badge, price } = product;
+    const { name, category, brand, image, description, badge, price, base_price } = product;
     const icon = CATEGORY_ICONS[category] ?? '🎵';
+    const { isAdmin } = useAdmin();
 
     return (
         <article className="product-card">
@@ -42,7 +44,14 @@ const ProductCard = ({ product }) => {
             <div className="product-card__body">
                 <span className="product-card__category">{category}</span>
                 <h3 className="product-card__name">{name}</h3>
-                <span className="product-card__price">{price}</span>
+                <div className="product-card__prices">
+                    <span className="product-card__price">{price}</span>
+                    {isAdmin && base_price && (
+                        <span className="product-card__base-price" title="Precio base (costo)">
+                            💰 Costo: {base_price}
+                        </span>
+                    )}
+                </div>
                 <p className="product-card__description">{description}</p>
                 <div className="product-card__footer">
                     <span className="product-card__brand">{brand}</span>
