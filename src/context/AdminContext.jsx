@@ -5,7 +5,7 @@
  */
 
 import { createContext, useContext, useState, useCallback } from 'react';
-import ENVIRONMENT from '../environment/environment';
+import ENVIRONMENT from '../environment/environment.js';
 
 const AdminContext = createContext(null);
 
@@ -23,8 +23,8 @@ export const AdminProvider = ({ children }) => {
      */
     const login = useCallback((password) => {
         const adminPassword = ENVIRONMENT.VITE_CLAVE_ADMIN;
-        console.log('ADMIN PASSWORND: ', adminPassword)
-        console.log('PASSWORND INPUT', password)
+        console.log('ADMIN PASSWORD: ', adminPassword)
+        console.log('PASSWORD INPUT: ', password)
         if (password === adminPassword) {
             setIsAdmin(true);
             sessionStorage.setItem(SESSION_KEY, 'true');
