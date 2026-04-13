@@ -23,6 +23,8 @@ export const AdminProvider = ({ children }) => {
      */
     const login = useCallback((password) => {
         const adminPassword = ENVIRONMENT.VITE_CLAVE_ADMIN;
+        console.log('ADMIN PASSWORND: ', adminPassword)
+        console.log('PASSWORND INPUT', password)
         if (password === adminPassword) {
             setIsAdmin(true);
             sessionStorage.setItem(SESSION_KEY, 'true');
