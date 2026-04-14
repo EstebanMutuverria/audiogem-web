@@ -1,18 +1,18 @@
 /* AdminLoginModal.css */
 
-/* Overlay */
+/* Overlay con un blur más profundo y color oscuro sutil */
 .admin-modal__overlay {
     position: fixed;
     inset: 0;
-    z-index: 9999;
+    z-index: var(--z-modal);
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    animation: adminModalFadeIn 0.2s ease forwards;
-    padding: var(--spacing-4);
+    background: rgba(7, 9, 13, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    animation: adminModalFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    padding: var(--spacing-6);
 }
 
 @keyframes adminModalFadeIn {
@@ -20,206 +20,245 @@
     to   { opacity: 1; }
 }
 
-/* Panel glassmorphism */
+/* Panel: Glassmorphism refinado, bordes suaves y sombra profunda */
 .admin-modal__panel {
     position: relative;
     width: 100%;
-    max-width: 400px;
-    background: rgba(18, 18, 30, 0.92);
-    border: 1px solid rgba(72, 149, 239, 0.25);
-    border-radius: var(--radius-xl);
-    padding: var(--spacing-8) var(--spacing-7);
-    box-shadow:
-        0 0 0 1px rgba(72, 149, 239, 0.08),
-        0 24px 64px rgba(0, 0, 0, 0.6),
-        0 0 40px rgba(72, 149, 239, 0.06);
-    animation: adminModalSlideUp 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    max-width: 380px;
+    background: rgba(20, 24, 32, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-2xl);
+    padding: var(--spacing-10) var(--spacing-8);
+    box-shadow: 
+        0 20px 50px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+    animation: adminModalSlideUp 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
     text-align: center;
+    overflow: hidden;
+}
+
+/* Efecto de luz superior muy sutil */
+.admin-modal__panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(72, 149, 239, 0.3), transparent);
 }
 
 @keyframes adminModalSlideUp {
-    from { opacity: 0; transform: translateY(20px) scale(0.97); }
-    to   { opacity: 1; transform: translateY(0) scale(1); }
+    from { 
+        opacity: 0; 
+        transform: translateY(30px) scale(0.95); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0) scale(1); 
+    }
 }
 
-/* Shake on wrong password */
+/* Shake refinado: más corto y seco */
 .admin-modal__panel--shake {
-    animation: adminShake 0.45s cubic-bezier(0.36, 0.07, 0.19, 0.97) forwards;
+    animation: adminShake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
 
 @keyframes adminShake {
-    0%   { transform: translateX(0); }
-    15%  { transform: translateX(-8px); }
-    30%  { transform: translateX(8px); }
-    45%  { transform: translateX(-6px); }
-    60%  { transform: translateX(6px); }
-    75%  { transform: translateX(-3px); }
-    90%  { transform: translateX(3px); }
-    100% { transform: translateX(0); }
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
 }
 
-/* Icono */
+/* Contenedor del Icono/Avatar de Admin */
 .admin-modal__icon {
-    font-size: 2.5rem;
-    margin-bottom: var(--spacing-4);
-    display: block;
-    filter: drop-shadow(0 0 12px rgba(72, 149, 239, 0.4));
+    width: 64px;
+    height: 64px;
+    margin: 0 auto var(--spacing-6);
+    background: rgba(72, 149, 239, 0.1);
+    border: 1px solid rgba(72, 149, 239, 0.2);
+    border-radius: var(--radius-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    color: var(--color-primary);
+    position: relative;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Título */
+.admin-modal__icon::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: inherit;
+    border: 1px solid rgba(72, 149, 239, 0.1);
+    opacity: 0.5;
+}
+
+/* Título y Subtítulo */
 .admin-modal__title {
     font-family: var(--font-heading);
     font-size: var(--text-2xl);
     font-weight: var(--font-weight-bold);
-    color: var(--color-text);
+    color: var(--color-white);
     margin-bottom: var(--spacing-2);
+    letter-spacing: -0.02em;
 }
 
-/* Subtítulo */
 .admin-modal__subtitle {
     font-size: var(--text-sm);
     color: var(--color-text-muted);
-    margin-bottom: var(--spacing-6);
-    line-height: 1.5;
+    margin-bottom: var(--spacing-8);
+    padding: 0 var(--spacing-2);
 }
 
-/* Formulario */
+/* Estructura del Formulario */
 .admin-modal__form {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-4);
+    gap: var(--spacing-6);
     text-align: left;
 }
 
 .admin-modal__field {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-2);
+    gap: var(--spacing-3);
 }
 
 .admin-modal__label {
     font-size: var(--text-xs);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-bold);
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--color-text-muted);
+    letter-spacing: 0.1em;
+    color: var(--color-text-faint);
 }
 
-/* Input wrapper con toggle */
+/* Input con diseño minimalista "dentado" */
 .admin-modal__input-wrapper {
     position: relative;
-    display: flex;
-    align-items: center;
 }
 
 .admin-modal__input {
     width: 100%;
-    padding: var(--spacing-3) var(--spacing-10) var(--spacing-3) var(--spacing-4);
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: var(--radius-md);
-    color: var(--color-text);
+    height: 48px;
+    padding: 0 var(--spacing-12) 0 var(--spacing-4);
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-lg);
+    color: var(--color-white);
     font-size: var(--text-base);
     font-family: var(--font-body);
     outline: none;
-    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    transition: all var(--transition-base);
 }
 
 .admin-modal__input:focus {
-    border-color: rgba(72, 149, 239, 0.6);
-    box-shadow: 0 0 0 3px rgba(72, 149, 239, 0.12);
+    background: rgba(0, 0, 0, 0.4);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(72, 149, 239, 0.1);
 }
 
 .admin-modal__input--error {
-    border-color: rgba(239, 68, 68, 0.6);
-}
-
-.admin-modal__input--error:focus {
-    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12);
+    border-color: rgba(255, 77, 109, 0.5);
+    background: rgba(255, 77, 109, 0.05);
 }
 
 .admin-modal__input::placeholder {
-    color: rgba(255, 255, 255, 0.2);
-    letter-spacing: 0.15em;
+    color: rgba(255, 255, 255, 0.15);
+    letter-spacing: 0.2em;
 }
 
-/* Toggle mostrar/ocultar contraseña */
+/* Botón de visibilidad de password */
 .admin-modal__toggle-pw {
     position: absolute;
-    right: var(--spacing-3);
-    background: none;
+    right: var(--spacing-2);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    background: transparent;
     border: none;
+    color: var(--color-text-faint);
     cursor: pointer;
-    font-size: 1rem;
-    padding: 0;
-    opacity: 0.6;
-    transition: opacity var(--transition-fast);
-    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
 }
 
 .admin-modal__toggle-pw:hover {
-    opacity: 1;
+    color: var(--color-white);
+    background: rgba(255, 255, 255, 0.05);
 }
 
-/* Mensaje de error */
+/* Mensaje de Error */
 .admin-modal__error {
     font-size: var(--text-xs);
-    color: #f87171;
-    margin-top: var(--spacing-1);
+    color: var(--color-error);
+    margin-top: var(--spacing-2);
     display: flex;
     align-items: center;
-    gap: var(--spacing-1);
+    gap: var(--spacing-2);
+    font-weight: var(--font-weight-medium);
 }
 
-.admin-modal__error::before {
-    content: '⚠';
-}
-
-/* Botón submit */
+/* Botón Submit: Premium Glow */
 .admin-modal__submit {
     width: 100%;
-    padding: var(--spacing-3) var(--spacing-5);
-    background: var(--gradient-primary);
+    height: 48px;
+    background: var(--color-primary);
     color: var(--color-white);
     font-size: var(--text-sm);
-    font-weight: var(--font-weight-semibold);
-    font-family: var(--font-body);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
     border: none;
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-lg);
     cursor: pointer;
-    letter-spacing: 0.04em;
-    transition: opacity var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
-    margin-top: var(--spacing-2);
+    transition: all var(--transition-base);
+    box-shadow: 0 4px 12px rgba(72, 149, 239, 0.2);
 }
 
 .admin-modal__submit:hover:not(:disabled) {
-    opacity: 0.9;
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-glow);
+    background: var(--color-primary-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(72, 149, 239, 0.4);
+}
+
+.admin-modal__submit:active:not(:disabled) {
+    transform: translateY(0);
 }
 
 .admin-modal__submit:disabled {
-    opacity: 0.35;
+    background: var(--color-bg-border);
+    color: var(--color-text-faint);
     cursor: not-allowed;
+    box-shadow: none;
 }
 
-/* Botón cerrar (X) */
+/* Botón cerrar minimalista arriba a la derecha */
 .admin-modal__close {
     position: absolute;
     top: var(--spacing-4);
     right: var(--spacing-4);
-    background: none;
+    width: 32px;
+    height: 32px;
+    background: transparent;
     border: none;
     color: var(--color-text-faint);
-    font-size: var(--text-base);
+    border-radius: var(--radius-full);
     cursor: pointer;
-    padding: var(--spacing-1) var(--spacing-2);
-    border-radius: var(--radius-sm);
-    transition: color var(--transition-fast), background var(--transition-fast);
-    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
 }
 
 .admin-modal__close:hover {
-    color: var(--color-text);
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 77, 109, 0.1);
+    color: var(--color-error);
 }
