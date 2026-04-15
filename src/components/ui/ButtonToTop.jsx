@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import './ButtonToTop.css'
-import { FaArrowUp } from 'react-icons/fa'
+import { HiArrowSmUp } from 'react-icons/hi'
 
 const ButtonToTop = () => {
     const [showButton, setShowButton] = useState(false)
@@ -27,8 +27,15 @@ const ButtonToTop = () => {
         })
     }
     return (
-        <button className={`button-to-top ${showButton ? 'show' : ''}`} onClick={scrollToTop}>
-            <FaArrowUp />
+        <button 
+            className={`button-to-top ${showButton ? 'show' : ''}`} 
+            onClick={scrollToTop}
+            aria-label="Volver arriba"
+            title="Volver arriba"
+        >
+            <div className="button-to-top__content">
+                <HiArrowSmUp className="button-to-top__icon" />
+            </div>
         </button>
     )
 }

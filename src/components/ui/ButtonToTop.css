@@ -1,14 +1,17 @@
+/* ButtonToTop.css */
+
 .button-to-top {
     position: fixed;
     bottom: calc(var(--spacing-8) + 64px + var(--spacing-4));
     right: var(--spacing-10);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: none;
-    background: var(--gradient-primary);
-    color: var(--color-white);
-    font-size: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(15, 15, 20, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: var(--color-text);
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -17,29 +20,66 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transform: translateY(20px);
-    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease, box-shadow 0.3s ease, filter 0.3s ease, scale 0.3s ease;
-    box-shadow: var(--shadow-lg), var(--shadow-glow);
-}
-
-.button-to-top:hover {
-    transform: translateY(1px);
-    box-shadow: 0 0 30px rgba(72, 149, 239, 0.4);
-    filter: brightness(1.1);
-    scale: 1.1;
-    transition: all 0.3s ease;
+    transform: translateY(20px) scale(0.9);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .button-to-top.show {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
 }
 
+.button-to-top__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.button-to-top__icon {
+    font-size: 1.5rem;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hover effects */
+.button-to-top:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 15px rgba(131, 56, 236, 0.3);
+    /* Glow with primary color */
+    transform: translateY(-4px) scale(1.05);
+}
+
+.button-to-top:hover .button-to-top__icon {
+    transform: translateY(-3px);
+    color: var(--color-primary);
+}
+
+/* Active/Focus state */
+.button-to-top:active {
+    transform: translateY(0) scale(0.95);
+}
+
+.button-to-top:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+}
+
+/* Responsive adjustment */
 @media (max-width: 768px) {
     .button-to-top {
-        right: 25px;
-        bottom: calc(var(--spacing-6) + 64px + var(--spacing-2));
+        right: var(--spacing-6);
+        bottom: calc(var(--spacing-6) + 56px + var(--spacing-5));
+        width: 40px;
+        height: 40px;
     }
+
+    /* Ocultamos en móviles si hay algo importante abajo, 
+       pero usualmente se deja visible. Ajustamos posición si es necesario. */
 }
