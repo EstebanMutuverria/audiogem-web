@@ -91,7 +91,7 @@ const Navbar = () => {
                         >
                             <span className="navbar__admin-btn-icon">{isAdmin ? '🔓' : '🔐'}</span>
                             <span className="navbar__admin-btn-label">
-                                {isAdmin ? 'Admin activo' : 'Soy Admin'}
+                                {isAdmin ? 'Cerrar sesion Admin' : 'Soy Admin'}
                             </span>
                         </button>
 
@@ -115,7 +115,7 @@ const Navbar = () => {
             </header>
 
             {/* Overlay background */}
-            <div 
+            <div
                 className={`navbar__overlay ${isMenuOpen ? 'navbar__overlay--open' : ''}`}
                 onClick={closeMenu}
             />
@@ -129,8 +129,8 @@ const Navbar = () => {
                     <span className="navbar__logo-text">
                         AUDIO<span className="navbar__logo-accent">GEM</span>
                     </span>
-                    <button 
-                        className="navbar__mobile-close" 
+                    <button
+                        className="navbar__mobile-close"
                         onClick={closeMenu}
                         aria-label="Cerrar menú"
                     >
@@ -161,7 +161,7 @@ const Navbar = () => {
                         <Link to="/contacto" className="navbar__mobile-cta" onClick={closeMenu}>
                             Consultanos ahora
                         </Link>
-                        
+
                         <button
                             className={`navbar__mobile-admin-btn ${isAdmin ? 'navbar__mobile-admin-btn--active' : ''}`}
                             onClick={() => {
