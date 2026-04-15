@@ -33,6 +33,16 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Lock scroll when menu is open
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => { document.body.style.overflow = ''; };
+    }, [isMenuOpen]);
+
     // Cierra el menú móvil al cambiar de ruta
     const closeMenu = () => setIsMenuOpen(false);
 
@@ -104,37 +114,68 @@ const Navbar = () => {
                 </div>
             </header>
 
+            {/* Overlay background */}
+            <div 
+                className={`navbar__overlay ${isMenuOpen ? 'navbar__overlay--open' : ''}`}
+                onClick={closeMenu}
+            />
+
             {/* Menú móvil */}
             <nav
                 className={`navbar__mobile-menu ${isMenuOpen ? 'navbar__mobile-menu--open' : ''}`}
                 aria-label="Menú móvil"
             >
-                {NAV_LINKS.map(({ to, label }) => (
-                    <NavLink
-                        key={to}
-                        to={to}
-                        end={to === '/'}
-                        className={({ isActive }) =>
-                            `navbar__mobile-link ${isActive ? 'navbar__mobile-link--active' : ''}`
-                        }
+                <div className="navbar__mobile-header">
+                    <span className="navbar__logo-text">
+                        AUDIO<span className="navbar__logo-accent">GEM</span>
+                    </span>
+                    <button 
+                        className="navbar__mobile-close" 
                         onClick={closeMenu}
+                        aria-label="Cerrar menú"
                     >
-                        {label}
-                    </NavLink>
-                ))}
-                <Link to="/contacto" className="navbar__mobile-cta" onClick={closeMenu}>
-                    Consultanos
-                </Link>
-                {/* Botón admin en menú móvil */}
-                <button
-                    className={`navbar__mobile-admin-btn ${isAdmin ? 'navbar__mobile-admin-btn--active' : ''}`}
-                    onClick={() => {
-                        closeMenu();
-                        handleAdminClick();
-                    }}
-                >
-                    {isAdmin ? '🔓 Cerrar sesión admin' : '🔐 Soy Admin'}
-                </button>
+                        ✕
+                    </button>
+                </div>
+
+                <div className="navbar__mobile-content">
+                    <div className="navbar__mobile-links">
+                        {NAV_LINKS.map(({ to, label }, index) => (
+                            <NavLink
+                                key={to}
+                                to={to}
+                                end={to === '/'}
+                                className={({ isActive }) =>
+                                    `navbar__mobile-link ${isActive ? 'navbar__mobile-link--active' : ''}`
+                                }
+                                onClick={closeMenu}
+                                style={{ '--index': index }}
+                            >
+                                <span className="navbar__mobile-link-label">{label}</span>
+                                <span className="navbar__mobile-link-arrow">→</span>
+                            </NavLink>
+                        ))}
+                    </div>
+
+                    <div className="navbar__mobile-footer">
+                        <Link to="/contacto" className="navbar__mobile-cta" onClick={closeMenu}>
+                            Consultanos ahora
+                        </Link>
+                        
+                        <button
+                            className={`navbar__mobile-admin-btn ${isAdmin ? 'navbar__mobile-admin-btn--active' : ''}`}
+                            onClick={() => {
+                                closeMenu();
+                                handleAdminClick();
+                            }}
+                        >
+                            <span className="navbar__mobile-admin-icon">{isAdmin ? '🔓' : '🔐'}</span>
+                            <span className="navbar__mobile-admin-text">
+                                {isAdmin ? 'Panel Admin Activo' : 'Acceso Administrador'}
+                            </span>
+                        </button>
+                    </div>
+                </div>
             </nav>
 
             {/* Modal de autenticación */}

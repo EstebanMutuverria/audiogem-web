@@ -25,6 +25,10 @@ const ProductCard = ({ product }) => {
     const icon = CATEGORY_ICONS[category] ?? '🎵';
     const { isAdmin } = useAdmin();
 
+    const phoneNumber = '1160081534'
+    const message = `Hola AudioGem! Te queria consultar acerca del producto: ${product.name}`
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
     return (
         <article className="product-card">
             {badge && <span className="product-card__badge">{badge}</span>}
@@ -57,7 +61,7 @@ const ProductCard = ({ product }) => {
                     <span className="product-card__brand">{brand}</span>
                     <StarBorder
                         as="a"
-                        href="https://wa.me/1160081534"
+                        href={whatsappUrl}
                         className="product-card__action"
                         color="#4895ef"
                         speed="3s"

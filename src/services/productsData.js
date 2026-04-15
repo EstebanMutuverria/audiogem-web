@@ -128,7 +128,7 @@ export const FEATURED_PRODUCTS = [
     },
     {
         id: 2,
-        name: 'Rackera 2 drivers y 2 tweeters',
+        name: 'Rackera 2 drivers 250W MAX y 2 super tweeters',
         category: 'rackeras',
         brand: null,
         image: rackera_2y2_para_pote,
