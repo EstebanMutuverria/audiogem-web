@@ -1,0 +1,176 @@
+.intro-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden;
+    transition: opacity 0.8s cubic-bezier(0.77, 0, 0.175, 1), 
+                visibility 0.8s cubic-bezier(0.77, 0, 0.175, 1),
+                transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.intro-overlay.exit {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+}
+
+.intro-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.logo-wrapper {
+    margin-bottom: var(--spacing-4);
+    position: relative;
+    overflow: hidden;
+}
+
+.intro-logo {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 10vw, 6rem);
+    font-weight: var(--font-weight-black);
+    color: var(--color-white);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.intro-logo .char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(100%) skewY(10deg);
+    animation: revealChar 0.8s cubic-bezier(0.2, 0.6, 0.35, 1) forwards;
+}
+
+/* Staggered animation for letters */
+.intro-logo .char:nth-child(1) { animation-delay: 0.1s; }
+.intro-logo .char:nth-child(2) { animation-delay: 0.15s; }
+.intro-logo .char:nth-child(3) { animation-delay: 0.2s; }
+.intro-logo .char:nth-child(4) { animation-delay: 0.25s; }
+.intro-logo .char:nth-child(5) { animation-delay: 0.3s; }
+.intro-logo .char:nth-child(6) { animation-delay: 0.35s; }
+.intro-logo .char:nth-child(7) { animation-delay: 0.4s; }
+.intro-logo .char:nth-child(8) { animation-delay: 0.45s; }
+
+@keyframes revealChar {
+    to {
+        opacity: 1;
+        transform: translateY(0) skewY(0);
+    }
+}
+
+.logo-line {
+    width: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    margin: var(--spacing-2) auto 0;
+    border-radius: var(--radius-full);
+    animation: revealLine 1s cubic-bezier(0.2, 0.6, 0.35, 1) forwards;
+    animation-delay: 0.8s;
+}
+
+@keyframes revealLine {
+    to {
+        width: 100%;
+    }
+}
+
+.intro-tagline {
+    font-family: var(--font-body);
+    font-size: var(--text-lg);
+    color: var(--color-primary-light);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: revealTagline 1s cubic-bezier(0.2, 0.6, 0.35, 1) forwards;
+    animation-delay: 1.2s;
+    margin: 0;
+}
+
+@keyframes revealTagline {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Background elements for that "epic" feel */
+.intro-bg-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.15;
+}
+
+.circle-1 {
+    width: 40vw;
+    height: 40vw;
+    background: var(--color-primary);
+    top: -10vw;
+    left: -10vw;
+    animation: float1 10s infinite alternate;
+}
+
+.circle-2 {
+    width: 30vw;
+    height: 30vw;
+    background: var(--color-primary-dark);
+    bottom: -5vw;
+    right: -5vw;
+    animation: float2 12s infinite alternate;
+}
+
+@keyframes float1 {
+    from { transform: translate(0, 0); }
+    to { transform: translate(10%, 10%); }
+}
+
+@keyframes float2 {
+    from { transform: translate(0, 0); }
+    to { transform: translate(-10%, -10%); }
+}
+
+/* Reveal transition for the whole content when exiting */
+.intro-overlay.exit .intro-content {
+    animation: exitContent 0.6s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+@keyframes exitContent {
+    to {
+        opacity: 0;
+        transform: scale(1.1) translateY(-20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .intro-tagline {
+        font-size: var(--text-sm);
+        letter-spacing: 0.15em;
+    }
+    
+    .logo-line {
+        height: 2px;
+    }
+}

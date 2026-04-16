@@ -42,6 +42,7 @@
     /* ===================== GRADIENTES ===================== */
     --gradient-hero: radial-gradient(circle at top left, #141820 0%, #0b0e14 100%);
     --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    --gradient-premium: linear-gradient(135deg, #4895ef 0%, #3f37c9 50%, #7209b7 100%);
     --gradient-card: linear-gradient(145deg, #1c222d 0%, #141820 100%);
     --gradient-text: linear-gradient(135deg, var(--color-text) 0%, var(--color-primary-light) 100%);
 

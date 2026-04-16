@@ -6,20 +6,20 @@
     align-items: center;
     justify-content: center;
     gap: var(--spacing-2);
-    padding: var(--spacing-3) var(--spacing-6);
+    padding: var(--spacing-3) var(--spacing-8);
     font-family: var(--font-body);
+    /* Usando Inter como pidió el usuario */
     font-size: var(--text-sm);
-    font-weight: var(--font-weight-semibold);
-    letter-spacing: 0.03em;
-    border-radius: var(--radius-lg);
-    border: 2px solid transparent;
+    font-weight: var(--font-weight-medium);
+    border-radius: var(--radius-full);
+    /* Redondeado premium */
+    border: 1px solid transparent;
     cursor: pointer;
-    transition: transform var(--transition-fast), opacity var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     text-decoration: none;
     white-space: nowrap;
     user-select: none;
     overflow: hidden;
-    /* Necesario para el efecto de brillo */
 }
 
 .btn:disabled {
@@ -31,62 +31,75 @@
 /* Variantes */
 
 .btn--primary {
-    background: var(--gradient-primary);
+    background: var(--gradient-premium);
     color: var(--color-white);
-    border: transparent;
+    border: none;
+    box-shadow: 0 4px 14px 0 rgba(72, 149, 239, 0.39);
 }
 
 .btn--primary:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-glow);
+    box-shadow: 0 6px 20px rgba(72, 149, 239, 0.5);
+    filter: brightness(1.1);
 }
 
+/* GlareHover logic in CSS for buttons that have it */
 .btn--has-glare {
     padding: 0 !important;
 }
 
 .btn--has-glare .glare-hover__content {
-    gap: var(--spacing-2);
+    /* El componente GlareHover envuelve al contenido, 
+       aquí aseguramos que respete el padding interno del botón */
+    padding: var(--spacing-3) var(--spacing-8);
 }
 
 .btn--secondary {
-    background: transparent;
-    border-color: var(--color-primary);
-    color: var(--color-primary);
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-text);
+    backdrop-filter: blur(8px);
 }
 
 .btn--secondary:hover {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--color-primary);
+    transform: translateY(-1px);
 }
 
 .btn--ghost {
     background: transparent;
-    border-color: var(--color-bg-border);
+    border-color: transparent;
     color: var(--color-text-muted);
 }
 
 .btn--ghost:hover {
-    border-color: var(--color-text-muted);
     color: var(--color-text);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 /* Tamaños */
 
 .btn--sm {
-    padding: var(--spacing-2) var(--spacing-4);
+    padding: var(--spacing-2) var(--spacing-5);
     font-size: var(--text-xs);
-    border-radius: var(--radius-md);
+}
+
+.btn--sm.btn--has-glare .glare-hover__content {
+    padding: var(--spacing-2) var(--spacing-5);
 }
 
 .btn--lg {
-    padding: var(--spacing-4) var(--spacing-8);
+    padding: var(--spacing-4) var(--spacing-10);
     font-size: var(--text-base);
+}
+
+.btn--lg.btn--has-glare .glare-hover__content {
+    padding: var(--spacing-4) var(--spacing-10);
 }
 
 .btn--icon {
     padding: var(--spacing-3);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-full);
     aspect-ratio: 1;
 }

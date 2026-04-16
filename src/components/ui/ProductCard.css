@@ -116,8 +116,15 @@
 }
 
 @keyframes basePriceFadeIn {
-    from { opacity: 0; transform: translateY(-4px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .product-card__description {
@@ -148,41 +155,41 @@
 }
 
 .product-card__action {
-    /* Hereda display:inline-block de .star-border-container */
-    border-radius: 20px;
-    text-decoration: none;
-    transition: transform var(--transition-base), filter var(--transition-base);
+    display: inline-block;
 }
 
-.product-card__action:hover {
-    transform: translateY(-1px);
-    filter: brightness(1.15);
-}
-
-/* Contenido visible dentro del StarBorder */
 .product-card__action-inner {
     display: inline-flex;
     align-items: center;
-    gap: var(--spacing-1);
-    padding: 6px 14px;
+    gap: var(--spacing-2);
+    padding: 8px 20px;
     font-size: var(--text-xs);
     font-weight: var(--font-weight-semibold);
-    letter-spacing: 0.05em;
-    color: var(--color-primary);
-    border: 1px solid rgba(72, 149, 239, 0.25);
-    border-radius: 20px;
-    background: rgba(72, 149, 239, 0.06);
-    backdrop-filter: blur(4px);
-    white-space: nowrap;
-    transition: color var(--transition-fast), background var(--transition-fast), gap var(--transition-fast);
+    color: var(--color-primary-light);
+    background: rgba(72, 149, 239, 0.08);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(72, 149, 239, 0.15);
+    border-radius: var(--radius-full);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .product-card__action:hover .product-card__action-inner {
-    color: var(--color-primary-light);
-    background: rgba(72, 149, 239, 0.12);
-    gap: var(--spacing-2);
+    background: rgba(72, 149, 239, 0.15);
+    border-color: var(--color-primary-light);
+    color: var(--color-white);
+    transform: translateX(4px);
+}
+
+/* Efecto de flecha animada */
+.product-card__action-inner::after {
+    content: '→';
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card__action:hover .product-card__action-inner::after {
+    transform: translateX(4px);
 }
 
 .product-card:hover .product-card__action-inner {
-    gap: var(--spacing-2);
+    border-color: rgba(72, 149, 239, 0.3);
 }

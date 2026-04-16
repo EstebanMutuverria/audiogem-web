@@ -9,12 +9,14 @@ import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import ScrollToTop from '../components/layout/ScrollToTop';
 import FloatingWhatsApp from '../components/ui/FloatingWhatsApp';
+import IntroAnimation from '../components/ui/IntroAnimation';
 import './RootLayout.css';
 import ButtonToTop from '../components/ui/ButtonToTop';
 
 const RootLayout = () => {
     return (
         <>
+            <IntroAnimation />
             <ScrollToTop />
             <Navbar />
             <main style={{ minHeight: 'calc(100vh - var(--navbar-height))' }}>

@@ -101,7 +101,7 @@ const ContactForm = () => {
 
                 <Button
                     type="submit"
-                    size="lg"
+                    size="md"
                     disabled={status === 'loading'}
                 >
                     {status === 'loading' ? 'Enviando...' : 'Enviar consulta'}

@@ -70,7 +70,7 @@ const ProductCard = ({ product }) => {
                         rel="noopener noreferrer"
                         aria-label={`Consultar por ${name} vía WhatsApp`}
                     >
-                        <span className="product-card__action-inner">Consultar →</span>
+                        <span className="product-card__action-inner">Consultar</span>
                     </StarBorder>
                 </div>
             </div>
