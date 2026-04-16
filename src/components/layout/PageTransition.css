@@ -16,9 +16,9 @@
     pointer-events: none;
     z-index: 9999;
     display: grid;
-    /* 10 columnas y 10 filas */
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+    /* 5 columnas y 5 filas */
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
 }
 
 .sonic-tile {
@@ -32,6 +32,7 @@
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
     position: relative;
     z-index: 2;
+    will-change: opacity, transform; /* Activación de aceleración por hardware */
 }
 
 /* Efecto de logo durante la transición completa */

@@ -21,9 +21,7 @@ const RootLayout = () => {
             <ScrollToTop />
             <Navbar />
             <main style={{ minHeight: 'calc(100vh - var(--navbar-height))' }}>
-                <PageTransition>
-                    <Outlet />
-                </PageTransition>
+                <PageTransition />
             </main>
             <FloatingWhatsApp />
             <ButtonToTop />

@@ -1,15 +1,16 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useOutlet } from 'react-router-dom';
 import './PageTransition.css';
 
-const PageTransition = ({ children }) => {
+const PageTransition = () => {
     const location = useLocation();
+    const currentOutlet = useOutlet(); // Capturamos el elemento renderizado actual
 
     // Configuración del grid de "cuadrados"
-    // Usamos 10 columnas y 10 filas para tener 100 "azulejos"
-    const columns = 10;
-    const rows = 10;
+    // Reducido a 5x5 (25 azulejos) para un rendimiento fluido y ultrarrápido
+    const columns = 5;
+    const rows = 5;
     const tileCount = columns * rows;
     const tiles = Array.from({ length: tileCount });
 
@@ -19,55 +20,52 @@ const PageTransition = ({ children }) => {
         animate: (i) => {
             const col = i % columns;
             const row = Math.floor(i / columns);
-            // Efecto diagonal
-            const delay = (col + row) * 0.03;
+            // Efecto diagonal optimizado para velocidad
+            const delay = (col + row) * 0.02;
             
             return {
                 opacity: 0,
-                // Leve reducción de escala para dar un efecto técnico
-                scale: 0.8,
+                scale: 0.98,
                 transition: {
-                    duration: 0.4,
+                    duration: 0.25,
                     delay: delay,
-                    ease: "easeInOut"
+                    ease: "easeOut" 
                 }
             };
         },
         exit: (i) => {
             const col = i % columns;
             const row = Math.floor(i / columns);
-            // Efecto diagonal inverso para la salida
-            const delay = ((columns - col) + (rows - row)) * 0.03;
+            const delay = ((columns - col) + (rows - row)) * 0.02;
 
             return {
                 opacity: 1,
                 scale: 1,
                 transition: {
-                    duration: 0.4,
+                    duration: 0.25,
                     delay: delay,
-                    ease: "easeInOut"
+                    ease: "easeOut"
                 }
             };
         }
     };
 
-    // Variantes para el contenido de la página
+    // Variantes de contenido (Removido blur costoso para máxima fluidez)
     const contentVariants = {
-        initial: { opacity: 0, filter: 'blur(10px)', scale: 0.98 },
+        initial: { opacity: 0, y: 10 },
         animate: { 
             opacity: 1, 
-            filter: 'blur(0px)',
-            scale: 1,
+            y: 0,
             transition: {
-                duration: 0.5,
-                delay: 0.3, // Esperar un poco a que empiecen a desaparecer los cuadros
+                duration: 0.3,
+                delay: 0.1, // Revelar extremadamente rápido
                 ease: "easeOut"
             }
         },
         exit: { 
             opacity: 0,
             transition: {
-                duration: 0.3,
+                duration: 0.2,
                 ease: "easeIn"
             }
         }
@@ -83,9 +81,10 @@ const PageTransition = ({ children }) => {
                     animate="animate"
                     exit="exit"
                 >
-                    {/* Contenido real de la página */}
+                    {/* Renderizamos currentOutlet en lugar de children 
+                        Esto congela visualmente la página vieja mientras sale */}
                     <motion.div variants={contentVariants} className="content-inner">
-                        {children}
+                        {currentOutlet}
                     </motion.div>
 
                     {/* Overlay del Grid de Cuadrados */}
