@@ -10,7 +10,6 @@ import Footer from '../components/layout/Footer';
 import ScrollToTop from '../components/layout/ScrollToTop';
 import FloatingWhatsApp from '../components/ui/FloatingWhatsApp';
 import IntroAnimation from '../components/ui/IntroAnimation';
-import PageTransition from '../components/layout/PageTransition';
 import './RootLayout.css';
 import ButtonToTop from '../components/ui/ButtonToTop';
 
@@ -21,7 +20,7 @@ const RootLayout = () => {
             <ScrollToTop />
             <Navbar />
             <main style={{ minHeight: 'calc(100vh - var(--navbar-height))' }}>
-                <PageTransition />
+                <Outlet />
             </main>
             <FloatingWhatsApp />
             <ButtonToTop />
