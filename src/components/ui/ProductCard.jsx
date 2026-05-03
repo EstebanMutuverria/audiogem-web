@@ -31,7 +31,8 @@ const ProductCard = ({ product }) => {
 
     return (
         <article className="product-card">
-            {badge && <span className="product-card__badge">{badge}</span>}
+            {badge && badge !== 'Sin Stock' && <span className="product-card__badge">{badge}</span>}
+            {badge && badge === 'Sin Stock' && <span className="product-card__badge out-of-stock">{badge}</span>}
 
             {/* Imagen / Placeholder */}
             <div className="product-card__image">

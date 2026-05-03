@@ -60,6 +60,7 @@ import rackera_2driver_2tweeter_arwen from '../assets/products_section_pictures/
 import tweeter_bala_ds18_pro_twx2 from '../assets/products_section_pictures/tweeter-bala-ds18-pro-twx2.jpeg'
 
 import icon_categories from '../assets/icon-productsdata-categories/Success.png'
+import BADGETS_NAMES from '../constants/badgets_names.js';
 
 export const CATEGORIES = [
     {
@@ -121,7 +122,7 @@ export const FEATURED_PRODUCTS = [
         brand: 'B52',
         image: estereo_b52,
         description: 'Receptor de audio digital con Bluetooth.',
-        badge: 'Más vendido',
+        badge: BADGETS_NAMES.BEST_SELLER,
         price: '$70.000',
         base_price: '$50.000',
         state: true
@@ -133,7 +134,7 @@ export const FEATURED_PRODUCTS = [
         brand: null,
         image: rackera_2y2_para_pote,
         description: 'Rackera 2 drivers Jahro 250 watts y 2 super tweeters Jahro',
-        badge: 'Más vendido',
+        badge: BADGETS_NAMES.BEST_SELLER,
         price: '$160.000',
         base_price: '$120.000',
         state: true
@@ -145,7 +146,7 @@ export const FEATURED_PRODUCTS = [
         brand: 'Taramps',
         image: pote_taramps_400x4,
         description: 'Potencia Taramps 400x4 4 canales 400 watts RMS',
-        badge: 'Mas vendido',
+        badge: BADGETS_NAMES.OUT_OF_STOCK,
         price: '$90.000',
         base_price: '$70.000',
         state: true
@@ -157,7 +158,7 @@ export const FEATURED_PRODUCTS = [
         brand: 'JBL',
         image: tweeter_jbl_st400_trio,
         description: 'Tweeter JBL ST400 Trio de 200w rms',
-        badge: 'Top Calidad',
+        badge: BADGETS_NAMES.TOP_QUALITY,
         price: '$110.000',
         base_price: '$91.000',
         state: true
@@ -169,7 +170,7 @@ export const FEATURED_PRODUCTS = [
         brand: 'JBL',
         image: driver_jbl_250,
         description: 'Driver JBL D250-X',
-        badge: 'Recomendado',
+        badge: BADGETS_NAMES.RECOMMENDED,
         price: '$80.000',
         base_price: '$65.000',
         state: true
@@ -181,7 +182,7 @@ export const FEATURED_PRODUCTS = [
         brand: null,
         image: rackera_2y2_chica,
         description: 'Rackera 2 drivers Jahro 5041 de 150 watts y 2 tweeters Jahro',
-        badge: 'Más vendido',
+        badge: BADGETS_NAMES.BEST_SELLER,
         price: '$85.000',
         base_price: '$55.000',
         state: true
@@ -209,7 +210,7 @@ export const ALL_PRODUCTS = [
         brand: null,
         image: rackera_2medios_2super,
         description: 'Rackera 2 medios de 8 pulgadas marca Jahro y 2 super tweeters Jahro',
-        badge: null,
+        badge: BADGETS_NAMES.OUT_OF_STOCK,
         price: '$140.000',
         base_price: '$95.000',
         state: true
@@ -233,7 +234,7 @@ export const ALL_PRODUCTS = [
         brand: null,
         image: rackera_curva_completa_estereo,
         description: 'Rackera 2 drivers jahro 5041, 2 medios jahro y 2 tweeters Jahro',
-        badge: 'Más vendido',
+        badge: BADGETS_NAMES.BEST_SELLER,
         price: '$170.000',
         base_price: '$120.000',
         state: true
@@ -257,7 +258,7 @@ export const ALL_PRODUCTS = [
         brand: null,
         image: rackera_2driver_2bomber_2tweeter,
         description: 'Rackera 2 drivers Jahro, 2 parlantes Bomber de 6" y 2 tweeters marca Jahro',
-        badge: 'Oferta',
+        badge: BADGETS_NAMES.SALE,
         price: '$75.000',
         base_price: '$46.000',
         state: false
@@ -269,7 +270,7 @@ export const ALL_PRODUCTS = [
         brand: 'Philco',
         image: estereo_philco,
         description: 'Estereo Philco con Bluetooth, USB, Manos Libres',
-        badge: 'Nuevo',
+        badge: BADGETS_NAMES.NEW,
         price: '$50.000',
         base_price: '$30.000',
         state: true
@@ -281,7 +282,7 @@ export const ALL_PRODUCTS = [
         brand: null,
         image: rackera_2driver_26x9pioneer,
         description: 'Rackera 2 drivers Jahro 5041 de 150 watts y 2 parlantes Pioneer 6x9',
-        badge: null,
+        badge: BADGETS_NAMES.OUT_OF_STOCK,
         price: '$160.000',
         base_price: '$120.000',
         state: true
@@ -389,7 +390,7 @@ export const ALL_PRODUCTS = [
         brand: 'Infinity Tech',
         image: estereo_infinity_tech,
         description: 'Estereo Infinity Tech con Bluetooth, USB, MP3',
-        badge: 'Oferta',
+        badge: BADGETS_NAMES.SALE,
         price: '$40.000',
         base_price: '$22.000',
         state: true
@@ -449,7 +450,7 @@ export const ALL_PRODUCTS = [
         brand: 'Jahro',
         image: parlantes_jahro_6p,
         description: 'Parlantes Jahro 6 pulgadas',
-        badge: 'Oferta',
+        badge: BADGETS_NAMES.SALE,
         price: '$30.000',
         base_price: '$18.000',
         state: true
@@ -509,7 +510,7 @@ export const ALL_PRODUCTS = [
         brand: 'JBL',
         image: driver_jbl_trio,
         description: 'Driver JBL D250 Trio de 200w rms',
-        badge: 'Top Calidad',
+        badge: BADGETS_NAMES.TOP_QUALITY,
         price: '$135.000',
         base_price: '$110.000',
         state: true
@@ -521,7 +522,7 @@ export const ALL_PRODUCTS = [
         brand: 'Stetsom',
         image: controles_stetsom,
         description: 'Controlador de Sonido Stetsom',
-        badge: 'Nuevo',
+        badge: BADGETS_NAMES.NEW,
         price: '$50.000',
         base_price: '$35.000',
         state: true
@@ -593,7 +594,7 @@ export const ALL_PRODUCTS = [
         brand: 'Sound Digital',
         image: pote_sound_digital_400x4,
         description: 'Potencia Sound Digital 400.4 400w Rms 4 canales',
-        badge: 'Oferta',
+        badge: BADGETS_NAMES.SALE,
         price: '$100.000',
         base_price: '$80.000',
         state: true
