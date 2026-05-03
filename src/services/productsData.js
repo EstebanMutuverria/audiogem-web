@@ -438,7 +438,7 @@ export const ALL_PRODUCTS = [
         brand: 'Bomber',
         image: parlantes_bomber_6x9_con_caja,
         description: 'Parlantes Bomber 6x9 con Cajas individuales',
-        badge: null,
+        badge: BADGETS_NAMES.OUT_OF_STOCK,
         price: '$75.000',
         base_price: '$45.000',
         state: true
