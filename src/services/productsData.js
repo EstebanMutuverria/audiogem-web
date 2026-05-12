@@ -295,7 +295,7 @@ export const ALL_PRODUCTS = [
         image: rackera_2parlantes_2tweeter_jahro,
         description: 'Rackera 2 parlantes de 6" marca Jahro y 2 tweeters marca Jahro',
         badge: null,
-        price: '$80.000',
+        price: '$85.000',
         base_price: '$50.000',
         state: true
     },
@@ -702,7 +702,7 @@ export const ALL_PRODUCTS = [
         brand: null,
         image: rackera_2driver5041_2medios_6p_audiopipe,
         description: 'Rackera 2 Drivers Jahro 5041, 2 Medios de 6 pulgadas AudioPipe 250W MAX',
-        badge: null,
+        badge: BADGETS_NAMES.OUT_OF_STOCK,
         price: '$165.000',
         base_price: '$98.000',
         state: true
