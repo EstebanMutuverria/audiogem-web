@@ -378,6 +378,70 @@
     }
 }
 
+/* Botón del Carrito en Navbar */
+.navbar__cart-btn {
+    position: relative;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-text);
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    padding: 0;
+}
+
+.navbar__cart-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--color-primary-light);
+    transform: scale(1.05);
+}
+
+.navbar__cart-icon {
+    font-size: var(--text-lg);
+}
+
+/* Badge del Carrito */
+.navbar__cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--gradient-primary);
+    color: var(--color-white);
+    font-size: 10px;
+    font-weight: var(--font-weight-bold);
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-glow);
+    animation: cartBadgePop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes cartBadgePop {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Wrapper para acciones móviles */
+.navbar__mobile-actions-wrapper {
+    display: none;
+    align-items: center;
+    gap: var(--spacing-3);
+    z-index: calc(var(--z-sticky) + 2);
+}
+
 /* Responsive Visibility */
 @media (max-width: 768px) {
     .navbar__nav, 
@@ -386,6 +450,10 @@
     }
 
     .navbar__hamburger {
+        display: flex;
+    }
+
+    .navbar__mobile-actions-wrapper {
         display: flex;
     }
 }

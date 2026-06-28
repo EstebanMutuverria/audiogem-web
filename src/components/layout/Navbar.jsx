@@ -10,8 +10,10 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { useAdmin } from '../../context/AdminContext';
+import { useCart } from '../../context/CartContext';
 import AdminLoginModal from '../ui/AdminLoginModal';
 import './Navbar.css';
+import { FaShoppingCart } from 'react-icons/fa';
 
 const NAV_LINKS = [
     { to: '/', label: 'Inicio' },
@@ -25,6 +27,7 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const { isAdmin, logout } = useAdmin();
+    const { toggleCart, cartItemsCount } = useCart();
 
     // Detecta scroll para agregar sombra al navbar
     useEffect(() => {
@@ -95,22 +98,48 @@ const Navbar = () => {
                             </span>
                         </button>
 
+                        <button
+                            className="navbar__cart-btn"
+                            onClick={toggleCart}
+                            aria-label="Abrir carrito de compras"
+                            title="Ver mi carrito"
+                        >
+                            <span className="navbar__cart-icon"><FaShoppingCart /></span>
+                            {cartItemsCount > 0 && (
+                                <span className="navbar__cart-badge">{cartItemsCount}</span>
+                            )}
+                        </button>
+
                         <Link to="/contacto" className="navbar__cta">
                             Consultanos
                         </Link>
                     </div>
 
-                    {/* Hamburguesa móvil */}
-                    <button
-                        className={`navbar__hamburger ${isMenuOpen ? 'navbar__hamburger--open' : ''}`}
-                        onClick={() => setIsMenuOpen((prev) => !prev)}
-                        aria-label="Abrir menú"
-                        aria-expanded={isMenuOpen}
-                    >
-                        <span />
-                        <span />
-                        <span />
-                    </button>
+                    {/* Acciones móviles */}
+                    <div className="navbar__mobile-actions-wrapper">
+                        <button
+                            className="navbar__cart-btn navbar__cart-btn--mobile"
+                            onClick={toggleCart}
+                            aria-label="Abrir carrito de compras"
+                            title="Ver mi carrito"
+                        >
+                            <span className="navbar__cart-icon">🛒</span>
+                            {cartItemsCount > 0 && (
+                                <span className="navbar__cart-badge">{cartItemsCount}</span>
+                            )}
+                        </button>
+
+                        <button
+                            className={`navbar__hamburger ${isMenuOpen ? 'navbar__hamburger--open' : ''}`}
+                            onClick={() => setIsMenuOpen((prev) => !prev)}
+                            aria-label="Abrir menú"
+                            aria-expanded={isMenuOpen}
+                        >
+                            <span />
+                            <span />
+                            <span />
+                        </button>
+                    </div>
                 </div>
             </header>
 

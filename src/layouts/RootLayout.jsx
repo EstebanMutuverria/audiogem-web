@@ -10,6 +10,7 @@ import Footer from '../components/layout/Footer';
 import ScrollToTop from '../components/layout/ScrollToTop';
 import FloatingWhatsApp from '../components/ui/FloatingWhatsApp';
 import IntroAnimation from '../components/ui/IntroAnimation';
+import CartDrawer from '../components/layout/CartDrawer';
 import './RootLayout.css';
 import ButtonToTop from '../components/ui/ButtonToTop';
 
@@ -22,6 +23,7 @@ const RootLayout = () => {
             <main style={{ minHeight: 'calc(100vh - var(--navbar-height))' }}>
                 <Outlet />
             </main>
+            <CartDrawer />
             <FloatingWhatsApp />
             <ButtonToTop />
             <Footer />

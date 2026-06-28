@@ -558,7 +558,7 @@ export const ALL_PRODUCTS = [
         brand: 'Triton',
         image: woofer_12p_triton,
         description: 'Woofer Triton 12 Pulgadas TR 620 8 ohm 620w Rms 1240w pmpo',
-        badge: null,
+        badge: BADGETS_NAMES.OUT_OF_STOCK,
         price: '$250.000',
         base_price: '$195.000',
         state: true
@@ -570,7 +570,7 @@ export const ALL_PRODUCTS = [
         brand: 'Triton',
         image: woofer_12p_triton_850rms,
         description: 'Woofer Triton Medio Grave 850w Rms 8 Ohm Tr 850 Negro',
-        badge: null,
+        badge: BADGETS_NAMES.OUT_OF_STOCK,
         price: '$340.000',
         base_price: '$265.000',
         state: true
