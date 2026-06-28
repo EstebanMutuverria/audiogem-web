@@ -13,14 +13,17 @@ import IntroAnimation from '../components/ui/IntroAnimation';
 import CartDrawer from '../components/layout/CartDrawer';
 import './RootLayout.css';
 import ButtonToTop from '../components/ui/ButtonToTop';
+import { CartContext } from '../context/CartContext';
 
 const RootLayout = () => {
+    const { isCartOpen } = useContext(CartContext);
+
     return (
         <>
             <IntroAnimation />
             <ScrollToTop />
             <Navbar />
-            <main style={{ minHeight: 'calc(100vh - var(--navbar-height))' }}>
+            <main style={{ minHeight: 'calc(100vh - var(--navbar-height))' }} className={isCartOpen ? 'disable-scroll' : ''}>
                 <Outlet />
             </main>
             <CartDrawer />
