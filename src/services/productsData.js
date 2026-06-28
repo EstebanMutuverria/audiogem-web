@@ -581,7 +581,7 @@ export const ALL_PRODUCTS = [
         category: 'componentes',
         brand: 'Jahro',
         image: driver_jahro_5042,
-        description: 'Driver Jahro 5042 250 watts max 400w Rms',
+        description: 'Driver Jahro 5042 250 watts max 40w Rms',
         badge: null,
         price: '$47.000',
         base_price: '$32.000',
