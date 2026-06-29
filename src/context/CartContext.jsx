@@ -8,7 +8,7 @@
 import { createContext, useContext, useState, useEffect, useMemo, useCallback } from 'react';
 import { parsePrice } from '../utils/price';
 
-const CartContext = createContext(null);
+export const CartContext = createContext(null);
 const LOCAL_STORAGE_KEY = 'audiogem_cart_items';
 
 export const CartProvider = ({ children }) => {

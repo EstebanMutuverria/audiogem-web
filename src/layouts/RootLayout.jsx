@@ -13,6 +13,7 @@ import IntroAnimation from '../components/ui/IntroAnimation';
 import CartDrawer from '../components/layout/CartDrawer';
 import './RootLayout.css';
 import ButtonToTop from '../components/ui/ButtonToTop';
+import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 
 const RootLayout = () => {
