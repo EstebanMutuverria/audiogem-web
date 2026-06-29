@@ -227,6 +227,7 @@ const CartDrawer = () => {
                                     </div>
                                 );
                             })}
+                            <button onClick={handleGoToProducts} className='btn-add-more-products'>Agregar más productos</button>
                         </div>
                     )}
                 </div>
