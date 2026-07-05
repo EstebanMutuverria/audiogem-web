@@ -158,7 +158,7 @@ export const FEATURED_PRODUCTS = [
         brand: 'JBL',
         image: tweeter_jbl_st400_trio,
         description: 'Tweeter JBL ST400 Trio de 200w rms',
-        badge: BADGETS_NAMES.TOP_QUALITY,
+        badge: BADGETS_NAMES.OUT_OF_STOCK,
         price: '$110.000',
         base_price: '$91.000',
         state: true
@@ -390,7 +390,7 @@ export const ALL_PRODUCTS = [
         brand: 'Infinity Tech',
         image: estereo_infinity_tech,
         description: 'Estereo Infinity Tech con Bluetooth, USB, MP3',
-        badge: BADGETS_NAMES.SALE,
+        badge: BADGETS_NAMES.OUT_OF_STOCK,
         price: '$40.000',
         base_price: '$22.000',
         state: true
@@ -414,7 +414,7 @@ export const ALL_PRODUCTS = [
         brand: 'Pioneer',
         image: subwoofer_pioneer_12p,
         description: 'Subwoofer Pioneer 12 pulgadas doble bobina TS-W312D4 1600w Max / 500w RMS',
-        badge: null,
+        badge: BADGETS_NAMES.OUT_OF_STOCK,
         price: '$200.000',
         base_price: '$USD 55',
         state: true
@@ -438,7 +438,7 @@ export const ALL_PRODUCTS = [
         brand: 'Bomber',
         image: parlantes_bomber_6x9_con_caja,
         description: 'Parlantes Bomber 6x9 con Cajas individuales',
-        badge: BADGETS_NAMES.OUT_OF_STOCK,
+        badge: BADGETS_NAMES.BUDGET_FRIENDLY,
         price: '$75.000',
         base_price: '$45.000',
         state: true
