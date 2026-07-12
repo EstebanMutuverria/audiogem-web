@@ -9,6 +9,8 @@ import StarBorder from '../animations/StarBorder';
 import { useAdmin } from '../../context/AdminContext';
 import { useCart } from '../../context/CartContext';
 
+import BADGETS_NAMES from '../../constants/badgets_names.js';
+
 const CATEGORY_ICONS = {
     estereos: '🎵',
     parlantes: '🔊',
@@ -35,7 +37,11 @@ const ProductCard = ({ product }) => {
 
     return (
         <article className="product-card">
-            {badge && badge !== 'Sin Stock' && <span className="product-card__badge">{badge}</span>}
+            {badge && badge !== 'Sin Stock' && (
+                <span className={`product-card__badge ${badge === BADGETS_NAMES.NEW ? 'new' : ''}`}>
+                    {badge}
+                </span>
+            )}
             {badge && badge === 'Sin Stock' && <span className="product-card__badge out-of-stock">{badge}</span>}
 
             {/* Imagen / Placeholder */}
