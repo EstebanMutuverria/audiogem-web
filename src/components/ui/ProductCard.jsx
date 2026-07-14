@@ -35,7 +35,7 @@ const ProductCard = ({ product }) => {
     const imageUrl = product.image
         ? (product.image.startsWith('data:') ? '' : `${window.location.origin}${product.image}`)
         : '';
-    const message = `Hola AudioGem! Te queria consultar acerca del producto: ${product.name}${imageUrl ? ` - Imagen: ${imageUrl}` : ''}`;
+    const message = `Hola AudioGem! Te queria consultar acerca del producto: ${product.name}${imageUrl ? ` - Imagen🔗: ${imageUrl}` : ''}`;
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
     return (
