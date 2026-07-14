@@ -30,7 +30,10 @@ const ProductCard = ({ product }) => {
     const isOutOfStock = badge === 'Sin Stock';
 
     const phoneNumber = '1160081534';
-    const message = `Hola AudioGem! Te queria consultar acerca del producto: ${product.name}`;
+    const imageUrl = product.image
+        ? (product.image.startsWith('data:') ? '' : `${window.location.origin}${product.image}`)
+        : '';
+    const message = `Hola AudioGem! Te queria consultar acerca del producto: ${product.name}${imageUrl ? ` - Imagen: ${imageUrl}` : ''}`;
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
     return (
