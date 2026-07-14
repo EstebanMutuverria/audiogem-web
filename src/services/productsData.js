@@ -443,8 +443,8 @@ export const ALL_PRODUCTS = [
         image: parlantes_bomber_6x9_con_caja,
         description: 'Parlantes Bomber 6x9 con Cajas individuales',
         badge: BADGETS_NAMES.BUDGET_FRIENDLY,
-        price: '$75.000',
-        base_price: '$45.000',
+        price: '$99.000',
+        base_price: '$67.000',
         state: true
     },
     {
@@ -504,7 +504,7 @@ export const ALL_PRODUCTS = [
         description: 'Driver Jahro 5041 de 150 watts',
         badge: null,
         price: '$22.000',
-        base_price: '$12.500',
+        base_price: '$12.000',
         state: true
     },
     {
