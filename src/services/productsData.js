@@ -58,6 +58,10 @@ import parlantes_pioneer_6_coma_5_pulgadas_280w from '../assets/products_section
 import rackera_2_6x9_pioneer_2_supertweeter_jahro from '../assets/products_section_pictures/rackera-2-6x9-pioneer-2-supertweeter-jahro.jpeg'
 import rackera_2driver_2tweeter_arwen from '../assets/products_section_pictures/rackera-2driver-2tweeter-arwen.jpeg'
 import tweeter_bala_ds18_pro_twx2 from '../assets/products_section_pictures/tweeter-bala-ds18-pro-twx2.jpeg'
+import medios_de_8_pulgadas_ap from '../assets/products_section_pictures/medios-de-8-pulgadas-ap.jpeg'
+import medios_de_8_pulgadas_wild_sound from '../assets/products_section_pictures/medios-de-8-pulgadas-wild-sound.jpeg'
+import estereo_car_mp3_player from '../assets/products_section_pictures/estereo-car-mp3-player.jpeg'
+
 
 import icon_categories from '../assets/icon-productsdata-categories/Success.png'
 import BADGETS_NAMES from '../constants/badgets_names.js';
@@ -146,7 +150,7 @@ export const FEATURED_PRODUCTS = [
         brand: 'Taramps',
         image: pote_taramps_400x4,
         description: 'Potencia Taramps 400x4 4 canales 400 watts RMS',
-        badge: BADGETS_NAMES.OUT_OF_STOCK,
+        badge: BADGETS_NAMES.BEST_SELLER,
         price: '$90.000',
         base_price: '$70.000',
         state: true
@@ -270,7 +274,7 @@ export const ALL_PRODUCTS = [
         brand: 'Philco',
         image: estereo_philco,
         description: 'Estereo Philco con Bluetooth, USB, Manos Libres',
-        badge: BADGETS_NAMES.NEW,
+        badge: BADGETS_NAMES.OUT_OF_STOCK,
         price: '$50.000',
         base_price: '$30.000',
         state: true
@@ -439,8 +443,8 @@ export const ALL_PRODUCTS = [
         image: parlantes_bomber_6x9_con_caja,
         description: 'Parlantes Bomber 6x9 con Cajas individuales',
         badge: BADGETS_NAMES.BUDGET_FRIENDLY,
-        price: '$75.000',
-        base_price: '$45.000',
+        price: '$99.000',
+        base_price: '$67.000',
         state: true
     },
     {
@@ -500,7 +504,7 @@ export const ALL_PRODUCTS = [
         description: 'Driver Jahro 5041 de 150 watts',
         badge: null,
         price: '$22.000',
-        base_price: '$12.500',
+        base_price: '$12.000',
         state: true
     },
     {
@@ -642,9 +646,9 @@ export const ALL_PRODUCTS = [
         brand: 'Pioneer',
         image: parlantes_pioneer_300w,
         description: 'Pioneer TS G1620F Negro 6.5 Pulgadas Potencia Máxima 300W',
-        badge: null,
-        price: '$80.000',
-        base_price: '$55.000',
+        badge: BADGETS_NAMES.TOP_QUALITY,
+        price: '$88.000',
+        base_price: '$68.000',
         state: true
     },
     {
@@ -726,7 +730,7 @@ export const ALL_PRODUCTS = [
         brand: 'Pioneer',
         image: parlantes_pioneer_6_coma_5_pulgadas_280w,
         description: 'Parlantes Pioneer 6.5 pulgadas 280W MAX',
-        badge: null,
+        badge: BADGETS_NAMES.OUT_OF_STOCK,
         price: '$68.000',
         base_price: '$55.000',
         state: true
@@ -766,6 +770,42 @@ export const ALL_PRODUCTS = [
         price: '$70.000',
         base_price: '$50.000',
         state: true
-    }
+    },
+    {
+        id: 55,
+        name: 'Medios de 8 pulgadas AudioPipe (el par)',
+        category: 'componentes',
+        brand: 'AudioPipe',
+        image: medios_de_8_pulgadas_ap,
+        description: 'Medios de 8 pulgadas AudioPipe de 300Watts MAX',
+        badge: BADGETS_NAMES.RECOMMENDED,
+        price: '$105.000',
+        base_price: '$80.000',
+        state: true
+    },
+    {
+        id: 56,
+        name: 'Medios de 8 pulgadas Wild Sound (el par)',
+        category: 'componentes',
+        brand: 'Wild Sound',
+        image: medios_de_8_pulgadas_wild_sound,
+        description: 'Medios de 8 pulgadas Wild Sound de 150Watts MAX',
+        badge: BADGETS_NAMES.NEW,
+        price: '$65.000',
+        base_price: '$45.000',
+        state: true
+    },
+    {
+        id: 57,
+        name: 'Estereo Car MP3 Player',
+        category: 'estereos',
+        brand: null,
+        image: estereo_car_mp3_player,
+        description: 'Estereo Car MP3 Player de 1 Din, Bluetooth, USB, FM, hands free, AUX, Control remoto.',
+        badge: BADGETS_NAMES.SALE,
+        price: '$26.000',
+        base_price: '$16.000',
+        state: true
+    },
 
 ];

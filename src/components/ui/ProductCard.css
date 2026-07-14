@@ -35,6 +35,14 @@
     background: rgb(207, 27, 27);
 }
 
+.product-card__badge.new {
+    background: linear-gradient(135deg, #00ff87 0%, #00b48a 100%);
+    color: #0b0e14;
+    font-weight: var(--font-weight-black);
+    box-shadow: 0 0 12px rgba(0, 255, 135, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 /* Image area */
 .product-card__image {
     width: 100%;
