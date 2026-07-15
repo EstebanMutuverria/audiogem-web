@@ -75,7 +75,7 @@
 @media (max-width: 768px) {
     .button-to-top {
         right: var(--spacing-6);
-        bottom: calc(var(--spacing-6) + 56px + var(--spacing-5));
+        bottom: 170px;
         width: 40px;
         height: 40px;
     }

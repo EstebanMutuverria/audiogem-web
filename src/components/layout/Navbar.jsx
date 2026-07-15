@@ -1,10 +1,10 @@
 /**
  * Navbar.jsx
  * Barra de navegación principal.
- * - Sticky con efecto glassmorphism al hacer scroll
- * - NavLink de React Router para estilo "active" automático
- * - Menú hamburguesa en móvil
- * - Botón "Soy Admin" para autenticar y ver precios base
+ * - Cabezal superior clásico con Logo y acciones (Admin, Carrito, CTA)
+ * - Isla de navegación flotante (Pill) con efecto Glassmorphism
+ * - Burbuja circular activa con deslizamiento animado por Framer Motion (layoutId)
+ * - Posicionamiento ergonómico: Superior en Desktop, Inferior en Mobile
  */
 
 import { useState, useEffect } from 'react';
@@ -14,40 +14,28 @@ import { useCart } from '../../context/CartContext';
 import AdminLoginModal from '../ui/AdminLoginModal';
 import './Navbar.css';
 import { FaShoppingCart } from 'react-icons/fa';
+import { FiHome, FiShoppingBag, FiUsers, FiMail } from 'react-icons/fi';
+import { motion } from 'framer-motion';
 
 const NAV_LINKS = [
-    { to: '/', label: 'Inicio' },
-    { to: '/productos', label: 'Productos' },
-    { to: '/nosotros', label: 'Nosotros' },
-    { to: '/contacto', label: 'Contacto' },
+    { to: '/', label: 'Inicio', Icon: FiHome },
+    { to: '/productos', label: 'Productos', Icon: FiShoppingBag },
+    { to: '/nosotros', label: 'Nosotros', Icon: FiUsers },
+    { to: '/contacto', label: 'Contacto', Icon: FiMail },
 ];
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const { isAdmin, logout } = useAdmin();
     const { toggleCart, cartItemsCount } = useCart();
 
-    // Detecta scroll para agregar sombra al navbar
+    // Detecta scroll para agregar sombra y cambiar estilo del header superior
     useEffect(() => {
         const handleScroll = () => setIsScrolled(window.scrollY > 20);
         window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-
-    // Lock scroll when menu is open
-    useEffect(() => {
-        if (isMenuOpen) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = '';
-        }
-        return () => { document.body.style.overflow = ''; };
-    }, [isMenuOpen]);
-
-    // Cierra el menú móvil al cambiar de ruta
-    const closeMenu = () => setIsMenuOpen(false);
 
     const handleAdminClick = () => {
         if (isAdmin) {
@@ -59,32 +47,17 @@ const Navbar = () => {
 
     return (
         <>
+            {/* Header clásico superior (Logo + Acciones) */}
             <header className={`navbar ${isScrolled ? 'navbar--scrolled' : ''}`}>
                 <div className="navbar__container">
                     {/* Logo */}
-                    <Link to="/" className="navbar__logo" onClick={closeMenu}>
+                    <Link to="/" className="navbar__logo">
                         <span className="navbar__logo-text">
                             AUDIO<span className="navbar__logo-accent">GEM</span>
                         </span>
                     </Link>
 
-                    {/* Links desktop */}
-                    <nav className="navbar__nav" aria-label="Navegación principal">
-                        {NAV_LINKS.map(({ to, label }) => (
-                            <NavLink
-                                key={to}
-                                to={to}
-                                end={to === '/'}
-                                className={({ isActive }) =>
-                                    `navbar__link ${isActive ? 'navbar__link--active' : ''}`
-                                }
-                            >
-                                {label}
-                            </NavLink>
-                        ))}
-                    </nav>
-
-                    {/* Acciones desktop */}
+                    {/* Acciones (Admin, Carrito, CTA) */}
                     <div className="navbar__actions">
                         <button
                             className={`navbar__admin-btn ${isAdmin ? 'navbar__admin-btn--active' : ''}`}
@@ -114,96 +87,43 @@ const Navbar = () => {
                             Consultanos
                         </Link>
                     </div>
-
-                    {/* Acciones móviles */}
-                    <div className="navbar__mobile-actions-wrapper">
-                        <button
-                            className="navbar__cart-btn navbar__cart-btn--mobile"
-                            onClick={toggleCart}
-                            aria-label="Abrir carrito de compras"
-                            title="Ver mi carrito"
-                        >
-                            <span className="navbar__cart-icon">🛒</span>
-                            {cartItemsCount > 0 && (
-                                <span className="navbar__cart-badge">{cartItemsCount}</span>
-                            )}
-                        </button>
-
-                        <button
-                            className={`navbar__hamburger ${isMenuOpen ? 'navbar__hamburger--open' : ''}`}
-                            onClick={() => setIsMenuOpen((prev) => !prev)}
-                            aria-label="Abrir menú"
-                            aria-expanded={isMenuOpen}
-                        >
-                            <span />
-                            <span />
-                            <span />
-                        </button>
-                    </div>
                 </div>
             </header>
 
-            {/* Overlay background */}
-            <div
-                className={`navbar__overlay ${isMenuOpen ? 'navbar__overlay--open' : ''}`}
-                onClick={closeMenu}
-            />
-
-            {/* Menú móvil */}
-            <nav
-                className={`navbar__mobile-menu ${isMenuOpen ? 'navbar__mobile-menu--open' : ''}`}
-                aria-label="Menú móvil"
-            >
-                <div className="navbar__mobile-header">
-                    <span className="navbar__logo-text">
-                        AUDIO<span className="navbar__logo-accent">GEM</span>
-                    </span>
-                    <button
-                        className="navbar__mobile-close"
-                        onClick={closeMenu}
-                        aria-label="Cerrar menú"
-                    >
-                        ✕
-                    </button>
-                </div>
-
-                <div className="navbar__mobile-content">
-                    <div className="navbar__mobile-links">
-                        {NAV_LINKS.map(({ to, label }, index) => (
-                            <NavLink
-                                key={to}
-                                to={to}
-                                end={to === '/'}
-                                className={({ isActive }) =>
-                                    `navbar__mobile-link ${isActive ? 'navbar__mobile-link--active' : ''}`
-                                }
-                                onClick={closeMenu}
-                                style={{ '--index': index }}
-                            >
-                                <span className="navbar__mobile-link-label">{label}</span>
-                                <span className="navbar__mobile-link-arrow">→</span>
-                            </NavLink>
-                        ))}
-                    </div>
-
-                    <div className="navbar__mobile-footer">
-                        <Link to="/contacto" className="navbar__mobile-cta" onClick={closeMenu}>
-                            Consultanos ahora
-                        </Link>
-
-                        <button
-                            className={`navbar__mobile-admin-btn ${isAdmin ? 'navbar__mobile-admin-btn--active' : ''}`}
-                            onClick={() => {
-                                closeMenu();
-                                handleAdminClick();
-                            }}
+            {/* Isla flotante de navegación (Pill flotante) */}
+            <nav className="nav-pill" aria-label="Navegación principal flotante">
+                <div className="nav-pill__container">
+                    {NAV_LINKS.map(({ to, label, Icon }) => (
+                        <NavLink
+                            key={to}
+                            to={to}
+                            end={to === '/'}
+                            className="nav-pill__link"
                         >
-                            <span className="navbar__mobile-admin-icon">{isAdmin ? '🔓' : '🔐'}</span>
-                            <span className="navbar__mobile-admin-text">
-                                {isAdmin ? 'Panel Admin Activo' : 'Acceso Administrador'}
-                            </span>
-                        </button>
-                    </div>
+                            {({ isActive }) => (
+                                <div className="nav-pill__item-wrapper">
+                                    {/* Indicador activo deslizante (Shared Layout Animation) */}
+                                    {isActive && (
+                                        <motion.div
+                                            layoutId="active-bubble"
+                                            className="nav-pill__active-bg"
+                                            transition={{
+                                                type: "spring",
+                                                stiffness: 380,
+                                                damping: 30,
+                                                mass: 0.9
+                                            }}
+                                        />
+                                    )}
+                                    <span className={`nav-pill__icon ${isActive ? 'nav-pill__icon--active' : ''}`}>
+                                        <Icon />
+                                    </span>
+                                    {/* Tooltip flotante */}
+                                    <span className="nav-pill__tooltip">{label}</span>
+                                </div>
+                            )}
+                        </NavLink>
+                    ))}
                 </div>
             </nav>
 

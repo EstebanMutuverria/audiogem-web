@@ -79,8 +79,8 @@
 /* Mobiles */
 @media (max-width: 768px) {
     .whatsapp-float {
-        bottom: var(--spacing-6);
-        right: var(--spacing-6);
+        bottom: 90px;
+        right: var(--spacing-4);
         width: 56px;
         height: 56px;
         font-size: 28px;
