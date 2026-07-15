@@ -587,8 +587,8 @@ export const ALL_PRODUCTS = [
         image: driver_jahro_5042,
         description: 'Driver Jahro 5042 250 watts max 40w Rms',
         badge: null,
-        price: '$47.000',
-        base_price: '$32.000',
+        price: '$50.000',
+        base_price: '$35.000',
         state: true
     },
     {
