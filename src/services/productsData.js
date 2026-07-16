@@ -455,7 +455,7 @@ export const ALL_PRODUCTS = [
         image: parlantes_jahro_6p,
         description: 'Parlantes Jahro 6 pulgadas',
         badge: BADGETS_NAMES.SALE,
-        price: '$30.000',
+        price: '$32.000',
         base_price: '$18.000',
         state: true
     },
@@ -467,7 +467,7 @@ export const ALL_PRODUCTS = [
         image: parlantes_jahro_5p,
         description: 'Parlantes Jahro 5 pulgadas',
         badge: null,
-        price: '$29.000',
+        price: '$32.000',
         base_price: '$17.000',
         state: true
     },
@@ -479,7 +479,7 @@ export const ALL_PRODUCTS = [
         image: parlantes_jahro_4p,
         description: 'Parlantes Jahro 4 pulgadas',
         badge: null,
-        price: '$28.000',
+        price: '$32.000',
         base_price: '$16.000',
         state: true
     },
