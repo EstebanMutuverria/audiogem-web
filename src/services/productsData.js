@@ -61,6 +61,7 @@ import tweeter_bala_ds18_pro_twx2 from '../assets/products_section_pictures/twee
 import medios_de_8_pulgadas_ap from '../assets/products_section_pictures/medios-de-8-pulgadas-ap.jpeg'
 import medios_de_8_pulgadas_wild_sound from '../assets/products_section_pictures/medios-de-8-pulgadas-wild-sound.jpeg'
 import estereo_car_mp3_player from '../assets/products_section_pictures/estereo-car-mp3-player.jpeg'
+import rackera_2_medios_de_6_jahro_2_driver_jahro_5042 from '../assets/products_section_pictures/rackera-2-medios-de-6-jahro-2-driver-jahro-5042.jpeg'
 
 
 import icon_categories from '../assets/icon-productsdata-categories/Success.png'
@@ -807,5 +808,17 @@ export const ALL_PRODUCTS = [
         base_price: '$16.000',
         state: true
     },
+    {
+        id: 58,
+        name: 'Rackera 2 medios de 6 Jahro y 2 Driver Jahro 5042',
+        category: 'rackeras',
+        brand: null,
+        image: rackera_2_medios_de_6_jahro_2_driver_jahro_5042,
+        description: 'Rackera 2 medios de 6 Jahro, 2 Driver Jahro 5042 200W MAX',
+        badge: null,
+        price: '$180.000',
+        base_price: '$140.000',
+        state: true
+    }
 
 ];
