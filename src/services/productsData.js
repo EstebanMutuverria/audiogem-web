@@ -823,7 +823,7 @@ export const ALL_PRODUCTS = [
     },
     {
         id: 59,
-        name: 'Driver Jahro ATQ-250',
+        name: 'Driver Jahro ATQ02 250W MAX',
         category: 'componentes',
         brand: 'Jahro',
         image: driver_jahro_atq_250,
@@ -835,11 +835,11 @@ export const ALL_PRODUCTS = [
     },
     {
         id: 60,
-        name: 'Rackera 4 driver Jahro 250 ATQ',
+        name: 'Rackera 4 driver Jahro 250 ATQ02',
         category: 'rackeras',
         brand: null,
         image: rackera_4drivers5041,
-        description: 'Rackera 4 driver Jahro 250 ATQ - Piezo Eléctrico',
+        description: 'Rackera 4 driver Jahro ATQ02 250W MAX - Piezo Eléctrico',
         badge: null,
         price: '$85.000',
         base_price: '$47.000',
