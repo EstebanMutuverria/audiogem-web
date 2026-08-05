@@ -151,7 +151,7 @@ export const FEATURED_PRODUCTS = [
         brand: 'Taramps',
         image: pote_taramps_400x4,
         description: 'Potencia Taramps 400x4 4 canales 400 watts RMS',
-        badge: BADGETS_NAMES.BEST_SELLER,
+        badge: BADGETS_NAMES.OUT_OF_STOCK,
         price: '$90.000',
         base_price: '$70.000',
         state: true
@@ -176,7 +176,7 @@ export const FEATURED_PRODUCTS = [
         image: driver_jbl_250,
         description: 'Driver JBL D250-X',
         badge: BADGETS_NAMES.RECOMMENDED,
-        price: '$80.000',
+        price: '$90.000',
         base_price: '$65.000',
         state: true
     },
@@ -251,7 +251,7 @@ export const ALL_PRODUCTS = [
         brand: 'Infinity Tech',
         image: kit_instalacion_infinity_tech,
         description: 'Kit de cableado completo calibre 8 GA. Incluye cable de poder, tierra, señal RCA y fusible.',
-        badge: null,
+        badge: BADGETS_NAMES.OUT_OF_STOCK,
         price: '$25.000',
         base_price: '$22.000',
         state: true
@@ -443,7 +443,7 @@ export const ALL_PRODUCTS = [
         brand: 'Bomber',
         image: parlantes_bomber_6x9_con_caja,
         description: 'Parlantes Bomber 6x9 con Cajas individuales',
-        badge: BADGETS_NAMES.BUDGET_FRIENDLY,
+        badge: BADGETS_NAMES.OUT_OF_STOCK,
         price: '$99.000',
         base_price: '$67.000',
         state: true
