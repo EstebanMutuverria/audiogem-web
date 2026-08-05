@@ -62,6 +62,7 @@ import medios_de_8_pulgadas_ap from '../assets/products_section_pictures/medios-
 import medios_de_8_pulgadas_wild_sound from '../assets/products_section_pictures/medios-de-8-pulgadas-wild-sound.jpeg'
 import estereo_car_mp3_player from '../assets/products_section_pictures/estereo-car-mp3-player.jpeg'
 import rackera_2_medios_de_6_jahro_2_driver_jahro_5042 from '../assets/products_section_pictures/rackera-2-medios-de-6-jahro-2-driver-jahro-5042.jpeg'
+import driver_jahro_atq_250 from '../assets/products_section_pictures/driver-jahro-atq-250.jpeg'
 
 
 import icon_categories from '../assets/icon-productsdata-categories/Success.png'
@@ -819,6 +820,30 @@ export const ALL_PRODUCTS = [
         price: '$180.000',
         base_price: '$140.000',
         state: true
-    }
+    },
+    {
+        id: 59,
+        name: 'Driver Jahro ATQ-250',
+        category: 'componentes',
+        brand: 'Jahro',
+        image: driver_jahro_atq_250,
+        description: 'Driver Jahro ATQ-250 de 250 Watts MAX - piezo eléctrico',
+        badge: null,
+        price: '$12.000',
+        base_price: '$8.500',
+        state: true
+    },
+    {
+        id: 60,
+        name: 'Rackera 4 driver Jahro 250 ATQ',
+        category: 'rackeras',
+        brand: null,
+        image: rackera_4drivers5041,
+        description: 'Rackera 4 driver Jahro 250 ATQ - Piezo Eléctrico',
+        badge: null,
+        price: '$85.000',
+        base_price: '$47.000',
+        state: true
+    },
 
 ];
