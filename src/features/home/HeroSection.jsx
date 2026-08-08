@@ -167,7 +167,7 @@ const HeroSection = () => {
                 </div>
 
                 {/* Visual */}
-                <div className="hero__visual" aria-hidden={!bargainProduct}>
+                <div className={`hero__visual${bargainProduct ? ' hero__visual--bargain' : ''}`} aria-hidden={!bargainProduct}>
                     {bargainProduct ? (
                         <BargainCard product={bargainProduct} />
                     ) : (
