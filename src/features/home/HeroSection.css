@@ -428,7 +428,6 @@
 
     .hero__stats {
         display: none;
-        justify-content: center;
     }
 
     /* Ocultar el visual por defecto (tarjeta AudioGem) en mobile */
@@ -441,6 +440,7 @@
         display: flex;
         justify-content: center;
         width: 100%;
+        margin-bottom: 30px;
     }
 
     /* Tarjeta de oferta en tablet/mobile */
