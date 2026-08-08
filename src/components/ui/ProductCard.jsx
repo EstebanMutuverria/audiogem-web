@@ -9,7 +9,7 @@ import StarBorder from '../animations/StarBorder';
 import { useAdmin } from '../../context/AdminContext';
 import { useCart } from '../../context/CartContext';
 
-import BADGETS_NAMES from '../../constants/badgets_names.js';
+import BADGETS_NAMES from '../../constants/badge_names.js';
 
 const CATEGORY_ICONS = {
     estereos: '🎵',

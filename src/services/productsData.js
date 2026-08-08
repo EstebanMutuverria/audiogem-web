@@ -66,7 +66,7 @@ import driver_jahro_atq_250 from '../assets/products_section_pictures/driver-jah
 
 
 import icon_categories from '../assets/icon-productsdata-categories/Success.png'
-import BADGETS_NAMES from '../constants/badgets_names.js';
+import BADGE_NAMES from '../constants/badge_names.js';
 
 export const CATEGORIES = [
     {
@@ -128,7 +128,7 @@ export const FEATURED_PRODUCTS = [
         brand: 'B52',
         image: estereo_b52,
         description: 'Receptor de audio digital con Bluetooth.',
-        badge: BADGETS_NAMES.BEST_SELLER,
+        badge: BADGE_NAMES.BEST_SELLER,
         price: '$70.000',
         base_price: '$50.000',
         state: true
@@ -140,7 +140,7 @@ export const FEATURED_PRODUCTS = [
         brand: null,
         image: rackera_2y2_para_pote,
         description: 'Rackera 2 drivers Jahro 250 watts y 2 super tweeters Jahro',
-        badge: BADGETS_NAMES.BEST_SELLER,
+        badge: BADGE_NAMES.BEST_SELLER,
         price: '$160.000',
         base_price: '$120.000',
         state: true
@@ -152,7 +152,7 @@ export const FEATURED_PRODUCTS = [
         brand: 'Taramps',
         image: pote_taramps_400x4,
         description: 'Potencia Taramps 400x4 4 canales 400 watts RMS',
-        badge: BADGETS_NAMES.OUT_OF_STOCK,
+        badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$90.000',
         base_price: '$70.000',
         state: true
@@ -164,7 +164,7 @@ export const FEATURED_PRODUCTS = [
         brand: 'JBL',
         image: tweeter_jbl_st400_trio,
         description: 'Tweeter JBL ST400 Trio de 200w rms',
-        badge: BADGETS_NAMES.OUT_OF_STOCK,
+        badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$110.000',
         base_price: '$91.000',
         state: true
@@ -176,7 +176,7 @@ export const FEATURED_PRODUCTS = [
         brand: 'JBL',
         image: driver_jbl_250,
         description: 'Driver JBL D250-X',
-        badge: BADGETS_NAMES.RECOMMENDED,
+        badge: BADGE_NAMES.RECOMMENDED,
         price: '$90.000',
         base_price: '$65.000',
         state: true
@@ -188,7 +188,7 @@ export const FEATURED_PRODUCTS = [
         brand: null,
         image: rackera_2y2_chica,
         description: 'Rackera 2 drivers Jahro 5041 de 150 watts y 2 tweeters Jahro',
-        badge: BADGETS_NAMES.BEST_SELLER,
+        badge: BADGE_NAMES.BEST_SELLER,
         price: '$85.000',
         base_price: '$55.000',
         state: true
@@ -216,7 +216,7 @@ export const ALL_PRODUCTS = [
         brand: null,
         image: rackera_2medios_2super,
         description: 'Rackera 2 medios de 8 pulgadas marca Jahro y 2 super tweeters Jahro',
-        badge: BADGETS_NAMES.OUT_OF_STOCK,
+        badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$140.000',
         base_price: '$95.000',
         state: true
@@ -240,7 +240,7 @@ export const ALL_PRODUCTS = [
         brand: null,
         image: rackera_curva_completa_estereo,
         description: 'Rackera 2 drivers jahro 5041, 2 medios jahro y 2 tweeters Jahro',
-        badge: BADGETS_NAMES.BEST_SELLER,
+        badge: BADGE_NAMES.BEST_SELLER,
         price: '$170.000',
         base_price: '$120.000',
         state: true
@@ -252,7 +252,7 @@ export const ALL_PRODUCTS = [
         brand: 'Infinity Tech',
         image: kit_instalacion_infinity_tech,
         description: 'Kit de cableado completo calibre 8 GA. Incluye cable de poder, tierra, señal RCA y fusible.',
-        badge: BADGETS_NAMES.OUT_OF_STOCK,
+        badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$25.000',
         base_price: '$22.000',
         state: true
@@ -264,7 +264,7 @@ export const ALL_PRODUCTS = [
         brand: null,
         image: rackera_2driver_2bomber_2tweeter,
         description: 'Rackera 2 drivers Jahro, 2 parlantes Bomber de 6" y 2 tweeters marca Jahro',
-        badge: BADGETS_NAMES.SALE,
+        badge: BADGE_NAMES.SALE,
         price: '$75.000',
         base_price: '$46.000',
         state: false
@@ -276,7 +276,7 @@ export const ALL_PRODUCTS = [
         brand: 'Philco',
         image: estereo_philco,
         description: 'Estereo Philco con Bluetooth, USB, Manos Libres',
-        badge: BADGETS_NAMES.OUT_OF_STOCK,
+        badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$50.000',
         base_price: '$30.000',
         state: true
@@ -288,7 +288,7 @@ export const ALL_PRODUCTS = [
         brand: null,
         image: rackera_2driver_26x9pioneer,
         description: 'Rackera 2 drivers Jahro 5041 de 150 watts y 2 parlantes Pioneer 6x9',
-        badge: BADGETS_NAMES.OUT_OF_STOCK,
+        badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$160.000',
         base_price: '$120.000',
         state: true
@@ -396,7 +396,7 @@ export const ALL_PRODUCTS = [
         brand: 'Infinity Tech',
         image: estereo_infinity_tech,
         description: 'Estereo Infinity Tech con Bluetooth, USB, MP3',
-        badge: BADGETS_NAMES.OUT_OF_STOCK,
+        badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$40.000',
         base_price: '$22.000',
         state: true
@@ -420,7 +420,7 @@ export const ALL_PRODUCTS = [
         brand: 'Pioneer',
         image: subwoofer_pioneer_12p,
         description: 'Subwoofer Pioneer 12 pulgadas doble bobina TS-W312D4 1600w Max / 500w RMS',
-        badge: BADGETS_NAMES.OUT_OF_STOCK,
+        badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$200.000',
         base_price: '$USD 55',
         state: true
@@ -444,7 +444,7 @@ export const ALL_PRODUCTS = [
         brand: 'Bomber',
         image: parlantes_bomber_6x9_con_caja,
         description: 'Parlantes Bomber 6x9 con Cajas individuales',
-        badge: BADGETS_NAMES.OUT_OF_STOCK,
+        badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$99.000',
         base_price: '$67.000',
         state: true
@@ -456,7 +456,7 @@ export const ALL_PRODUCTS = [
         brand: 'Jahro',
         image: parlantes_jahro_6p,
         description: 'Parlantes Jahro 6 pulgadas',
-        badge: BADGETS_NAMES.SALE,
+        badge: BADGE_NAMES.SALE,
         price: '$32.000',
         base_price: '$18.000',
         state: true
@@ -516,7 +516,7 @@ export const ALL_PRODUCTS = [
         brand: 'JBL',
         image: driver_jbl_trio,
         description: 'Driver JBL D250 Trio de 200w rms',
-        badge: BADGETS_NAMES.TOP_QUALITY,
+        badge: BADGE_NAMES.TOP_QUALITY,
         price: '$135.000',
         base_price: '$110.000',
         state: true
@@ -528,7 +528,7 @@ export const ALL_PRODUCTS = [
         brand: 'Stetsom',
         image: controles_stetsom,
         description: 'Controlador de Sonido Stetsom',
-        badge: BADGETS_NAMES.NEW,
+        badge: BADGE_NAMES.NEW,
         price: '$50.000',
         base_price: '$35.000',
         state: true
@@ -564,7 +564,7 @@ export const ALL_PRODUCTS = [
         brand: 'Triton',
         image: woofer_12p_triton,
         description: 'Woofer Triton 12 Pulgadas TR 620 8 ohm 620w Rms 1240w pmpo',
-        badge: BADGETS_NAMES.OUT_OF_STOCK,
+        badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$250.000',
         base_price: '$195.000',
         state: true
@@ -576,7 +576,7 @@ export const ALL_PRODUCTS = [
         brand: 'Triton',
         image: woofer_12p_triton_850rms,
         description: 'Woofer Triton Medio Grave 850w Rms 8 Ohm Tr 850 Negro',
-        badge: BADGETS_NAMES.OUT_OF_STOCK,
+        badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$340.000',
         base_price: '$265.000',
         state: true
@@ -600,7 +600,7 @@ export const ALL_PRODUCTS = [
         brand: 'Sound Digital',
         image: pote_sound_digital_400x4,
         description: 'Potencia Sound Digital 400.4 400w Rms 4 canales',
-        badge: BADGETS_NAMES.SALE,
+        badge: BADGE_NAMES.SALE,
         price: '$100.000',
         base_price: '$80.000',
         state: true
@@ -648,7 +648,7 @@ export const ALL_PRODUCTS = [
         brand: 'Pioneer',
         image: parlantes_pioneer_300w,
         description: 'Pioneer TS G1620F Negro 6.5 Pulgadas Potencia Máxima 300W',
-        badge: BADGETS_NAMES.TOP_QUALITY,
+        badge: BADGE_NAMES.TOP_QUALITY,
         price: '$88.000',
         base_price: '$68.000',
         state: true
@@ -708,7 +708,7 @@ export const ALL_PRODUCTS = [
         brand: null,
         image: rackera_2driver5041_2medios_6p_audiopipe,
         description: 'Rackera 2 Drivers Jahro 5041, 2 Medios de 6 pulgadas AudioPipe 250W MAX',
-        badge: BADGETS_NAMES.OUT_OF_STOCK,
+        badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$165.000',
         base_price: '$98.000',
         state: true
@@ -732,7 +732,7 @@ export const ALL_PRODUCTS = [
         brand: 'Pioneer',
         image: parlantes_pioneer_6_coma_5_pulgadas_280w,
         description: 'Parlantes Pioneer 6.5 pulgadas 280W MAX',
-        badge: BADGETS_NAMES.OUT_OF_STOCK,
+        badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$68.000',
         base_price: '$55.000',
         state: true
@@ -780,7 +780,7 @@ export const ALL_PRODUCTS = [
         brand: 'AudioPipe',
         image: medios_de_8_pulgadas_ap,
         description: 'Medios de 8 pulgadas AudioPipe de 300Watts MAX',
-        badge: BADGETS_NAMES.RECOMMENDED,
+        badge: BADGE_NAMES.RECOMMENDED,
         price: '$105.000',
         base_price: '$80.000',
         state: true
@@ -792,7 +792,7 @@ export const ALL_PRODUCTS = [
         brand: 'Wild Sound',
         image: medios_de_8_pulgadas_wild_sound,
         description: 'Medios de 8 pulgadas Wild Sound de 150Watts MAX',
-        badge: BADGETS_NAMES.NEW,
+        badge: BADGE_NAMES.NEW,
         price: '$65.000',
         base_price: '$45.000',
         state: true
@@ -804,7 +804,7 @@ export const ALL_PRODUCTS = [
         brand: null,
         image: estereo_car_mp3_player,
         description: 'Estereo Car MP3 Player de 1 Din, Bluetooth, USB, FM, hands free, AUX, Control remoto.',
-        badge: BADGETS_NAMES.SALE,
+        badge: BADGE_NAMES.SALE,
         price: '$26.000',
         base_price: '$16.000',
         state: true
@@ -840,7 +840,7 @@ export const ALL_PRODUCTS = [
         brand: null,
         image: rackera_4drivers5041,
         description: 'Rackera 4 driver Jahro ATQ02 250W MAX - Piezo Eléctrico',
-        badge: null,
+        badge: BADGE_NAMES.BARGAIN,
         price: '$85.000',
         base_price: '$47.000',
         state: true
