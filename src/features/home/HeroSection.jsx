@@ -127,6 +127,14 @@ const HeroSection = () => {
 
             <div className="hero__container">
                 {/* Contenido */}
+                {/* Visual */}
+                <div className={`hero__visual${bargainProduct ? ' hero__visual--bargain' : ''}`} aria-hidden={!bargainProduct}>
+                    {bargainProduct ? (
+                        <BargainCard product={bargainProduct} />
+                    ) : (
+                        <DefaultVisualCard />
+                    )}
+                </div>
                 <div className="hero__content">
                     <div className="hero__label">
                         <span>🏆</span>
@@ -164,15 +172,6 @@ const HeroSection = () => {
                             </div>
                         ))}
                     </div>
-                </div>
-
-                {/* Visual */}
-                <div className={`hero__visual${bargainProduct ? ' hero__visual--bargain' : ''}`} aria-hidden={!bargainProduct}>
-                    {bargainProduct ? (
-                        <BargainCard product={bargainProduct} />
-                    ) : (
-                        <DefaultVisualCard />
-                    )}
                 </div>
             </div>
         </section>
