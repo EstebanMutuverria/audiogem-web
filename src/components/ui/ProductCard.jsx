@@ -24,10 +24,16 @@ const CATEGORY_ICONS = {
  * @param {Object} props.product - Objeto de producto de productsData.js
  */
 const ProductCard = ({ product }) => {
-    const { name, category, brand, image, description, badge, price, base_price } = product;
+    const { name, category, brand, image, description, badge, price, base_price, weight, height, width, depth } = product;
     const icon = CATEGORY_ICONS[category] ?? '🎵';
     const { isAdmin } = useAdmin();
     const { addToCart } = useCart();
+
+    const specs = [];
+    if (weight != null) specs.push({ icon: '⚖️', label: `${weight} kg` });
+    if (height != null && width != null && depth != null) {
+        specs.push({ icon: '📏', label: `Alto: ${height} × Ancho: ${width} × Profundo: ${depth} cm` });
+    }
 
     const isOutOfStock = badge === 'Sin Stock';
 
@@ -71,6 +77,16 @@ const ProductCard = ({ product }) => {
                     )}
                 </div>
                 <p className="product-card__description">{description}</p>
+                {specs.length > 0 && (
+                    <div className="product-card__specs">
+                        {specs.map((spec) => (
+                            <span key={spec.label} className="product-card__spec">
+                                <span aria-hidden="true">{spec.icon}</span>
+                                {spec.label}
+                            </span>
+                        ))}
+                    </div>
+                )}
                 <div className="product-card__footer">
                     <div className="product-card__footer-meta">
                         <span className="product-card__brand">{brand || 'AudioGem'}</span>

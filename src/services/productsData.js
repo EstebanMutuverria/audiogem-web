@@ -131,7 +131,11 @@ export const FEATURED_PRODUCTS = [
         badge: BADGE_NAMES.BEST_SELLER,
         price: '$70.000',
         base_price: '$50.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 2,
@@ -143,7 +147,11 @@ export const FEATURED_PRODUCTS = [
         badge: BADGE_NAMES.BEST_SELLER,
         price: '$160.000',
         base_price: '$120.000',
-        state: true
+        state: true,
+        weight: 7.9,
+        height: 20,
+        width: 62,
+        depth: 23
     },
     {
         id: 3,
@@ -155,7 +163,11 @@ export const FEATURED_PRODUCTS = [
         badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$90.000',
         base_price: '$70.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 4,
@@ -167,7 +179,11 @@ export const FEATURED_PRODUCTS = [
         badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$110.000',
         base_price: '$91.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 5,
@@ -179,7 +195,11 @@ export const FEATURED_PRODUCTS = [
         badge: BADGE_NAMES.RECOMMENDED,
         price: '$90.000',
         base_price: '$65.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 6,
@@ -191,7 +211,11 @@ export const FEATURED_PRODUCTS = [
         badge: BADGE_NAMES.BEST_SELLER,
         price: '$85.000',
         base_price: '$55.000',
-        state: true
+        state: true,
+        weight: 4,
+        height: 18,
+        width: 60,
+        depth: 22
     },
 ];
 
@@ -207,7 +231,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$140.000',
         base_price: '$88.000',
-        state: false
+        state: false,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 8,
@@ -219,7 +247,11 @@ export const ALL_PRODUCTS = [
         badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$140.000',
         base_price: '$95.000',
-        state: true
+        state: true,
+        weight: 10,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 9,
@@ -231,7 +263,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$125.000',
         base_price: '$76.000',
-        state: true
+        state: true,
+        weight: 5,
+        height: 18,
+        width: 71,
+        depth: 22
     },
     {
         id: 10,
@@ -243,7 +279,11 @@ export const ALL_PRODUCTS = [
         badge: BADGE_NAMES.BEST_SELLER,
         price: '$170.000',
         base_price: '$120.000',
-        state: true
+        state: true,
+        weight: 8,
+        height: 22,
+        width: 99,
+        depth: 23
     },
     {
         id: 11,
@@ -255,7 +295,11 @@ export const ALL_PRODUCTS = [
         badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$25.000',
         base_price: '$22.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 12,
@@ -267,7 +311,11 @@ export const ALL_PRODUCTS = [
         badge: BADGE_NAMES.SALE,
         price: '$75.000',
         base_price: '$46.000',
-        state: false
+        state: false,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 13,
@@ -279,7 +327,11 @@ export const ALL_PRODUCTS = [
         badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$50.000',
         base_price: '$30.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 14,
@@ -291,7 +343,11 @@ export const ALL_PRODUCTS = [
         badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$160.000',
         base_price: '$120.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 15,
@@ -303,7 +359,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$85.000',
         base_price: '$50.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 16,
@@ -315,7 +375,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$30.000',
         base_price: '$18.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 17,
@@ -327,7 +391,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$5.000',
         base_price: '$2.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 18,
@@ -339,7 +407,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$2.500',
         base_price: '$1.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 19,
@@ -351,7 +423,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$2.500',
         base_price: '$1.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 20,
@@ -363,7 +439,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$37.000',
         base_price: '$28.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 21,
@@ -374,8 +454,12 @@ export const ALL_PRODUCTS = [
         description: 'Potencia Taramps 800.4 4 canales 800 watts RMS',
         badge: null,
         price: '$180.000',
-        base_price: '$140.000',
-        state: true
+        base_price: '$160.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 22,
@@ -387,7 +471,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$32.000',
         base_price: '$22.500',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 23,
@@ -399,7 +487,11 @@ export const ALL_PRODUCTS = [
         badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$40.000',
         base_price: '$22.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 24,
@@ -411,7 +503,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$3.800',
         base_price: '$2.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 25,
@@ -423,7 +519,11 @@ export const ALL_PRODUCTS = [
         badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$200.000',
         base_price: '$USD 55',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 26,
@@ -435,7 +535,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$290.000',
         base_price: '$230.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 27,
@@ -447,7 +551,11 @@ export const ALL_PRODUCTS = [
         badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$99.000',
         base_price: '$67.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 28,
@@ -459,7 +567,11 @@ export const ALL_PRODUCTS = [
         badge: BADGE_NAMES.SALE,
         price: '$32.000',
         base_price: '$18.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 29,
@@ -471,7 +583,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$32.000',
         base_price: '$17.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 30,
@@ -483,7 +599,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$32.000',
         base_price: '$16.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 31,
@@ -495,7 +615,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$27.000',
         base_price: '$20.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 32,
@@ -507,7 +631,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$22.000',
         base_price: '$12.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 33,
@@ -519,7 +647,11 @@ export const ALL_PRODUCTS = [
         badge: BADGE_NAMES.TOP_QUALITY,
         price: '$135.000',
         base_price: '$110.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 34,
@@ -531,7 +663,11 @@ export const ALL_PRODUCTS = [
         badge: BADGE_NAMES.NEW,
         price: '$50.000',
         base_price: '$35.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 36,
@@ -543,7 +679,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$55.000',
         base_price: '$41.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 35,
@@ -555,7 +695,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$65.000',
         base_price: '$45.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 37,
@@ -567,7 +711,11 @@ export const ALL_PRODUCTS = [
         badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$250.000',
         base_price: '$195.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 38,
@@ -579,7 +727,11 @@ export const ALL_PRODUCTS = [
         badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$340.000',
         base_price: '$265.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 39,
@@ -591,7 +743,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$50.000',
         base_price: '$35.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 40,
@@ -603,7 +759,11 @@ export const ALL_PRODUCTS = [
         badge: BADGE_NAMES.SALE,
         price: '$100.000',
         base_price: '$80.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 41,
@@ -613,9 +773,13 @@ export const ALL_PRODUCTS = [
         image: pote_sound_digital_800x4,
         description: 'Potencia Sound Digital 800.4 800w Rms 4 canales',
         badge: null,
-        price: '$170.000',
-        base_price: '$140.000',
-        state: true
+        price: '$180.000',
+        base_price: '$160.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 42,
@@ -627,7 +791,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$14.500',
         base_price: '$9.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 43,
@@ -639,7 +807,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$25.000',
         base_price: '$15.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 44,
@@ -651,7 +823,11 @@ export const ALL_PRODUCTS = [
         badge: BADGE_NAMES.TOP_QUALITY,
         price: '$88.000',
         base_price: '$68.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 45,
@@ -663,7 +839,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$260.000',
         base_price: '$195.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 46,
@@ -675,7 +855,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$27.000',
         base_price: '$15.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 47,
@@ -687,7 +871,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$17.000',
         base_price: '$12.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 48,
@@ -699,7 +887,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$14.500',
         base_price: '$9.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 49,
@@ -711,7 +903,11 @@ export const ALL_PRODUCTS = [
         badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$165.000',
         base_price: '$98.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 50,
@@ -723,7 +919,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$50.000',
         base_price: '$35.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 51,
@@ -735,7 +935,11 @@ export const ALL_PRODUCTS = [
         badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$68.000',
         base_price: '$55.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 52,
@@ -747,7 +951,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$170.000',
         base_price: '$120.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 53,
@@ -759,7 +967,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$85.000',
         base_price: '$55.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 54,
@@ -771,7 +983,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$70.000',
         base_price: '$50.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 55,
@@ -783,7 +999,11 @@ export const ALL_PRODUCTS = [
         badge: BADGE_NAMES.RECOMMENDED,
         price: '$105.000',
         base_price: '$80.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 56,
@@ -795,7 +1015,11 @@ export const ALL_PRODUCTS = [
         badge: BADGE_NAMES.NEW,
         price: '$65.000',
         base_price: '$45.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 57,
@@ -807,7 +1031,11 @@ export const ALL_PRODUCTS = [
         badge: BADGE_NAMES.SALE,
         price: '$26.000',
         base_price: '$16.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 58,
@@ -819,7 +1047,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$180.000',
         base_price: '$140.000',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 59,
@@ -831,7 +1063,11 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$12.000',
         base_price: '$8.500',
-        state: true
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     {
         id: 60,
@@ -843,7 +1079,11 @@ export const ALL_PRODUCTS = [
         badge: BADGE_NAMES.BARGAIN,
         price: '$85.000',
         base_price: '$47.000',
-        state: true
+        state: true,
+        weight: 3.7,
+        height: 18,
+        width: 71,
+        depth: 22
     },
 
 ];
