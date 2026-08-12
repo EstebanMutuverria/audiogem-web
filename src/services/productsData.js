@@ -63,6 +63,9 @@ import medios_de_8_pulgadas_wild_sound from '../assets/products_section_pictures
 import estereo_car_mp3_player from '../assets/products_section_pictures/estereo-car-mp3-player.jpeg'
 import rackera_2_medios_de_6_jahro_2_driver_jahro_5042 from '../assets/products_section_pictures/rackera-2-medios-de-6-jahro-2-driver-jahro-5042.jpeg'
 import driver_jahro_atq_250 from '../assets/products_section_pictures/driver-jahro-atq-250.jpeg'
+import rackera_2_medios_de_8_2_driver_5042 from '../assets/products_section_pictures/rackera-2-medios-de-8-2-driver-5042.jpeg'
+import pantalla_pioneer_DMH_A5650BT from '../assets/products_section_pictures/pantalla-pioneer-DMH-A5650BT.jpeg'
+import tweeter_jahro_yp307 from '../assets/products_section_pictures/tweeter-jahro-yp307.jpeg'
 
 
 import icon_categories from '../assets/icon-productsdata-categories/Success.png'
@@ -203,11 +206,11 @@ export const FEATURED_PRODUCTS = [
     },
     {
         id: 6,
-        name: 'Rackera 2 driver y 2 tweeters Jahro',
+        name: 'Rackera 2 driver Jahro 5041 y 2 tweeter Jahro',
         category: 'rackeras',
         brand: null,
         image: rackera_2y2_chica,
-        description: 'Rackera 2 drivers Jahro 5041 de 150 watts y 2 tweeters Jahro',
+        description: 'Rackera 2 driver Jahro 5041 de 150W MAX y 2 tweeter Jahro',
         badge: BADGE_NAMES.BEST_SELLER,
         price: '$85.000',
         base_price: '$55.000',
@@ -360,10 +363,10 @@ export const ALL_PRODUCTS = [
         price: '$85.000',
         base_price: '$50.000',
         state: true,
-        weight: null,
-        height: null,
-        width: null,
-        depth: null
+        weight: 4,
+        height: 18,
+        width: 60,
+        depth: 22
     },
     {
         id: 16,
@@ -537,9 +540,9 @@ export const ALL_PRODUCTS = [
         base_price: '$230.000',
         state: true,
         weight: null,
-        height: null,
-        width: null,
-        depth: null
+        height: 22,
+        width: 99,
+        depth: 23
     },
     {
         id: 27,
@@ -841,9 +844,9 @@ export const ALL_PRODUCTS = [
         base_price: '$195.000',
         state: true,
         weight: null,
-        height: null,
-        width: null,
-        depth: null
+        height: 22,
+        width: 99,
+        depth: 23
     },
     {
         id: 46,
@@ -904,10 +907,10 @@ export const ALL_PRODUCTS = [
         price: '$165.000',
         base_price: '$98.000',
         state: true,
-        weight: null,
-        height: null,
-        width: null,
-        depth: null
+        weight: 7,
+        height: 18,
+        width: 71,
+        depth: 22
     },
     {
         id: 50,
@@ -959,7 +962,7 @@ export const ALL_PRODUCTS = [
     },
     {
         id: 53,
-        name: 'Rackera 2 Drivers y 2 Tweeter Arwen',
+        name: 'Rackera 2 drivers y 2 tweeter Arwen',
         category: 'rackeras',
         brand: null,
         image: rackera_2driver_2tweeter_arwen,
@@ -968,10 +971,10 @@ export const ALL_PRODUCTS = [
         price: '$85.000',
         base_price: '$55.000',
         state: true,
-        weight: null,
-        height: null,
-        width: null,
-        depth: null
+        weight: 4,
+        height: 18,
+        width: 60,
+        depth: 22
     },
     {
         id: 54,
@@ -1048,10 +1051,10 @@ export const ALL_PRODUCTS = [
         price: '$180.000',
         base_price: '$140.000',
         state: true,
-        weight: null,
-        height: null,
-        width: null,
-        depth: null
+        weight: 7,
+        height: 18,
+        width: 71,
+        depth: 22
     },
     {
         id: 59,
@@ -1071,7 +1074,7 @@ export const ALL_PRODUCTS = [
     },
     {
         id: 60,
-        name: 'Rackera 4 driver Jahro 250 ATQ02',
+        name: 'Rackera 4 driver Jahro ATQ02 250W',
         category: 'rackeras',
         brand: null,
         image: rackera_4drivers5041,
@@ -1085,5 +1088,85 @@ export const ALL_PRODUCTS = [
         width: 71,
         depth: 22
     },
+    {
+        id: 61,
+        name: 'Rackera 2 driver Jahro ATQ02 250W y 2 Tweeter',
+        category: 'rackeras',
+        brand: null,
+        image: rackera_2y2_chica,
+        description: 'Rackera con 2 Driver JAhro ATQ02 piezoelectrico 250W y 2 Tweeter',
+        badge: BADGE_NAMES.SALE,
+        price: '$75.000',
+        base_price: '$37.000',
+        state: true,
+        weight: 3,
+        height: 18,
+        width: 60,
+        depth: 22
+    },
+    {
+        id: 62,
+        name: 'Rackera 2 medios de 8 y 2 driver 5042 Jahro',
+        category: 'rackeras',
+        brand: null,
+        image: rackera_2_medios_de_8_2_driver_5042,
+        description: 'Rackera 2 medios de 8 pulgadas Jahro y 2 Driver Jahro 5042',
+        badge: null,
+        price: '$195.000',
+        base_price: '$145.000',
+        state: true,
+        weight: 9,
+        height: 22,
+        width: 79,
+        depth: 22
+    },
+    {
+        id: 63,
+        name: 'Pantalla Pioneer DMH-A5650BT',
+        category: 'estereos',
+        brand: 'Pioneer',
+        image: pantalla_pioneer_DMH_A5650BT,
+        description: 'Pioneer DMH-A5650BT - Pantalla con radio, Bluetooth, Apple car play y Android Auto Inalámbrico',
+        badge: null,
+        price: '$280.000',
+        base_price: '$230.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        id: 64,
+        name: 'Tweeter Jahro YP307 250W',
+        category: 'componentes',
+        brand: 'Jahro',
+        image: tweeter_jahro_yp307,
+        description: 'Tweeter Jahro YP-307 Piezoeléctrico',
+        badge: BADGE_NAMES.SALE,
+        price: '$8.500',
+        base_price: '$3.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        id: 65,
+        name: 'Rackera 2 medios Jahro de 6 pulgadas y 2 driver Jahro 5041',
+        category: 'rackeras',
+        brand: null,
+        image: rackera_2_medios_de_6_jahro_2_driver_jahro_5042,
+        description: 'Rackera 2 medios de 6 pulgadas Jahro y 2 Driver Jahro 5041 de 150W MAX',
+        badge: BADGE_NAMES.NEW,
+        price: '$128.000',
+        base_price: '$84.000',
+        state: true,
+        weight: 6,
+        height: 18,
+        width: 71,
+        depth: 22
+    }
 
 ];
