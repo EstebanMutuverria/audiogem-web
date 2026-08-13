@@ -142,11 +142,11 @@ export const FEATURED_PRODUCTS = [
     },
     {
         id: 2,
-        name: 'Rackera 2 drivers 250W MAX y 2 super tweeters',
+        name: 'Rackera 2 drivers Jahro 5042 250W MAX y 2 super tweeters',
         category: 'rackeras',
         brand: null,
         image: rackera_2y2_para_pote,
-        description: 'Rackera 2 drivers Jahro 250 watts y 2 super tweeters Jahro',
+        description: 'Rackera 2 drivers Jahro 5042 250 watts y 2 super tweeters Jahro',
         badge: BADGE_NAMES.BEST_SELLER,
         price: '$160.000',
         base_price: '$120.000',
