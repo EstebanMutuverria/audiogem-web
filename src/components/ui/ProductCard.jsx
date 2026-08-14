@@ -10,13 +10,14 @@ import { useAdmin } from '../../context/AdminContext';
 import { useCart } from '../../context/CartContext';
 
 import BADGETS_NAMES from '../../constants/badge_names.js';
+import CATEGORY_NAMES from '../../constants/category_names.js';
 
 const CATEGORY_ICONS = {
-    estereos: '🎵',
-    parlantes: '🔊',
-    subwoofers: '💥',
-    potencias: '⚡',
-    accesorios: '🔧',
+    [CATEGORY_NAMES.ESTEREOS]: '🎵',
+    [CATEGORY_NAMES.PARLANTES]: '🔊',
+    [CATEGORY_NAMES.SUBWOOFERS]: '💥',
+    [CATEGORY_NAMES.POTENCIAS]: '⚡',
+    [CATEGORY_NAMES.ACCESORIOS]: '🔧',
 };
 
 /**

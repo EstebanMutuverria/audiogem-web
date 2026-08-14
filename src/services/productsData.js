@@ -70,52 +70,54 @@ import tweeter_jahro_yp307 from '../assets/products_section_pictures/tweeter-jah
 
 import icon_categories from '../assets/icon-productsdata-categories/Success.png'
 import BADGE_NAMES from '../constants/badge_names.js';
+import CATEGORY_NAMES from '../constants/category_names.js';
+import BRAND_NAMES from '../constants/brand_names.js';
 
 export const CATEGORIES = [
     {
-        id: 'estereos',
+        id: CATEGORY_NAMES.ESTEREOS,
         label: 'Estéreos',
         description: 'Receptores multimedia con Bluetooth, USB y pantallas táctiles.',
         icon: icon_categories,
         color: '#4895ef',
     },
     {
-        id: 'parlantes',
+        id: CATEGORY_NAMES.PARLANTES,
         label: 'Parlantes',
         description: 'Altavoces coaxiales y separados para un sonido envolvente.',
         icon: icon_categories,
         color: '#4cc9f0',
     },
     {
-        id: 'subwoofers',
+        id: CATEGORY_NAMES.SUBWOOFERS,
         label: 'Subwoofers/Woofers',
         description: 'Graves profundos y presentes que transforman tu experiencia.',
         icon: icon_categories,
         color: '#3f37c9',
     },
     {
-        id: 'potencias',
+        id: CATEGORY_NAMES.POTENCIAS,
         label: 'Potencias',
         description: 'Amplificadores de alta potencia para un audio sin distorsión.',
         icon: icon_categories,
         color: '#ced4da',
     },
     {
-        id: 'accesorios',
+        id: CATEGORY_NAMES.ACCESORIOS,
         label: 'Accesorios',
         description: 'Cables, conectores, kits de instalación y todo lo necesario.',
         icon: icon_categories,
         color: '#adb5bd',
     },
     {
-        id: 'rackeras',
+        id: CATEGORY_NAMES.RACKERAS,
         label: 'Rackeras',
         description: 'Rackeras para un sonido envolvente.',
         icon: icon_categories,
         color: '#4cc9f0',
     },
     {
-        id: 'componentes',
+        id: CATEGORY_NAMES.COMPONENTES,
         label: 'Drivers/Tweeters/Medios',
         description: 'Drivers, Tweeters y Medios para un sonido de alta calidad.',
         icon: icon_categories,
@@ -127,8 +129,8 @@ export const FEATURED_PRODUCTS = [
     {
         id: 1,
         name: 'B52 RM-2025BT 4x25 watts',
-        category: 'estereos',
-        brand: 'B52',
+        category: CATEGORY_NAMES.ESTEREOS,
+        brand: BRAND_NAMES.B52,
         image: estereo_b52,
         description: 'Receptor de audio digital con Bluetooth.',
         badge: BADGE_NAMES.BEST_SELLER,
@@ -143,7 +145,7 @@ export const FEATURED_PRODUCTS = [
     {
         id: 2,
         name: 'Rackera 2 drivers Jahro 5042 250W MAX y 2 super tweeters',
-        category: 'rackeras',
+        category: CATEGORY_NAMES.RACKERAS,
         brand: null,
         image: rackera_2y2_para_pote,
         description: 'Rackera 2 drivers Jahro 5042 250 watts y 2 super tweeters Jahro',
@@ -159,8 +161,8 @@ export const FEATURED_PRODUCTS = [
     {
         id: 3,
         name: 'Taramps 400.4',
-        category: 'potencias',
-        brand: 'Taramps',
+        category: CATEGORY_NAMES.POTENCIAS,
+        brand: BRAND_NAMES.TARAMPS,
         image: pote_taramps_400x4,
         description: 'Potencia Taramps 400x4 4 canales 400 watts RMS',
         badge: BADGE_NAMES.OUT_OF_STOCK,
@@ -175,8 +177,8 @@ export const FEATURED_PRODUCTS = [
     {
         id: 4,
         name: 'Tweeter JBL ST400 Trio',
-        category: 'componentes',
-        brand: 'JBL',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.JBL,
         image: tweeter_jbl_st400_trio,
         description: 'Tweeter JBL ST400 Trio de 200w rms',
         badge: BADGE_NAMES.OUT_OF_STOCK,
@@ -191,8 +193,8 @@ export const FEATURED_PRODUCTS = [
     {
         id: 5,
         name: 'Driver JBL D250-X',
-        category: 'componentes',
-        brand: 'JBL',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.JBL,
         image: driver_jbl_250,
         description: 'Driver JBL D250-X',
         badge: BADGE_NAMES.RECOMMENDED,
@@ -207,7 +209,7 @@ export const FEATURED_PRODUCTS = [
     {
         id: 6,
         name: 'Rackera 2 driver Jahro 5041 y 2 tweeter Jahro',
-        category: 'rackeras',
+        category: CATEGORY_NAMES.RACKERAS,
         brand: null,
         image: rackera_2y2_chica,
         description: 'Rackera 2 driver Jahro 5041 de 150W MAX y 2 tweeter Jahro',
@@ -227,8 +229,8 @@ export const ALL_PRODUCTS = [
     {
         id: 7,
         name: 'Sony XAV-AX5500',
-        category: 'estereos',
-        brand: 'Sony',
+        category: CATEGORY_NAMES.ESTEREOS,
+        brand: BRAND_NAMES.SONY,
         image: null,
         description: 'Pantalla táctil de 6.95" con Apple CarPlay, Android Auto, WebLink Cast y Bluetooth.',
         badge: null,
@@ -243,7 +245,7 @@ export const ALL_PRODUCTS = [
     {
         id: 8,
         name: 'Rackera 2 medios de 8 pulgadas y 2 super tweeters Jahro',
-        category: 'rackeras',
+        category: CATEGORY_NAMES.RACKERAS,
         brand: null,
         image: rackera_2medios_2super,
         description: 'Rackera 2 medios de 8 pulgadas marca Jahro y 2 super tweeters Jahro',
@@ -259,7 +261,7 @@ export const ALL_PRODUCTS = [
     {
         id: 9,
         name: 'Rackera 4 drivers Jahro 5041',
-        category: 'rackeras',
+        category: CATEGORY_NAMES.RACKERAS,
         brand: null,
         image: rackera_4drivers5041,
         description: 'Rackera 4 drivers Jahro 5041 de 150 watts',
@@ -275,7 +277,7 @@ export const ALL_PRODUCTS = [
     {
         id: 10,
         name: 'Rackera 2 drivers, 2 medios y 2 tweeters',
-        category: 'rackeras',
+        category: CATEGORY_NAMES.RACKERAS,
         brand: null,
         image: rackera_curva_completa_estereo,
         description: 'Rackera 2 drivers jahro 5041, 2 medios jahro y 2 tweeters Jahro',
@@ -291,8 +293,8 @@ export const ALL_PRODUCTS = [
     {
         id: 11,
         name: 'Kit instalación Infinity Tech 8 GA',
-        category: 'accesorios',
-        brand: 'Infinity Tech',
+        category: CATEGORY_NAMES.ACCESORIOS,
+        brand: BRAND_NAMES.INFINITY_TECH,
         image: kit_instalacion_infinity_tech,
         description: 'Kit de cableado completo calibre 8 GA. Incluye cable de poder, tierra, señal RCA y fusible.',
         badge: BADGE_NAMES.OUT_OF_STOCK,
@@ -307,7 +309,7 @@ export const ALL_PRODUCTS = [
     {
         id: 12,
         name: 'Rackera 2 drivers, 2 parlantes y 2 tweeters',
-        category: 'rackeras',
+        category: CATEGORY_NAMES.RACKERAS,
         brand: null,
         image: rackera_2driver_2bomber_2tweeter,
         description: 'Rackera 2 drivers Jahro, 2 parlantes Bomber de 6" y 2 tweeters marca Jahro',
@@ -323,8 +325,8 @@ export const ALL_PRODUCTS = [
     {
         id: 13,
         name: 'Estereo philco CSP2950BT',
-        category: 'estereos',
-        brand: 'Philco',
+        category: CATEGORY_NAMES.ESTEREOS,
+        brand: BRAND_NAMES.PHILCO,
         image: estereo_philco,
         description: 'Estereo Philco con Bluetooth, USB, Manos Libres',
         badge: BADGE_NAMES.OUT_OF_STOCK,
@@ -339,7 +341,7 @@ export const ALL_PRODUCTS = [
     {
         id: 14,
         name: 'Rackera 2 drivers y 2 parlantes 6x9 Pioneer',
-        category: 'rackeras',
+        category: CATEGORY_NAMES.RACKERAS,
         brand: null,
         image: rackera_2driver_26x9pioneer,
         description: 'Rackera 2 drivers Jahro 5041 de 150 watts y 2 parlantes Pioneer 6x9',
@@ -355,7 +357,7 @@ export const ALL_PRODUCTS = [
     {
         id: 15,
         name: 'Rackera 2 parlantes Jahro y 2 tweeters Jahro',
-        category: 'rackeras',
+        category: CATEGORY_NAMES.RACKERAS,
         brand: null,
         image: rackera_2parlantes_2tweeter_jahro,
         description: 'Rackera 2 parlantes de 6" marca Jahro y 2 tweeters marca Jahro',
@@ -371,8 +373,8 @@ export const ALL_PRODUCTS = [
     {
         id: 16,
         name: 'Super Tweeter Blauline BT-304',
-        category: 'componentes',
-        brand: 'Blauline',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.BLAULINE,
         image: super_tweeter_blauline,
         description: 'Super Tweeter Blauline 1.8 Super Bullet',
         badge: null,
@@ -387,7 +389,7 @@ export const ALL_PRODUCTS = [
     {
         id: 17,
         name: 'Cable y Griega',
-        category: 'accesorios',
+        category: CATEGORY_NAMES.ACCESORIOS,
         brand: null,
         image: cable_y_griega,
         description: 'Cable y Griega - 1 rca hembra a 2 rca macho',
@@ -403,7 +405,7 @@ export const ALL_PRODUCTS = [
     {
         id: 18,
         name: 'Capacitores para Tweeter',
-        category: 'accesorios',
+        category: CATEGORY_NAMES.ACCESORIOS,
         brand: null,
         image: capacitores_tweeter,
         description: 'Capacitores para Tweeter',
@@ -419,7 +421,7 @@ export const ALL_PRODUCTS = [
     {
         id: 19,
         name: 'Capacitores para Driver',
-        category: 'accesorios',
+        category: CATEGORY_NAMES.ACCESORIOS,
         brand: null,
         image: capacitores_driver,
         description: 'Capacitores para Driver',
@@ -435,7 +437,7 @@ export const ALL_PRODUCTS = [
     {
         id: 20,
         name: 'Difusores de Aluminio',
-        category: 'accesorios',
+        category: CATEGORY_NAMES.ACCESORIOS,
         brand: null,
         image: difusores_de_aluminio,
         description: 'Difusores de Aluminio para Driver',
@@ -451,8 +453,8 @@ export const ALL_PRODUCTS = [
     {
         id: 21,
         name: 'Potencia Taramps 800.4',
-        category: 'potencias',
-        brand: 'Taramps',
+        category: CATEGORY_NAMES.POTENCIAS,
+        brand: BRAND_NAMES.TARAMPS,
         image: pote_taramps_800x4,
         description: 'Potencia Taramps 800.4 4 canales 800 watts RMS',
         badge: null,
@@ -467,8 +469,8 @@ export const ALL_PRODUCTS = [
     {
         id: 22,
         name: 'Medio de 8 pulgadas Jahro',
-        category: 'componentes',
-        brand: 'Jahro',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.JAHRO,
         image: medios_de_8_jahro,
         description: 'Medio de 8 pulgadas marca Jahro',
         badge: null,
@@ -483,8 +485,8 @@ export const ALL_PRODUCTS = [
     {
         id: 23,
         name: 'Estereo Infinity Tech',
-        category: 'estereos',
-        brand: 'Infinity Tech',
+        category: CATEGORY_NAMES.ESTEREOS,
+        brand: BRAND_NAMES.INFINITY_TECH,
         image: estereo_infinity_tech,
         description: 'Estereo Infinity Tech con Bluetooth, USB, MP3',
         badge: BADGE_NAMES.OUT_OF_STOCK,
@@ -499,7 +501,7 @@ export const ALL_PRODUCTS = [
     {
         id: 24,
         name: 'Difusores de Plástico Cortos',
-        category: 'accesorios',
+        category: CATEGORY_NAMES.ACCESORIOS,
         brand: null,
         image: difusores_de_plastico_cortos,
         description: 'Difusores de Plástico Cortos',
@@ -515,8 +517,8 @@ export const ALL_PRODUCTS = [
     {
         id: 25,
         name: 'Subwoofer Pioneer 12 pulgadas',
-        category: 'subwoofers',
-        brand: 'Pioneer',
+        category: CATEGORY_NAMES.SUBWOOFERS,
+        brand: BRAND_NAMES.PIONEER,
         image: subwoofer_pioneer_12p,
         description: 'Subwoofer Pioneer 12 pulgadas doble bobina TS-W312D4 1600w Max / 500w RMS',
         badge: BADGE_NAMES.OUT_OF_STOCK,
@@ -531,7 +533,7 @@ export const ALL_PRODUCTS = [
     {
         id: 26,
         name: 'Rackera Curva 2 medios bala, 2 drivers 250 y 2 super tweeters',
-        category: 'rackeras',
+        category: CATEGORY_NAMES.RACKERAS,
         brand: null,
         image: rackera_curva_completa_para_pote_bala,
         description: 'Rackera Curva 2 medios bala, 2 drivers 250 y 2 super tweeters',
@@ -547,8 +549,8 @@ export const ALL_PRODUCTS = [
     {
         id: 27,
         name: 'Parlantes Bomber 6x9 con Cajas individuales (el par)',
-        category: 'parlantes',
-        brand: 'Bomber',
+        category: CATEGORY_NAMES.PARLANTES,
+        brand: BRAND_NAMES.BOMBER,
         image: parlantes_bomber_6x9_con_caja,
         description: 'Parlantes Bomber 6x9 con Cajas individuales',
         badge: BADGE_NAMES.OUT_OF_STOCK,
@@ -563,8 +565,8 @@ export const ALL_PRODUCTS = [
     {
         id: 28,
         name: 'Parlantes Jahro 6 pulgadas (el par)',
-        category: 'parlantes',
-        brand: 'Jahro',
+        category: CATEGORY_NAMES.PARLANTES,
+        brand: BRAND_NAMES.JAHRO,
         image: parlantes_jahro_6p,
         description: 'Parlantes Jahro 6 pulgadas',
         badge: BADGE_NAMES.SALE,
@@ -579,8 +581,8 @@ export const ALL_PRODUCTS = [
     {
         id: 29,
         name: 'Parlantes Jahro 5 pulgadas (el par)',
-        category: 'parlantes',
-        brand: 'Jahro',
+        category: CATEGORY_NAMES.PARLANTES,
+        brand: BRAND_NAMES.JAHRO,
         image: parlantes_jahro_5p,
         description: 'Parlantes Jahro 5 pulgadas',
         badge: null,
@@ -595,8 +597,8 @@ export const ALL_PRODUCTS = [
     {
         id: 30,
         name: 'Parlantes Jahro 4 pulgadas (el par)',
-        category: 'parlantes',
-        brand: 'Jahro',
+        category: CATEGORY_NAMES.PARLANTES,
+        brand: BRAND_NAMES.JAHRO,
         image: parlantes_jahro_4p,
         description: 'Parlantes Jahro 4 pulgadas',
         badge: null,
@@ -611,8 +613,8 @@ export const ALL_PRODUCTS = [
     {
         id: 31,
         name: 'Medio de 6" Jahro',
-        category: 'componentes',
-        brand: 'Jahro',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.JAHRO,
         image: medios_de_6_jahro,
         description: 'Medio de 6" marca Jahro',
         badge: null,
@@ -627,8 +629,8 @@ export const ALL_PRODUCTS = [
     {
         id: 32,
         name: 'Driver Jahro 5041',
-        category: 'componentes',
-        brand: 'Jahro',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.JAHRO,
         image: driver_jahro_5041,
         description: 'Driver Jahro 5041 de 150 watts',
         badge: null,
@@ -643,8 +645,8 @@ export const ALL_PRODUCTS = [
     {
         id: 33,
         name: 'Driver JBL Trio',
-        category: 'componentes',
-        brand: 'JBL',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.JBL,
         image: driver_jbl_trio,
         description: 'Driver JBL D250 Trio de 200w rms',
         badge: BADGE_NAMES.TOP_QUALITY,
@@ -659,8 +661,8 @@ export const ALL_PRODUCTS = [
     {
         id: 34,
         name: 'Controlador de Sonido Stetsom',
-        category: 'accesorios',
-        brand: 'Stetsom',
+        category: CATEGORY_NAMES.ACCESORIOS,
+        brand: BRAND_NAMES.STETSOM,
         image: controles_stetsom,
         description: 'Controlador de Sonido Stetsom',
         badge: BADGE_NAMES.NEW,
@@ -675,8 +677,8 @@ export const ALL_PRODUCTS = [
     {
         id: 36,
         name: 'Tweeter JBL ST200',
-        category: 'componentes',
-        brand: 'JBL',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.JBL,
         image: tweeter_jbl_st200,
         description: 'Tweeter JBL ST200 de 100w rms',
         badge: null,
@@ -691,8 +693,8 @@ export const ALL_PRODUCTS = [
     {
         id: 35,
         name: 'Estereo Crown Mustang DMR-3000BT',
-        category: 'estereos',
-        brand: 'Crown Mustang',
+        category: CATEGORY_NAMES.ESTEREOS,
+        brand: BRAND_NAMES.CROWN_MUSTANG,
         image: estereo_crown_mustang,
         description: 'Estereo Crown Mustang con Bluetooth, USB, MP3',
         badge: null,
@@ -707,8 +709,8 @@ export const ALL_PRODUCTS = [
     {
         id: 37,
         name: 'Woofer Triton 12 Pulgadas 620rms',
-        category: 'subwoofers',
-        brand: 'Triton',
+        category: CATEGORY_NAMES.SUBWOOFERS,
+        brand: BRAND_NAMES.TRITON,
         image: woofer_12p_triton,
         description: 'Woofer Triton 12 Pulgadas TR 620 8 ohm 620w Rms 1240w pmpo',
         badge: BADGE_NAMES.OUT_OF_STOCK,
@@ -723,8 +725,8 @@ export const ALL_PRODUCTS = [
     {
         id: 38,
         name: 'Woofer Triton 12 Pulgadas 850rms',
-        category: 'subwoofers',
-        brand: 'Triton',
+        category: CATEGORY_NAMES.SUBWOOFERS,
+        brand: BRAND_NAMES.TRITON,
         image: woofer_12p_triton_850rms,
         description: 'Woofer Triton Medio Grave 850w Rms 8 Ohm Tr 850 Negro',
         badge: BADGE_NAMES.OUT_OF_STOCK,
@@ -739,8 +741,8 @@ export const ALL_PRODUCTS = [
     {
         id: 39,
         name: 'Driver Jahro 5042 200w MAX',
-        category: 'componentes',
-        brand: 'Jahro',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.JAHRO,
         image: driver_jahro_5042,
         description: 'Driver Jahro 5042 250 watts max 40w Rms',
         badge: null,
@@ -755,8 +757,8 @@ export const ALL_PRODUCTS = [
     {
         id: 40,
         name: 'Potencia Sound Digital 400.4',
-        category: 'potencias',
-        brand: 'Sound Digital',
+        category: CATEGORY_NAMES.POTENCIAS,
+        brand: BRAND_NAMES.SOUND_DIGITAL,
         image: pote_sound_digital_400x4,
         description: 'Potencia Sound Digital 400.4 400w Rms 4 canales',
         badge: BADGE_NAMES.SALE,
@@ -771,8 +773,8 @@ export const ALL_PRODUCTS = [
     {
         id: 41,
         name: 'Potencia Sound Digital 800.4',
-        category: 'potencias',
-        brand: 'Sound Digital',
+        category: CATEGORY_NAMES.POTENCIAS,
+        brand: BRAND_NAMES.SOUND_DIGITAL,
         image: pote_sound_digital_800x4,
         description: 'Potencia Sound Digital 800.4 800w Rms 4 canales',
         badge: null,
@@ -787,8 +789,8 @@ export const ALL_PRODUCTS = [
     {
         id: 42,
         name: 'Adaptador de Impedancia Jahro',
-        category: 'accesorios',
-        brand: 'Jahro',
+        category: CATEGORY_NAMES.ACCESORIOS,
+        brand: BRAND_NAMES.JAHRO,
         image: adaptador_imp_jahro,
         description: 'Adaptador Conversor De Impedancia Regulable Jahro',
         badge: null,
@@ -803,8 +805,8 @@ export const ALL_PRODUCTS = [
     {
         id: 43,
         name: 'Adaptador de Impedancia Blauline',
-        category: 'accesorios',
-        brand: 'Blauline',
+        category: CATEGORY_NAMES.ACCESORIOS,
+        brand: BRAND_NAMES.BLAULINE,
         image: adaptador_imp_blauline,
         description: 'Adaptador De Impedancia 4 Canales Salida Remoto Blauline',
         badge: null,
@@ -819,8 +821,8 @@ export const ALL_PRODUCTS = [
     {
         id: 44,
         name: 'Parlantes Pioneer 300W MAX',
-        category: 'parlantes',
-        brand: 'Pioneer',
+        category: CATEGORY_NAMES.PARLANTES,
+        brand: BRAND_NAMES.PIONEER,
         image: parlantes_pioneer_300w,
         description: 'Pioneer TS G1620F Negro 6.5 Pulgadas Potencia Máxima 300W',
         badge: BADGE_NAMES.TOP_QUALITY,
@@ -835,7 +837,7 @@ export const ALL_PRODUCTS = [
     {
         id: 45,
         name: 'Rackera Curva 2 Medios de 8 pulgadas, 2 Drivers 250 y 2 Super Tweeters',
-        category: 'rackeras',
+        category: CATEGORY_NAMES.RACKERAS,
         brand: null,
         image: rackera_curva_completa_para_pote,
         description: 'Rackera Curva 2 Medios de 8 pulgadas, 2 Drivers 250 y 2 Super Tweeters',
@@ -851,8 +853,8 @@ export const ALL_PRODUCTS = [
     {
         id: 46,
         name: 'Voltimetro automotivo Taramps',
-        category: 'accesorios',
-        brand: 'Taramps',
+        category: CATEGORY_NAMES.ACCESORIOS,
+        brand: BRAND_NAMES.TARAMPS,
         image: voltimetro_taramps,
         description: 'Voltimetro automotivo Taramps VTR 1000',
         badge: null,
@@ -867,8 +869,8 @@ export const ALL_PRODUCTS = [
     {
         id: 47,
         name: 'Cable RCA Svart 4mm 1m',
-        category: 'accesorios',
-        brand: 'Svart',
+        category: CATEGORY_NAMES.ACCESORIOS,
+        brand: BRAND_NAMES.SVART,
         image: cable_rca_svart_4mm_1m,
         description: 'Cable RCA Svart 4mm 1m',
         badge: null,
@@ -883,8 +885,8 @@ export const ALL_PRODUCTS = [
     {
         id: 48,
         name: 'Adaptador de Impedancia Maverick',
-        category: 'accesorios',
-        brand: 'Maverick',
+        category: CATEGORY_NAMES.ACCESORIOS,
+        brand: BRAND_NAMES.MAVERICK,
         image: adaptador_imp_maverick,
         description: 'Adaptador de Impedancia Maverick universal',
         badge: null,
@@ -899,7 +901,7 @@ export const ALL_PRODUCTS = [
     {
         id: 49,
         name: 'Rackera 2 Drivers Jahro y 2 Medios de 6 pulgadas AudioPipe',
-        category: 'rackeras',
+        category: CATEGORY_NAMES.RACKERAS,
         brand: null,
         image: rackera_2driver5041_2medios_6p_audiopipe,
         description: 'Rackera 2 Drivers Jahro 5041, 2 Medios de 6 pulgadas AudioPipe 250W MAX',
@@ -915,8 +917,8 @@ export const ALL_PRODUCTS = [
     {
         id: 50,
         name: 'Parlantes Bomber 5 pulgadas',
-        category: 'parlantes',
-        brand: 'Bomber',
+        category: CATEGORY_NAMES.PARLANTES,
+        brand: BRAND_NAMES.BOMBER,
         image: parlantes_bomber_5pulgadas,
         description: 'Parlantes Bomber 5 pulgadas 65W RMS',
         badge: null,
@@ -931,8 +933,8 @@ export const ALL_PRODUCTS = [
     {
         id: 51,
         name: 'Parlantes Pioneer 6.5 pulgadas 280W MAX',
-        category: 'parlantes',
-        brand: 'Pioneer',
+        category: CATEGORY_NAMES.PARLANTES,
+        brand: BRAND_NAMES.PIONEER,
         image: parlantes_pioneer_6_coma_5_pulgadas_280w,
         description: 'Parlantes Pioneer 6.5 pulgadas 280W MAX',
         badge: BADGE_NAMES.OUT_OF_STOCK,
@@ -947,7 +949,7 @@ export const ALL_PRODUCTS = [
     {
         id: 52,
         name: 'Rackera 2 6x9 Pioneer y 2 Super Tweeter Jahro',
-        category: 'rackeras',
+        category: CATEGORY_NAMES.RACKERAS,
         brand: null,
         image: rackera_2_6x9_pioneer_2_supertweeter_jahro,
         description: 'Rackera 2 6x9 Pioneer de 500W MAX y 2 Super Tweeter Jahro',
@@ -963,7 +965,7 @@ export const ALL_PRODUCTS = [
     {
         id: 53,
         name: 'Rackera 2 drivers y 2 tweeter Arwen',
-        category: 'rackeras',
+        category: CATEGORY_NAMES.RACKERAS,
         brand: null,
         image: rackera_2driver_2tweeter_arwen,
         description: 'Rackera 2 Drivers y 2 Tweeter Arwen',
@@ -979,8 +981,8 @@ export const ALL_PRODUCTS = [
     {
         id: 54,
         name: 'Tweeter Bala DS18 Pro TWX2 (el par)',
-        category: 'componentes',
-        brand: 'DS18',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.DS18,
         image: tweeter_bala_ds18_pro_twx2,
         description: 'Tweeter Bala DS18 Pro TWX2 de 3.78 pulgadas',
         badge: null,
@@ -995,8 +997,8 @@ export const ALL_PRODUCTS = [
     {
         id: 55,
         name: 'Medios de 8 pulgadas AudioPipe (el par)',
-        category: 'componentes',
-        brand: 'AudioPipe',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.AUDIOPIPE,
         image: medios_de_8_pulgadas_ap,
         description: 'Medios de 8 pulgadas AudioPipe de 300Watts MAX',
         badge: BADGE_NAMES.RECOMMENDED,
@@ -1011,8 +1013,8 @@ export const ALL_PRODUCTS = [
     {
         id: 56,
         name: 'Medios de 8 pulgadas Wild Sound (el par)',
-        category: 'componentes',
-        brand: 'Wild Sound',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.WILD_SOUND,
         image: medios_de_8_pulgadas_wild_sound,
         description: 'Medios de 8 pulgadas Wild Sound de 150Watts MAX',
         badge: BADGE_NAMES.NEW,
@@ -1027,7 +1029,7 @@ export const ALL_PRODUCTS = [
     {
         id: 57,
         name: 'Estereo Car MP3 Player',
-        category: 'estereos',
+        category: CATEGORY_NAMES.ESTEREOS,
         brand: null,
         image: estereo_car_mp3_player,
         description: 'Estereo Car MP3 Player de 1 Din, Bluetooth, USB, FM, hands free, AUX, Control remoto.',
@@ -1043,7 +1045,7 @@ export const ALL_PRODUCTS = [
     {
         id: 58,
         name: 'Rackera 2 medios de 6 Jahro y 2 Driver Jahro 5042',
-        category: 'rackeras',
+        category: CATEGORY_NAMES.RACKERAS,
         brand: null,
         image: rackera_2_medios_de_6_jahro_2_driver_jahro_5042,
         description: 'Rackera 2 medios de 6 Jahro, 2 Driver Jahro 5042 200W MAX',
@@ -1059,8 +1061,8 @@ export const ALL_PRODUCTS = [
     {
         id: 59,
         name: 'Driver Jahro ATQ02 250W MAX',
-        category: 'componentes',
-        brand: 'Jahro',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.JAHRO,
         image: driver_jahro_atq_250,
         description: 'Driver Jahro ATQ-250 de 250 Watts MAX - piezo eléctrico',
         badge: null,
@@ -1075,7 +1077,7 @@ export const ALL_PRODUCTS = [
     {
         id: 60,
         name: 'Rackera 4 driver Jahro ATQ02 250W',
-        category: 'rackeras',
+        category: CATEGORY_NAMES.RACKERAS,
         brand: null,
         image: rackera_4drivers5041,
         description: 'Rackera 4 driver Jahro ATQ02 250W MAX - Piezo Eléctrico',
@@ -1091,7 +1093,7 @@ export const ALL_PRODUCTS = [
     {
         id: 61,
         name: 'Rackera 2 driver Jahro ATQ02 250W y 2 Tweeter',
-        category: 'rackeras',
+        category: CATEGORY_NAMES.RACKERAS,
         brand: null,
         image: rackera_2y2_chica,
         description: 'Rackera con 2 Driver JAhro ATQ02 piezoelectrico 250W y 2 Tweeter',
@@ -1107,7 +1109,7 @@ export const ALL_PRODUCTS = [
     {
         id: 62,
         name: 'Rackera 2 medios de 8 y 2 driver 5042 Jahro',
-        category: 'rackeras',
+        category: CATEGORY_NAMES.RACKERAS,
         brand: null,
         image: rackera_2_medios_de_8_2_driver_5042,
         description: 'Rackera 2 medios de 8 pulgadas Jahro y 2 Driver Jahro 5042',
@@ -1123,8 +1125,8 @@ export const ALL_PRODUCTS = [
     {
         id: 63,
         name: 'Pantalla Pioneer DMH-A5650BT',
-        category: 'estereos',
-        brand: 'Pioneer',
+        category: CATEGORY_NAMES.ESTEREOS,
+        brand: BRAND_NAMES.PIONEER,
         image: pantalla_pioneer_DMH_A5650BT,
         description: 'Pioneer DMH-A5650BT - Pantalla con radio, Bluetooth, Apple car play y Android Auto Inalámbrico',
         badge: null,
@@ -1139,8 +1141,8 @@ export const ALL_PRODUCTS = [
     {
         id: 64,
         name: 'Tweeter Jahro YP307 250W',
-        category: 'componentes',
-        brand: 'Jahro',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.JAHRO,
         image: tweeter_jahro_yp307,
         description: 'Tweeter Jahro YP-307 Piezoeléctrico',
         badge: BADGE_NAMES.SALE,
@@ -1155,7 +1157,7 @@ export const ALL_PRODUCTS = [
     {
         id: 65,
         name: 'Rackera 2 medios Jahro de 6 pulgadas y 2 driver Jahro 5041',
-        category: 'rackeras',
+        category: CATEGORY_NAMES.RACKERAS,
         brand: null,
         image: rackera_2_medios_de_6_jahro_2_driver_jahro_5042,
         description: 'Rackera 2 medios de 6 pulgadas Jahro y 2 Driver Jahro 5041 de 150W MAX',
