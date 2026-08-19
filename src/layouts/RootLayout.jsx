@@ -8,16 +8,15 @@ import { Outlet } from 'react-router-dom';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import ScrollToTop from '../components/layout/ScrollToTop';
-import FloatingWhatsApp from '../components/ui/FloatingWhatsApp';
-import IntroAnimation from '../components/ui/IntroAnimation';
+import FloatingWhatsApp from '../components/layout/FloatingWhatsApp';
+import IntroAnimation from '../components/animations/IntroAnimation';
 import CartDrawer from '../components/layout/CartDrawer';
 import './RootLayout.css';
-import ButtonToTop from '../components/ui/ButtonToTop';
-import { useContext } from 'react';
-import { CartContext } from '../context/CartContext';
+import ButtonToTop from '../components/layout/ButtonToTop';
+import { useCart } from '../context/CartContext';
 
 const RootLayout = () => {
-    const { isCartOpen } = useContext(CartContext);
+    const { isCartOpen } = useCart();
 
     return (
         <>

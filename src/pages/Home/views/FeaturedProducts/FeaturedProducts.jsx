@@ -3,10 +3,10 @@
  * Muestra los 6 productos destacados en la Home.
  */
 
-import { useScrollReveal } from '../../hooks/useScrollReveal';
-import ProductCard from '../../components/ui/ProductCard';
-import Button from '../../components/ui/Button';
-import { FEATURED_PRODUCTS } from '../../services/productsData';
+import { useScrollReveal } from '../../../../hooks/useScrollReveal';
+import ProductCard from '../../../../components/ui/ProductCard';
+import Button from '../../../../components/ui/Button';
+import { FEATURED_PRODUCTS } from '../../../../services/productsData';
 import './FeaturedProducts.css';
 
 const FeaturedProducts = () => {

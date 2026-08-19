@@ -4,9 +4,9 @@
  */
 
 import { useState } from 'react';
-import { ALL_PRODUCTS } from '../services/productsData';
-import CategoryFilter from '../features/products/CategoryFilter';
-import ProductCatalog from '../features/products/ProductCatalog';
+import { ALL_PRODUCTS } from '../../services/productsData';
+import CategoryFilter from './views/CategoryFilter/CategoryFilter';
+import ProductCatalog from './views/ProductCatalog/ProductCatalog';
 
 const ProductsPage = () => {
     const [activeCategory, setActiveCategory] = useState('all');

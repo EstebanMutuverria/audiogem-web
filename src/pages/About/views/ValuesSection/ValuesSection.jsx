@@ -3,7 +3,7 @@
  * Sección de valores y pilares de la empresa.
  */
 
-import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { useScrollReveal } from '../../../../hooks/useScrollReveal';
 import './ValuesSection.css';
 
 const VALUES = [

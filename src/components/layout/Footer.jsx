@@ -5,9 +5,8 @@
 
 import { Link } from 'react-router-dom';
 import './Footer.css';
-import { FaInstagram, FaTiktok } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
+import { CART_CONFIG } from '../../constants/cartConfig';
 
 const QUICK_LINKS = [
     { to: '/', label: 'Inicio' },
@@ -60,7 +59,7 @@ const Footer = () => {
                                 <FaTiktok />
                             </a>
                             <a
-                                href="https://wa.me/1160081534"
+                                href={`https://wa.me/${CART_CONFIG.whatsappNumber}`}
                                 target="_blank"
                                 rel="noreferrer"
                                 className="footer__social-link"

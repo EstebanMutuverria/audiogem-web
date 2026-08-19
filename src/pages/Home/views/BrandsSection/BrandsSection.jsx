@@ -3,8 +3,8 @@
  * Marquee infinito de las marcas que maneja AudioGem.
  */
 
-import { useScrollReveal } from '../../hooks/useScrollReveal';
-import { BRANDS } from '../../services/brandsData';
+import { useScrollReveal } from '../../../../hooks/useScrollReveal';
+import { BRANDS } from '../../../../services/brandsData';
 import './BrandsSection.css';
 
 const BrandsSection = () => {

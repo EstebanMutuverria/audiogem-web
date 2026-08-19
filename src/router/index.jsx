@@ -1,6 +1,6 @@
 /**
  * router/index.jsx
- * Configuración centralizada de React Router v6.
+ * Configuración centralizada de React Router v7.
  * Implementa Lazy Loading para optimizar el bundle de producción.
  */
 
@@ -9,12 +9,13 @@ import { lazy, Suspense } from 'react';
 import RootLayout from '../layouts/RootLayout';
 import PageLoader from '../components/ui/PageLoader';
 import ErrorBoundary from '../components/ui/ErrorBoundary';
+import NotFoundPage from '../pages/NotFound/NotFoundPage';
 
 // Lazy loading de páginas
-const HomePage = lazy(() => import('../pages/HomePage'));
-const ProductsPage = lazy(() => import('../pages/ProductsPage'));
-const AboutPage = lazy(() => import('../pages/AboutPage'));
-const ContactPage = lazy(() => import('../pages/ContactPage'));
+const HomePage = lazy(() => import('../pages/Home/HomePage'));
+const ProductsPage = lazy(() => import('../pages/Products/ProductsPage'));
+const AboutPage = lazy(() => import('../pages/About/AboutPage'));
+const ContactPage = lazy(() => import('../pages/Contact/ContactPage'));
 
 // Helper para envolver páginas con Suspense
 const withSuspense = (Component) => (
@@ -47,12 +48,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '*',
-                element: (
-                    <div className="container section" style={{ textAlign: 'center' }}>
-                        <h1>404</h1>
-                        <p>Página no encontrada</p>
-                    </div>
-                ),
+                element: <NotFoundPage />,
             },
         ],
     },

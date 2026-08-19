@@ -11,6 +11,7 @@ import { useCart } from '../../context/CartContext';
 
 import BADGETS_NAMES from '../../constants/badge_names.js';
 import CATEGORY_NAMES from '../../constants/category_names.js';
+import { buildWhatsAppProductUrl } from '../../utils/whatsapp';
 
 const CATEGORY_ICONS = {
     [CATEGORY_NAMES.ESTEREOS]: '🎵',
@@ -36,23 +37,18 @@ const ProductCard = ({ product }) => {
         specs.push({ icon: '📏', label: `Alto: ${height} × Ancho: ${width} × Profundo: ${depth} cm` });
     }
 
-    const isOutOfStock = badge === 'Sin Stock';
+    const isOutOfStock = badge === BADGETS_NAMES.OUT_OF_STOCK;
 
-    const phoneNumber = '1160081534';
-    const imageUrl = product.image
-        ? (product.image.startsWith('data:') ? '' : `${window.location.origin}${product.image}`)
-        : '';
-    const message = `Hola AudioGem! Te queria consultar acerca del producto: ${product.name}${imageUrl ? ` - Imagen🔗: ${imageUrl}` : ''}`;
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = buildWhatsAppProductUrl(product);
 
     return (
         <article className="product-card">
-            {badge && badge !== 'Sin Stock' && (
+            {badge && badge !== BADGETS_NAMES.OUT_OF_STOCK && (
                 <span className={`product-card__badge ${badge === BADGETS_NAMES.NEW ? 'new' : ''}`}>
                     {badge}
                 </span>
             )}
-            {badge && badge === 'Sin Stock' && <span className="product-card__badge out-of-stock">{badge}</span>}
+            {badge && badge === BADGETS_NAMES.OUT_OF_STOCK && <span className="product-card__badge out-of-stock">{badge}</span>}
 
             {/* Imagen / Placeholder */}
             <div className="product-card__image">

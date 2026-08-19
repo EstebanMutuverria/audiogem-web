@@ -11,7 +11,7 @@ import { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { useAdmin } from '../../context/AdminContext';
 import { useCart } from '../../context/CartContext';
-import AdminLoginModal from '../ui/AdminLoginModal';
+import AdminLoginModal from '../layout/AdminLoginModal';
 import './Navbar.css';
 import { FaShoppingCart } from 'react-icons/fa';
 import { FiHome, FiShoppingBag, FiUsers, FiMail } from 'react-icons/fi';

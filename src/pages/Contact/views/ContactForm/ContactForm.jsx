@@ -3,8 +3,8 @@
  * Formulario de contacto con validación y manejo de estados.
  */
 
-import { useContactForm } from '../../hooks/useContactForm';
-import Button from '../../components/ui/Button';
+import { useContactForm } from '../../../../hooks/useContactForm';
+import Button from '../../../../components/ui/Button';
 import './ContactForm.css';
 
 const ContactForm = () => {

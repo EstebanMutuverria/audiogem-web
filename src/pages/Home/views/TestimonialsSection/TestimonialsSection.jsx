@@ -3,8 +3,8 @@
  * Muestra reseñas de clientes.
  */
 
-import { useScrollReveal } from '../../hooks/useScrollReveal';
-import { TESTIMONIALS } from '../../services/testimonialsData';
+import { useScrollReveal } from '../../../../hooks/useScrollReveal';
+import { TESTIMONIALS } from '../../../../services/testimonialsData';
 import './TestimonialsSection.css';
 
 const TestimonialsSection = () => {

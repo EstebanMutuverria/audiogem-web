@@ -3,13 +3,13 @@
  * Galería de fotos de instalaciones y local.
  */
 
-import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { useScrollReveal } from '../../../../hooks/useScrollReveal';
 import './GallerySection.css';
-import foto_1 from '../../assets/gallery_section_pictures/foto-1.jpeg';
-import foto_2 from '../../assets/gallery_section_pictures/foto-2.jpeg';
-import foto_3 from '../../assets/gallery_section_pictures/foto-3.jpeg';
-import foto_4 from '../../assets/gallery_section_pictures/foto-4.jpeg';
-import foto_5 from '../../assets/gallery_section_pictures/foto-5.jpeg';
+import foto_1 from '../../../../assets/gallery_section_pictures/foto-1.jpeg';
+import foto_2 from '../../../../assets/gallery_section_pictures/foto-2.jpeg';
+import foto_3 from '../../../../assets/gallery_section_pictures/foto-3.jpeg';
+import foto_4 from '../../../../assets/gallery_section_pictures/foto-4.jpeg';
+import foto_5 from '../../../../assets/gallery_section_pictures/foto-5.jpeg';
 
 const GALLERY_ITEMS = [
     { id: 1, image: foto_1, caption: 'Calidad Premium', size: 'large' },

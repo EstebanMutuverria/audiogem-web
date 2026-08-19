@@ -38,13 +38,3 @@ export const validateContactForm = (fields) => {
 
     return errors;
 };
-
-/**
- * Verifica si un email tiene formato válido.
- * @param {string} email
- * @returns {boolean}
- */
-export const isValidEmail = (email) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-};

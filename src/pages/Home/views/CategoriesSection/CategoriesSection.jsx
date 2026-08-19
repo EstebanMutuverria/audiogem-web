@@ -4,8 +4,8 @@
  */
 
 import { Link } from 'react-router-dom';
-import { useScrollReveal } from '../../hooks/useScrollReveal';
-import { CATEGORIES } from '../../services/productsData';
+import { useScrollReveal } from '../../../../hooks/useScrollReveal';
+import { CATEGORIES } from '../../../../services/productsData';
 import './CategoriesSection.css';
 
 const CategoriesSection = () => {

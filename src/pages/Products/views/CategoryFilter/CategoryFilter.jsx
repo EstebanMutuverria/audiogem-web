@@ -3,7 +3,7 @@
  * Botonera de filtrado por categoría para el catálogo.
  */
 
-import { CATEGORIES } from '../../services/productsData';
+import { CATEGORIES } from '../../../../services/productsData';
 import './CategoryFilter.css';
 
 const CategoryFilter = ({ activeCategory, onCategoryChange }) => {

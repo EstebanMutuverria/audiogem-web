@@ -3,8 +3,8 @@
  * Página de contacto con formulario e información de la tienda.
  */
 
-import ContactForm from '../features/contact/ContactForm';
-import ContactInfo from '../features/contact/ContactInfo';
+import ContactForm from './views/ContactForm/ContactForm';
+import ContactInfo from './views/ContactInfo/ContactInfo';
 import './ContactPage.css';
 
 const ContactPage = () => {

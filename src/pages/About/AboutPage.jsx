@@ -3,8 +3,8 @@
  * Página "Sobre Nosotros" que ensambla historia y valores.
  */
 
-import AboutHero from '../features/about/AboutHero';
-import ValuesSection from '../features/about/ValuesSection';
+import AboutHero from './views/AboutHero/AboutHero';
+import ValuesSection from './views/ValuesSection/ValuesSection';
 
 const AboutPage = () => {
     return (

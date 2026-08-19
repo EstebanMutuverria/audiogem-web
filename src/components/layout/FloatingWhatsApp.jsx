@@ -5,9 +5,10 @@
 
 import { FaWhatsapp } from 'react-icons/fa';
 import './FloatingWhatsApp.css';
+import { CART_CONFIG } from '../../constants/cartConfig';
 
 const FloatingWhatsApp = () => {
-    const phoneNumber = '5491160081534';
+    const phoneNumber = CART_CONFIG.whatsappNumber;
     const message = 'Hola AudioGem! Quiero realizar una consulta.';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

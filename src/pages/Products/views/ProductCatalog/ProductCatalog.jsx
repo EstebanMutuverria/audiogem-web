@@ -3,7 +3,7 @@
  * Grid de productos filtrables.
  */
 
-import ProductCard from '../../components/ui/ProductCard';
+import ProductCard from '../../../../components/ui/ProductCard';
 import './ProductCatalog.css';
 
 const ProductCatalog = ({ products }) => {
