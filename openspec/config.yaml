@@ -1,0 +1,34 @@
+schema: spec-driven
+
+context: |
+  Tech stack: React (v19.2.0), Vite (v7.3.1), ESLint (v9.39.1)
+  Dependencies: framer-motion, react-icons, react-router-dom
+  Architecture: SPA with page-level views (e.g. src/pages/Home) and layout wrapper (RootLayout)
+  Styling: CSS variables (src/styles/variables.css) and global/view-specific stylesheets (HeroSection.css)
+  Testing: None (no test runner detected in package.json)
+
+rules:
+  proposal:
+    - Focus on responsive layout changes without altering business logic or styling parameters.
+    - Describe typography and spacing scale-downs for viewports down to 320px.
+  specs:
+    - Document visual behavior under 320px, 480px, 768px, and 1024px break points.
+    - Identify DOM elements that need wrapping, sizing modifications, or flex direction changes.
+  design:
+    - Design a fluid typographic system adjustments for small viewports.
+    - Prevent layout clipping, text overflows, and horizontal scrollbars.
+  tasks:
+    - List CSS modifications clearly with target classes.
+    - Plan validation checkpoints for different viewport widths (e.g., 320px, 375px, 768px, 1024px).
+  apply:
+    guidelines:
+      - Preserve clean CSS structure and avoid inline style overrides.
+      - Follow established mobile-first or desktop-first CSS conventions in HeroSection.css.
+    tdd: false
+    test_command: ""
+  verify:
+    test_command: ""
+    build_command: "npm run build"
+    coverage_threshold: 0
+  archive:
+    - Ensure all changes are verified and documented in the walkthrough.

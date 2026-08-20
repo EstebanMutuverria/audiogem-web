@@ -46,6 +46,7 @@
 /* GlareHover logic in CSS for buttons that have it */
 .btn--has-glare {
     padding: 0 !important;
+    min-width: 0;
 }
 
 .btn--has-glare .glare-hover__content {

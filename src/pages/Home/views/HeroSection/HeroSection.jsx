@@ -11,6 +11,7 @@ import './HeroSection.css';
 import { ALL_PRODUCTS } from '../../../../services/productsData';
 import BADGE_NAMES from '../../../../constants/badge_names';
 import BargainCard from './BargainCard';
+import BargainBanner from './BargainBanner';
 import DefaultVisualCard from './DefaultVisualCard';
 
 const STATS = [
@@ -27,14 +28,7 @@ const HeroSection = () => {
             <div className="hero__grid-bg" aria-hidden="true" />
 
             <div className="hero__container">
-                {/* Visual */}
-                <div className={`hero__visual${bargainProduct ? ' hero__visual--bargain' : ''}`} aria-hidden={!bargainProduct}>
-                    {bargainProduct ? (
-                        <BargainCard product={bargainProduct} />
-                    ) : (
-                        <DefaultVisualCard />
-                    )}
-                </div>
+                {/* Contenido (primero en DOM: en mobile queda arriba del pliegue) */}
                 <div className="hero__content">
                     <div className="hero__label">
                         <span>🏆</span>
@@ -63,6 +57,9 @@ const HeroSection = () => {
                         </Button>
                     </div>
 
+                    {/* Promo compacta (visible en mobile/tablet) */}
+                    {bargainProduct && <BargainBanner product={bargainProduct} />}
+
                     {/* Stats */}
                     <div className="hero__stats">
                         {STATS.map(({ number, label }) => (
@@ -72,6 +69,15 @@ const HeroSection = () => {
                             </div>
                         ))}
                     </div>
+                </div>
+
+                {/* Visual (desktop): tarjeta completa */}
+                <div className="hero__visual" aria-hidden={!bargainProduct}>
+                    {bargainProduct ? (
+                        <BargainCard product={bargainProduct} />
+                    ) : (
+                        <DefaultVisualCard />
+                    )}
                 </div>
             </div>
         </section>
