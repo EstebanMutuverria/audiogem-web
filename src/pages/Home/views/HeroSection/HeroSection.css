@@ -70,6 +70,10 @@
 .hero__content {
     grid-area: content;
     animation: fadeInUp 0.8s ease forwards;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .hero__label {
