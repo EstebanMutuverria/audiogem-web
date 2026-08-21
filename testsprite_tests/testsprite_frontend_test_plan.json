@@ -1,0 +1,249 @@
+[
+  {
+    "id": "TC-001",
+    "title": "Add product to cart from home page featured products",
+    "description": "Verify adding a featured product to cart works correctly",
+    "steps": [
+      "Navigate to http://localhost:5173/",
+      "Wait for featured products section to load",
+      "Click 'Agregar al carrito' on first product card",
+      "Verify cart drawer opens",
+      "Verify product name and price in cart"
+    ],
+    "expectedResult": "Product added to cart, drawer opens, correct item displayed"
+  },
+  {
+    "id": "TC-002",
+    "title": "Add product to cart from products page",
+    "description": "Verify adding a product from the full catalog works",
+    "steps": [
+      "Navigate to http://localhost:5173/productos",
+      "Wait for product catalog to load",
+      "Click 'Agregar al carrito' on first product card",
+      "Verify cart drawer opens",
+      "Verify product name and price in cart"
+    ],
+    "expectedResult": "Product added to cart, drawer opens, correct item displayed"
+  },
+  {
+    "id": "TC-003",
+    "title": "Submit contact form with valid data",
+    "description": "Verify form submits successfully with all valid fields",
+    "steps": [
+      "Navigate to http://localhost:5173/contacto",
+      "Wait for contact form to load",
+      "Fill name: 'Juan Pérez'",
+      "Fill email: 'juan@example.com'",
+      "Fill message: 'Hola, me gustaría saber más sobre sus auriculares.'",
+      "Click 'Enviar' button",
+      "Verify success message appears",
+      "Verify WhatsApp opens or is triggered"
+    ],
+    "expectedResult": "Form submits, success message shown, WhatsApp integration triggered"
+  },
+  {
+    "id": "TC-004",
+    "title": "Contact form validation - empty fields",
+    "description": "Verify validation errors for empty required fields",
+    "steps": [
+      "Navigate to http://localhost:5173/contacto",
+      "Wait for contact form to load",
+      "Click 'Enviar' button without filling any fields",
+      "Verify validation errors appear for all required fields"
+    ],
+    "expectedResult": "Validation errors shown for name, email, message"
+  },
+  {
+    "id": "TC-005",
+    "title": "Contact form validation - invalid email",
+    "description": "Verify validation error for invalid email format",
+    "steps": [
+      "Navigate to http://localhost:5173/contacto",
+      "Wait for contact form to load",
+      "Fill name: 'Juan Pérez'",
+      "Fill email: 'invalid-email'",
+      "Fill message: 'Mensaje de prueba'",
+      "Click 'Enviar' button",
+      "Verify email validation error appears"
+    ],
+    "expectedResult": "Email validation error shown, form not submitted"
+  },
+  {
+    "id": "TC-006",
+    "title": "Click WhatsApp button in contact info",
+    "description": "Verify WhatsApp button opens chat",
+    "steps": [
+      "Navigate to http://localhost:5173/contacto",
+      "Wait for contact info section to load",
+      "Click WhatsApp button",
+      "Verify WhatsApp chat opens (new tab/window or app)"
+    ],
+    "expectedResult": "WhatsApp chat opens with pre-filled message"
+  },
+  {
+    "id": "TC-007",
+    "title": "Open and close cart drawer",
+    "description": "Verify cart drawer opens and closes correctly",
+    "steps": [
+      "Navigate to http://localhost:5173/",
+      "Click cart icon in navbar",
+      "Verify cart drawer opens",
+      "Click close button",
+      "Verify cart drawer closes"
+    ],
+    "expectedResult": "Cart drawer opens and closes smoothly"
+  },
+  {
+    "id": "TC-008",
+    "title": "Update item quantity in cart",
+    "description": "Verify quantity can be updated in cart",
+    "steps": [
+      "Add a product to cart",
+      "Open cart drawer",
+      "Change quantity input to 3",
+      "Verify total updates correctly",
+      "Verify quantity persists"
+    ],
+    "expectedResult": "Quantity updates, total recalculates correctly"
+  },
+  {
+    "id": "TC-009",
+    "title": "Remove item from cart",
+    "description": "Verify item can be removed from cart",
+    "steps": [
+      "Add a product to cart",
+      "Open cart drawer",
+      "Click remove button on the item",
+      "Verify item is removed from cart",
+      "Verify cart shows empty state or updated total"
+    ],
+    "expectedResult": "Item removed, cart updates correctly"
+  },
+  {
+    "id": "TC-010",
+    "title": "Navigate to Home page",
+    "description": "Verify Home link navigates to home page",
+    "steps": [
+      "Navigate to http://localhost:5173/productos",
+      "Click Home link in navbar",
+      "Verify URL is http://localhost:5173/",
+      "Verify home page content loads"
+    ],
+    "expectedResult": "Navigation to home page works"
+  },
+  {
+    "id": "TC-011",
+    "title": "Navigate to Products page",
+    "description": "Verify Productos link navigates to products page",
+    "steps": [
+      "Navigate to http://localhost:5173/",
+      "Click Productos link in navbar",
+      "Verify URL is http://localhost:5173/productos",
+      "Verify products page content loads"
+    ],
+    "expectedResult": "Navigation to products page works"
+  },
+  {
+    "id": "TC-012",
+    "title": "Navigate to About page",
+    "description": "Verify Nosotros link navigates to about page",
+    "steps": [
+      "Navigate to http://localhost:5173/",
+      "Click Nosotros link in navbar",
+      "Verify URL is http://localhost:5173/nosotros",
+      "Verify about page content loads"
+    ],
+    "expectedResult": "Navigation to about page works"
+  },
+  {
+    "id": "TC-013",
+    "title": "Navigate to Contact page",
+    "description": "Verify Contacto link navigates to contact page",
+    "steps": [
+      "Navigate to http://localhost:5173/",
+      "Click Contacto link in navbar",
+      "Verify URL is http://localhost:5173/contacto",
+      "Verify contact page content loads"
+    ],
+    "expectedResult": "Navigation to contact page works"
+  },
+  {
+    "id": "TC-014",
+    "title": "Navigation island works on mobile viewport",
+    "description": "Verify the dynamic island navigation works at mobile viewport",
+    "steps": [
+      "Resize viewport to mobile width (< 768px)",
+      "Verify navigation island is visible at bottom center",
+      "Click Home link in island",
+      "Verify URL is http://localhost:5173/",
+      "Click Productos link in island",
+      "Verify URL is http://localhost:5173/productos"
+    ],
+    "expectedResult": "Navigation island visible and functional on mobile"
+  },
+  {
+    "id": "TC-015",
+    "title": "Filter products by category",
+    "description": "Verify filtering products by category works",
+    "steps": [
+      "Navigate to http://localhost:5173/productos",
+      "Wait for products to load",
+      "Note initial product count",
+      "Click a category button (e.g., 'Auriculares')",
+      "Verify only products from that category are shown",
+      "Verify active category button is highlighted"
+    ],
+    "expectedResult": "Products filtered correctly, active category highlighted"
+  },
+  {
+    "id": "TC-016",
+    "title": "Show all products (Todos category)",
+    "description": "Verify 'Todos' category shows all products",
+    "steps": [
+      "Navigate to http://localhost:5173/productos",
+      "Click a specific category to filter",
+      "Click 'Todos' category button",
+      "Verify all products are shown again",
+      "Verify 'Todos' button is highlighted"
+    ],
+    "expectedResult": "All products shown, 'Todos' category active"
+  },
+  {
+    "id": "TC-017",
+    "title": "Open lightbox from gallery",
+    "description": "Verify clicking gallery image opens lightbox",
+    "steps": [
+      "Navigate to http://localhost:5173/",
+      "Scroll to gallery section",
+      "Click first gallery image",
+      "Verify lightbox opens with correct image",
+      "Verify lightbox is visible and focused"
+    ],
+    "expectedResult": "Lightbox opens with clicked image"
+  },
+  {
+    "id": "TC-018",
+    "title": "Navigate between images in lightbox",
+    "description": "Verify next/previous navigation in lightbox",
+    "steps": [
+      "Open lightbox",
+      "Click next button",
+      "Verify next image loads",
+      "Click previous button",
+      "Verify previous image loads"
+    ],
+    "expectedResult": "Navigation between images works correctly"
+  },
+  {
+    "id": "TC-019",
+    "title": "Close lightbox",
+    "description": "Verify lightbox can be closed",
+    "steps": [
+      "Open lightbox",
+      "Click close button or press Escape",
+      "Verify lightbox closes",
+      "Verify focus returns to gallery"
+    ],
+    "expectedResult": "Lightbox closes, focus restored"
+  }
+]

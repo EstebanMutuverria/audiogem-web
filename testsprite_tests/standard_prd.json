@@ -1,0 +1,221 @@
+{
+  "projectName": "web-audiogem",
+  "version": "1.0.0",
+  "description": "AUDIO GEM - E-commerce web application for audio equipment",
+  "type": "frontend",
+  "techStack": {
+    "language": "JavaScript",
+    "framework": "Vite",
+    "uiLibrary": "React",
+    "other": ["framer-motion", "react-router-dom", "react-icons"]
+  },
+  "features": [
+    {
+      "id": "FEAT-001",
+      "name": "Home Hero Section",
+      "description": "Hero section with animated visual cards and bargain banner",
+      "route": "/",
+      "components": ["HeroSection", "BargainCard", "DefaultVisualCard", "BargainBanner"],
+      "userInteractions": ["View animated hero content", "Interact with visual cards (hover effects)"],
+      "apiCalls": []
+    },
+    {
+      "id": "FEAT-002",
+      "name": "Featured Products",
+      "description": "Display featured products as interactive cards",
+      "route": "/",
+      "components": ["FeaturedProducts", "ProductCard"],
+      "userInteractions": [
+        "View product cards with image, name, price",
+        "Click 'Agregar al carrito' button on product card",
+        "Click 'Ver producto' button on product card",
+        "Hover effects on cards"
+      ],
+      "apiCalls": []
+    },
+    {
+      "id": "FEAT-003",
+      "name": "Categories Section",
+      "description": "Display category cards for navigation",
+      "route": "/",
+      "components": ["CategoriesSection"],
+      "userInteractions": ["Click category cards to navigate to products filtered by category"],
+      "apiCalls": []
+    },
+    {
+      "id": "FEAT-004",
+      "name": "Brands Section",
+      "description": "Display brand logos/cards",
+      "route": "/",
+      "components": ["BrandsSection"],
+      "userInteractions": ["View brand logos"],
+      "apiCalls": []
+    },
+    {
+      "id": "FEAT-005",
+      "name": "Testimonials Section",
+      "description": "Display customer testimonials",
+      "route": "/",
+      "components": ["TestimonialsSection"],
+      "userInteractions": ["Read testimonials"],
+      "apiCalls": []
+    },
+    {
+      "id": "FEAT-006",
+      "name": "Gallery Section",
+      "description": "Image gallery with lightbox/modal",
+      "route": "/",
+      "components": ["GallerySection"],
+      "userInteractions": [
+        "Click images to open lightbox",
+        "Navigate between images in lightbox",
+        "Close lightbox"
+      ],
+      "apiCalls": []
+    },
+    {
+      "id": "FEAT-007",
+      "name": "Products Catalog",
+      "description": "Full product catalog with filtering and product cards",
+      "route": "/productos",
+      "components": ["ProductsPage", "ProductCatalog", "CategoryFilter", "ProductCard"],
+      "userInteractions": [
+        "Filter products by category",
+        "View product cards with image, name, price, badges",
+        "Click 'Agregar al carrito' button on product card",
+        "Click 'Ver producto' button on product card",
+        "Pagination or infinite scroll"
+      ],
+      "apiCalls": []
+    },
+    {
+      "id": "FEAT-008",
+      "name": "About Page",
+      "description": "About us page with hero and values",
+      "route": "/nosotros",
+      "components": ["AboutPage", "AboutHero", "ValuesSection"],
+      "userInteractions": ["Read about content", "View values cards"],
+      "apiCalls": []
+    },
+    {
+      "id": "FEAT-009",
+      "name": "Contact Form",
+      "description": "Contact form with validation and WhatsApp integration",
+      "route": "/contacto",
+      "components": ["ContactPage", "ContactForm", "ContactInfo"],
+      "userInteractions": [
+        "Fill name input field",
+        "Fill email input field",
+        "Fill subject input field",
+        "Fill message textarea",
+        "Click 'Enviar' button to submit form",
+        "See validation errors on invalid input",
+        "See success message on successful submission",
+        "Click WhatsApp button to open WhatsApp chat"
+      ],
+      "apiCalls": [
+        {
+          "method": "POST",
+          "endpoint": "WhatsApp API (via whatsapp.js utility)"
+        }
+      ]
+    },
+    {
+      "id": "FEAT-010",
+      "name": "Shopping Cart",
+      "description": "Side drawer cart with add/remove/update items",
+      "route": "*",
+      "components": ["CartDrawer", "CartContext"],
+      "userInteractions": [
+        "Click cart icon to open drawer",
+        "View cart items with quantity controls",
+        "Update item quantities",
+        "Remove items from cart",
+        "Click 'Finalizar compra' button",
+        "Close cart drawer"
+      ],
+      "apiCalls": []
+    },
+    {
+      "id": "FEAT-011",
+      "name": "Floating WhatsApp Button",
+      "description": "Persistent WhatsApp floating button",
+      "route": "*",
+      "components": ["FloatingWhatsApp"],
+      "userInteractions": ["Click floating button to open WhatsApp chat"],
+      "apiCalls": [
+        {
+          "method": "GET",
+          "endpoint": "WhatsApp deep link"
+        }
+      ]
+    },
+    {
+      "id": "FEAT-012",
+      "name": "Navigation",
+      "description": "Navbar with navigation links and cart access",
+      "route": "*",
+      "components": ["Navbar"],
+      "userInteractions": [
+        "Click navigation links (Home, Productos, Nosotros, Contacto)",
+        "Click cart icon to open cart drawer",
+        "Mobile menu toggle"
+      ],
+      "apiCalls": []
+    }
+  ],
+  "routes": [
+    {
+      "path": "/",
+      "component": "HomePage",
+      "authRequired": false,
+      "description": "Home page with hero, featured products, categories, brands, testimonials, gallery"
+    },
+    {
+      "path": "/productos",
+      "component": "ProductsPage",
+      "authRequired": false,
+      "description": "Products catalog with category filter and product cards"
+    },
+    {
+      "path": "/nosotros",
+      "component": "AboutPage",
+      "authRequired": false,
+      "description": "About page with hero and values section"
+    },
+    {
+      "path": "/contacto",
+      "component": "ContactPage",
+      "authRequired": false,
+      "description": "Contact page with contact form and contact info"
+    },
+    {
+      "path": "*",
+      "component": "NotFoundPage",
+      "authRequired": false,
+      "description": "404 Not Found page"
+    }
+  ],
+  "knownLimitations": [
+    {
+      "issue": "No backend API - all data is static/mock from JS files",
+      "location": "src/services/*.js",
+      "impact": "Product data, testimonials, brands are not fetched from API"
+    },
+    {
+      "issue": "Contact form submits to WhatsApp only, no email/backend integration",
+      "location": "src/hooks/useContactForm.js, src/utils/whatsapp.js",
+      "impact": "Form data not persisted in database"
+    },
+    {
+      "issue": "Cart state is only in memory (React Context), not persisted",
+      "location": "src/context/CartContext.jsx",
+      "impact": "Cart clears on page refresh"
+    },
+    {
+      "issue": "No authentication system implemented",
+      "location": "src/components/layout/AdminLoginModal.jsx, src/context/AdminContext.jsx",
+      "impact": "Admin login is UI-only mock"
+    }
+  ]
+}
