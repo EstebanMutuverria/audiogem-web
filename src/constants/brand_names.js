@@ -18,6 +18,10 @@ const BRAND_NAMES = {
     DS18: 'DS18',
     AUDIOPIPE: 'AudioPipe',
     WILD_SOUND: 'Wild Sound',
+    MTX: 'MTX',
+    ARWEN: 'Arwen',
+    NAKAMICHI: 'Nakamichi',
+
 };
 
 export default BRAND_NAMES;

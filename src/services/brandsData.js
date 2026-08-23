@@ -19,5 +19,6 @@ export const BRANDS = [
     { id: 11, name: BRAND_NAMES.SOUND_DIGITAL, logo: null },
     { id: 12, name: BRAND_NAMES.STETSOM, logo: null },
     { id: 13, name: BRAND_NAMES.TRITON, logo: null },
-    { id: 14, name: BRAND_NAMES.SVART, logo: null }
+    { id: 14, name: BRAND_NAMES.SVART, logo: null },
+    { id: 15, name: BRAND_NAMES.MTX, logo: null }
 ];

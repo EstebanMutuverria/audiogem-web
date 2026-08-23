@@ -68,6 +68,10 @@ import driver_jahro_atq_250 from '../assets/products_section_pictures/driver-jah
 import rackera_2_medios_de_8_2_driver_5042 from '../assets/products_section_pictures/rackera-2-medios-de-8-2-driver-5042.jpeg';
 import pantalla_pioneer_DMH_A5650BT from '../assets/products_section_pictures/pantalla-pioneer-DMH-A5650BT.jpeg';
 import tweeter_jahro_yp307 from '../assets/products_section_pictures/tweeter-jahro-yp307.jpeg';
+import pote_nakamichi_100x4 from '../assets/products_section_pictures/pote-nakamichi-100.4.jpeg';
+import pote_mtx_1200x1 from '../assets/products_section_pictures/pote-mtx-1200x1.jpeg';
+import parlante_pioneer_6x9_500_watts from '../assets/products_section_pictures/parlante-6x9-pioneer-500-watts.jpeg';
+import componentes_pioneer_6_coma_5_pulgadas_350_watts from '../assets/products_section_pictures/componentes-pioneer-6-pulgadas-350-watts.jpeg';
 
 export const ALL_PRODUCTS = [
     {
@@ -1116,5 +1120,69 @@ export const ALL_PRODUCTS = [
         height: 18,
         width: 71,
         depth: 22
+    },
+    {
+        id: 66,
+        name: 'Componentes Pioneer 6,5 pulgadas 350 Watts MAX (el par)',
+        category: CATEGORY_NAMES.PARLANTES,
+        brand: BRAND_NAMES.PIONEER,
+        image: componentes_pioneer_6_coma_5_pulgadas_350_watts,
+        description: 'Componentes Pioneer TS-A1688S 6,5 pulgadas 350 Watts MAX',
+        badge: BADGE_NAMES.TOP_QUALITY,
+        price: '$140.000',
+        base_price: null,
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        id: 67,
+        name: 'Potencia Nakamichi 100.4 ',
+        category: CATEGORY_NAMES.POTENCIAS,
+        brand: BRAND_NAMES.NAKAMICHI,
+        image: pote_nakamichi_100x4,
+        description: 'Potencia Nakamichi NKTA100.4 - 4 Canales',
+        badge: BADGE_NAMES.NEW,
+        price: '$150.000',
+        base_price: null,
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        id: 68,
+        name: 'Parlante Pioneer 6x9 500 Watts MAX (usado)',
+        category: CATEGORY_NAMES.PARLANTES,
+        brand: BRAND_NAMES.PIONEER,
+        image: parlante_pioneer_6x9_500_watts,
+        description: 'Parlante Pioneer 6x9 500 Watts MAX',
+        badge: BADGE_NAMES.TOP_QUALITY,
+        price: '$60.000',
+        base_price: null,
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        id: 69,
+        name: 'Potencia MTX 1200.1',
+        category: CATEGORY_NAMES.POTENCIAS,
+        brand: BRAND_NAMES.MTX,
+        image: pote_mtx_1200x1,
+        description: 'Potencia MTX TH1200.1D - 1200 Watts RMS - Monoblock',
+        badge: BADGE_NAMES.TOP_QUALITY,
+        price: '$650.000',
+        base_price: null,
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     }
 ];

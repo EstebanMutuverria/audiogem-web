@@ -5,6 +5,7 @@
  */
 
 import ElectricBorder from '../../../../components/animations/ElectricBorder';
+import GlareHover from '../../../../components/animations/GlareHover';
 import { LuAudioLines, LuShoppingCart, LuMessageCircle } from "react-icons/lu";
 import { useCart } from '../../../../context/CartContext';
 import { buildWhatsAppProductUrl } from '../../../../utils/whatsapp';
@@ -28,18 +29,27 @@ const BargainCard = ({ product }) => {
                     <span>PRECIO EXCLUSIVO</span>
                 </div>
 
-                {/* Imagen del producto */}
-                <div className="hero__bargain-image">
-                    {product.image ? (
-                        <img src={product.image} alt={product.name} loading="eager" />
-                    ) : (
-                        <div className="hero__bargain-image-placeholder">
-                            <LuAudioLines />
-                        </div>
-                    )}
-                    {/* Glow detrás de la imagen */}
-                    <div className="hero__bargain-image-glow" />
-                </div>
+                {/* Product image with interactive glare */}
+                <GlareHover
+                    glareColor="#a78bfa"
+                    glareOpacity={0.25}
+                    glareAngle={-40}
+                    glareSize={250}
+                    transitionDuration={600}
+                    className="hero__bargain-glare"
+                >
+                    <div className="hero__bargain-image">
+                        {product.image ? (
+                            <img src={product.image} alt={product.name} loading="eager" />
+                        ) : (
+                            <div className="hero__bargain-image-placeholder">
+                                <LuAudioLines />
+                            </div>
+                        )}
+                        {/* Glow overlay */}
+                        <div className="hero__bargain-image-glow" />
+                    </div>
+                </GlareHover>
 
                 {/* Info del producto */}
                 <div className="hero__bargain-info">

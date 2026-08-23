@@ -1,17 +1,17 @@
 /**
  * HeroSection.jsx
  * Sección principal del Home (above the fold).
- * Visual: Título con gradient, CTA buttons, stats y tarjeta flotante.
- * Si existe un producto con badge BARGAIN, lo muestra como tarjeta premium en el lado visual.
+ * Visual: Título con gradient, CTA buttons, stats y tarjeta flotante de bargain.
+ * La BargainCard es visible tanto en desktop (columna visual) como en mobile (debajo del CTA).
  */
 
 import Button from '../../../../components/ui/Button';
+import StarBorder from '../../../../components/animations/StarBorder';
 import TextShimmer from '../../../../components/animations/TextShimmer';
 import './HeroSection.css';
 import { ALL_PRODUCTS } from '../../../../services/productsData';
 import BADGE_NAMES from '../../../../constants/badge_names';
 import BargainCard from './BargainCard';
-import BargainBanner from './BargainBanner';
 import DefaultVisualCard from './DefaultVisualCard';
 
 const STATS = [
@@ -28,7 +28,7 @@ const HeroSection = () => {
             <div className="hero__grid-bg" aria-hidden="true" />
 
             <div className="hero__container">
-                {/* Contenido (primero en DOM: en mobile queda arriba del pliegue) */}
+                {/* Content column — always first in DOM so mobile reads it first */}
                 <div className="hero__content">
                     <div className="hero__label">
                         <span>🏆</span>
@@ -49,18 +49,24 @@ const HeroSection = () => {
                     </p>
 
                     <div className="hero__actions">
-                        <Button to="/productos" size="md">
-                            Ver productos
-                        </Button>
+                        <StarBorder
+                            as="div"
+                            color="hsl(210, 100%, 70%)"
+                            speed="4s"
+                            thickness={2}
+                            borderRadius="var(--radius-full)"
+                            className="hero__cta-star"
+                        >
+                            <Button to="/productos" size="md" className="hero__cta-primary">
+                                Ver productos
+                            </Button>
+                        </StarBorder>
                         <Button to="/contacto" variant="secondary" size="lg">
                             Contactanos
                         </Button>
                     </div>
 
-                    {/* Promo compacta (visible en mobile/tablet) */}
-                    {bargainProduct && <BargainBanner product={bargainProduct} />}
-
-                    {/* Stats */}
+                    {/* Stats — desktop only (hidden via CSS on mobile) */}
                     <div className="hero__stats">
                         {STATS.map(({ number, label }) => (
                             <div key={label} className="hero__stat">
@@ -71,7 +77,7 @@ const HeroSection = () => {
                     </div>
                 </div>
 
-                {/* Visual (desktop): tarjeta completa */}
+                {/* Visual column — BargainCard visible on desktop AND mobile */}
                 <div className="hero__visual" aria-hidden={!bargainProduct}>
                     {bargainProduct ? (
                         <BargainCard product={bargainProduct} />

@@ -12,7 +12,8 @@ const StarBorder = ({
     className = '',
     color = 'white',
     speed = '6s',
-    thickness = 1,
+    thickness = 1.5,
+    borderRadius = 'var(--radius-full)',
     style,
     children,
     ...rest
@@ -25,12 +26,12 @@ const StarBorder = ({
     return (
         <Tag
             className={`star-border-container ${className}`}
-            style={{ padding: `${thickness}px 0`, ...style }}
+            style={{ padding: `${thickness}px`, borderRadius, ...style }}
             {...rest}
         >
             <div className="star-border__gradient star-border__gradient--bottom" style={gradientStyle} />
             <div className="star-border__gradient star-border__gradient--top" style={gradientStyle} />
-            <div className="star-border__inner">{children}</div>
+            <div className="star-border__inner" style={{ borderRadius }}>{children}</div>
         </Tag>
     );
 };

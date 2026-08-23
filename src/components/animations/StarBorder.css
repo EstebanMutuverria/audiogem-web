@@ -4,9 +4,9 @@
 */
 
 .star-border-container {
-    display: inline-block;
+    display: inline-flex;
     position: relative;
-    border-radius: 20px;
+    border-radius: var(--radius-full);
     overflow: hidden;
     /* Necesario para que el text-decoration del :hover del padre no se propague */
     text-decoration: none;
@@ -41,7 +41,12 @@
 .star-border__inner {
     position: relative;
     z-index: 1;
-    /* El padding, color y fuente lo hereda/sobreescribe el className que pase el padre */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-full);
 }
 
 /* ── Keyframes ──────────────────────────────────────── */
