@@ -78,6 +78,8 @@ import bornera from '../assets/products_section_pictures/bornera.jpeg';
 import reparo_para_driver from '../assets/products_section_pictures/reparo-para-driver.jpeg';
 import medio_de_6_bala_pervoi from '../assets/products_section_pictures/medio-de-6-bala-pervoi.jpeg';
 import medios_de_8_infinity_tech from '../assets/products_section_pictures/medios-de-8-infinity-tech.jpeg';
+import bloque_distribuidor_recoil from '../assets/products_section_pictures/bloque-distribuidor-recoil.jpeg';
+import cable_rca_storm_tech from '../assets/products_section_pictures/cable-rca-storm-tech.jpeg';
 
 
 export const ALL_PRODUCTS = [
@@ -1282,6 +1284,37 @@ export const ALL_PRODUCTS = [
         badge: BADGE_NAMES.TOP_QUALITY,
         price: '$100.000',
         base_price: '$85.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        id: 76,
+        name: 'Bloque distribuidor Recoil',
+        category: CATEGORY_NAMES.ACCESORIOS,
+        brand: BRAND_NAMES.RECOIL,
+        image: bloque_distribuidor_recoil,
+        description: 'Bloque distribuidor Recoil - 1 entrada 0 AWG 2 salidas de 4 AWG',
+        badge: null,
+        price: '$17.000',
+        base_price: '$12.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        name: 'Cable RCA Storm Tech 5',
+        category: CATEGORY_NAMES.ACCESORIOS,
+        brand: null,
+        image: cable_rca_storm_tech,
+        description: 'Cable RCA Storm Tech',
+        badge: null,
+        price: '$13.000',
+        base_price: '$8.000',
         state: true,
         weight: null,
         height: null,
