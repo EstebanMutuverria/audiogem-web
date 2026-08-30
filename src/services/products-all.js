@@ -1307,6 +1307,7 @@ export const ALL_PRODUCTS = [
         depth: null
     },
     {
+        id: 77,
         name: 'Cable RCA Storm Tech 4mm',
         category: CATEGORY_NAMES.ACCESORIOS,
         brand: null,
