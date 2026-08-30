@@ -1307,11 +1307,11 @@ export const ALL_PRODUCTS = [
         depth: null
     },
     {
-        name: 'Cable RCA Storm Tech 5',
+        name: 'Cable RCA Storm Tech 4mm',
         category: CATEGORY_NAMES.ACCESORIOS,
         brand: null,
         image: cable_rca_storm_tech,
-        description: 'Cable RCA Storm Tech',
+        description: 'Cable RCA Storm Tech 5 Metros 4mm',
         badge: null,
         price: '$13.000',
         base_price: '$8.000',
