@@ -479,7 +479,7 @@ export const ALL_PRODUCTS = [
         brand: BRAND_NAMES.PIONEER,
         image: subwoofer_pioneer_12p,
         description: 'Subwoofer Pioneer 12 pulgadas doble bobina TS-W312D4 1600w Max / 500w RMS',
-        badge: BADGE_NAMES.OUT_OF_STOCK,
+        badge: BADGE_NAMES.TOP_QUALITY,
         price: '$200.000',
         base_price: '$USD 55',
         state: true,
