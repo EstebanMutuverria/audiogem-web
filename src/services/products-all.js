@@ -72,6 +72,13 @@ import pote_nakamichi_100x4 from '../assets/products_section_pictures/pote-nakam
 import pote_mtx_1200x1 from '../assets/products_section_pictures/pote-mtx-1200x1.jpeg';
 import parlante_pioneer_6x9_500_watts from '../assets/products_section_pictures/parlante-6x9-pioneer-500-watts.jpeg';
 import componentes_pioneer_6_coma_5_pulgadas_350_watts from '../assets/products_section_pictures/componentes-pioneer-6-pulgadas-350-watts.jpeg';
+import parlantes_pioneer_6x9_450_watts from '../assets/products_section_pictures/parlantes-6x9-pioneer-450-watts.jpeg';
+import kit_de_cables_4_gau from '../assets/products_section_pictures/kit-de-cables-4-gau.jpeg';
+import bornera from '../assets/products_section_pictures/bornera.jpeg';
+import reparo_para_driver from '../assets/products_section_pictures/reparo-para-driver.jpeg';
+import medio_de_6_bala_pervoi from '../assets/products_section_pictures/medio-de-6-bala-pervoi.jpeg';
+import medios_de_8_infinity_tech from '../assets/products_section_pictures/medios-de-8-infinity-tech.jpeg';
+
 
 export const ALL_PRODUCTS = [
     {
@@ -1081,8 +1088,8 @@ export const ALL_PRODUCTS = [
         image: pantalla_pioneer_DMH_A5650BT,
         description: 'Pioneer DMH-A5650BT - Pantalla con radio, Bluetooth, Apple car play y Android Auto Inalámbrico',
         badge: null,
-        price: '$280.000',
-        base_price: '$230.000',
+        price: '$680.000',
+        base_price: null,
         state: true,
         weight: null,
         height: null,
@@ -1160,7 +1167,7 @@ export const ALL_PRODUCTS = [
         brand: BRAND_NAMES.PIONEER,
         image: parlante_pioneer_6x9_500_watts,
         description: 'Parlante Pioneer 6x9 500 Watts MAX',
-        badge: BADGE_NAMES.TOP_QUALITY,
+        badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$60.000',
         base_price: null,
         state: true,
@@ -1179,6 +1186,102 @@ export const ALL_PRODUCTS = [
         badge: BADGE_NAMES.TOP_QUALITY,
         price: '$650.000',
         base_price: null,
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        id: 70,
+        name: 'Parlantes Pioneer 6x9 TS-A6968S 450W MAX (el par)',
+        category: CATEGORY_NAMES.PARLANTES,
+        brand: BRAND_NAMES.PIONEER,
+        image: parlantes_pioneer_6x9_450_watts,
+        description: 'Parlantes Pioneer 6x9 - 24cm TS-A6968S 450 Watts MAX',
+        badge: BADGE_NAMES.TOP_QUALITY,
+        price: '$150.000',
+        base_price: '$130.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        id: 71,
+        name: 'Kit de cables 4 GA',
+        category: CATEGORY_NAMES.ACCESORIOS,
+        brand: null,
+        image: kit_de_cables_4_gau,
+        description: 'Kit de cables 4 GA XA-2103 2500 Watts',
+        badge: BADGE_NAMES.NEW,
+        price: '$50.000',
+        base_price: '$40.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        id: 72,
+        name: 'Bornera',
+        category: CATEGORY_NAMES.ACCESORIOS,
+        brand: null,
+        image: bornera,
+        description: 'Bornera',
+        badge: BADGE_NAMES.NEW,
+        price: '$2.700',
+        base_price: '$1.500',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        id: 73,
+        name: 'Reparo para driver 250',
+        category: CATEGORY_NAMES.ACCESORIOS,
+        brand: null,
+        image: reparo_para_driver,
+        description: 'Reparo para driver 250',
+        badge: BADGE_NAMES.NEW,
+        price: '$10.000',
+        base_price: '$8.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        id: 74,
+        name: 'Medio Pervoi de 6.5 pulgadas punta bala 600W MAX',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.PERVOI,
+        image: medio_de_6_bala_pervoi,
+        description: 'Medio Pervoi de 6.5 pulgadas punta bala 600W MAX - 180W RMS',
+        badge: BADGE_NAMES.BUDGET_FRIENDLY,
+        price: '$27.500',
+        base_price: '$17.500',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        id: 75,
+        name: 'Medios de 8 pulgadas Infinity Tech AK-800 600W MAX (el par)',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.INFINITY_TECH,
+        image: medios_de_8_infinity_tech,
+        description: 'Medios de 8 pulgadas - 20cm Infinity Tech AK-800 600W MAX 150W RMS - Sensibilidad 96dB',
+        badge: BADGE_NAMES.TOP_QUALITY,
+        price: '$100.000',
+        base_price: '$85.000',
         state: true,
         weight: null,
         height: null,

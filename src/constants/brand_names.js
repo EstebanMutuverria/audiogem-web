@@ -21,6 +21,7 @@ const BRAND_NAMES = {
     MTX: 'MTX',
     ARWEN: 'Arwen',
     NAKAMICHI: 'Nakamichi',
+    PERVOI: 'Pervoi',
 
 };
 
