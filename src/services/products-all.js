@@ -80,7 +80,8 @@ import medio_de_6_bala_pervoi from '../assets/products_section_pictures/medio-de
 import medios_de_8_infinity_tech from '../assets/products_section_pictures/medios-de-8-infinity-tech.jpeg';
 import bloque_distribuidor_recoil from '../assets/products_section_pictures/bloque-distribuidor-recoil.jpeg';
 import cable_rca_storm_tech from '../assets/products_section_pictures/cable-rca-storm-tech.jpeg';
-
+import kit_de_cables_6_ga_pervoi_high from '../assets/products_section_pictures/kit-de-cables-6-ga-pervoi-high.jpeg';
+import componentes_6_pulgadas_y_media_650_watts_pervoi from '../assets/products_section_pictures/componentes-6,5-pulgadas-650-watts-pervoi.jpeg'
 
 export const ALL_PRODUCTS = [
     {
@@ -125,7 +126,7 @@ export const ALL_PRODUCTS = [
         image: pote_taramps_400x4,
         description: 'Potencia Taramps 400x4 4 canales 400 watts RMS',
         badge: BADGE_NAMES.OUT_OF_STOCK,
-        price: '$90.000',
+        price: '$95.000',
         base_price: '$70.000',
         state: true,
         weight: null,
@@ -1316,6 +1317,38 @@ export const ALL_PRODUCTS = [
         badge: null,
         price: '$13.000',
         base_price: '$8.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        id: 78,
+        name: 'Kit de cables 6 GA pervoi high performance CTC-320A',
+        category: CATEGORY_NAMES.ACCESORIOS,
+        brand: BRAND_NAMES.PERVOI,
+        image: kit_de_cables_6_ga_pervoi_high,
+        description: 'Kit de cables 6 GA pervoi high performance CTC-320A',
+        badge: null,
+        price: '$22.500',
+        base_price: '$17.500',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        id: 79,
+        name: 'Componentes Pervoi de 6,5 pulgadas 650 Watts MAX',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.PERVOI,
+        image: componentes_6_pulgadas_y_media_650_watts_pervoi,
+        description: 'Componentes Pervoi CTC-6592 de 6,5 pulgadas 650 Watts MAX',
+        badge: BADGE_NAMES.NEW,
+        price: '$40.000',
+        base_price: '$30.000',
         state: true,
         weight: null,
         height: null,
