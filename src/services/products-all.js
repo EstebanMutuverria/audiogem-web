@@ -83,6 +83,7 @@ import cable_rca_storm_tech from '../assets/products_section_pictures/cable-rca-
 import kit_de_cables_6_ga_pervoi_high from '../assets/products_section_pictures/kit-de-cables-6-ga-pervoi-high.jpeg';
 import componentes_6_pulgadas_y_media_650_watts_pervoi from '../assets/products_section_pictures/componentes-6,5-pulgadas-650-watts-pervoi.jpeg'
 import pote_taramps_bass_400x1_2ohms from '../assets/products_section_pictures/pote-taramps-bass-400x1-2-ohms.jpeg'
+import medios_de_6_pulgadas_y_media_pervoi_450_watts from '../assets/products_section_pictures/medios-de-6-pulgadas-y-media-pervoi-450-watts.jpeg'
 
 export const ALL_PRODUCTS = [
     {
@@ -1342,7 +1343,7 @@ export const ALL_PRODUCTS = [
     },
     {
         id: 79,
-        name: 'Componentes Pervoi de 6,5 pulgadas 650 Watts MAX',
+        name: 'Componentes Pervoi de 6,5 pulgadas 650 Watts MAX (el par)',
         category: CATEGORY_NAMES.COMPONENTES,
         brand: BRAND_NAMES.PERVOI,
         image: componentes_6_pulgadas_y_media_650_watts_pervoi,
@@ -1366,6 +1367,22 @@ export const ALL_PRODUCTS = [
         badge: BADGE_NAMES.NEW,
         price: '$115.000',
         base_price: '$95.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        id: 81,
+        name: 'Medios Pervoi de 6.5 pulgadas 450 Watts (el par)',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.PERVOI,
+        image: medios_de_6_pulgadas_y_media_pervoi_450_watts,
+        description: 'Medios Pervoi de 6.5 pulgadas 450 Watts MAX - 150W RMS',
+        badge: BADGE_NAMES.NEW,
+        price: '$60.000',
+        base_price: '$45.000',
         state: true,
         weight: null,
         height: null,
