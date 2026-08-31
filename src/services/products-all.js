@@ -82,6 +82,7 @@ import bloque_distribuidor_recoil from '../assets/products_section_pictures/bloq
 import cable_rca_storm_tech from '../assets/products_section_pictures/cable-rca-storm-tech.jpeg';
 import kit_de_cables_6_ga_pervoi_high from '../assets/products_section_pictures/kit-de-cables-6-ga-pervoi-high.jpeg';
 import componentes_6_pulgadas_y_media_650_watts_pervoi from '../assets/products_section_pictures/componentes-6,5-pulgadas-650-watts-pervoi.jpeg'
+import pote_taramps_bass_400x1_2ohms from '../assets/products_section_pictures/pote-taramps-bass-400x1-2-ohms.jpeg'
 
 export const ALL_PRODUCTS = [
     {
@@ -125,7 +126,7 @@ export const ALL_PRODUCTS = [
         brand: BRAND_NAMES.TARAMPS,
         image: pote_taramps_400x4,
         description: 'Potencia Taramps 400x4 4 canales 400 watts RMS',
-        badge: BADGE_NAMES.OUT_OF_STOCK,
+        badge: null,
         price: '$95.000',
         base_price: '$70.000',
         state: true,
@@ -226,7 +227,7 @@ export const ALL_PRODUCTS = [
         brand: null,
         image: rackera_2medios_2super,
         description: 'Rackera 2 medios de 8 pulgadas marca Jahro y 2 super tweeters Jahro',
-        badge: BADGE_NAMES.OUT_OF_STOCK,
+        badge: null,
         price: '$140.000',
         base_price: '$95.000',
         state: true,
@@ -514,7 +515,7 @@ export const ALL_PRODUCTS = [
         brand: BRAND_NAMES.BOMBER,
         image: parlantes_bomber_6x9_con_caja,
         description: 'Parlantes Bomber 6x9 con Cajas individuales',
-        badge: BADGE_NAMES.OUT_OF_STOCK,
+        badge: null,
         price: '$99.000',
         base_price: '$67.000',
         state: true,
@@ -962,7 +963,7 @@ export const ALL_PRODUCTS = [
         brand: BRAND_NAMES.AUDIOPIPE,
         image: medios_de_8_pulgadas_ap,
         description: 'Medios de 8 pulgadas AudioPipe de 300Watts MAX',
-        badge: BADGE_NAMES.RECOMMENDED,
+        badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$105.000',
         base_price: '$80.000',
         state: true,
@@ -1349,6 +1350,22 @@ export const ALL_PRODUCTS = [
         badge: BADGE_NAMES.NEW,
         price: '$40.000',
         base_price: '$30.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        id: 80,
+        name: 'Potencia Taramps Bass 400x1 2ohms',
+        category: CATEGORY_NAMES.POTENCIAS,
+        brand: BRAND_NAMES.TARAMPS,
+        image: pote_taramps_bass_400x1_2ohms,
+        description: 'Potencia Taramps Bass 400x1 2ohms',
+        badge: BADGE_NAMES.NEW,
+        price: '$115.000',
+        base_price: '$95.000',
         state: true,
         weight: null,
         height: null,
