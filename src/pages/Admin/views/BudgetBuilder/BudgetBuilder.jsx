@@ -80,6 +80,8 @@ const BudgetBuilder = () => {
         if (selectedProduct) {
             addItem(selectedProduct);
         }
+        setQuery('');
+        setSelectedProductId('');
     };
 
     const handleClear = () => {
