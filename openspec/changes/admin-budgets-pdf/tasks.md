@@ -45,8 +45,8 @@ Chain strategy: stacked-to-main
 
 ## Phase 4: Orchestrator (PR 4)
 
-- [ ] 4.1 Create `src/pages/Admin/views/BudgetBuilder/BudgetBuilder.jsx` + `.css`: product picker from `ALL_PRODUCTS`, drives `useBudget`, metadata form (company/date required; clientName/vehicle/validity optional), wires `buildBudgetPdf` to download (builder R7; export R1,R2,R3).
-- [ ] 4.2 Manual QA: accented `Pérez` filename + render, `$USD 55` edge via parsePrice, no `base_price` in PDF.
+- [x] 4.1 Create `src/pages/Admin/views/BudgetBuilder/BudgetBuilder.jsx` + `.css`: product picker from `ALL_PRODUCTS`, drives `useBudget`, metadata form (company/date required; clientName/vehicle/validity optional), wires `buildBudgetPdf` to download (builder R7; export R1,R2,R3).
+- [x] 4.2 Manual QA: accented `Pérez` filename + render, `$USD 55` edge via parsePrice, no `base_price` in PDF.
 
 ## Phase 5: Verification
 
