@@ -156,6 +156,17 @@
     color: var(--color-text-muted);
 }
 
+/* Admin link - discreto, mismo estilo que copyright */
+.footer__admin-link {
+    color: var(--color-text-faint);
+    font-weight: var(--font-weight-normal);
+}
+
+.footer__admin-link:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     .footer__grid {

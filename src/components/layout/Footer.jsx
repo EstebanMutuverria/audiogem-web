@@ -3,7 +3,8 @@
  * Footer principal de la aplicación.
  */
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAdmin } from '../../context/AdminContext';
 import './Footer.css';
 import { FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
 import { CART_CONFIG } from '../../constants/cartConfig';
@@ -25,6 +26,18 @@ const PRODUCT_LINKS = [
 
 const Footer = () => {
     const year = new Date().getFullYear();
+    const { isAdmin, logout } = useAdmin();
+    const navigate = useNavigate();
+
+    const handleAdminClick = (e) => {
+        e.preventDefault();
+        if (isAdmin) {
+            logout();
+            navigate('/', { replace: true });
+        } else {
+            navigate('/admin');
+        }
+    };
 
     return (
         <footer className="footer">
@@ -130,6 +143,16 @@ const Footer = () => {
                     <p className="footer__copyright">
                         © {year} AudioGem. Todos los derechos reservados.
                     </p>
+                    <div className="footer__bottom-links">
+                        <a
+                            href="#"
+                            onClick={handleAdminClick}
+                            className="footer__bottom-link footer__admin-link"
+                            aria-label={isAdmin ? 'Cerrar sesión de administrador' : 'Acceso administrativo'}
+                        >
+                            {isAdmin ? 'Salir Admin' : 'Admin'}
+                        </a>
+                    </div>
                 </div>
             </div>
         </footer>

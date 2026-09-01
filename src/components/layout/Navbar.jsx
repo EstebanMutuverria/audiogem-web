@@ -8,13 +8,12 @@
  */
 
 import { useState, useEffect } from 'react';
-import { NavLink, Link, useNavigate } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { useAdmin } from '../../context/AdminContext';
 import { useCart } from '../../context/CartContext';
-import AdminLoginModal from '../layout/AdminLoginModal';
 import './Navbar.css';
 import { FaShoppingCart } from 'react-icons/fa';
-import { FiHome, FiShoppingBag, FiUsers, FiMail } from 'react-icons/fi';
+import { FiHome, FiShoppingBag, FiUsers, FiMail, FiFileText } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 
 const NAV_LINKS = [
@@ -26,10 +25,8 @@ const NAV_LINKS = [
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const { isAdmin, logout } = useAdmin();
+    const { isAdmin } = useAdmin();
     const { toggleCart, cartItemsCount } = useCart();
-    const navigate = useNavigate();
 
     // Detecta scroll para agregar sombra y cambiar estilo del header superior
     useEffect(() => {
@@ -37,17 +34,6 @@ const Navbar = () => {
         window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-
-    const handleAdminClick = () => {
-        if (isAdmin) {
-            logout();
-            // Al cerrar sesión desde una ruta protegida, volver al inicio
-            // para no dejar el modal de login o la pantalla admin en pantalla.
-            navigate('/');
-        } else {
-            setIsModalOpen(true);
-        }
-    };
 
     return (
         <>
@@ -61,19 +47,8 @@ const Navbar = () => {
                         </span>
                     </Link>
 
-                    {/* Acciones (Admin, Carrito, CTA) */}
+                    {/* Acciones (Presupuestos si admin, Carrito, CTA) */}
                     <div className="navbar__actions">
-                        <button
-                            className={`navbar__admin-btn ${isAdmin ? 'navbar__admin-btn--active' : ''}`}
-                            onClick={handleAdminClick}
-                            aria-label={isAdmin ? 'Cerrar sesión de administrador' : 'Acceder como administrador'}
-                            title={isAdmin ? 'Sesión admin activa — click para cerrar sesión' : 'Soy Admin'}
-                        >
-                            <span className="navbar__admin-btn-icon">{isAdmin ? '🔓' : '🔐'}</span>
-                            <span className="navbar__admin-btn-label">
-                                {isAdmin ? 'Cerrar sesion Admin' : 'Soy Admin'}
-                            </span>
-                        </button>
 
                         {isAdmin && (
                             <Link
@@ -82,6 +57,7 @@ const Navbar = () => {
                                 aria-label="Crear presupuestos"
                                 title="Crear presupuestos"
                             >
+                                <span className="navbar__admin-link-icon"><FiFileText /></span>
                                 <span className="navbar__admin-link-label">Presupuestos</span>
                             </Link>
                         )}
@@ -141,12 +117,6 @@ const Navbar = () => {
                     ))}
                 </div>
             </nav>
-
-            {/* Modal de autenticación */}
-            <AdminLoginModal
-                isOpen={isModalOpen}
-                onClose={() => setIsModalOpen(false)}
-            />
         </>
     );
 };

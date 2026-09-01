@@ -141,6 +141,13 @@
     box-shadow: 0 0 14px rgba(244, 162, 97, 0.2);
 }
 
+.navbar__admin-link-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-sm);
+}
+
 /* Botón del Carrito */
 .navbar__cart-btn {
     position: relative;
@@ -336,28 +343,6 @@
     .navbar__cta {
         display: none;
         /* Hide CTA button on mobile */
-    }
-
-    /* Admin Button compacto en móvil (solo icono/emoji) */
-    .navbar__admin-btn {
-        padding: 0;
-        width: 40px;
-        height: 40px;
-        justify-content: center;
-        border-radius: var(--radius-lg);
-    }
-
-    .navbar__admin-btn-label {
-        display: none;
-        /* Hide text label on mobile */
-    }
-
-    .navbar__admin-btn-icon {
-        font-size: 16px;
-    }
-
-    .navbar__admin-link {
-        padding: 0 var(--spacing-3);
     }
 
     /* Isla flotante de navegación (Pill flotante) en la parte inferior en móvil */

@@ -19,6 +19,7 @@ const ProductsPage = lazy(() => import('../pages/Products/ProductsPage'));
 const AboutPage = lazy(() => import('../pages/About/AboutPage'));
 const ContactPage = lazy(() => import('../pages/Contact/ContactPage'));
 const BudgetBuilder = lazy(() => import('../pages/Admin/views/BudgetBuilder/BudgetBuilder'));
+const AdminLoginPage = lazy(() => import('../pages/Admin/AdminLoginPage'));
 
 // Helper para envolver páginas con Suspense
 const withSuspense = (Component) => (
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
             {
                 path: 'contacto',
                 element: withSuspense(ContactPage),
+            },
+            {
+                path: 'admin',
+                element: <AdminLoginPage />,
             },
             {
                 path: 'admin/presupuestos',
