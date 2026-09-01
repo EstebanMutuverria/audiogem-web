@@ -1218,7 +1218,6 @@ export const ALL_PRODUCTS = ([
         depth: null
     },
     {
-        id: 76,
         name: 'Bloque distribuidor Recoil',
         category: CATEGORY_NAMES.ACCESORIOS,
         brand: BRAND_NAMES.RECOIL,
@@ -1234,7 +1233,6 @@ export const ALL_PRODUCTS = ([
         depth: null
     },
     {
-        id: 77,
         name: 'Cable RCA Storm Tech 4mm',
         category: CATEGORY_NAMES.ACCESORIOS,
         brand: null,
@@ -1250,7 +1248,6 @@ export const ALL_PRODUCTS = ([
         depth: null
     },
     {
-        id: 78,
         name: 'Kit de cables 6 GA pervoi high performance CTC-320A',
         category: CATEGORY_NAMES.ACCESORIOS,
         brand: BRAND_NAMES.PERVOI,
@@ -1266,7 +1263,6 @@ export const ALL_PRODUCTS = ([
         depth: null
     },
     {
-        id: 79,
         name: 'Componentes Pervoi de 6,5 pulgadas 650 Watts MAX (el par)',
         category: CATEGORY_NAMES.COMPONENTES,
         brand: BRAND_NAMES.PERVOI,
@@ -1282,7 +1278,6 @@ export const ALL_PRODUCTS = ([
         depth: null
     },
     {
-        id: 80,
         name: 'Potencia Taramps Bass 400x1 2ohms',
         category: CATEGORY_NAMES.POTENCIAS,
         brand: BRAND_NAMES.TARAMPS,
@@ -1298,7 +1293,6 @@ export const ALL_PRODUCTS = ([
         depth: null
     },
     {
-        id: 81,
         name: 'Medios Pervoi de 6.5 pulgadas 450 Watts (el par)',
         category: CATEGORY_NAMES.COMPONENTES,
         brand: BRAND_NAMES.PERVOI,
