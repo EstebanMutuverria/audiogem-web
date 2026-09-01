@@ -36,7 +36,7 @@ const BudgetSummary = ({ budgetTotal, isEmpty, onDownload }) => {
                 onClick={onDownload}
                 disabled={isEmpty}
             >
-                Aceptar o Crear presupuesto
+                Crear presupuesto
             </Button>
         </div>
     );

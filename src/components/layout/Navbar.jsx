@@ -8,7 +8,7 @@
  */
 
 import { useState, useEffect } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { useAdmin } from '../../context/AdminContext';
 import { useCart } from '../../context/CartContext';
 import AdminLoginModal from '../layout/AdminLoginModal';
@@ -29,6 +29,7 @@ const Navbar = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const { isAdmin, logout } = useAdmin();
     const { toggleCart, cartItemsCount } = useCart();
+    const navigate = useNavigate();
 
     // Detecta scroll para agregar sombra y cambiar estilo del header superior
     useEffect(() => {
@@ -40,6 +41,9 @@ const Navbar = () => {
     const handleAdminClick = () => {
         if (isAdmin) {
             logout();
+            // Al cerrar sesión desde una ruta protegida, volver al inicio
+            // para no dejar el modal de login o la pantalla admin en pantalla.
+            navigate('/');
         } else {
             setIsModalOpen(true);
         }
