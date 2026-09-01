@@ -5,7 +5,7 @@
  * PDF. Compone useBudget, BudgetItem, BudgetSummary y buildBudgetPdf.
  */
 
-import { useState } from 'react';
+import { useState, useRef, useEffect, useMemo } from 'react';
 import { ALL_PRODUCTS } from '../../../../services/productsData';
 import { useBudget } from '../../hooks/useBudget';
 import { buildBudgetPdf } from '../../utils/budgetPdf';
@@ -33,7 +33,48 @@ const BudgetBuilder = () => {
     const [validity, setValidity] = useState('');
     const [formError, setFormError] = useState('');
 
+    // Estado del buscador de productos
+    const [query, setQuery] = useState('');
+    const [isPickerOpen, setIsPickerOpen] = useState(false);
+    const pickerRef = useRef(null);
+
     const selectedProduct = ALL_PRODUCTS.find((product) => product.id === selectedProductId);
+
+    // Filtra productos por nombre o descripción según la búsqueda del usuario.
+    // Sin texto, devuelve el catálogo completo (la lista es scrolleable).
+    const filteredProducts = useMemo(() => {
+        const term = query.trim().toLowerCase();
+        if (!term) return ALL_PRODUCTS;
+        return ALL_PRODUCTS.filter(
+            (product) =>
+                product.name.toLowerCase().includes(term) ||
+                (product.description || '').toLowerCase().includes(term)
+        );
+    }, [query]);
+
+    // Cierra el dropdown al hacer clic fuera del buscador.
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (pickerRef.current && !pickerRef.current.contains(event.target)) {
+                setIsPickerOpen(false);
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
+
+    const handleSelectProduct = (product) => {
+        setSelectedProductId(product.id);
+        setQuery(product.name);
+        setIsPickerOpen(false);
+    };
+
+    const handleSearchChange = (value) => {
+        setQuery(value);
+        // Si el usuario edita el texto, la selección vigente deja de coincidir.
+        setSelectedProductId('');
+        setIsPickerOpen(true);
+    };
 
     const handleAddProduct = () => {
         if (selectedProduct) {
@@ -105,22 +146,61 @@ const BudgetBuilder = () => {
                 {/* Columna izquierda: picker + line items */}
                 <div className="budget-builder__products">
                     <div className="budget-builder__picker">
-                        <label className="budget-builder__field-label" htmlFor="budget-product">
+                        <label className="budget-builder__field-label" htmlFor="budget-product-search">
                             Producto del catálogo
                         </label>
                         <div className="budget-builder__picker-row">
-                            <select
-                                id="budget-product"
-                                className="budget-builder__select"
-                                value={selectedProductId}
-                                onChange={(e) => setSelectedProductId(Number(e.target.value))}
+                            <div
+                                className="budget-builder__search"
+                                ref={pickerRef}
                             >
-                                {ALL_PRODUCTS.map((product) => (
-                                    <option key={product.id} value={product.id}>
-                                        {product.name}
-                                    </option>
-                                ))}
-                            </select>
+                                <input
+                                    id="budget-product-search"
+                                    className="budget-builder__search-input"
+                                    type="text"
+                                    value={query}
+                                    onChange={(e) => handleSearchChange(e.target.value)}
+                                    onFocus={() => setIsPickerOpen(true)}
+                                    placeholder="Buscar por nombre o descripción…"
+                                    autoComplete="off"
+                                    aria-label="Buscar producto del catálogo"
+                                    aria-expanded={isPickerOpen}
+                                    aria-controls="budget-product-options"
+                                />
+                                {isPickerOpen && (
+                                    <ul
+                                        id="budget-product-options"
+                                        className="budget-builder__search-list"
+                                        role="listbox"
+                                        aria-label="Resultados de productos"
+                                    >
+                                        {filteredProducts.length > 0 ? (
+                                            filteredProducts.map((product) => (
+                                                <li key={product.id} role="option" aria-selected={product.id === selectedProductId}>
+                                                    <button
+                                                        type="button"
+                                                        className="budget-builder__search-option"
+                                                        onClick={() => handleSelectProduct(product)}
+                                                    >
+                                                        <span className="budget-builder__search-option-name">
+                                                            {product.name}
+                                                        </span>
+                                                        {product.description && (
+                                                            <span className="budget-builder__search-option-desc">
+                                                                {product.description}
+                                                            </span>
+                                                        )}
+                                                    </button>
+                                                </li>
+                                            ))
+                                        ) : (
+                                            <li className="budget-builder__search-empty">
+                                                Sin resultados para “{query.trim()}”
+                                            </li>
+                                        )}
+                                    </ul>
+                                )}
+                            </div>
                             <button
                                 type="button"
                                 className="budget-builder__add-btn"
@@ -129,10 +209,16 @@ const BudgetBuilder = () => {
                                 Agregar
                             </button>
                         </div>
-                        {selectedProduct && (
+                        {selectedProduct ? (
                             <span className="budget-builder__picker-price">
                                 {selectedProduct.price}
                             </span>
+                        ) : (
+                            query.trim() && (
+                                <span className="budget-builder__search-hint">
+                                    Seleccioná un producto de la lista para agregarlo.
+                                </span>
+                            )
                         )}
                     </div>
 
