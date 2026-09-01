@@ -92,7 +92,7 @@ const BudgetBuilder = () => {
         setFormError('');
     };
 
-    const handleDownload = () => {
+    const handleDownload = async () => {
         if (isEmpty) return;
 
         if (!company.trim() || !date) {
@@ -118,7 +118,7 @@ const BudgetBuilder = () => {
         if (vehicle.trim()) header.vehicle = vehicle.trim();
         if (validity.trim()) header.validity = validity.trim();
 
-        buildBudgetPdf({ header, items });
+        await buildBudgetPdf({ header, items });
     };
 
     return (
