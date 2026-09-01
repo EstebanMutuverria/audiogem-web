@@ -63,7 +63,9 @@
 
 .budget-builder__layout {
     display: grid;
-    grid-template-columns: 1.6fr 1fr;
+    /* minmax(0, …) permite que las columnas encojan por debajo del
+       contenido (nombres largos, precios) sin desbordar en mobile. */
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
     gap: var(--spacing-8);
     align-items: start;
 }
@@ -72,6 +74,8 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-6);
+    min-width: 0;
+    max-width: 100%;
     background: var(--color-bg-card);
     border: 1px solid var(--color-bg-border);
     border-radius: var(--radius-lg);
@@ -119,10 +123,13 @@
     right: 0;
     z-index: 20;
     max-height: 260px;
+    max-width: 100%;
     overflow-y: auto;
+    overflow-x: hidden;
     margin: 0;
     padding: var(--spacing-1);
     list-style: none;
+    box-sizing: border-box;
     background: var(--color-bg-card);
     border: 1px solid var(--color-bg-border);
     border-radius: var(--radius-md);
@@ -151,12 +158,14 @@
     font-size: var(--text-sm);
     font-weight: var(--font-weight-semibold);
     color: var(--color-text);
+    overflow-wrap: anywhere;
 }
 
 .budget-builder__search-option-desc {
     font-size: var(--text-xs);
     color: var(--color-text-muted);
     line-height: 1.5;
+    overflow-wrap: anywhere;
 }
 
 .budget-builder__search-empty {
@@ -211,18 +220,23 @@
     gap: var(--spacing-4);
     margin: 0;
     padding: 0;
+    min-width: 0;
     list-style: none;
 }
 
 .budget-builder__list-item {
     margin: 0;
     padding: 0;
+    min-width: 0;
+    max-width: 100%;
 }
 
 .budget-builder__side {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-6);
+    min-width: 0;
+    max-width: 100%;
     position: sticky;
     top: calc(var(--navbar-height) + var(--spacing-4));
 }
@@ -286,18 +300,30 @@
 
 @media (max-width: 720px) {
     .budget-builder__layout {
-        grid-template-columns: 1fr;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        grid-template-columns: minmax(0, 1fr);
         margin-bottom: 80px;
-
     }
 
     .budget-builder__side {
         position: static;
+        width: 100%;
+    }
+}
+
+/* Muy pequeño: el picker deja de ser una fila y se apila para que el input
+   y el botón "Agregar" no se compriman ni desborden (base 320px). */
+@media (max-width: 480px) {
+    .budget-builder__products,
+    .budget-builder__form {
+        padding: var(--spacing-4);
+    }
+
+    .budget-builder__picker-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .budget-builder__add-btn {
         width: 100%;
     }
 }
