@@ -1,0 +1,45 @@
+/* BudgetSummary.css */
+
+.budget-summary {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-5);
+    padding: var(--spacing-6);
+    border-top: 1px solid var(--color-bg-border);
+    background: rgba(14, 18, 25, 0.95);
+}
+
+.budget-summary__total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
+}
+
+.budget-summary__total-amount {
+    color: var(--color-primary);
+    font-size: var(--text-2xl);
+    text-shadow: 0 0 10px rgba(72, 149, 239, 0.2);
+}
+
+.budget-summary__empty {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.budget-summary__download-btn {
+    width: 100%;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: var(--font-weight-semibold);
+}
+
+.budget-summary__download-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

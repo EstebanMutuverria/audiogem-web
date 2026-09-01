@@ -40,8 +40,8 @@ Chain strategy: stacked-to-main
 
 ## Phase 3: Line item + summary (PR 3)
 
-- [ ] 3.1 Create `src/pages/Admin/views/BudgetBuilder/BudgetItem.jsx` + `.css`: steppers `+`/`-`, remove, subtotal, admin cost column hidden when `base_price` null (builder R2,R3,R4,R5).
-- [ ] 3.2 Create `src/pages/Admin/views/BudgetBuilder/BudgetSummary.jsx` + `.css`: total via `formatPrice`, empty-state message, download button 'Aceptar o Crear presupuesto' disabled when empty (builder R6; export R1).
+- [x] 3.1 Create `src/pages/Admin/views/BudgetBuilder/BudgetItem.jsx` + `.css`: steppers `+`/`-`, remove, subtotal, admin cost column hidden when `base_price` null (builder R2,R3,R4,R5).
+- [x] 3.2 Create `src/pages/Admin/views/BudgetBuilder/BudgetSummary.jsx` + `.css`: total via `formatPrice`, empty-state message, download button 'Aceptar o Crear presupuesto' disabled when empty (builder R6; export R1).
 
 ## Phase 4: Orchestrator (PR 4)
 
