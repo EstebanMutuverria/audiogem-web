@@ -10,12 +10,15 @@ import RootLayout from '../layouts/RootLayout';
 import PageLoader from '../components/ui/PageLoader';
 import ErrorBoundary from '../components/ui/ErrorBoundary';
 import NotFoundPage from '../pages/NotFound/NotFoundPage';
+import AdminPage from '../pages/Admin/AdminPage';
+import AdminRoute from '../components/admin/AdminRoute';
 
 // Lazy loading de páginas
 const HomePage = lazy(() => import('../pages/Home/HomePage'));
 const ProductsPage = lazy(() => import('../pages/Products/ProductsPage'));
 const AboutPage = lazy(() => import('../pages/About/AboutPage'));
 const ContactPage = lazy(() => import('../pages/Contact/ContactPage'));
+const BudgetBuilder = lazy(() => import('../pages/Admin/views/BudgetBuilder/BudgetBuilder'));
 
 // Helper para envolver páginas con Suspense
 const withSuspense = (Component) => (
@@ -45,6 +48,20 @@ const router = createBrowserRouter([
             {
                 path: 'contacto',
                 element: withSuspense(ContactPage),
+            },
+            {
+                path: 'admin/presupuestos',
+                element: <AdminPage />,
+                children: [
+                    {
+                        index: true,
+                        element: withSuspense(() => (
+                            <AdminRoute>
+                                <BudgetBuilder />
+                            </AdminRoute>
+                        )),
+                    },
+                ],
             },
             {
                 path: '*',

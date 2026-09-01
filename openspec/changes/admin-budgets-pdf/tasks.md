@@ -34,9 +34,9 @@ Chain strategy: stacked-to-main
 
 ## Phase 2: Admin shell + gate (PR 2)
 
-- [ ] 2.1 Create `src/pages/Admin/AdminPage.jsx` + `.css`: admin header + content wrapper.
-- [ ] 2.2 Create `src/components/admin/AdminRoute.jsx`: gate on `useAdmin().isAdmin`; render builder or `AdminLoginModal` (builder R1-R2).
-- [ ] 2.3 Modify `src/router/index.jsx`: lazy `admin/presupuestos` child under `RootLayout` wrapped in `AdminRoute` (builder R1).
+- [x] 2.1 Create `src/pages/Admin/AdminPage.jsx` + `.css`: admin header + content wrapper.
+- [x] 2.2 Create `src/components/admin/AdminRoute.jsx`: gate on `useAdmin().isAdmin`; render builder or `AdminLoginModal` (builder R1-R2).
+- [x] 2.3 Modify `src/router/index.jsx`: lazy `admin/presupuestos` child under `RootLayout` wrapped in `AdminRoute` (builder R1).
 
 ## Phase 3: Line item + summary (PR 3)
 
