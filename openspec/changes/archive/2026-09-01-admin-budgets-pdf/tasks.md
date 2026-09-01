@@ -50,9 +50,9 @@ Chain strategy: stacked-to-main
 
 ## Phase 5: Verification
 
-- [ ] 5.1 Run `npm run build` (config verify command) — clean.
-- [ ] 5.2 Run `npm run lint` — no new errors.
-- [ ] 5.3 Manual route/flow check against builder + export scenarios.
+- [x] 5.1 Run `npm run build` (config verify command) — clean.
+- [x] 5.2 Run `npm run lint` — no new errors.
+- [x] 5.3 Manual route/flow check against builder + export scenarios.
 
 ## Open Design Questions → Resolve in Apply
 
