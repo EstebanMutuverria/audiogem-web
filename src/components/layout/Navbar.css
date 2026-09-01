@@ -114,6 +114,33 @@
     box-shadow: 0 0 12px rgba(244, 162, 97, 0.15);
 }
 
+/* Link a Presupuestos (visible solo cuando el admin está logueado) */
+.navbar__admin-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-2) var(--spacing-4);
+    background: rgba(244, 162, 97, 0.1);
+    border: 1px solid rgba(244, 162, 97, 0.4);
+    border-radius: var(--radius-lg);
+    color: #f4a261;
+    font-size: var(--text-xs);
+    font-weight: var(--font-weight-semibold);
+    font-family: var(--font-body);
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    white-space: nowrap;
+    height: 40px;
+    transition: all var(--transition-base);
+}
+
+.navbar__admin-link:hover {
+    background: rgba(244, 162, 97, 0.18);
+    border-color: rgba(244, 162, 97, 0.6);
+    color: #f4a261;
+    box-shadow: 0 0 14px rgba(244, 162, 97, 0.2);
+}
+
 /* Botón del Carrito */
 .navbar__cart-btn {
     position: relative;
@@ -327,6 +354,10 @@
 
     .navbar__admin-btn-icon {
         font-size: 16px;
+    }
+
+    .navbar__admin-link {
+        padding: 0 var(--spacing-3);
     }
 
     /* Isla flotante de navegación (Pill flotante) en la parte inferior en móvil */

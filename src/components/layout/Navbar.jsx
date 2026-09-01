@@ -71,6 +71,17 @@ const Navbar = () => {
                             </span>
                         </button>
 
+                        {isAdmin && (
+                            <Link
+                                to="/admin/presupuestos"
+                                className="navbar__admin-link"
+                                aria-label="Crear presupuestos"
+                                title="Crear presupuestos"
+                            >
+                                <span className="navbar__admin-link-label">Presupuestos</span>
+                            </Link>
+                        )}
+
                         <button
                             className="navbar__cart-btn"
                             onClick={toggleCart}
