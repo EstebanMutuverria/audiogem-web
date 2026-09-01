@@ -25,7 +25,7 @@ const BudgetBuilder = () => {
         isEmpty,
     } = useBudget();
 
-    const [selectedProductId, setSelectedProductId] = useState(ALL_PRODUCTS[0]?.id ?? '');
+    const [selectedProductId, setSelectedProductId] = useState('');
     const [company, setCompany] = useState('');
     const [date, setDate] = useState('');
     const [clientName, setClientName] = useState('');
