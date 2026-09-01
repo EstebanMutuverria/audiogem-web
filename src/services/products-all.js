@@ -1308,5 +1308,3 @@ export const ALL_PRODUCTS = ([
         depth: null
     }
 ]).map((product, index) => ({ ...product, id: index + 1 }));
-
-console.log(ALL_PRODUCTS.length)
