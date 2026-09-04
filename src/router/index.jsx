@@ -19,6 +19,7 @@ const ProductsPage = lazy(() => import('../pages/Products/ProductsPage'));
 const AboutPage = lazy(() => import('../pages/About/AboutPage'));
 const ContactPage = lazy(() => import('../pages/Contact/ContactPage'));
 const BudgetBuilder = lazy(() => import('../pages/Admin/views/BudgetBuilder/BudgetBuilder'));
+const ComboBuilder = lazy(() => import('../pages/Admin/views/ComboBuilder/ComboBuilder'));
 const AdminLoginPage = lazy(() => import('../pages/Admin/AdminLoginPage'));
 
 // Helper para envolver páginas con Suspense
@@ -63,6 +64,20 @@ const router = createBrowserRouter([
                         element: withSuspense(() => (
                             <AdminRoute>
                                 <BudgetBuilder />
+                            </AdminRoute>
+                        )),
+                    },
+                ],
+            },
+            {
+                path: 'admin/combos',
+                element: <AdminPage />,
+                children: [
+                    {
+                        index: true,
+                        element: withSuspense(() => (
+                            <AdminRoute>
+                                <ComboBuilder />
                             </AdminRoute>
                         )),
                     },

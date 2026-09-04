@@ -1,0 +1,236 @@
+/* ComboDetailModal.css */
+
+/* Overlay — reutiliza patrón de AdminLoginModal */
+.combo-detail__overlay {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-modal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(7, 9, 13, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: var(--spacing-6);
+}
+
+/* Panel del modal */
+.combo-detail__panel {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    max-height: 85vh;
+    overflow-y: auto;
+    background: rgba(20, 24, 32, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-2xl);
+    padding: var(--spacing-8);
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* Línea de luz superior */
+.combo-detail__panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(72, 149, 239, 0.3), transparent);
+}
+
+/* ─── Header ─── */
+.combo-detail__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--spacing-4);
+    margin-bottom: var(--spacing-6);
+}
+
+.combo-detail__badge {
+    display: inline-block;
+    font-size: var(--text-xs);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-primary);
+    background: rgba(72, 149, 239, 0.1);
+    border: 1px solid rgba(72, 149, 239, 0.2);
+    border-radius: var(--radius-full);
+    padding: var(--spacing-1) var(--spacing-3);
+    margin-bottom: var(--spacing-2);
+}
+
+.combo-detail__title {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+    margin: 0;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.combo-detail__close {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: none;
+    color: var(--color-text-faint);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+}
+
+.combo-detail__close:hover {
+    background: rgba(255, 77, 109, 0.1);
+    color: var(--color-error);
+}
+
+/* ─── Tabla de productos ─── */
+.combo-detail__products {
+    margin-bottom: var(--spacing-6);
+}
+
+.combo-detail__table-header {
+    display: grid;
+    grid-template-columns: 1fr 50px 80px 90px;
+    gap: var(--spacing-2);
+    font-size: var(--text-xs);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-faint);
+    padding: 0 0 var(--spacing-2);
+    border-bottom: 1px solid var(--color-bg-border);
+    margin-bottom: var(--spacing-2);
+}
+
+.combo-detail__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.combo-detail__row {
+    display: grid;
+    grid-template-columns: 1fr 50px 80px 90px;
+    gap: var(--spacing-2);
+    align-items: center;
+    padding: var(--spacing-2) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.combo-detail__row:last-child {
+    border-bottom: none;
+}
+
+.combo-detail__product-name {
+    font-size: var(--text-sm);
+    color: var(--color-text);
+    font-weight: var(--font-weight-medium);
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.combo-detail__missing {
+    display: block;
+    font-size: var(--text-xs);
+    color: var(--color-error);
+    font-weight: var(--font-weight-regular);
+    margin-top: 2px;
+}
+
+.combo-detail__qty {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    text-align: center;
+}
+
+.combo-detail__price {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+.combo-detail__subtotal {
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+/* ─── Resumen de precios ─── */
+.combo-detail__summary {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+    padding: var(--spacing-4);
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-bg-border);
+}
+
+.combo-detail__summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--text-sm);
+    color: var(--color-text);
+    font-weight: var(--font-weight-medium);
+    font-variant-numeric: tabular-nums;
+}
+
+.combo-detail__summary-row--muted {
+    color: var(--color-text-muted);
+    font-weight: var(--font-weight-regular);
+}
+
+.combo-detail__summary-row--accent {
+    color: var(--color-success);
+}
+
+.combo-detail__summary-row--combo {
+    margin-top: var(--spacing-2);
+    padding-top: var(--spacing-2);
+    border-top: 1px solid var(--color-bg-border);
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+}
+
+/* ─── Footer ─── */
+.combo-detail__footer {
+    margin-top: var(--spacing-4);
+    padding-top: var(--spacing-3);
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    text-align: center;
+}
+
+.combo-detail__date {
+    font-size: var(--text-xs);
+    color: var(--color-text-faint);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 560px) {
+    .combo-detail__panel {
+        padding: var(--spacing-5);
+        max-height: 90vh;
+    }
+
+    .combo-detail__table-header,
+    .combo-detail__row {
+        grid-template-columns: 1fr 40px 70px 80px;
+        font-size: var(--text-xs);
+    }
+}

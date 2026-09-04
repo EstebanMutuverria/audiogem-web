@@ -1,0 +1,359 @@
+/* ComboBuilder.css */
+
+.combo-builder {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+    padding-block: var(--spacing-10) var(--spacing-16);
+}
+
+.combo-builder__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--spacing-4);
+    flex-wrap: wrap;
+}
+
+.combo-builder__heading {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
+
+.combo-builder__label {
+    display: inline-block;
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-primary);
+}
+
+.combo-builder__hint {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    max-width: 520px;
+    margin: 0;
+}
+
+.combo-builder__layout {
+    display: grid;
+    /* minmax(0, …) permite que las columnas encojan por debajo del
+       contenido (nombres largos, precios) sin desbordar en mobile. */
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+    gap: var(--spacing-8);
+    align-items: start;
+}
+
+.combo-builder__products {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-6);
+    min-width: 0;
+    max-width: 100%;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-bg-border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-6);
+}
+
+.combo-builder__picker {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+}
+
+.combo-builder__search {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+}
+
+.combo-builder__search-icon {
+    position: absolute;
+    top: 50%;
+    left: var(--spacing-3);
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-faint);
+    pointer-events: none;
+}
+
+.combo-builder__search-input {
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-bg-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    padding: var(--spacing-2) var(--spacing-3) var(--spacing-2) calc(var(--spacing-3) * 2 + 1rem);
+}
+
+.combo-builder__search-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.combo-builder__search-list {
+    position: absolute;
+    top: calc(100% + var(--spacing-1));
+    left: 0;
+    right: 0;
+    z-index: 20;
+    max-height: 260px;
+    max-width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 0;
+    padding: var(--spacing-1);
+    list-style: none;
+    box-sizing: border-box;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-bg-border);
+    border-radius: var(--radius-md);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.combo-builder__search-option {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1);
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: var(--spacing-2) var(--spacing-3);
+    cursor: pointer;
+    transition: background var(--transition-fast);
+}
+
+.combo-builder__search-option:hover {
+    background: rgba(244, 162, 97, 0.1);
+}
+
+.combo-builder__search-option-name {
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    overflow-wrap: anywhere;
+}
+
+.combo-builder__search-option-cat {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    text-transform: capitalize;
+    overflow-wrap: anywhere;
+}
+
+.combo-builder__search-empty {
+    padding: var(--spacing-3);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    text-align: center;
+}
+
+.combo-builder__empty {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin: 0;
+    padding: var(--spacing-4);
+    border: 1px dashed var(--color-bg-border);
+    border-radius: var(--radius-md);
+}
+
+.combo-builder__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+    list-style: none;
+}
+
+.combo-builder__list-item {
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.combo-builder__side {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-6);
+    min-width: 0;
+    max-width: 100%;
+}
+
+.combo-builder__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-bg-border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-6);
+}
+
+.combo-builder__form-title {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
+    margin: 0 0 var(--spacing-2);
+}
+
+.combo-builder__field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1);
+}
+
+.combo-builder__field-label {
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-muted);
+}
+
+.combo-builder__required {
+    color: var(--color-error);
+}
+
+.combo-builder__input {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-bg-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    padding: var(--spacing-2) var(--spacing-3);
+    transition: border-color var(--transition-fast);
+}
+
+.combo-builder__input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+/* Lista de combos guardados */
+.combo-builder__saved {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-bg-border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-6);
+}
+
+.combo-builder__saved-empty {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.combo-builder__saved-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    min-width: 0;
+}
+
+.combo-builder__saved-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-3);
+    min-width: 0;
+    padding: var(--spacing-3);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--color-bg-border);
+    border-radius: var(--radius-md);
+}
+
+.combo-builder__saved-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1);
+    min-width: 0;
+    flex: 1;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: opacity var(--transition-fast);
+}
+
+.combo-builder__saved-info:hover {
+    opacity: 0.85;
+}
+
+.combo-builder__saved-name {
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.combo-builder__saved-meta {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.combo-builder__saved-delete {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-muted);
+    opacity: 0.4;
+    padding: var(--spacing-1);
+    transition: opacity var(--transition-fast), transform var(--transition-fast), color var(--transition-fast);
+}
+
+.combo-builder__saved-delete:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    color: var(--color-error);
+}
+
+@media (max-width: 768px) {
+    .combo-builder__layout {
+        grid-template-columns: minmax(0, 1fr);
+        margin-bottom: 80px;
+    }
+}
+
+/* Muy pequeño: el picker se adapta y se reduce el padding de las tarjetas. */
+@media (max-width: 480px) {
+    .combo-builder__products,
+    .combo-builder__form,
+    .combo-builder__saved {
+        padding: var(--spacing-4);
+    }
+}
