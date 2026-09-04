@@ -58,7 +58,7 @@ const Navbar = () => {
                                 title="Crear presupuestos"
                             >
                                 <span className="navbar__admin-link-icon"><FiFileText /></span>
-                                <span className="navbar__admin-link-label">Presupuestos</span>
+                                <span className="navbar__admin-link-label">Admin.</span>
                             </Link>
                         )}
 
