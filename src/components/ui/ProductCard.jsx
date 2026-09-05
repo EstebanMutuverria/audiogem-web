@@ -9,7 +9,7 @@ import StarBorder from '../animations/StarBorder';
 import { useAdmin } from '../../context/AdminContext';
 import { useCart } from '../../context/CartContext';
 
-import BADGETS_NAMES from '../../constants/badge_names.js';
+import BADGE_NAMES from '../../constants/badge_names.js';
 import CATEGORY_NAMES from '../../constants/category_names.js';
 import { buildWhatsAppProductUrl } from '../../utils/whatsapp';
 
@@ -19,6 +19,7 @@ const CATEGORY_ICONS = {
     [CATEGORY_NAMES.SUBWOOFERS]: '💥',
     [CATEGORY_NAMES.POTENCIAS]: '⚡',
     [CATEGORY_NAMES.ACCESORIOS]: '🔧',
+    [CATEGORY_NAMES.CAJONES]: '📦',
 };
 
 /**
@@ -31,35 +32,40 @@ const ProductCard = ({ product }) => {
     const { isAdmin } = useAdmin();
     const { addToCart } = useCart();
 
+    const isNotCajones = category !== CATEGORY_NAMES.CAJONES;
+
     const specs = [];
     if (weight != null) specs.push({ icon: '⚖️', label: `${weight} kg` });
     if (height != null && width != null && depth != null) {
         specs.push({ icon: '📏', label: `Alto: ${height} × Ancho: ${width} × Profundo: ${depth} cm` });
     }
 
-    const isOutOfStock = badge === BADGETS_NAMES.OUT_OF_STOCK;
+    const isOutOfStock = badge === BADGE_NAMES.OUT_OF_STOCK;
 
     const whatsappUrl = buildWhatsAppProductUrl(product);
 
     return (
         <article className="product-card">
-            {badge && badge !== BADGETS_NAMES.OUT_OF_STOCK && (
-                <span className={`product-card__badge ${badge === BADGETS_NAMES.NEW ? 'new' : ''}`}>
+            {badge && badge !== BADGE_NAMES.OUT_OF_STOCK && (
+                <span className={`product-card__badge ${badge === BADGE_NAMES.NEW ? 'new' : ''}`}>
                     {badge}
                 </span>
             )}
-            {badge && badge === BADGETS_NAMES.OUT_OF_STOCK && <span className="product-card__badge out-of-stock">{badge}</span>}
+            {badge && badge === BADGE_NAMES.OUT_OF_STOCK && <span className="product-card__badge out-of-stock">{badge}</span>}
 
             {/* Imagen / Placeholder */}
-            <div className="product-card__image">
-                {image ? (
-                    <img src={image} alt={name} loading="lazy" />
-                ) : (
-                    <span className="product-card__image-placeholder" aria-hidden="true">
-                        {icon}
-                    </span>
-                )}
-            </div>
+            {
+                isNotCajones &&
+                <div className="product-card__image">
+                    {image ? (
+                        <img src={image} alt={name} loading="lazy" />
+                    ) : (
+                        <span className="product-card__image-placeholder" aria-hidden="true">
+                            {icon}
+                        </span>
+                    )}
+                </div>
+            }
 
             {/* Contenido */}
             <div className="product-card__body">
@@ -88,30 +94,33 @@ const ProductCard = ({ product }) => {
                     <div className="product-card__footer-meta">
                         <span className="product-card__brand">{brand || 'AudioGem'}</span>
                     </div>
-                    <div className="product-card__actions">
-                        <StarBorder
-                            as="a"
-                            href={whatsappUrl}
-                            className="product-card__action"
-                            color="#4895ef"
-                            speed="3s"
-                            thickness={1}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={`Consultar por ${name} vía WhatsApp`}
-                        >
-                            <span className="product-card__action-inner">Consultar</span>
-                        </StarBorder>
+                    {
+                        isNotCajones &&
+                        <div className="product-card__actions">
+                            <StarBorder
+                                as="a"
+                                href={whatsappUrl}
+                                className="product-card__action"
+                                color="#4895ef"
+                                speed="3s"
+                                thickness={1}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={`Consultar por ${name} vía WhatsApp`}
+                            >
+                                <span className="product-card__action-inner">Consultar</span>
+                            </StarBorder>
 
-                        <button
-                            className="product-card__add-btn"
-                            onClick={() => !isOutOfStock && addToCart(product)}
-                            disabled={isOutOfStock}
-                            aria-label={isOutOfStock ? 'Producto sin stock' : `Agregar ${name} al carrito`}
-                        >
-                            {isOutOfStock ? 'Sin Stock' : 'Agregar 🛒'}
-                        </button>
-                    </div>
+                            <button
+                                className="product-card__add-btn"
+                                onClick={() => !isOutOfStock && addToCart(product)}
+                                disabled={isOutOfStock}
+                                aria-label={isOutOfStock ? 'Producto sin stock' : `Agregar ${name} al carrito`}
+                            >
+                                {isOutOfStock ? 'Sin Stock' : 'Agregar 🛒'}
+                            </button>
+                        </div>
+                    }
                 </div>
             </div>
         </article>

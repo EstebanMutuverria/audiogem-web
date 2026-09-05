@@ -58,4 +58,11 @@ export const CATEGORIES = [
         icon: icon_categories,
         color: '#4cc953',
     },
+    {
+        id: CATEGORY_NAMES.CAJONES,
+        label: 'Cajones',
+        description: 'Cajones y recintos para subwoofers y parlantes.',
+        icon: icon_categories,
+        color: '#8b5cf6',
+    },
 ];

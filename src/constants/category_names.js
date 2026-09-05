@@ -6,6 +6,7 @@ const CATEGORY_NAMES = {
     ACCESORIOS: 'accesorios',
     RACKERAS: 'rackeras',
     COMPONENTES: 'componentes',
+    CAJONES: 'cajones',
 };
 
 export default CATEGORY_NAMES;

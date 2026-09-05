@@ -3,20 +3,19 @@
  * Botonera de filtrado por categoría para el catálogo.
  */
 
-import { CATEGORIES } from '../../../../services/productsData';
 import './CategoryFilter.css';
 
-const CategoryFilter = ({ activeCategory, onCategoryChange }) => {
+const CategoryFilter = ({ activeCategory, onCategoryChange, categories, allFilterValue = 'all' }) => {
     return (
         <div className="filter">
             <div className="filter__list">
                 <button
-                    className={`filter__btn ${activeCategory === 'all' ? 'filter__btn--active' : ''}`}
-                    onClick={() => onCategoryChange('all')}
+                    className={`filter__btn ${activeCategory === allFilterValue ? 'filter__btn--active' : ''}`}
+                    onClick={() => onCategoryChange(allFilterValue)}
                 >
                     Todos
                 </button>
-                {CATEGORIES.map((cat) => (
+                {categories.map((cat) => (
                     <button
                         key={cat.id}
                         className={`filter__btn ${activeCategory === cat.id ? 'filter__btn--active' : ''}`}

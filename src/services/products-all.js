@@ -5,6 +5,7 @@
 import CATEGORY_NAMES from '../constants/category_names.js';
 import BADGE_NAMES from '../constants/badge_names.js';
 import BRAND_NAMES from '../constants/brand_names.js';
+import DRAWERS from './drawersData.js';
 
 import estereo_b52 from '../assets/products_section_pictures/estereo_b52-rm-2025bt.jpeg';
 import rackera_2y2_para_pote from '../assets/products_section_pictures/rackera-2y2-para-pote.jpeg';
@@ -460,7 +461,7 @@ export const ALL_PRODUCTS = ([
         description: 'Subwoofer Pioneer 12 pulgadas doble bobina TS-W312D4 1600w Max / 500w RMS',
         badge: BADGE_NAMES.TOP_QUALITY,
         price: '$200.000',
-        base_price: '$USD 55',
+        base_price: '$80.000',
         state: true,
         weight: null,
         height: null,
@@ -1090,7 +1091,7 @@ export const ALL_PRODUCTS = ([
         description: 'Potencia Nakamichi NKTA100.4 - 4 Canales',
         badge: BADGE_NAMES.NEW,
         price: '$150.000',
-        base_price: null,
+        base_price: '$105.000',
         state: true,
         weight: null,
         height: null,
@@ -1105,7 +1106,7 @@ export const ALL_PRODUCTS = ([
         description: 'Parlante Pioneer 6x9 500 Watts MAX',
         badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$60.000',
-        base_price: null,
+        base_price: '$40.000',
         state: true,
         weight: null,
         height: null,
@@ -1120,7 +1121,7 @@ export const ALL_PRODUCTS = ([
         description: 'Potencia MTX TH1200.1D - 1200 Watts RMS - Monoblock',
         badge: BADGE_NAMES.TOP_QUALITY,
         price: '$650.000',
-        base_price: null,
+        base_price: '$455.000',
         state: true,
         weight: null,
         height: null,
@@ -1306,5 +1307,20 @@ export const ALL_PRODUCTS = ([
         height: null,
         width: null,
         depth: null
-    }
+    },
+    ...DRAWERS.map((drawer) => ({
+        name: drawer.name,
+        category: CATEGORY_NAMES.CAJONES,
+        brand: null,
+        image: null,
+        description: null,
+        badge: null,
+        price: `$${drawer.price}`,
+        base_price: `$${drawer.base_price}`,
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    }))
 ]).map((product, index) => ({ ...product, id: index + 1 }));
