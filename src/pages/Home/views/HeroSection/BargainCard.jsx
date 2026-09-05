@@ -1,18 +1,17 @@
 /**
  * BargainCard.jsx
  * Tarjeta premium del producto con badge BARGAIN en el Hero.
- * Visual: tarjeta flotante con imagen, precio de oferta y acciones.
+ * Visual Elite Premium: tarjeta flotante Cyber-Luxe con iluminación neón, glare y micro-acciones.
  */
 
 import ElectricBorder from '../../../../components/animations/ElectricBorder';
 import GlareHover from '../../../../components/animations/GlareHover';
-import { LuAudioLines, LuShoppingCart, LuMessageCircle } from "react-icons/lu";
+import { LuAudioLines, LuShoppingCart, LuMessageCircle, LuZap, LuSparkles } from "react-icons/lu";
 import { useCart } from '../../../../context/CartContext';
 import { buildWhatsAppProductUrl } from '../../../../utils/whatsapp';
 
 const BargainCard = ({ product }) => {
     const { addToCart } = useCart();
-
     const whatsappUrl = buildWhatsAppProductUrl(product);
 
     return (
@@ -20,21 +19,27 @@ const BargainCard = ({ product }) => {
             color="hsl(280, 100%, 65%)"
             speed={1.2}
             chaos={0.18}
-            borderRadius={20}
+            borderRadius={22}
         >
             <div className="hero__bargain-card">
-                {/* Badge exclusivo */}
-                <div className="hero__bargain-badge">
-                    <span className="hero__bargain-badge-dot" />
-                    <span>PRECIO EXCLUSIVO</span>
+                {/* Header Badge */}
+                <div className="hero__bargain-header">
+                    <div className="hero__bargain-badge">
+                        <span className="hero__bargain-badge-dot" />
+                        <LuZap className="hero__bargain-badge-icon" />
+                        <span>OFERTA EXCLUSIVA</span>
+                    </div>
+                    <div className="hero__bargain-sparkle">
+                        <LuSparkles />
+                    </div>
                 </div>
 
                 {/* Product image with interactive glare */}
                 <GlareHover
                     glareColor="#a78bfa"
-                    glareOpacity={0.25}
+                    glareOpacity={0.3}
                     glareAngle={-40}
-                    glareSize={250}
+                    glareSize={280}
                     transitionDuration={600}
                     className="hero__bargain-glare"
                 >
@@ -46,8 +51,11 @@ const BargainCard = ({ product }) => {
                                 <LuAudioLines />
                             </div>
                         )}
-                        {/* Glow overlay */}
+                        {/* Glow overlay & cyber accents */}
                         <div className="hero__bargain-image-glow" />
+                        <div className="hero__bargain-image-accent">
+                            <span>DESTACADO</span>
+                        </div>
                     </div>
                 </GlareHover>
 
@@ -59,9 +67,12 @@ const BargainCard = ({ product }) => {
                     <h3 className="hero__bargain-name">{product.name}</h3>
                     <p className="hero__bargain-desc">{product.description}</p>
 
-                    {/* Precio */}
+                    {/* Bloque de Precio */}
                     <div className="hero__bargain-price-block">
-                        <span className="hero__bargain-price-label">Precio de oferta</span>
+                        <div className="hero__bargain-price-header">
+                            <span className="hero__bargain-price-label">Precio especial</span>
+                            <span className="hero__bargain-tag">Ocasión única</span>
+                        </div>
                         <span className="hero__bargain-price">{product.price}</span>
                     </div>
                 </div>
@@ -95,3 +106,4 @@ const BargainCard = ({ product }) => {
 };
 
 export default BargainCard;
+

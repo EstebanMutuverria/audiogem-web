@@ -36,9 +36,8 @@ const Button = ({
         <GlareHover
             glareColor="#ffffff"
             glareOpacity={0.4}
-            glareSize={200}
+            glareSize={250}
             transitionDuration={800}
-            style={{ padding: sizePadding }}
         >
             {children}
         </GlareHover>

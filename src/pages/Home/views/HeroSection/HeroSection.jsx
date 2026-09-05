@@ -1,8 +1,7 @@
 /**
  * HeroSection.jsx
  * Sección principal del Home (above the fold).
- * Visual: Título con gradient, CTA buttons, stats y tarjeta flotante de bargain.
- * La BargainCard es visible tanto en desktop (columna visual) como en mobile (debajo del CTA).
+ * Visual Elite Premium: Título con gradient, CTA buttons, stats interactivos y tarjeta de oferta (BargainCard).
  */
 
 import Button from '../../../../components/ui/Button';
@@ -13,11 +12,12 @@ import { ALL_PRODUCTS } from '../../../../services/productsData';
 import BADGE_NAMES from '../../../../constants/badge_names';
 import BargainCard from './BargainCard';
 import DefaultVisualCard from './DefaultVisualCard';
+import { LuAward, LuPackage, LuShieldCheck, LuUsers, LuChevronRight } from 'react-icons/lu';
 
 const STATS = [
-    { number: '+100', label: 'Productos' },
-    { number: '+10', label: 'Marcas' },
-    { number: '+3k', label: 'Clientes' },
+    { number: '+100', label: 'Productos', icon: LuPackage },
+    { number: '+10', label: 'Marcas top', icon: LuShieldCheck },
+    { number: '+3k', label: 'Clientes felices', icon: LuUsers },
 ];
 
 const HeroSection = () => {
@@ -25,13 +25,27 @@ const HeroSection = () => {
 
     return (
         <section className="hero" aria-label="Inicio">
+            {/* Ambient Lighting & Audio Wave Glows */}
+            <div className="hero__glow hero__glow--1" aria-hidden="true" />
+            <div className="hero__glow hero__glow--2" aria-hidden="true" />
+            <div className="hero__glow hero__glow--3" aria-hidden="true" />
             <div className="hero__grid-bg" aria-hidden="true" />
 
+            {/* Visual Equalizer / Soundwave Ambient Accent */}
+            <div className="hero__soundwaves" aria-hidden="true">
+                <div className="hero__wave-bar" />
+                <div className="hero__wave-bar" />
+                <div className="hero__wave-bar" />
+                <div className="hero__wave-bar" />
+                <div className="hero__wave-bar" />
+            </div>
+
             <div className="hero__container">
-                {/* Content column — always first in DOM so mobile reads it first */}
+                {/* Content column */}
                 <div className="hero__content">
                     <div className="hero__label">
-                        <span>🏆</span>
+                        <span className="hero__label-pulse" />
+                        <LuAward className="hero__label-icon" />
                         <TextShimmer as="span" duration={2.5}>
                             Especialistas en audio vehicular
                         </TextShimmer>
@@ -45,7 +59,7 @@ const HeroSection = () => {
 
                     <p className="hero__subtitle">
                         Estéreos, parlantes, subwoofers y potencias de las mejores marcas.
-                        Asesoramiento personalizado.
+                        Asesoramiento personalizado e instalación profesional.
                     </p>
 
                     <div className="hero__actions">
@@ -58,20 +72,26 @@ const HeroSection = () => {
                             className="hero__cta-star"
                         >
                             <Button to="/productos" size="md" className="hero__cta-primary">
-                                Ver productos
+                                <span>Ver productos</span>
+                                <LuChevronRight className="hero__cta-icon" />
                             </Button>
                         </StarBorder>
-                        <Button to="/contacto" variant="secondary" size="lg">
+                        <Button to="/contacto" variant="secondary" size="lg" className="hero__cta-secondary">
                             Contactanos
                         </Button>
                     </div>
 
-                    {/* Stats — desktop only (hidden via CSS on mobile) */}
+                    {/* Stats — glassmorphic cards */}
                     <div className="hero__stats">
-                        {STATS.map(({ number, label }) => (
+                        {STATS.map(({ number, label, icon: Icon }) => (
                             <div key={label} className="hero__stat">
-                                <span className="hero__stat-number">{number}</span>
-                                <span className="hero__stat-label">{label}</span>
+                                <div className="hero__stat-icon-wrapper">
+                                    <Icon />
+                                </div>
+                                <div className="hero__stat-info">
+                                    <span className="hero__stat-number">{number}</span>
+                                    <span className="hero__stat-label">{label}</span>
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -91,3 +111,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
