@@ -4,8 +4,11 @@
  * Basado en React Bits, adaptado para Vite y React 18+.
  */
 
-import { useEffect, useRef, useCallback, useMemo } from 'react';
+import { useEffect, useRef, useCallback, useMemo, useState } from 'react';
 import './ElectricBorder.css';
+
+/** Detect mobile once — capped DPR and reduced sample counts. */
+const IS_MOBILE = typeof navigator !== 'undefined' && /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
 
 const ElectricBorder = ({
     children,
@@ -21,6 +24,8 @@ const ElectricBorder = ({
     const animationRef = useRef(null);
     const timeRef = useRef(0);
     const lastFrameTimeRef = useRef(0);
+
+    const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
     // Optimizamos las funciones de ruido con useCallback
     const random = useCallback((x) => {
@@ -134,30 +139,69 @@ const ElectricBorder = ({
         [getCornerPoint]
     );
 
+    // Listen for prefers-reduced-motion changes
+    useEffect(() => {
+        const mql = window.matchMedia?.('(prefers-reduced-motion: reduce)');
+        if (!mql) return;
+        setPrefersReducedMotion(mql.matches);
+        const handler = (e) => setPrefersReducedMotion(e.matches);
+        mql.addEventListener?.('change', handler) ?? mql.addListener?.(handler);
+        return () => mql.removeEventListener?.('change', handler) ?? mql.removeListener?.(handler);
+    }, []);
+
     useEffect(() => {
         const canvas = canvasRef.current;
         const container = containerRef.current;
         if (!canvas || !container) return;
 
+        // If user prefers reduced motion, render a single static frame and skip the loop
+        if (prefersReducedMotion) {
+            const ctx = canvas.getContext('2d');
+            if (!ctx) return;
+
+            const rect = container.getBoundingClientRect();
+            const width = rect.width + 100;
+            const height = rect.height + 100;
+            const dpr = Math.min(window.devicePixelRatio || 1, 1);
+            canvas.width = width * dpr;
+            canvas.height = height * dpr;
+            canvas.style.width = `${width}px`;
+            canvas.style.height = `${height}px`;
+            ctx.scale(dpr, dpr);
+            ctx.strokeStyle = color;
+            ctx.lineWidth = 1.5;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+            // Draw a simple static rounded rect
+            const r = Math.min(borderRadius, Math.min(width - 100, height - 100) / 2);
+            ctx.beginPath();
+            ctx.roundRect(50, 50, width - 100, height - 100, r);
+            ctx.stroke();
+            return;
+        }
+
         const ctx = canvas.getContext('2d');
         if (!ctx) return;
 
-        // Configuración de animación (pueden venir por props si se desea)
-        const octaves = 8;
+        // Configuración de animación
+        const octaves = IS_MOBILE ? 4 : 8;       // Half octaves on mobile
         const lacunarity = 1.6;
         const gain = 0.7;
         const amplitude = chaos;
-        const frequency = 10;
+        const frequency = IS_MOBILE ? 6 : 10;     // Lower frequency on mobile
         const baseFlatness = 0;
-        const displacement = 45; // Reducido ligeramente para más control
+        const displacement = 45;
         const borderOffset = 50;
+
+        // Cap DPR to 1 on mobile to avoid huge canvases
+        const getDpr = () => Math.min(window.devicePixelRatio || 1, IS_MOBILE ? 1 : 2);
 
         const updateSize = () => {
             const rect = container.getBoundingClientRect();
             const width = rect.width + borderOffset * 2;
             const height = rect.height + borderOffset * 2;
 
-            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            const dpr = getDpr();
             canvas.width = width * dpr;
             canvas.height = height * dpr;
             canvas.style.width = `${width}px`;
@@ -176,7 +220,7 @@ const ElectricBorder = ({
             timeRef.current += deltaTime * speed;
             lastFrameTimeRef.current = currentTime;
 
-            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            const dpr = getDpr();
             ctx.setTransform(1, 0, 0, 1, 0, 0);
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.scale(dpr, dpr);
@@ -195,7 +239,8 @@ const ElectricBorder = ({
             const radius = Math.min(borderRadius, maxRadius);
 
             const approximatePerimeter = 2 * (borderWidth + borderHeight) + 2 * Math.PI * radius;
-            const sampleCount = Math.floor(approximatePerimeter / 2);
+            const sampleStep = IS_MOBILE ? 4 : 2;  // Wider steps on mobile
+            const sampleCount = Math.floor(approximatePerimeter / sampleStep);
 
             ctx.beginPath();
 
@@ -244,12 +289,32 @@ const ElectricBorder = ({
             animationRef.current = requestAnimationFrame(drawElectricBorder);
         };
 
+        // Throttled resize observer — recalculate at most once per 300ms
+        let resizeTimer = null;
         const resizeObserver = new ResizeObserver(() => {
-            const newSize = updateSize();
-            width = newSize.width;
-            height = newSize.height;
+            if (resizeTimer) return;
+            resizeTimer = setTimeout(() => {
+                resizeTimer = null;
+                const newSize = updateSize();
+                width = newSize.width;
+                height = newSize.height;
+            }, 300);
         });
         resizeObserver.observe(container);
+
+        // Pause animation when tab is not visible
+        const handleVisibilityChange = () => {
+            if (document.hidden) {
+                if (animationRef.current) {
+                    cancelAnimationFrame(animationRef.current);
+                    animationRef.current = null;
+                }
+            } else {
+                lastFrameTimeRef.current = 0;
+                animationRef.current = requestAnimationFrame(drawElectricBorder);
+            }
+        };
+        document.addEventListener('visibilitychange', handleVisibilityChange);
 
         animationRef.current = requestAnimationFrame(drawElectricBorder);
 
@@ -257,9 +322,11 @@ const ElectricBorder = ({
             if (animationRef.current) {
                 cancelAnimationFrame(animationRef.current);
             }
+            if (resizeTimer) clearTimeout(resizeTimer);
             resizeObserver.disconnect();
+            document.removeEventListener('visibilitychange', handleVisibilityChange);
         };
-    }, [color, speed, chaos, borderRadius, octavedNoise, getRoundedRectPoint]);
+    }, [color, speed, chaos, borderRadius, prefersReducedMotion, octavedNoise, getRoundedRectPoint]);
 
     const vars = useMemo(() => ({
         '--electric-border-color': color,

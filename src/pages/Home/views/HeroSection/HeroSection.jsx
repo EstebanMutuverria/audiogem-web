@@ -4,6 +4,7 @@
  * Visual Elite Premium: Título con gradient, CTA buttons, stats interactivos y tarjeta de oferta (BargainCard).
  */
 
+import { useState, useEffect } from 'react';
 import Button from '../../../../components/ui/Button';
 import StarBorder from '../../../../components/animations/StarBorder';
 import TextShimmer from '../../../../components/animations/TextShimmer';
@@ -11,6 +12,7 @@ import './HeroSection.css';
 import { ALL_PRODUCTS } from '../../../../services/productsData';
 import BADGE_NAMES from '../../../../constants/badge_names';
 import BargainCard from './BargainCard';
+import BargainBanner from './BargainBanner';
 import DefaultVisualCard from './DefaultVisualCard';
 import { LuAward, LuPackage, LuShieldCheck, LuUsers, LuChevronRight } from 'react-icons/lu';
 
@@ -22,6 +24,18 @@ const STATS = [
 
 const HeroSection = () => {
     const bargainProduct = ALL_PRODUCTS.find(p => p.badge === BADGE_NAMES.BARGAIN);
+
+    // Use the lightweight BargainBanner on mobile/tablet to avoid heavy canvas animations
+    const [isMobile, setIsMobile] = useState(() =>
+        typeof window !== 'undefined' && window.matchMedia?.('(max-width: 768px)').matches
+    );
+    useEffect(() => {
+        const mql = window.matchMedia?.('(max-width: 768px)');
+        if (!mql) return;
+        const handler = (e) => setIsMobile(e.matches);
+        mql.addEventListener?.('change', handler) ?? mql.addListener?.(handler);
+        return () => mql.removeEventListener?.('change', handler) ?? mql.removeListener?.(handler);
+    }, []);
 
     return (
         <section className="hero" aria-label="Inicio">
@@ -97,10 +111,14 @@ const HeroSection = () => {
                     </div>
                 </div>
 
-                {/* Visual column — BargainCard visible on desktop AND mobile */}
+                {/* Visual column — full BargainCard on desktop, lightweight BargainBanner on mobile/tablet */}
                 <div className="hero__visual" aria-hidden={!bargainProduct}>
                     {bargainProduct ? (
-                        <BargainCard product={bargainProduct} />
+                        isMobile ? (
+                            <BargainBanner product={bargainProduct} />
+                        ) : (
+                            <BargainCard product={bargainProduct} />
+                        )
                     ) : (
                         <DefaultVisualCard />
                     )}
