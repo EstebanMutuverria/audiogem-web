@@ -36,19 +36,19 @@ ALL_PRODUCTS ──→ ComboBuilder (picker state) ──→ useCombo.addItem()
 
 **Persistence trigger**: Explicit save only (button click). No auto-save — admins must confirm combo name + price intentionally.
 
-**Validation loop**: `comboPrice` state → `useMemo` checks `comboPrice >= totalBasePrice && comboPrice <= totalSalePrice` → `isPriceValid` boolean → ComboSummary shows error message + disables save button.
+**Validation loop**: `discount` state → derived `parsedDiscount` and `comboPrice = totalSalePrice − parsedDiscount` → `useMemo` checks `parsedDiscount <= maxDiscount` → `isDiscountValid` boolean → ComboSummary shows error message + disables save button.
 
 ## File Changes
 
 | File | Action | Description |
 |------|--------|-------------|
 | `src/services/combos.js` | Create | localStorage CRUD: `loadCombos()`, `saveCombos(list)`, `addCombo(combo)`, `deleteCombo(id)` |
-| `src/pages/Admin/hooks/useCombo.js` | Create | State hook: items, name, comboPrice, derived pricing, actions |
+| `src/pages/Admin/hooks/useCombo.js` | Create | State hook: items, name, discount input, derived pricing, actions |
 | `src/pages/Admin/views/ComboBuilder/ComboBuilder.jsx` | Create | Orchestrator: picker + items list + metadata + summary |
 | `src/pages/Admin/views/ComboBuilder/ComboBuilder.css` | Create | Two-column grid mirroring BudgetBuilder layout |
 | `src/pages/Admin/views/ComboBuilder/ComboItem.jsx` | Create | Line card: name, dual prices, qty stepper, line subtotals, remove |
 | `src/pages/Admin/views/ComboBuilder/ComboItem.css` | Create | Mirrors BudgetItem.css with added base-price row |
-| `src/pages/Admin/views/ComboBuilder/ComboSummary.jsx` | Create | 4-row pricing + comboPrice input + validation + save button |
+| `src/pages/Admin/views/ComboBuilder/ComboSummary.jsx` | Create | 6 pricing rows (venta, base, descuento max, descuento input, precio final auto-calc, ganancia) + validation + save button |
 | `src/pages/Admin/views/ComboBuilder/ComboSummary.css` | Create | Mirrors BudgetSummary.css with extra rows |
 | `src/router/index.jsx` | Modify | Lazy import ComboBuilder, add `admin/combos` child route |
 | `src/pages/Admin/AdminPage.jsx` | Modify | Replace static title with NavLink tabs for "Presupuestos"/"Combos" |
@@ -81,22 +81,23 @@ export function deleteCombo(id) {}
 {
   comboItems: Array<{ product: Object, quantity: number }>,
   comboName: string,
-  comboPrice: string,           // raw input string
+  discount: string,             // raw input string
+  comboPrice: number,           // derived: totalSalePrice - parsePrice(discount)
   totalSalePrice: number,
   totalBasePrice: number,
   maxDiscount: number,
-  isPriceValid: boolean,
+  isDiscountValid: boolean,
   isEmpty: boolean,
   addItem: (product) => void,
   removeItem: (productId) => void,
   updateQuantity: (productId, qty) => void,
   setComboName: (name) => void,
-  setComboPrice: (priceStr) => void,
+  setDiscount: (discountStr) => void,
   clearCombo: () => void,
 }
 ```
 
-`comboPrice` stored as string input, parsed to number in `totalBasePrice`-range validation. `totalSalePrice` and `totalBasePrice` are `useMemo` derived from `comboItems` (same pattern as `budgetTotal` in `useBudget`).
+`discount` is stored as the raw string input; `parsedDiscount` is parsed to a number and `comboPrice` is derived as `totalSalePrice - parsedDiscount`. `isDiscountValid` requires a non-empty input with `0 <= parsedDiscount <= maxDiscount`. `totalSalePrice` and `totalBasePrice` are `useMemo` derived from `comboItems` (same pattern as `budgetTotal` in `useBudget`).
 
 ### Combo data shape (persisted)
 
@@ -105,8 +106,9 @@ export function deleteCombo(id) {}
   id: crypto.randomUUID(),
   name: string,
   items: Array<{ productId: number, quantity: number }>,
-  comboPrice: number,   // parsed numeric domain
-  createdAt: string,    // new Date().toISOString()
+  discount: number,   // parsed numeric domain (admin-entered)
+  comboPrice: number, // derived numeric: totalSale - discount
+  createdAt: string,  // new Date().toISOString()
 }
 ```
 
@@ -154,7 +156,7 @@ Add lazy import: `const ComboBuilder = lazy(() => import('../pages/Admin/views/C
 
 **ComboItem** differs from BudgetItem by showing dual price rows (sale + base) and a warning icon for null `base_price` items. The `isAdmin` guard from `useAdmin` controls base-price visibility (same pattern as BudgetItem).
 
-**ComboSummary** has 4 pricing rows (Total venta, Total base, Descuento maximo, Precio combo) plus an editable comboPrice input field and a validation error message. The save button is disabled when `isEmpty || !isPriceValid || !comboName.trim()`.
+**ComboSummary** has 6 pricing rows (Total venta, Total base, Descuento máximo, Descuento a aplicar input, Precio final auto-calculado, Ganancia) plus a validation error message. The save button is disabled when `isEmpty || !isDiscountValid || !comboName.trim()`.
 
 **ComboBuilder** owns saved-combos state (`savedCombos` from `loadCombos()` on mount) — not in the hook, since the hook models the current editing session only. `addCombo()` from the service is called on save; `deleteCombo()` on list item delete.
 

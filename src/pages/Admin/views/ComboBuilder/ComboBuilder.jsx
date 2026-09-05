@@ -16,23 +16,25 @@ import { parsePrice, formatPrice } from '../../../../utils/price';
 import ComboItem from './ComboItem';
 import ComboSummary from './ComboSummary';
 import ComboDetailModal from './ComboDetailModal';
+import { resolveComboTotals } from './comboTotals';
 import './ComboBuilder.css';
 
 const ComboBuilder = () => {
     const {
         comboItems,
         comboName,
+        discount,
         comboPrice,
         totalSalePrice,
         totalBasePrice,
         maxDiscount,
-        isPriceValid,
+        isDiscountValid,
         isEmpty,
         addItem,
         updateQuantity,
         removeItem,
         setComboName,
-        setComboPrice,
+        setDiscount,
         clearCombo,
     } = useCombo();
 
@@ -81,7 +83,7 @@ const ComboBuilder = () => {
     };
 
     const handleSave = () => {
-        if (isEmpty || !isPriceValid || !comboName.trim()) return;
+        if (isEmpty || !isDiscountValid || !comboName.trim()) return;
 
         const combo = {
             id: crypto.randomUUID(),
@@ -90,7 +92,8 @@ const ComboBuilder = () => {
                 productId: product.id,
                 quantity,
             })),
-            comboPrice: parsePrice(comboPrice),
+            discount: parsePrice(discount),
+            comboPrice, // ya es número derivado: totalSalePrice - discount
             createdAt: new Date().toISOString(),
         };
 
@@ -234,11 +237,11 @@ const ComboBuilder = () => {
                         totalSalePrice={totalSalePrice}
                         totalBasePrice={totalBasePrice}
                         maxDiscount={maxDiscount}
-                        comboPrice={comboPrice}
-                        isPriceValid={isPriceValid}
+                        discount={discount}
+                        isDiscountValid={isDiscountValid}
                         isEmpty={isEmpty}
                         comboName={comboName}
-                        setComboPrice={setComboPrice}
+                        setDiscount={setDiscount}
                         onSave={handleSave}
                     />
 
@@ -269,7 +272,10 @@ const ComboBuilder = () => {
                                                 {combo.items.length === 1
                                                     ? 'producto'
                                                     : 'productos'}{' '}
-                                                · {formatPrice(combo.comboPrice)}
+                                                ·{' '}
+                                                {formatPrice(
+                                                    resolveComboTotals(combo).finalPrice
+                                                )}
                                             </span>
                                         </button>
                                         <button

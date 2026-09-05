@@ -37,8 +37,10 @@
     color: var(--color-primary-light);
 }
 
-.combo-summary__amount--discount-applied {
-    color: var(--color-error);
+.combo-summary__amount--final {
+    color: var(--color-primary);
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-bold);
 }
 
 .combo-summary__amount--profit {

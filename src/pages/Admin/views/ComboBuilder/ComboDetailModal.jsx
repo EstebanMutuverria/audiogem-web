@@ -7,16 +7,9 @@
 import { useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { FiX } from 'react-icons/fi';
-import { ALL_PRODUCTS } from '../../../../services/productsData';
-import { parsePrice, formatPrice } from '../../../../utils/price';
+import { formatPrice } from '../../../../utils/price';
+import { resolveComboTotals } from './comboTotals';
 import './ComboDetailModal.css';
-
-/**
- * Resuelve un productId del combo a su objeto producto del catálogo.
- * Si no se encuentra, devuelve un placeholder.
- */
-const resolveProduct = (productId) =>
-    ALL_PRODUCTS.find((p) => p.id === productId) || null;
 
 const ComboDetailModal = ({ combo, isOpen, onClose }) => {
     // Cerrar con Escape
@@ -30,29 +23,14 @@ const ComboDetailModal = ({ combo, isOpen, onClose }) => {
 
     if (!isOpen || !combo) return null;
 
-    // Resolver items a productos reales
-    const resolvedItems = combo.items.map((item) => {
-        const product = resolveProduct(item.productId);
-        const saleUnit = product ? parsePrice(product.price) : 0;
-        const baseUnit = product ? parsePrice(product.base_price) : 0;
-        return {
-            ...item,
-            product,
-            productName: product?.name || 'Producto no encontrado',
-            saleUnit,
-            baseUnit,
-            saleSubtotal: saleUnit * item.quantity,
-            baseSubtotal: baseUnit * item.quantity
-        };
-    });
-
-    const totalSale = resolvedItems.reduce((acc, i) => acc + i.saleSubtotal, 0);
-    const totalBase = resolvedItems.reduce((acc, i) => acc + i.baseSubtotal, 0);
+    const { resolvedItems, totalSale, totalBase, appliedDiscount, finalPrice, netProfit } =
+        resolveComboTotals(combo);
 
     return (
         <AnimatePresence>
             {isOpen && (
                 <motion.div
+                    key="combo-detail-modal"
                     className="combo-detail__overlay"
                     onClick={(e) => {
                         if (e.target === e.currentTarget) onClose();
@@ -134,15 +112,21 @@ const ComboDetailModal = ({ combo, isOpen, onClose }) => {
                             </div>
                             <div className="combo-detail__summary-row combo-detail__summary-row--accent">
                                 <span>Descuento aplicado</span>
-                                <span>{formatPrice(totalSale - combo.comboPrice)}</span>
+                                <span>{formatPrice(appliedDiscount)}</span>
                             </div>
-                            <div className="combo-detail__summary-row combo-detail__summary-row--profit">
-                                <span>Ganancia neta</span>
-                                <span>{formatPrice(combo.comboPrice - totalBase)}</span>
-                            </div>
+                            <div
+                                    className={`combo-detail__summary-row combo-detail__summary-row--profit${
+                                        netProfit < 0
+                                            ? ' combo-detail__summary-row--loss'
+                                            : ''
+                                    }`}
+                                >
+                                    <span>Ganancia neta</span>
+                                    <span>{formatPrice(netProfit)}</span>
+                                </div>
                             <div className="combo-detail__summary-row combo-detail__summary-row--combo">
                                 <span>Precio del combo</span>
-                                <span>{formatPrice(combo.comboPrice)}</span>
+                                <span>{formatPrice(finalPrice)}</span>
                             </div>
                         </div>
 

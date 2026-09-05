@@ -1,8 +1,9 @@
 /**
  * useCombo.js
  * Hook local de estado para construir combos de administración.
- * Sigue el patrón de useBudget pero agrega campos de nombre, precio combo,
- * y derivaciones de dual pricing (venta + base).
+ * Sigue el patrón de useBudget pero agrega campos de nombre, descuento
+ * ingresado a mano, y derivaciones de dual pricing (venta + base).
+ * El precio final del combo se calcula como: venta total - descuento.
  */
 
 import { useCallback, useMemo, useState } from 'react';
@@ -15,7 +16,7 @@ import { parsePrice } from '../../../utils/price';
 export const useCombo = () => {
     const [comboItems, setComboItems] = useState([]);
     const [comboName, setComboName] = useState('');
-    const [comboPrice, setComboPrice] = useState('');
+    const [discount, setDiscount] = useState('');
 
     /**
      * Agrega un producto al combo. Si ya existe, incrementa su cantidad.
@@ -78,7 +79,7 @@ export const useCombo = () => {
     const clearCombo = useCallback(() => {
         setComboItems([]);
         setComboName('');
-        setComboPrice('');
+        setDiscount('');
     }, []);
 
     // Total de venta: parsePrice(product.price) * quantity por item.
@@ -101,29 +102,38 @@ export const useCombo = () => {
     // Descuento máximo posible entre venta y base.
     const maxDiscount = totalSalePrice - totalBasePrice;
 
-    // Validación: comboPrice debe estar entre totalBasePrice y totalSalePrice.
-    const isPriceValid = useMemo(() => {
-        if (!comboPrice || comboPrice.trim() === '') return false;
-        const price = parsePrice(comboPrice);
-        return price >= totalBasePrice && price <= totalSalePrice;
-    }, [comboPrice, totalBasePrice, totalSalePrice]);
+    // Descuento ingresado a mano, parseado a número.
+    const parsedDiscount =
+        discount && discount.trim() !== '' ? parsePrice(discount) : 0;
+
+    // Precio final del combo: se calcula solo como venta total - descuento.
+    const comboPrice = totalSalePrice - parsedDiscount;
+
+    // Validación: el descuento no puede superar el descuento máximo
+    // (venta - base) para no vender por debajo del costo y perder dinero.
+    const isDiscountValid = useMemo(() => {
+        if (!discount || discount.trim() === '') return false;
+        const parsed = parsePrice(discount);
+        return parsed >= 0 && parsed <= maxDiscount;
+    }, [discount, maxDiscount]);
 
     const isEmpty = comboItems.length === 0;
 
     return {
         comboItems,
         comboName,
+        discount,
         comboPrice,
         totalSalePrice,
         totalBasePrice,
         maxDiscount,
-        isPriceValid,
+        isDiscountValid,
         isEmpty,
         addItem,
         removeItem,
         updateQuantity,
         setComboName,
-        setComboPrice,
+        setDiscount,
         clearCombo,
     };
 };

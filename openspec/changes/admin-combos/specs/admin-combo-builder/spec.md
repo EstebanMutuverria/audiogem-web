@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Admin-only combo builder at route `admin/combos`: select products with quantities, set a discounted combo price validated against base cost, and persist combos via localStorage. Mirrors BudgetBuilder's two-column layout and patterns.
+Admin-only combo builder at route `admin/combos`: select products with quantities, enter a discount amount that is validated against the maximum possible discount (sale − base), compute the final combo price automatically (sale − discount), and persist combos via localStorage. Mirrors BudgetBuilder's two-column layout and patterns.
 
 ## Data Schema
 
@@ -11,7 +11,8 @@ Combo {
   id:         string   — crypto.randomUUID()
   name:       string   — admin-entered, required, non-empty
   items:      ComboItem[]
-  comboPrice: number   — final price in ARS numeric domain
+  discount:   number   — admin-entered discount in ARS numeric domain
+  comboPrice: number   — final price, derived as totalSalePrice − discount
   createdAt:  string   — ISO 8601 timestamp
 }
 
@@ -21,9 +22,9 @@ ComboItem {
 }
 ```
 
-Derived at runtime from items + catalog: `totalSalePrice`, `totalBasePrice`, `maxDiscount`, `isPriceValid`.
+Derived at runtime from items + catalog: `totalSalePrice`, `totalBasePrice`, `maxDiscount`, `parsedDiscount`, `comboPrice`, `isDiscountValid`.
 
-Storage key: `audiogem_combos` in `localStorage`.
+Storage key: `audiogem_combos` in `localStorage`. Combos saved before the discount model (without a `discount` field) remain readable; the modal falls back to `totalSalePrice − comboPrice` when `discount` is absent.
 
 ## UI Layout
 
@@ -31,7 +32,7 @@ Two-column grid (same as BudgetBuilder). Left: product picker + combo item cards
 
 Each combo card shows: product name, unit sale price, unit base price, quantity stepper, line subtotal, line base subtotal, null base_price warning, remove button.
 
-Pricing summary rows: Total venta, Total base, Descuento maximo, Precio combo (editable), validation message, save button.
+Pricing summary rows: Total venta, Total base, Descuento máximo, Descuento a aplicar (input), Precio final del combo (auto-calculado), Ganancia, validation message, save button. The discount input is the only manual price entry: the final price is always `totalSalePrice − discount`.
 
 ## Requirements
 
@@ -39,7 +40,7 @@ Pricing summary rows: Total venta, Total base, Descuento maximo, Precio combo (e
 |----|-------------|-----------|
 | REQ-1 | Combo Creation | 4 |
 | REQ-2 | Combo Pricing | 3 |
-| REQ-3 | Combo Price Validation | 3 |
+| REQ-3 | Discount Validation and Final Price Calculation | 4 |
 | REQ-4 | Combo Persistence | 3 |
 | REQ-5 | Combo Management | 3 |
 | REQ-6 | Product Picker | 4 |
@@ -81,7 +82,7 @@ The system SHALL compute and display pricing in real time as items and quantitie
 #### Scenario: Sale and base totals
 
 - GIVEN items: product A (price `$70.000`, base `$50.000`) qty 2, product B (price `$30.000`, base `$20.000`) qty 1
-- THEN totalSalePrice = `$200.000`, totalBasePrice = `$120.000`, maxDiscount = `$80.000`
+- THEN totalSalePrice = `$170.000`, totalBasePrice = `$120.000`, maxDiscount = `$50.000`
 
 #### Scenario: Null base_price treated as zero
 
@@ -93,27 +94,32 @@ The system SHALL compute and display pricing in real time as items and quantitie
 - GIVEN the combo has no items
 - THEN all pricing rows display `$0`
 
-### Requirement: REQ-3 — Combo Price Validation
+### Requirement: REQ-3 — Discount Validation and Final Price Calculation
 
-The system SHALL enforce that the admin-set combo price is within valid bounds: `totalBasePrice <= comboPrice <= totalSalePrice`.
+The system SHALL let the admin enter a discount amount manually and SHALL derive the final combo price as `totalSalePrice − discount`. The discount SHALL be validated so the sale never loses money: `0 <= discount <= maxDiscount` (where `maxDiscount = totalSalePrice − totalBasePrice`).
 
-#### Scenario: Valid price within range
+#### Scenario: Valid discount within range
 
 - GIVEN totalBasePrice = `$100.000` and totalSalePrice = `$200.000`
-- WHEN the admin enters comboPrice = `$150.000`
-- THEN the price is accepted and the save button is enabled
+- WHEN the admin enters discount = `$50.000`
+- THEN the final price is calculated as `$150.000`, the discount is accepted and the save button is enabled
 
-#### Scenario: Price below base total blocked
+#### Scenario: Discount above max discount blocked
 
-- GIVEN totalBasePrice = `$100.000`
-- WHEN the admin enters comboPrice = `$80.000`
-- THEN a validation error is displayed and the save button is disabled
+- GIVEN totalSalePrice = `$200.000` and totalBasePrice = `$100.000` (maxDiscount = `$100.000`)
+- WHEN the admin enters discount = `$120.000`
+- THEN a validation error is displayed, the final price would be `$80.000` (below base), and the save button is disabled
 
-#### Scenario: Price above sale total blocked
+#### Scenario: Discount at max discount still allowed
 
-- GIVEN totalSalePrice = `$200.000`
-- WHEN the admin enters comboPrice = `$250.000`
-- THEN a validation error is displayed and the save button is disabled
+- GIVEN totalBasePrice = `$100.000` and totalSalePrice = `$200.000`
+- WHEN the admin enters discount = `$100.000`
+- THEN the final price equals the base total (`$100.000`), the discount is accepted (zero-profit sale), and the save button is enabled
+
+#### Scenario: Final price always derived
+
+- GIVEN the admin enters discount = `$30.000` on a combo with totalSalePrice = `$200.000`
+- THEN the displayed final price is `$170.000` and the admin cannot edit it directly
 
 ### Requirement: REQ-4 — Combo Persistence
 
