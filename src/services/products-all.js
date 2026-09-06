@@ -1271,7 +1271,7 @@ export const ALL_PRODUCTS = ([
     },
     {
         name: 'Componentes Pervoi de 6,5 pulgadas 650 Watts MAX (el par)',
-        category: CATEGORY_NAMES.COMPONENTES,
+        category: CATEGORY_NAMES.PARLANTES,
         brand: BRAND_NAMES.PERVOI,
         image: componentes_6_pulgadas_y_media_650_watts_pervoi,
         description: 'Componentes Pervoi CTC-6592 de 6,5 pulgadas 650 Watts MAX',
