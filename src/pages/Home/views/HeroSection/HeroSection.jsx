@@ -73,7 +73,7 @@ const HeroSection = () => {
 
                     <p className="hero__subtitle">
                         Estéreos, parlantes, subwoofers y potencias de las mejores marcas.
-                        Asesoramiento personalizado e instalación profesional.
+                        Asesoramiento personalizado.
                     </p>
 
                     <div className="hero__actions">
