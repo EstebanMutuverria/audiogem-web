@@ -1404,6 +1404,21 @@ export const ALL_PRODUCTS = ([
         width: 71,
         depth: 22
     },
+    {
+        name: 'Rackera 2 medios de 6,5 pulgadas pervoi punta bala y 2 drivers Jahro 5041',
+        category: CATEGORY_NAMES.RACKERAS,
+        brand: null,
+        image: rackera_2_medios_de_6_pervoi_bala_y_2_driver,
+        description: 'Rackera 2 medios de 6,5 pulgadas pervoi punta bala 600W MAX y 2 drivers Jahro 5041 150W MAX',
+        badge: BADGE_NAMES.NEW,
+        price: '$129.000',
+        base_price: '$79.000',
+        state: true,
+        weight: 6,
+        height: 18,
+        width: 71,
+        depth: 22
+    },
     ...DRAWERS.map((drawer) => ({
         name: drawer.name,
         category: CATEGORY_NAMES.CAJONES,

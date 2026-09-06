@@ -40,6 +40,10 @@ const ComboSummary = ({
     const finalPrice = totalSalePrice - parsedDiscount;
     const profit = finalPrice - totalBasePrice;
 
+    if (isEmpty) {
+        setDiscount('');
+    }
+
     return (
         <div className="combo-summary">
             <div className="combo-summary__row">

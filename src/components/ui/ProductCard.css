@@ -208,6 +208,16 @@
     width: 100%;
 }
 
+.product-card__warranty {
+    font-size: var(--text-xs);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-faint);
+    text-align: center;
+    margin-top: var(--spacing-2);
+    padding: 4px;
+    align-items: center;
+}
+
 /* Ensure flex children take equal width */
 .product-card__actions>* {
     flex: 1;

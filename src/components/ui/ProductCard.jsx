@@ -122,6 +122,7 @@ const ProductCard = ({ product }) => {
                         </div>
                     }
                 </div>
+                <span className='product-card__warranty' title='Este producto no esta sujeto a Garantia'>Garantia: No plica</span>
             </div>
         </article>
     );
