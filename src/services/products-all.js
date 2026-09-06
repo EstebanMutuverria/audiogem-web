@@ -71,7 +71,7 @@ import tweeter_jahro_yp307 from '../assets/products_section_pictures/tweeter-jah
 import pote_nakamichi_100x4 from '../assets/products_section_pictures/pote-nakamichi-100.4.jpeg';
 import pote_mtx_1200x1 from '../assets/products_section_pictures/pote-mtx-1200x1.jpeg';
 import parlante_pioneer_6x9_500_watts from '../assets/products_section_pictures/parlante-6x9-pioneer-500-watts.jpeg';
-import componentes_pioneer_6_coma_5_pulgadas_350_watts from '../assets/products_section_pictures/componentes-pioneer-6-pulgadas-350-watts.jpeg';
+import parlantes_pioneer_6_coma_5_pulgadas_350_watts from '../assets/products_section_pictures/parlantes-pioneer-6-pulgadas-350-watts.jpeg';
 import parlantes_pioneer_6x9_450_watts from '../assets/products_section_pictures/parlantes-6x9-pioneer-450-watts.jpeg';
 import kit_de_cables_4_gau from '../assets/products_section_pictures/kit-de-cables-4-gau.jpeg';
 import bornera from '../assets/products_section_pictures/bornera.jpeg';
@@ -1075,10 +1075,10 @@ export const ALL_PRODUCTS = ([
         depth: 22
     },
     {
-        name: 'Componentes Pioneer 6,5 pulgadas 350 Watts MAX (el par)',
+        name: 'Parlantes Pioneer 6,5 pulgadas 350 Watts MAX (el par)',
         category: CATEGORY_NAMES.PARLANTES,
         brand: BRAND_NAMES.PIONEER,
-        image: componentes_pioneer_6_coma_5_pulgadas_350_watts,
+        image: parlantes_pioneer_6_coma_5_pulgadas_350_watts,
         description: 'Componentes Pioneer TS-A1688S 6,5 pulgadas 350 Watts MAX',
         badge: BADGE_NAMES.TOP_QUALITY,
         price: '$140.000',
