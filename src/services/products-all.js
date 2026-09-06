@@ -81,9 +81,15 @@ import medios_de_8_infinity_tech from '../assets/products_section_pictures/medio
 import bloque_distribuidor_recoil from '../assets/products_section_pictures/bloque-distribuidor-recoil.jpeg';
 import cable_rca_storm_tech from '../assets/products_section_pictures/cable-rca-storm-tech.jpeg';
 import kit_de_cables_6_ga_pervoi_high from '../assets/products_section_pictures/kit-de-cables-6-ga-pervoi-high.jpeg';
-import componentes_6_pulgadas_y_media_650_watts_pervoi from '../assets/products_section_pictures/componentes-6,5-pulgadas-650-watts-pervoi.jpeg'
-import pote_taramps_bass_400x1_2ohms from '../assets/products_section_pictures/pote-taramps-bass-400x1-2-ohms.jpeg'
-import medios_de_6_pulgadas_y_media_pervoi_450_watts from '../assets/products_section_pictures/medios-de-6-pulgadas-y-media-pervoi-450-watts.jpeg'
+import componentes_6_pulgadas_y_media_650_watts_pervoi from '../assets/products_section_pictures/componentes-6,5-pulgadas-650-watts-pervoi.jpeg';
+import pote_taramps_bass_400x1_2ohms from '../assets/products_section_pictures/pote-taramps-bass-400x1-2-ohms.jpeg';
+import medios_de_6_pulgadas_y_media_pervoi_450_watts from '../assets/products_section_pictures/medios-de-6-pulgadas-y-media-pervoi-450-watts.jpeg';
+import parlante_6x9_bomber from '../assets/products_section_pictures/parlante-6x9-bomber.jpeg';
+import rackera_2_medios_de_6_pervoi_bala_y_2_tweeters_ds18 from '../assets/products_section_pictures/rackera-2-medios-de-6-pervoi-bala-y-2-tweeters-ds18.jpeg';
+import rackera_2_medios_de_6_pervoi_bala_y_2_driver from '../assets/products_section_pictures/rackera-2-medios-de-6-pervoi-bala-y-2-driver.jpeg';
+import rackera_2_parlantes_6x9_bomber_y_2_super_tweeters from '../assets/products_section_pictures/rackera-2-super-tweeter-y-2-6x9-bomber.jpeg';
+import rackera_4_medios_de_6_pervoi_bala from '../assets/products_section_pictures/rackera-4-medios-de-6-pervoi-bala.jpeg';
+import super_tweeters_jahro from '../assets/products_section_pictures/super-tweeters-jahro.jpeg';
 
 export const ALL_PRODUCTS = ([
     {
@@ -326,7 +332,7 @@ export const ALL_PRODUCTS = ([
         description: 'Super Tweeter Blauline 1.8 Super Bullet',
         badge: null,
         price: '$30.000',
-        base_price: '$18.000',
+        base_price: '$21.000',
         state: true,
         weight: null,
         height: null,
@@ -869,9 +875,9 @@ export const ALL_PRODUCTS = ([
         base_price: '$120.000',
         state: true,
         weight: null,
-        height: null,
-        width: null,
-        depth: null
+        height: 73,
+        width: 23,
+        depth: 22
     },
     {
         name: 'Rackera 2 drivers y 2 tweeter Arwen',
@@ -1307,6 +1313,96 @@ export const ALL_PRODUCTS = ([
         height: null,
         width: null,
         depth: null
+    },
+    {
+        name: 'Parlantes 6x9 Bomber 75W RMS (el par)',
+        category: CATEGORY_NAMES.PARLANTES,
+        brand: BRAND_NAMES.BOMBER,
+        image: parlante_6x9_bomber,
+        description: 'Parlantes 6x9 pulgadas marca Bomber 75W RMS',
+        badge: null,
+        price: '$70.000',
+        base_price: '$50.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        name: 'Rackera 2 medios de 6,5 pulgadas bala Pervoi y 2 Tweeters DS18',
+        category: CATEGORY_NAMES.RACKERAS,
+        brand: null,
+        image: rackera_2_medios_de_6_pervoi_bala_y_2_tweeters_ds18,
+        description: 'Rackera 2 medios de 6,5 pulgadas bala Pervoi y 2 Tweeters DS18',
+        badge: BADGE_NAMES.NEW,
+        price: '$155.000',
+        base_price: '$105.000',
+        state: true,
+        weight: 7.9,
+        height: 20,
+        width: 62,
+        depth: 23
+    },
+    {
+        name: 'Rackera 2 parlantes 6x9 bomber y 2 super tweeters',
+        category: CATEGORY_NAMES.RACKERAS,
+        brand: null,
+        image: rackera_2_parlantes_6x9_bomber_y_2_super_tweeters,
+        description: 'Rackera 2 parlantes 6x9 bomber de 75W RMS y 2 super tweeters Jahro de 70W RMS',
+        badge: BADGE_NAMES.NEW,
+        price: '$165.000',
+        base_price: '$127.000',
+        state: true,
+        weight: null,
+        height: 23,
+        width: 73,
+        depth: 22
+    },
+    {
+        name: 'Super Tweeter Jahro',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.JAHRO,
+        image: super_tweeters_jahro,
+        description: 'Super Tweeter Jahro 70W RMS',
+        badge: BADGE_NAMES.NEW,
+        price: '$30.000',
+        base_price: '$21.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        name: 'Rackera 4 medios Pervoi punta bala de 6,5 pulgadas',
+        category: CATEGORY_NAMES.RACKERAS,
+        brand: null,
+        image: rackera_4_medios_de_6_pervoi_bala,
+        description: 'Rackera 4 medios Pervoi punta bala de 6,5 pulgadas 600W MAX - 180W RMS',
+        badge: BADGE_NAMES.NEW,
+        price: '$130.000',
+        base_price: '$90.000',
+        state: true,
+        weight: null,
+        height: 18,
+        width: 71,
+        depth: 22
+    },
+    {
+        name: 'Rackera 2 medios de 6,5 pulgadas pervoi punta bala y 2 drivers Jahro 5042',
+        category: CATEGORY_NAMES.RACKERAS,
+        brand: null,
+        image: rackera_2_medios_de_6_pervoi_bala_y_2_driver,
+        description: 'Rackera 2 medios de 6,5 pulgadas pervoi punta bala 600W MAX y 2 drivers Jahro 5042 200W MAX',
+        badge: BADGE_NAMES.NEW,
+        price: '$175.000',
+        base_price: '$135.000',
+        state: true,
+        weight: 7,
+        height: 18,
+        width: 71,
+        depth: 22
     },
     ...DRAWERS.map((drawer) => ({
         name: drawer.name,
