@@ -1,7 +1,9 @@
 /**
  * AdminContext.jsx
  * Contexto global para gestionar la autenticación del administrador.
- * La sesión se persiste en sessionStorage: dura mientras el tab esté abierto.
+ * La sesión se persiste en localStorage: sobrevive al cierre de la pestaña
+ * y del navegador. Solo se borra explícitamente con "Salir Admin" o si el
+ * usuario limpia los datos del navegador.
  */
 
 import { createContext, useContext, useState, useCallback } from 'react';
@@ -12,9 +14,9 @@ const AdminContext = createContext(null);
 const SESSION_KEY = 'audiogem_admin_auth';
 
 export const AdminProvider = ({ children }) => {
-    // Inicializar desde sessionStorage para mantener sesión al navegar
+    // Inicializar desde localStorage para mantener sesión entre visitas
     const [isAdmin, setIsAdmin] = useState(() => {
-        return sessionStorage.getItem(SESSION_KEY) === 'true';
+        return localStorage.getItem(SESSION_KEY) === 'true';
     });
 
     /**
@@ -25,7 +27,7 @@ export const AdminProvider = ({ children }) => {
         const adminPassword = ENVIRONMENT.VITE_CLAVE_ADMIN;
         if (password === adminPassword) {
             setIsAdmin(true);
-            sessionStorage.setItem(SESSION_KEY, 'true');
+            localStorage.setItem(SESSION_KEY, 'true');
             return true;
         }
         return false;
@@ -33,7 +35,7 @@ export const AdminProvider = ({ children }) => {
 
     const logout = useCallback(() => {
         setIsAdmin(false);
-        sessionStorage.removeItem(SESSION_KEY);
+        localStorage.removeItem(SESSION_KEY);
     }, []);
 
     return (

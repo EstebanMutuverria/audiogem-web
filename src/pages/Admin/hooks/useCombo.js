@@ -112,8 +112,7 @@ export const useCombo = () => {
     // Validación: el descuento no puede superar el descuento máximo
     // (venta - base) para no vender por debajo del costo y perder dinero.
     const isDiscountValid = useMemo(() => {
-        if (!discount || discount.trim() === '') return false;
-        const parsed = parsePrice(discount);
+        const parsed = parsePrice(discount || 0);
         return parsed >= 0 && parsed <= maxDiscount;
     }, [discount, maxDiscount]);
 

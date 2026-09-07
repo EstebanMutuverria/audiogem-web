@@ -217,7 +217,7 @@ src/
 - `ValuesSection`: 4 cards de valores (Calidad, Atención, Experiencia, Garantía)
 
 ### 5.7 Autenticación Admin
-- **Contexto:** `AdminContext` + `sessionStorage` key `audiogem_admin_auth`
+- **Contexto:** `AdminContext` + `localStorage` key `audiogem_admin_auth`
 - **Login:** Modal en Navbar (botón "Soy Admin" / "Cerrar sesion Admin")
 - **Validación:** `password === import.meta.env.VITE_CLAVE_ADMIN`
 - **Uso:** `isAdmin` en `ProductCard` muestra `base_price` (costo) y en Navbar cambia icono/label
@@ -412,7 +412,7 @@ Build output: `dist/` (Vite default). Vercel detecta Vite automáticamente.
 1. **Datos en `src/services/*.js`** — Single source of truth. Para backend real, reemplazar imports por `fetch()` en barrel `productsData.js` sin tocar componentes.
 2. **CSS Variables design system** — No introducir Tailwind/otro framework sin migración planificada.
 3. **CartContext + localStorage** — Es el "backend" del carrito. No romper la interfaz `useCart()`.
-4. **AdminContext + sessionStorage** — Auth simple, no JWT. Para panel real, evaluar Next.js API routes o Supabase Auth.
+4. **AdminContext + localStorage** — Auth simple, no JWT. Persiste la sesión entre visitas (sobrevive recargas y cierre de navegador en iOS donde sessionStorage se pierde). Se borra solo con "Salir Admin". Para panel real, evaluar Next.js API routes o Supabase Auth.
 5. **WhatsApp como checkout** — No hay pasarela de pagos. Cualquier "pago online" requiere cambio arquitectónico mayor.
 
 ---
