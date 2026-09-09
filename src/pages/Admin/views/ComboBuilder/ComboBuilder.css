@@ -30,6 +30,29 @@
     color: var(--color-primary);
 }
 
+.combo-builder__button-nuevo {
+    background: none;
+    border: 1px solid var(--color-bg-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text-muted);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-semibold);
+    padding: var(--spacing-2) var(--spacing-4);
+    cursor: pointer;
+    transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.combo-builder__button-nuevo:hover:not(:disabled) {
+    border-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+.combo-builder__button-nuevo:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 .combo-builder__hint {
     font-size: var(--text-base);
     color: var(--color-text-muted);
@@ -351,6 +374,7 @@
 
 /* Muy pequeño: el picker se adapta y se reduce el padding de las tarjetas. */
 @media (max-width: 480px) {
+
     .combo-builder__products,
     .combo-builder__form,
     .combo-builder__saved {

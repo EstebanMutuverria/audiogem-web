@@ -109,7 +109,7 @@ const ComboBuilder = () => {
         if (updated) {
             setSavedCombos(updated);
         }
-    };    return (
+    }; return (
         <section className="combo-builder">
             <header className="combo-builder__header">
                 <div className="combo-builder__heading">
@@ -119,6 +119,9 @@ const ComboBuilder = () => {
                         definí el precio del combo para guardarlo.
                     </p>
                 </div>
+                <button onClick={clearCombo} disabled={isEmpty} className="combo-builder__button-nuevo">
+                    Nuevo combo
+                </button>
             </header>
 
             <div className="combo-builder__layout">
