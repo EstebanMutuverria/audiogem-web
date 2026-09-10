@@ -230,6 +230,72 @@
     color: var(--color-text-faint);
 }
 
+/* ─── Variante pedido ─── */
+
+/* Botón de descarga de PDF del pedido */
+.combo-detail__download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-2);
+    width: 100%;
+    margin-bottom: var(--spacing-3);
+    padding: var(--spacing-3) var(--spacing-4);
+    background: var(--gradient-premium);
+    border: none;
+    border-radius: var(--radius-lg);
+    color: var(--color-white);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: var(--shadow-glow);
+    transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        opacity var(--transition-fast);
+}
+
+.combo-detail__download svg {
+    transition: transform var(--transition-fast);
+}
+
+.combo-detail__download:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow-lg), var(--shadow-md);
+}
+
+.combo-detail__download:hover:not(:disabled) svg {
+    transform: scale(1.12);
+}
+
+.combo-detail__download:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: var(--shadow-glow);
+}
+
+.combo-detail__download:focus-visible {
+    outline: 2px solid var(--color-primary-light);
+    outline-offset: 2px;
+}
+
+.combo-detail__download:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Error de descarga del PDF */
+.combo-detail__error {
+    font-size: var(--text-sm);
+    color: var(--color-error);
+    line-height: 1.4;
+    margin: 0 0 var(--spacing-3);
+}
+
 /* ─── Responsive ─── */
 @media (max-width: 560px) {
     .combo-detail__panel {

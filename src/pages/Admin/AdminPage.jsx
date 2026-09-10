@@ -30,6 +30,14 @@ const AdminPage = () => {
                         >
                             Combos
                         </NavLink>
+                        <NavLink
+                            to="/admin/pedidos"
+                            className={({ isActive }) =>
+                                `admin-page__tab ${isActive ? 'admin-page__tab--active' : ''}`
+                            }
+                        >
+                            Pedidos
+                        </NavLink>
                     </nav>
                 </div>
             </header>
