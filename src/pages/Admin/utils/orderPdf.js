@@ -276,14 +276,14 @@ const drawFooter = (doc) => {
         { align: 'center' }
     );
 
-    doc.setFontSize(7.5);
-    doc.setTextColor(160, 165, 175);
-    doc.text(
-        'Los precios están sujetos a cambios según disponibilidad del proveedor.',
-        PAGE_WIDTH / 2,
-        footerY + 11,
-        { align: 'center' }
-    );
+    /*     doc.setFontSize(7.5);
+        doc.setTextColor(160, 165, 175);
+        doc.text(
+            'Los precios están sujetos a cambios según disponibilidad del proveedor.',
+            PAGE_WIDTH / 2,
+            footerY + 11,
+            { align: 'center' }
+        ); */
 
     // Page indicator
     doc.setFontSize(7);
