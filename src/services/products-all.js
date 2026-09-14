@@ -1670,6 +1670,38 @@ export const ALL_PRODUCTS = ([
         depth: null,
         isFeatured: false
     },
+    {
+        name: 'Rackera 4 drivers Jahro N25',
+        category: CATEGORY_NAMES.RACKERAS,
+        brand: null,
+        image: rackera_4drivers5041,
+        description: 'Rackera 4 drivers jahro N25 de 150W MAX',
+        badge: BADGE_NAMES.NEW,
+        price: '$90.000',
+        base_price: '$56.000',
+        state: true,
+        weight: 4,
+        height: 18,
+        width: 71,
+        depth: 22,
+        isFeatured: false
+    },
+    {
+        name: 'Rackera 2 drivers Jahro N25 y 2 tweeters Jahro',
+        category: CATEGORY_NAMES.RACKERAS,
+        brand: null,
+        image: rackera_2y2_chica,
+        description: 'Rackera 2 drivers Jahro N25 de 150W MAX y 2 tweeters Jahro piezo electrico 250W MAX',
+        badge: BADGE_NAMES.NEW,
+        price: '$79.000',
+        base_price: '$49.000',
+        state: true,
+        weight: 3,
+        height: 18,
+        width: 60,
+        depth: 22,
+        isFeatured: false
+    },
     ...DRAWERS.map((drawer) => ({
         name: drawer.name,
         category: CATEGORY_NAMES.CAJONES,
