@@ -116,7 +116,7 @@ export const ALL_PRODUCTS = ([
         height: null,
         width: null,
         depth: null,
-        isFeatured: true
+        isFeatured: false
     },
     {
         name: 'Rackera 2 drivers Jahro 5042 250W MAX y 2 super tweeters',
@@ -164,7 +164,7 @@ export const ALL_PRODUCTS = ([
         height: null,
         width: null,
         depth: null,
-        isFeatured: true
+        isFeatured: false
     },
     {
         name: 'Driver JBL D250-X',
@@ -180,7 +180,7 @@ export const ALL_PRODUCTS = ([
         height: null,
         width: null,
         depth: null,
-        isFeatured: true
+        isFeatured: false
     },
     {
         name: 'Rackera 2 driver Jahro 5041 y 2 tweeter Jahro',
@@ -196,7 +196,7 @@ export const ALL_PRODUCTS = ([
         height: 18,
         width: 60,
         depth: 22,
-        isFeatured: true
+        isFeatured: false
     },
     {
         name: 'Kit instalación Infinity Tech 8 GA',
@@ -212,7 +212,7 @@ export const ALL_PRODUCTS = ([
         height: null,
         width: null,
         depth: null,
-        isFeatured: true
+        isFeatured: false
     },
     {
         name: 'Sony XAV-AX5500',
@@ -227,7 +227,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Rackera 2 medios de 8 pulgadas y 2 super tweeters Jahro',
@@ -242,7 +243,8 @@ export const ALL_PRODUCTS = ([
         weight: 10,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Rackera 4 drivers Jahro 5041',
@@ -257,7 +259,8 @@ export const ALL_PRODUCTS = ([
         weight: 5,
         height: 18,
         width: 71,
-        depth: 22
+        depth: 22,
+        isFeatured: true
     },
     {
         name: 'Rackera 2 drivers, 2 medios y 2 tweeters',
@@ -272,7 +275,8 @@ export const ALL_PRODUCTS = ([
         weight: 8,
         height: 22,
         width: 99,
-        depth: 23
+        depth: 23,
+        isFeatured: true
     },
     {
         name: 'Rackera 2 drivers, 2 parlantes y 2 tweeters',
@@ -287,7 +291,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Estereo philco CSP2950BT',
@@ -302,7 +307,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Rackera 2 drivers y 2 parlantes 6x9 Pioneer',
@@ -317,7 +323,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Rackera 2 parlantes Jahro y 2 tweeters Jahro',
@@ -332,7 +339,8 @@ export const ALL_PRODUCTS = ([
         weight: 4,
         height: 18,
         width: 60,
-        depth: 22
+        depth: 22,
+        isFeatured: false
     },
     {
         name: 'Super Tweeter Blauline BT-304',
@@ -347,7 +355,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Cable y Griega',
@@ -362,7 +371,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Capacitores para Tweeter',
@@ -377,7 +387,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Capacitores para Driver',
@@ -392,7 +403,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Difusores de Aluminio',
@@ -407,7 +419,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Potencia Taramps 800.4',
@@ -422,7 +435,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Medio de 8 pulgadas Jahro',
@@ -437,7 +451,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Estereo Infinity Tech',
@@ -452,7 +467,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Difusores de Plástico Cortos',
@@ -467,7 +483,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Subwoofer Pioneer 12 pulgadas',
@@ -482,7 +499,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Rackera Curva 2 medios bala, 2 drivers 250 y 2 super tweeters',
@@ -497,7 +515,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: 22,
         width: 99,
-        depth: 23
+        depth: 23,
+        isFeatured: true
     },
     {
         name: 'Parlantes Bomber 6x9 con Cajas individuales (el par)',
@@ -512,7 +531,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Parlantes Jahro 6 pulgadas (el par)',
@@ -527,7 +547,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Parlantes Jahro 5 pulgadas (el par)',
@@ -542,7 +563,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Parlantes Jahro 4 pulgadas (el par)',
@@ -557,7 +579,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Medio de 6" Jahro',
@@ -572,7 +595,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Driver Jahro 5041',
@@ -587,7 +611,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Driver JBL Trio',
@@ -602,7 +627,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Controlador de Sonido Stetsom',
@@ -617,7 +643,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Estereo Crown Mustang DMR-3000BT',
@@ -632,7 +659,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: true
     },
     {
         name: 'Tweeter JBL ST200',
@@ -647,7 +675,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Woofer Triton 12 Pulgadas 620rms',
@@ -662,7 +691,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Woofer Triton 12 Pulgadas 850rms',
@@ -677,7 +707,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Driver Jahro 5042 200w MAX',
@@ -692,7 +723,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: true
     },
     {
         name: 'Potencia Sound Digital 400.4',
@@ -707,7 +739,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Potencia Sound Digital 800.4',
@@ -722,7 +755,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Adaptador de Impedancia Jahro',
@@ -737,7 +771,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Adaptador de Impedancia Blauline',
@@ -752,7 +787,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Parlantes Pioneer 300W MAX',
@@ -767,7 +803,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: true
     },
     {
         name: 'Rackera Curva 2 Medios de 8 pulgadas Jahro, 2 Drivers Jahro 5042 y 2 Super Tweeters Jahro',
@@ -782,7 +819,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: 22,
         width: 99,
-        depth: 23
+        depth: 23,
+        isFeatured: false
     },
     {
         name: 'Voltimetro automotivo Taramps',
@@ -797,7 +835,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Cable RCA Svart 4mm 1m',
@@ -812,7 +851,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Adaptador de Impedancia Maverick',
@@ -827,7 +867,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Rackera 2 Drivers Jahro y 2 Medios de 6 pulgadas AudioPipe',
@@ -842,7 +883,8 @@ export const ALL_PRODUCTS = ([
         weight: 7,
         height: 18,
         width: 71,
-        depth: 22
+        depth: 22,
+        isFeatured: false
     },
     {
         name: 'Parlantes Bomber 5 pulgadas',
@@ -857,7 +899,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Parlantes Pioneer 6.5 pulgadas 280W MAX',
@@ -872,7 +915,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Rackera 2 6x9 Pioneer de 450W MAX y 2 Super Tweeter Jahro',
@@ -887,7 +931,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: 73,
         width: 23,
-        depth: 22
+        depth: 22,
+        isFeatured: false
     },
     {
         name: 'Rackera 2 drivers Jahro 5041 y 2 tweeter Arwen',
@@ -902,7 +947,8 @@ export const ALL_PRODUCTS = ([
         weight: 4,
         height: 18,
         width: 60,
-        depth: 22
+        depth: 22,
+        isFeatured: false
     },
     {
         name: 'Tweeter Bala DS18 Pro TWX2 (el par)',
@@ -917,7 +963,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: true
     },
     {
         name: 'Medios de 8 pulgadas AudioPipe (el par)',
@@ -932,7 +979,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Medios de 8 pulgadas Wild Sound (el par)',
@@ -947,7 +995,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Estereo Car MP3 Player',
@@ -962,7 +1011,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Rackera 2 medios de 6 Jahro y 2 Driver Jahro 5042',
@@ -977,7 +1027,8 @@ export const ALL_PRODUCTS = ([
         weight: 7,
         height: 18,
         width: 71,
-        depth: 22
+        depth: 22,
+        isFeatured: false
     },
     {
         name: 'Driver Jahro ATQ02 250W MAX',
@@ -992,7 +1043,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Rackera 4 driver Jahro ATQ02 250W',
@@ -1007,7 +1059,8 @@ export const ALL_PRODUCTS = ([
         weight: 3.7,
         height: 18,
         width: 71,
-        depth: 22
+        depth: 22,
+        isFeatured: false
     },
     {
         name: 'Rackera 2 driver Jahro ATQ02 250W y 2 Tweeter',
@@ -1022,7 +1075,8 @@ export const ALL_PRODUCTS = ([
         weight: 3,
         height: 18,
         width: 60,
-        depth: 22
+        depth: 22,
+        isFeatured: false
     },
     {
         name: 'Rackera 2 medios de 8 y 2 driver 5042 Jahro',
@@ -1037,7 +1091,8 @@ export const ALL_PRODUCTS = ([
         weight: 9,
         height: 22,
         width: 79,
-        depth: 22
+        depth: 22,
+        isFeatured: false
     },
     {
         name: 'Pantalla Pioneer DMH-A5650BT',
@@ -1052,7 +1107,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Tweeter Jahro YP307 250W',
@@ -1067,7 +1123,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Rackera 2 medios Jahro de 6 pulgadas y 2 driver Jahro 5041',
@@ -1082,7 +1139,8 @@ export const ALL_PRODUCTS = ([
         weight: 6,
         height: 18,
         width: 71,
-        depth: 22
+        depth: 22,
+        isFeatured: false
     },
     {
         name: 'Parlantes Pioneer 6,5 pulgadas 350 Watts MAX (el par)',
@@ -1097,7 +1155,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Potencia Nakamichi 100.4 ',
@@ -1112,7 +1171,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Parlante Pioneer 6x9 500 Watts MAX (usado)',
@@ -1127,7 +1187,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Potencia MTX 1200.1',
@@ -1142,7 +1203,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Parlantes Pioneer 6x9 TS-A6968S 450W MAX (el par)',
@@ -1157,7 +1219,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Kit de cables 4 GA Jahro',
@@ -1172,7 +1235,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Bornera',
@@ -1187,7 +1251,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Reparo para driver 250',
@@ -1202,7 +1267,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Medio Pervoi de 6.5 pulgadas punta bala 600W MAX',
@@ -1217,7 +1283,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Medios de 8 pulgadas Infinity Tech AK-800 600W MAX (el par)',
@@ -1232,7 +1299,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Bloque distribuidor Recoil',
@@ -1247,7 +1315,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Cable RCA Storm Tech 4mm',
@@ -1262,7 +1331,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Kit de cables 6 GA pervoi high performance CTC-320A',
@@ -1277,7 +1347,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Componentes Pervoi de 6,5 pulgadas 650 Watts MAX (el par)',
@@ -1292,7 +1363,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Potencia Taramps Bass 400x1 2ohms',
@@ -1307,7 +1379,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Medios Pervoi de 6.5 pulgadas 450 Watts (el par)',
@@ -1322,7 +1395,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Parlantes 6x9 Bomber 75W RMS (el par)',
@@ -1337,7 +1411,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Rackera 2 medios de 6,5 pulgadas bala Pervoi y 2 Tweeters DS18',
@@ -1352,7 +1427,8 @@ export const ALL_PRODUCTS = ([
         weight: 7.9,
         height: 20,
         width: 62,
-        depth: 23
+        depth: 23,
+        isFeatured: false
     },
     {
         name: 'Rackera 2 parlantes 6x9 bomber y 2 super tweeters',
@@ -1367,7 +1443,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: 23,
         width: 73,
-        depth: 22
+        depth: 22,
+        isFeatured: false
     },
     {
         name: 'Super Tweeter Jahro',
@@ -1382,7 +1459,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Rackera 4 medios Pervoi punta bala de 6,5 pulgadas',
@@ -1397,7 +1475,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: 18,
         width: 71,
-        depth: 22
+        depth: 22,
+        isFeatured: false
     },
     {
         name: 'Rackera 2 medios de 6,5 pulgadas pervoi punta bala y 2 drivers Jahro 5042',
@@ -1412,7 +1491,8 @@ export const ALL_PRODUCTS = ([
         weight: 7,
         height: 18,
         width: 71,
-        depth: 22
+        depth: 22,
+        isFeatured: false
     },
     {
         name: 'Rackera 2 medios de 6,5 pulgadas pervoi punta bala y 2 drivers Jahro 5041',
@@ -1427,7 +1507,8 @@ export const ALL_PRODUCTS = ([
         weight: 6,
         height: 18,
         width: 71,
-        depth: 22
+        depth: 22,
+        isFeatured: false
     },
     {
         name: 'Driver Jahro N25',
@@ -1442,7 +1523,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Subwoofer Activo Pervoi de 10 pulgadas 1000W MAX',
@@ -1457,7 +1539,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Parlantes 6x9 Pervoi de 1000W MAX (el par)',
@@ -1472,7 +1555,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Subwoofer B52 SW-1030 de 10 pulgadas 900W MAX',
@@ -1487,7 +1571,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Driver Bomber DB-200 X',
@@ -1502,7 +1587,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Estereo Jahro JH-346',
@@ -1517,7 +1603,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Difusor largo de plastico',
@@ -1532,7 +1619,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Kit de cables Pervoi de 6 GA CTC-63A',
@@ -1547,7 +1635,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Adaptador de impedancia pipeman´s IS-NR1000',
@@ -1562,7 +1651,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     {
         name: 'Medio Blauline de 8 pulgadas 150W BW-815',
@@ -1577,7 +1667,8 @@ export const ALL_PRODUCTS = ([
         weight: null,
         height: null,
         width: null,
-        depth: null
+        depth: null,
+        isFeatured: false
     },
     ...DRAWERS.map((drawer) => ({
         name: drawer.name,
