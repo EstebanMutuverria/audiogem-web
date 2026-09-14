@@ -90,6 +90,16 @@ import rackera_2_medios_de_6_pervoi_bala_y_2_driver from '../assets/products_sec
 import rackera_2_parlantes_6x9_bomber_y_2_super_tweeters from '../assets/products_section_pictures/rackera-2-super-tweeter-y-2-6x9-bomber.jpeg';
 import rackera_4_medios_de_6_pervoi_bala from '../assets/products_section_pictures/rackera-4-medios-de-6-pervoi-bala.jpeg';
 import super_tweeters_jahro from '../assets/products_section_pictures/super-tweeters-jahro.jpeg';
+import medio_de_8_blauline from '../assets/products_section_pictures/medio-de-8-blauline.jpeg'
+import adaptador_de_imp_pipemans from '../assets/products_section_pictures/adaptador-imp-pipemans.jpeg'
+import kit_de_cables_pervoi_6_ga_ctc63a from '../assets/products_section_pictures/kit-de-cables-pervoi-6-ga-ctc63a.jpeg'
+import difusores_de_plastico_largos from '../assets/products_section_pictures/difusores-de-plastico-largos.jpeg'
+import estereo_jahro from '../assets/products_section_pictures/estereo-jahro.jpeg'
+import driver_bomber_db200 from '../assets/products_section_pictures/driver-bomber-db200.jpeg'
+import subwoofer_b52_de_10 from '../assets/products_section_pictures/subwoofer-b52-de-10.jpeg'
+import parlantes_6x9_pervoi from '../assets/products_section_pictures/parlantes-6x9-pervoi.jpeg'
+import subwoofer_de_10_pervoi_activo from '../assets/products_section_pictures/subwoofer-de-10-pervoi-activo.jpeg'
+import driver_jahro_n25 from '../assets/products_section_pictures/driver-jahro-n25.jpeg'
 
 export const ALL_PRODUCTS = ([
     {
@@ -1418,6 +1428,156 @@ export const ALL_PRODUCTS = ([
         height: 18,
         width: 71,
         depth: 22
+    },
+    {
+        name: 'Driver Jahro N25',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.JAHRO,
+        image: driver_jahro_n25,
+        description: 'Driver Jahro N25 150W MAX',
+        badge: BADGE_NAMES.NEW,
+        price: '$15.000',
+        base_price: '$9.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        name: 'Subwoofer Activo Pervoi de 10 pulgadas 1000W MAX',
+        category: CATEGORY_NAMES.SUBWOOFERS,
+        brand: BRAND_NAMES.PERVOI,
+        image: subwoofer_de_10_pervoi_activo,
+        description: 'Subwoofer Activo Slim Pervoi de 10 pulgadas 1000W MAX',
+        badge: BADGE_NAMES.NEW,
+        price: '$125.000',
+        base_price: '$95.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        name: 'Parlantes 6x9 Pervoi de 1000W MAX (el par)',
+        category: CATEGORY_NAMES.PARLANTES,
+        brand: BRAND_NAMES.PERVOI,
+        image: parlantes_6x9_pervoi,
+        description: 'Parlantes 6x9 Pervoi de 1000W MAX - 150 RMS',
+        badge: BADGE_NAMES.NEW,
+        price: '$50.000',
+        base_price: '$35.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        name: 'Subwoofer B52 SW-1030 de 10 pulgadas 900W MAX',
+        category: CATEGORY_NAMES.SUBWOOFERS,
+        brand: BRAND_NAMES.B52,
+        image: subwoofer_b52_de_10,
+        description: 'Subwoofer B52 SW-1030 de 10 pulgadas 900W MAX - 300W RMS',
+        badge: BADGE_NAMES.NEW,
+        price: '$95.000',
+        base_price: '$70.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        name: 'Driver Bomber DB-200 X',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.BOMBER,
+        image: driver_bomber_db200,
+        description: 'Driver Bomber DB-200 X 100W RMS',
+        badge: BADGE_NAMES.BEST_SELLERS,
+        price: '$42.000',
+        base_price: '$35.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        name: 'Estereo Jahro JH-346',
+        category: CATEGORY_NAMES.ESTEREOS,
+        brand: BRAND_NAMES.JAHRO,
+        image: estereo_jahro,
+        description: 'Estereo Jahro JH-346 Con control remoto',
+        badge: BADGE_NAMES.NEW,
+        price: '$65.000',
+        base_price: '$45.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        name: 'Difusor largo de plastico',
+        category: CATEGORY_NAMES.ACCESORIOS,
+        brand: null,
+        image: difusores_de_plastico_largos,
+        description: 'Difusor largo de plastico',
+        badge: BADGE_NAMES.NEW,
+        price: '$8.500',
+        base_price: '$5.500',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        name: 'Kit de cables Pervoi de 6 GA CTC-63A',
+        category: CATEGORY_NAMES.ACCESORIOS,
+        brand: BRAND_NAMES.PERVOI,
+        image: kit_de_cables_pervoi_6_ga_ctc63a,
+        description: 'Kit de cables Pervoi de 6 gauges',
+        badge: BADGE_NAMES.NEW,
+        price: '$21.000',
+        base_price: '$13.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        name: 'Adaptador de impedancia pipeman´s IS-NR1000',
+        category: CATEGORY_NAMES.ACCESORIOS,
+        brand: null,
+        image: adaptador_de_imp_pipemans,
+        description: 'Adaptador de impedancia pipeman´s IS-NR1000 2 salidas RCA',
+        badge: BADGE_NAMES.NEW,
+        price: '$17.000',
+        base_price: '$12.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
+    },
+    {
+        name: 'Medio Blauline de 8 pulgadas 150W BW-815',
+        category: CATEGORY_NAMES.MEDIOS,
+        brand: BRAND_NAMES.BLAULINE,
+        image: medio_de_8_blauline,
+        description: 'Medio Blauline de 8 pulgadas 150W RMS BW-815',
+        badge: null,
+        price: '$37.000',
+        base_price: '$25.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null
     },
     ...DRAWERS.map((drawer) => ({
         name: drawer.name,
