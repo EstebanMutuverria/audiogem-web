@@ -9,7 +9,7 @@
 
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { FiX, FiDownload } from 'react-icons/fi';
+import { FiX, FiDownload, FiCopy, FiCheck } from 'react-icons/fi';
 import { formatPrice } from '../../../../utils/price';
 import { resolveComboTotals } from './comboTotals';
 import { buildOrderPdf } from '../../utils/orderPdf';
@@ -26,6 +26,9 @@ const ComboDetailModal = ({ combo, isOpen, onClose, variant = 'combo' }) => {
     const isOrder = variant === 'pedido';
     const [isDownloading, setIsDownloading] = useState(false);
     const [downloadError, setDownloadError] = useState('');
+    const [isCopying, setIsCopying] = useState(false);
+    const [copySuccess, setCopySuccess] = useState(false);
+    const [copyError, setCopyError] = useState('');
 
     // Cerrar con Escape
     useEffect(() => {
@@ -67,6 +70,153 @@ const ComboDetailModal = ({ combo, isOpen, onClose, variant = 'combo' }) => {
             setDownloadError('No se pudo generar el PDF. Intentá de nuevo.');
         } finally {
             setIsDownloading(false);
+        }
+    };
+
+    const buildAiPrompt = () => {
+        const productsList = resolvedItems
+            .map((item) => `• ${item.productName} — x${item.quantity}`)
+            .join('\n');
+        const priceFormatted = formatPrice(comboTotals.finalPrice);
+
+        return `Actuá como un **diseñador gráfico profesional especializado en publicidad de productos de audio para automóviles y e-commerce**.
+
+Quiero crear una **imagen publicitaria profesional para Audiogem** promocionando un combo de productos.
+
+Voy a proporcionarte:
+
+1. El nombre de cada producto.
+2. La cantidad de cada producto.
+3. El precio total del combo.
+4. Las fotografías originales de los productos.
+
+### DATOS DEL COMBO
+
+**Productos:**
+${productsList}
+
+**Precio total del combo:**
+${priceFormatted}
+
+### INSTRUCCIONES PARA LA IMAGEN
+
+Creá una publicidad de aspecto **profesional, moderno, atractivo, minimalista y comercial**, pensada para vender el combo en redes sociales y canales de venta de Audiogem.
+
+La composición debe mostrar claramente **todos los productos incluidos en el combo**, utilizando las fotografías que adjunto como referencia principal.
+
+### REGLAS IMPORTANTES SOBRE LOS PRODUCTOS
+
+* **NO modificar los productos originales.**
+* Mantener exactamente su diseño, forma, proporciones, colores, logos, marcas, textos, conexiones, botones, detalles y características visuales.
+* No inventar productos ni reemplazar productos por otros similares.
+* No cambiar marcas.
+* No agregar ni quitar componentes de los productos.
+* No alterar los textos impresos en los productos.
+* No deformar, estirar ni modificar las proporciones.
+* Si un producto aparece en varias unidades, representar correctamente la cantidad indicada.
+* Las fotografías proporcionadas son la referencia visual principal y deben respetarse fielmente.
+* Se pueden eliminar o limpiar fondos de las fotografías para integrarlas al diseño, pero **el producto en sí debe permanecer idéntico**.
+
+### DISEÑO PUBLICITARIO
+
+Crear una composición visual donde los productos sean los protagonistas.
+
+Organizá los productos de forma equilibrada, evitando que se vean excesivamente grandes o amontonados.
+
+Dejá suficiente espacio entre ellos para que cada producto pueda identificarse fácilmente.
+
+Utilizá un fondo y elementos gráficos relacionados con **audio para automóviles**, tecnología y sonido, pero sin sobrecargar la imagen.
+
+El diseño debe transmitir:
+
+* Potencia
+* Calidad
+* Tecnología
+* Oferta
+* Profesionalismo
+* Urgencia de compra
+
+### TEXTO OBLIGATORIO
+
+La publicidad debe incluir de forma **muy visible y llamativa** la frase:
+
+**"SOLO POR HOY"**
+
+Esta frase es OBLIGATORIA y debe aparecer en alguna parte de la imagen, preferentemente como una etiqueta, sello o elemento destacado de la promoción.
+
+También debe aparecer claramente:
+
+**COMBO AUDİOGEM**
+
+y el precio:
+
+**${priceFormatted}**
+
+El precio debe tener suficiente tamaño y contraste para ser uno de los elementos visuales más importantes de la publicidad.
+
+### INFORMACIÓN DE PRODUCTOS
+
+Mostrar los productos incluidos mediante textos breves y fáciles de leer.
+
+${productsList}
+
+Adaptá automáticamente esta sección a los productos y cantidades que proporcione.
+
+### ESTILO
+
+El resultado debe parecer una **publicidad real de una tienda profesional de audio para autos**, no una imagen genérica de IA.
+
+Utilizá:
+
+* Tipografía moderna y fuerte.
+* Jerarquía visual clara.
+* Alto contraste.
+* Composición limpia.
+* Iluminación profesional.
+* Efectos gráficos sutiles relacionados con sonido/audio.
+* Elementos visuales que ayuden a destacar la oferta sin tapar los productos.
+
+**No sobrecargar el diseño.**
+
+Los productos y el precio deben ser los protagonistas.
+
+### FORMATO
+
+Crear una imagen publicitaria optimizada para **Instagram, Facebook, WhatsApp y publicaciones de e-commerce**.
+
+Preferentemente utilizar formato **vertical 4:5**, salvo que indique otro formato.
+
+### REGLA FINAL
+
+Antes de generar la imagen, verificá que:
+
+✓ Aparezcan todos los productos.
+✓ Las cantidades sean correctas.
+✓ Los productos sean visualmente fieles a las fotografías originales.
+✓ El precio sea exactamente el proporcionado.
+✓ Aparezca obligatoriamente **"SOLO POR HOY"**.
+✓ Aparezca **"COMBO AUDIOGEM"**.
+✓ No haya productos inventados.
+✓ No se haya modificado ningún producto.
+✓ Los textos sean legibles.
+✓ La composición sea limpia, profesional y orientada a la venta.
+
+**No inventes información que no haya proporcionado.**`;
+    };
+
+    const handleCopyPrompt = async () => {
+        setIsCopying(true);
+        setCopySuccess(false);
+        setCopyError('');
+        try {
+            const prompt = buildAiPrompt();
+            await navigator.clipboard.writeText(prompt);
+            setCopySuccess(true);
+            setTimeout(() => setCopySuccess(false), 2000);
+        } catch {
+            setCopyError('No se pudo copiar. Intentá de nuevo.');
+        } finally {
+            setIsCopying(false);
         }
     };
 
@@ -215,6 +365,36 @@ const ComboDetailModal = ({ combo, isOpen, onClose, variant = 'combo' }) => {
 
                         {/* Footer */}
                         <div className="combo-detail__footer">
+                            {!isOrder && comboTotals && (
+                                <>
+                                    <button
+                                        type="button"
+                                        className="combo-detail__copy-prompt"
+                                        onClick={handleCopyPrompt}
+                                        disabled={isCopying}
+                                    >
+                                        {copySuccess ? (
+                                            <>
+                                                <FiCheck size={16} aria-hidden="true" />
+                                                Prompt copiado
+                                            </>
+                                        ) : (
+                                            <>
+                                                <FiCopy size={16} aria-hidden="true" />
+                                                Copiar prompt IA
+                                            </>
+                                        )}
+                                    </button>
+                                    {copyError && (
+                                        <p
+                                            className="combo-detail__error"
+                                            role="alert"
+                                        >
+                                            {copyError}
+                                        </p>
+                                    )}
+                                </>
+                            )}
                             {isOrder && (
                                 <>
                                     <button

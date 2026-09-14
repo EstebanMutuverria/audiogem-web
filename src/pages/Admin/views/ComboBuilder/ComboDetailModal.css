@@ -230,6 +230,63 @@
     color: var(--color-text-faint);
 }
 
+/* ─── Variante combo — Botón copiar prompt IA ─── */
+.combo-detail__copy-prompt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-2);
+    width: 100%;
+    margin-bottom: var(--spacing-3);
+    padding: var(--spacing-3) var(--spacing-4);
+    background: linear-gradient(135deg, rgba(72, 149, 239, 0.15), rgba(124, 58, 237, 0.15));
+    border: 1px solid rgba(72, 149, 239, 0.3);
+    border-radius: var(--radius-lg);
+    color: var(--color-primary-light);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        opacity var(--transition-fast),
+        background var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+.combo-detail__copy-prompt svg {
+    transition: transform var(--transition-fast);
+}
+
+.combo-detail__copy-prompt:hover:not(:disabled) {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, rgba(72, 149, 239, 0.25), rgba(124, 58, 237, 0.25));
+    border-color: rgba(72, 149, 239, 0.5);
+    box-shadow: 0 4px 20px rgba(72, 149, 239, 0.2);
+}
+
+.combo-detail__copy-prompt:hover:not(:disabled) svg {
+    transform: scale(1.12);
+}
+
+.combo-detail__copy-prompt:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.combo-detail__copy-prompt:focus-visible {
+    outline: 2px solid var(--color-primary-light);
+    outline-offset: 2px;
+}
+
+.combo-detail__copy-prompt:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+}
+
 /* ─── Variante pedido ─── */
 
 /* Botón de descarga de PDF del pedido */
