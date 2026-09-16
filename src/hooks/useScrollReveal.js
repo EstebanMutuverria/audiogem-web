@@ -37,7 +37,7 @@ export const useScrollReveal = (options = {}) => {
                 });
             },
             {
-                threshold: options.threshold ?? 0.15,
+                threshold: options.threshold ?? 0.05,
                 rootMargin: options.rootMargin ?? '0px',
             }
         );
