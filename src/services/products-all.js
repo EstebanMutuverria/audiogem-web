@@ -1581,7 +1581,7 @@ export const ALL_PRODUCTS = ([
         image: driver_bomber_db200,
         description: 'Driver Bomber DB-200 X 100W RMS',
         badge: BADGE_NAMES.BEST_SELLERS,
-        price: '$42.000',
+        price: '$45.000',
         base_price: '$35.000',
         state: true,
         weight: null,
