@@ -100,6 +100,8 @@ import subwoofer_b52_de_10 from '../assets/products_section_pictures/subwoofer-b
 import parlantes_6x9_pervoi from '../assets/products_section_pictures/parlantes-6x9-pervoi.jpeg'
 import subwoofer_de_10_pervoi_activo from '../assets/products_section_pictures/subwoofer-de-10-pervoi-activo.jpeg'
 import driver_jahro_n25 from '../assets/products_section_pictures/driver-jahro-n25.jpeg'
+import reparo_para_driver_5041 from '../assets/products_section_pictures/reparo-para-driver-5041.jpeg'
+import rackera_2_6x9_pervoi_2_driver_jahro_n25 from '../assets/products_section_pictures/rackera-2-6x9-pervoi-2-driver-jahro-n25.jpeg'
 
 export const ALL_PRODUCTS = ([
     {
@@ -1700,6 +1702,38 @@ export const ALL_PRODUCTS = ([
         height: 18,
         width: 60,
         depth: 22,
+        isFeatured: false
+    },
+    {
+        name: 'Rackera 2 6x9 Pervoi y 2 Driver Jahro N25',
+        category: CATEGORY_NAMES.RACKERAS,
+        brand: null,
+        image: rackera_2_6x9_pervoi_2_driver_jahro_n25,
+        description: 'Rackera 2 6x9 Pervoi de 1000W MAX - 150 RMS y 2 Driver Jahro N25 de 150W MAX - 30 RMS',
+        badge: BADGE_NAMES.NEW,
+        price: '$125.000',
+        base_price: '$88.000',
+        state: true,
+        weight: null,
+        height: 20,
+        width: 90,
+        depth: 22,
+        isFeatured: false
+    },
+    {
+        name: 'Reparo para driver 5041',
+        category: CATEGORY_NAMES.ACCESORIOS,
+        brand: null,
+        image: reparo_para_driver_5041,
+        description: 'Reparo para driver 5041 de 150W MAX',
+        badge: BADGE_NAMES.NEW,
+        price: '$10.000',
+        base_price: '$6.500',
+        state: true,
+        weight: 10,
+        height: 25,
+        width: 72,
+        depth: 23,
         isFeatured: false
     },
     ...DRAWERS.map((drawer) => ({
