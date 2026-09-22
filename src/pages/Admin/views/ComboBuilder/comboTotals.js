@@ -27,10 +27,18 @@ export function resolveComboTotals(combo) {
     let totalBase = 0;
 
     const resolvedItems = combo.items.map((item) => {
-        const product =
-            ALL_PRODUCTS.find((p) => p.id === item.productId) || null;
-        const saleUnit = product ? parsePrice(product.price) : 0;
-        const baseUnit = product ? parsePrice(product.base_price) : 0;
+        // Items manuales: guardan nombre y precio de venta propios;
+        // no se resuelven contra el catálogo y su costo base es $0.
+        const isManual = item.manual === true && item.productId == null;
+        const product = isManual
+            ? null
+            : ALL_PRODUCTS.find((p) => p.id === item.productId) || null;
+        const saleUnit = isManual
+            ? parsePrice(item.price)
+            : product
+              ? parsePrice(product.price)
+              : 0;
+        const baseUnit = isManual ? 0 : product ? parsePrice(product.base_price) : 0;
         const saleSubtotal = saleUnit * item.quantity;
         const baseSubtotal = baseUnit * item.quantity;
         totalSale += saleSubtotal;
@@ -38,7 +46,9 @@ export function resolveComboTotals(combo) {
         return {
             ...item,
             product,
-            productName: product?.name || 'Producto no encontrado',
+            productName: isManual
+                ? item.name
+                : product?.name || 'Producto no encontrado',
             saleUnit,
             baseUnit,
             saleSubtotal,

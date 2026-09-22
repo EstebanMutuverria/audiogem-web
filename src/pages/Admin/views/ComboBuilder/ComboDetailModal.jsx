@@ -290,12 +290,12 @@ Antes de generar la imagen, verificá que:
                                                 item.name
                                             ) : (
                                                 <>
-                                                    {item.productName}
-                                                    {!item.product && (
-                                                        <span className="combo-detail__missing">
-                                                            No disponible
-                                                        </span>
-                                                    )}
+{item.productName}
+                                                {!item.product && !item.manual && (
+                                                    <span className="combo-detail__missing">
+                                                        No disponible
+                                                    </span>
+                                                )}
                                                 </>
                                             )}
                                         </span>

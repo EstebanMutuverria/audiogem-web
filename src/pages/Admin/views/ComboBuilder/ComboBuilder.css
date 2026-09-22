@@ -268,6 +268,72 @@
     border-color: var(--color-primary);
 }
 
+/* ─── Formulario manual ─── */
+.combo-builder__manual {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+    padding-top: var(--spacing-6);
+    border-top: 1px solid var(--color-bg-border);
+}
+
+.combo-builder__manual-row {
+    display: flex;
+    align-items: stretch;
+    gap: var(--spacing-3);
+    flex-wrap: wrap;
+}
+
+.combo-builder__manual-input {
+    flex: 1 1 160px;
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-bg-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    padding: var(--spacing-2) var(--spacing-3);
+    transition: border-color var(--transition-fast);
+    box-sizing: border-box;
+}
+
+.combo-builder__manual-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.combo-builder__manual-input--price {
+    flex: 0 1 120px;
+    max-width: 120px;
+    text-align: right;
+}
+
+.combo-builder__manual-add {
+    flex-shrink: 0;
+    padding: var(--spacing-2) var(--spacing-4);
+    background: var(--gradient-primary);
+    border: none;
+    border-radius: var(--radius-md);
+    color: var(--color-white);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-semibold);
+    cursor: pointer;
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.combo-builder__manual-add:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.combo-builder__manual-error {
+    font-size: var(--text-sm);
+    color: var(--color-error);
+    margin: 0;
+    line-height: 1.4;
+}
+
 /* Lista de combos guardados */
 .combo-builder__saved {
     display: flex;

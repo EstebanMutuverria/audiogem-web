@@ -1,8 +1,9 @@
 /**
  * ComboBuilder.jsx
  * Orquestador de combos de administración: picker de productos del catálogo,
- * line items con steppers, nombre del combo, resumen de precios, listado de
- * combos guardados y persistencia en localStorage.
+ * formulario de productos cargados a mano, line items con steppers, nombre
+ * del combo, resumen de precios, listado de combos guardados y persistencia
+ * en localStorage.
  * Compone useCombo, ComboItem, ComboSummary y el servicio combos.
  */
 
@@ -31,6 +32,7 @@ const ComboBuilder = () => {
         isDiscountValid,
         isEmpty,
         addItem,
+        addManualItem,
         updateQuantity,
         removeItem,
         setComboName,
@@ -42,6 +44,11 @@ const ComboBuilder = () => {
     const [query, setQuery] = useState('');
     const [isPickerOpen, setIsPickerOpen] = useState(false);
     const pickerRef = useRef(null);
+
+    // Estado del formulario manual
+    const [manualName, setManualName] = useState('');
+    const [manualPrice, setManualPrice] = useState('');
+    const [manualError, setManualError] = useState('');
 
     // Combos guardados en localStorage (se cargan una vez al montar)
     const [savedCombos, setSavedCombos] = useState(() => loadCombos());
@@ -82,16 +89,53 @@ const ComboBuilder = () => {
         setIsPickerOpen(false);
     };
 
+    const handleAddManual = () => {
+        if (!manualName.trim()) {
+            setManualError('Ingresá el nombre del producto.');
+            return;
+        }
+        if (parsePrice(manualPrice) <= 0) {
+            setManualError('Ingresá un precio de venta mayor a $0.');
+            return;
+        }
+
+        addManualItem(manualName, manualPrice);
+        setManualName('');
+        setManualPrice('');
+        setManualError('');
+    };
+
+    const resetManualForm = () => {
+        setManualName('');
+        setManualPrice('');
+        setManualError('');
+    };
+
+    const handleClear = () => {
+        clearCombo();
+        resetManualForm();
+    };
+
     const handleSave = () => {
         if (isEmpty || !isDiscountValid || !comboName.trim()) return;
 
         const combo = {
             id: crypto.randomUUID(),
             name: comboName.trim(),
-            items: comboItems.map(({ product, quantity }) => ({
-                productId: product.id,
-                quantity,
-            })),
+            items: comboItems.map((item) =>
+                item.manual
+                    ? {
+                          productId: null,
+                          manual: true,
+                          name: item.name,
+                          price: item.price,
+                          quantity: item.quantity,
+                      }
+                    : {
+                          productId: item.product.id,
+                          quantity: item.quantity,
+                      }
+            ),
             discount: parsePrice(discount),
             comboPrice, // ya es número derivado: totalSalePrice - discount
             createdAt: new Date().toISOString(),
@@ -100,6 +144,7 @@ const ComboBuilder = () => {
         const updated = addCombo(combo);
         if (updated) {
             setSavedCombos(updated);
+            resetManualForm();
             clearCombo();
         }
     };
@@ -115,11 +160,12 @@ const ComboBuilder = () => {
                 <div className="combo-builder__heading">
                     <span className="combo-builder__label">Nuevo combo</span>
                     <p className="combo-builder__hint">
-                        Seleccioná productos del catálogo, ajustá cantidades y
-                        definí el precio del combo para guardarlo.
+                        Seleccioná productos del catálogo o cargá productos a
+                        mano, ajustá cantidades y definí el precio del combo
+                        para guardarlo.
                     </p>
                 </div>
-                <button onClick={clearCombo} disabled={isEmpty} className="combo-builder__button-nuevo">
+                <button onClick={handleClear} disabled={isEmpty} className="combo-builder__button-nuevo">
                     Nuevo combo
                 </button>
             </header>
@@ -186,6 +232,45 @@ const ComboBuilder = () => {
                         </div>
                     </div>
 
+                    <div className="combo-builder__manual">
+                        <label className="combo-builder__field-label" htmlFor="combo-manual-name">
+                            Producto no cargado (a mano)
+                        </label>
+                        <div className="combo-builder__manual-row">
+                            <input
+                                id="combo-manual-name"
+                                type="text"
+                                className="combo-builder__manual-input combo-builder__manual-input--name"
+                                value={manualName}
+                                onChange={(e) => setManualName(e.target.value)}
+                                placeholder="Nombre del producto"
+                                autoComplete="off"
+                            />
+                            <input
+                                id="combo-manual-price"
+                                type="text"
+                                className="combo-builder__manual-input combo-builder__manual-input--price"
+                                value={manualPrice}
+                                onChange={(e) => setManualPrice(e.target.value)}
+                                placeholder="$"
+                                inputMode="numeric"
+                                autoComplete="off"
+                            />
+                            <button
+                                type="button"
+                                className="combo-builder__manual-add"
+                                onClick={handleAddManual}
+                            >
+                                Agregar
+                            </button>
+                        </div>
+                        {manualError && (
+                            <p className="combo-builder__manual-error" role="alert">
+                                {manualError}
+                            </p>
+                        )}
+                    </div>
+
                     {isEmpty ? (
                         <p className="combo-builder__empty">
                             Agregá productos para armar el combo.
@@ -195,7 +280,7 @@ const ComboBuilder = () => {
                             <AnimatePresence initial={false}>
                                 {comboItems.map((item) => (
                                     <motion.li
-                                        key={item.product.id}
+                                        key={item.uid}
                                         layout
                                         initial={{ opacity: 0, y: -8 }}
                                         animate={{ opacity: 1, y: 0 }}
