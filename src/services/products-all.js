@@ -1359,7 +1359,7 @@ export const ALL_PRODUCTS = ([
         image: componentes_6_pulgadas_y_media_650_watts_pervoi,
         description: 'Componentes Pervoi CTC-6592 de 6,5 pulgadas 650 Watts MAX',
         badge: BADGE_NAMES.NEW,
-        price: '$40.000',
+        price: '$45.000',
         base_price: '$30.000',
         state: true,
         weight: null,
