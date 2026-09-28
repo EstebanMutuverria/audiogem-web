@@ -20,5 +20,8 @@ export const BRANDS = [
     { id: 12, name: BRAND_NAMES.STETSOM, logo: null },
     { id: 13, name: BRAND_NAMES.TRITON, logo: null },
     { id: 14, name: BRAND_NAMES.SVART, logo: null },
-    { id: 15, name: BRAND_NAMES.MTX, logo: null }
+    { id: 15, name: BRAND_NAMES.MTX, logo: null },
+    {
+        id: 16, name: BRAND_NAMES.SPYDER, logo: null
+    }
 ];

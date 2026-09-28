@@ -22,7 +22,8 @@ const BRAND_NAMES = {
     ARWEN: 'Arwen',
     NAKAMICHI: 'Nakamichi',
     PERVOI: 'Pervoi',
-
+    SPYDER: 'Spyder',
+    MINGYUAN: 'Mingyuan'
 };
 
 export default BRAND_NAMES;
