@@ -27,7 +27,7 @@ export const useCombo = () => {
 
         setComboItems((prevItems) => {
             const existingIndex = prevItems.findIndex(
-                (item) => item.product.id === product.id
+                (item) => !item.manual && item.product.id === product.id
             );
             if (existingIndex > -1) {
                 return prevItems.map((item, index) =>
