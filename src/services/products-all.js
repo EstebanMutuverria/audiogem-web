@@ -122,6 +122,16 @@ import rackera_2_medios_de_6_pervoi_bala_2_drivers from '../assets/products_sect
 import rackera_2_medios_de_6_pervoi_bala_2_tweeter_bala_ds18 from '../assets/products_section_pictures/rackera-2-medios-de-6-pervoi-bala-2-tweeter-bala-ds18.jpeg'
 import rackera_2_medios_de_6_pervoi_pesados_2_drivers from '../assets/products_section_pictures/rackera-2-medios-de-6-pervoi-pesados-2-drivers.jpeg'
 import rackera_4_medios_de_6_pervoi_bala_2_tweeters_bala_ds18 from '../assets/products_section_pictures/rackera-4-medios-de-6-pervoi-bala-2-tweeters-bala-ds18.jpeg'
+import kit_de_cables_pervoi_2_gau_ctc_76ag from '../assets/products_section_pictures/kit-de-cables-pervoi-2-gau-ctc-76ag.jpeg'
+import kit_de_cables_wis_huan_8_ga_bd_8 from '../assets/products_section_pictures/kit-de-cables-wis-huan-8-ga-bd-8.jpeg'
+import tweeter_pervoi_300w_ctc_14g from '../assets/products_section_pictures/tweeter-pervoi-300w-ctc-14g.jpeg'
+import tweeter_pervoi_bala_ctc_18ag from '../assets/products_section_pictures/tweeter-pervoi-bala-ctc-18ag.jpeg'
+import tweeter_pervoi_ctc_584g from '../assets/products_section_pictures/tweeter-pervoi-ctc-584g.jpeg'
+import subwoofer_pervoi_12_pulgadas_ctc_s1261 from '../assets/products_section_pictures/subwoofer-pervoi-12-pulgadas-ctc-s1261.jpeg'
+import subwoofer_bicho_12_pulgadas_400 from '../assets/products_section_pictures/subwoofer-bicho-12-pulgadas-400.jpeg'
+import medios_de_6_pulgadas_y_media_pervoi_ctc_1681 from '../assets/products_section_pictures/medios-de-6.5-pervoi-ctc-1681.jpeg'
+import driver_blauline_bd_100 from '../assets/products_section_pictures/driver-blauline-bd-100.jpeg'
+import pote_pervoi_60x2_ctc_3650 from '../assets/products_section_pictures/pote-pervoi-60x2-ctc-3650.jpeg'
 
 
 export const ALL_PRODUCTS = ([
@@ -2076,6 +2086,150 @@ export const ALL_PRODUCTS = ([
         depth: null,
         isFeatured: false
     },
+    {
+        name: 'Kit de Cables Pervoi 2 Gauge CTC_76AG',
+        category: CATEGORY_NAMES.ACCESORIOS,
+        brand: BRAND_NAMES.PERVOI,
+        image: kit_de_cables_pervoi_2_gau_ctc_76ag,
+        description: 'Kit de Cables Pervoi 2 Gauge CTC_76AG',
+        badge: null,
+        price: '$50.700',
+        base_price: '$30.700',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
+    {
+        name: 'Kit de Cables Wis Huan 8 Gauge BD_8',
+        category: CATEGORY_NAMES.ACCESORIOS,
+        brand: null,
+        image: kit_de_cables_wis_huan_8_ga_bd_8,
+        description: 'Kit de Cables Wis Huan 8 Gauge BD_8',
+        badge: null,
+        price: '$10.000',
+        base_price: '$4.900',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
+    {
+        name: 'Tweeters Pervoi 300W MAX CTC_14G (el par)',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.PERVOI,
+        image: tweeter_pervoi_300w_ctc_14g,
+        description: 'Tweeters Pervoi 300W MAX CTC_14G 35W RMS',
+        badge: null,
+        price: '$23.800',
+        base_price: '$1.800',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
+    {
+        name: 'Tweeters Pervoi Bala 380W MAX CTC_18AG (el par)',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.PERVOI,
+        image: tweeter_pervoi_bala_ctc_18ag,
+        description: 'Tweeters Pervoi Bala 380W MAX CTC_18AG 100W RMS',
+        badge: null,
+        price: '$30.000',
+        base_price: '$20.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
+    {
+        name: 'Tweeters Pervoi 120W MAX CTC_584G (el par)',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.PERVOI,
+        image: tweeter_pervoi_ctc_584g,
+        description: 'Tweeters Pervoi 120W MAX CTC_584G ',
+        badge: null,
+        price: '$5.600',
+        base_price: '$2.600',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
+    {
+        name: 'Subwoofer Pervoi 12 pulgadas',
+        category: CATEGORY_NAMES.SUBWOOFERS,
+        brand: BRAND_NAMES.PERVOI,
+        image: subwoofer_pervoi_12_pulgadas_ctc_s1261,
+        description: 'Subwoofer Pervoi 12 pulgadas 750W RMS CTC-S1261',
+        badge: null,
+        price: '$85.000',
+        base_price: '$59.500',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
+    {
+        name: 'Subwoofer Bomber Bicho Paopao 12 pulgadas',
+        category: CATEGORY_NAMES.SUBWOOFERS,
+        brand: BRAND_NAMES.BOMBER,
+        image: subwoofer_bicho_12_pulgadas_400,
+        description: 'Subwoofer Bomber Bicho Paopao 12 pulgadas 400W RMS',
+        badge: null,
+        price: '$135.000',
+        base_price: '$106.245',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: true
+    },
+    {
+        name: 'Medios de 6,5 pulgadas Pervoi CTC_1681',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.PERVOI,
+        image: medios_de_6_pulgadas_y_media_pervoi_ctc_1681,
+        description: 'Medios de 6,5 pulgadas Pervoi 105W RMS CTC_1681 (el par)',
+        badge: null,
+        price: '$36.000',
+        base_price: '$23.200',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
+    {
+        name: '',
+        category:,
+        brand: ,
+        image: ,
+        description: ,
+        badge: ,
+        price: ,
+        base_price: ,
+        state: ,
+        weight: ,
+        height: ,
+        width: ,
+        depth: ,
+        isFeatured: 
+    },
     /*     {
             name: '',
             category:,
@@ -2092,6 +2246,7 @@ export const ALL_PRODUCTS = ([
             depth: ,
             isFeatured: 
             }, */
+
     ...DRAWERS.map((drawer) => ({
         name: drawer.name,
         category: CATEGORY_NAMES.CAJONES,
