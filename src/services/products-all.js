@@ -132,6 +132,7 @@ import subwoofer_bicho_12_pulgadas_400 from '../assets/products_section_pictures
 import medios_de_6_pulgadas_y_media_pervoi_ctc_1681 from '../assets/products_section_pictures/medios-de-6.5-pervoi-ctc-1681.jpeg'
 import driver_blauline_bd_100 from '../assets/products_section_pictures/driver-blauline-bd-100.jpeg'
 import pote_pervoi_60x2_ctc_3650 from '../assets/products_section_pictures/pote-pervoi-60x2-ctc-3650.jpeg'
+import tweeter_blauline_btw_2001_piezo from '../assets/products_section_pictures/tweeter-blauline-btw-2001-piezo.jpeg'
 
 
 export const ALL_PRODUCTS = ([
@@ -2239,6 +2240,22 @@ export const ALL_PRODUCTS = ([
         badge: null,
         price: '$70.000',
         base_price: '$49.600',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
+    {
+        name: 'Tweeter Blauline BTW-2001 150W MAX',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.BLAULINE,
+        image: tweeter_blauline_btw_2001_piezo,
+        description: 'Tweeter Blauline BTW-2001 Piezo eléctrico',
+        badge: null,
+        price: '$5.000',
+        base_price: '$2.500',
         state: true,
         weight: null,
         height: null,
