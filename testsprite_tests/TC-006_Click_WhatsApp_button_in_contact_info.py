@@ -52,11 +52,11 @@ async def run_test():
         
         # --> Assertions to verify final state
         current_url = await page.evaluate("() => window.location.href")
-        # Assert: WhatsApp send URL opened with phone +54 9 11 6008-1534
-        assert "/send/?phone=5491160081534" in current_url, "The page should be at /send/?phone=5491160081534"
-        text = await page.locator("text=Chat on WhatsApp with +54 9 11 6008-1534").nth(0).text_content()
+        # Assert: WhatsApp send URL opened with phone +54 9 11 69966209
+        assert "/send/?phone=5491169966209" in current_url, "The page should be at /send/?phone=5491160081534"
+        text = await page.locator("text=Chat on WhatsApp with +54 9 11 69966209").nth(0).text_content()
         # Assert: Page shows heading 'Chat on WhatsApp with +54 9 11 6008-1534'
-        assert "Chat on WhatsApp with +54 9 11 6008-1534" in text, "The WhatsApp chat heading should mention the expected phone number"
+        assert "Chat on WhatsApp with +54 9 11 69966209" in text, "The WhatsApp chat heading should mention the expected phone number"
         elem = page.locator('xpath=/html/body/div[1]/div[1]/div/div/section/div/div/div/div[2]/div[4]/a[1]').nth(0)
         await elem.scroll_into_view_if_needed()
         # Assert: 'Open app' link/button is visible after scrolling into view

@@ -231,7 +231,7 @@ src/
 
 ### 5.9 Floating WhatsApp
 - Fixed bottom-right, pulse animation, tooltip on hover
-- Link: `wa.me/5491160081534?text=Hola%20AudioGem!%20Quiero%20realizar%20una%20consulta.`
+- Link: `wa.me/5491169966209?text=Hola%20AudioGem!%20Quiero%20realizar%20una%20consulta.`
 
 ### 5.10 Footer
 - 4 columnas: Marca + tagline + Social (IG, TikTok, WA), Navegación (4 links), Productos (7 categorías link a `/productos`), Contacto (dirección, 2 teléfonos, email, horario)
