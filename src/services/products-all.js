@@ -2199,11 +2199,11 @@ export const ALL_PRODUCTS = ([
         isFeatured: true
     },
     {
-        name: 'Medios de 6,5 pulgadas Pervoi CTC_1681',
+        name: 'Medios de 6,5 pulgadas Pervoi CTC_1681 (el par)',
         category: CATEGORY_NAMES.COMPONENTES,
         brand: BRAND_NAMES.PERVOI,
         image: medios_de_6_pulgadas_y_media_pervoi_ctc_1681,
-        description: 'Medios de 6,5 pulgadas Pervoi 105W RMS CTC_1681 (el par)',
+        description: 'Medios de 6,5 pulgadas Pervoi 105W RMS CTC_1681',
         badge: null,
         price: '$36.000',
         base_price: '$23.200',
