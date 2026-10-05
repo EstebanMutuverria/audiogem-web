@@ -1150,7 +1150,7 @@ export const ALL_PRODUCTS = ([
         brand: BRAND_NAMES.JAHRO,
         image: tweeter_jahro_yp307,
         description: 'Tweeter Jahro YP-307 Piezoeléctrico',
-        badge: BADGE_NAMES.SALE,
+        badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$8.500',
         base_price: '$3.000',
         state: true,
