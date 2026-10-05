@@ -1917,7 +1917,7 @@ export const ALL_PRODUCTS = ([
         brand: BRAND_NAMES.STETSOM,
         image: pote_stetsom_400x4,
         description: 'Potencia Stetsom 400x4 400w Rms 4 canales',
-        badge: BADGE_NAMES.OUT_OF_STOCK,
+        badge: null,
         price: '$95.000',
         base_price: '$70.000',
         state: true,
