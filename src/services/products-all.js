@@ -133,9 +133,42 @@ import super_tweeter_bomber_stb350 from '../assets/products_section_pictures/sup
 import subwoofer_blauline_sw_15400_15_pulgadas from '../assets/products_section_pictures/subwoofer-blauline-sw-15400-15-pulgadas.jpeg'
 import medio_de_6_audiopipe_apmb_616pm from '../assets/products_section_pictures/medio-de-6-audiopipe-apmb-616pm.jpeg'
 import kit_de_cables_blauline_2_ga from '../assets/products_section_pictures/kit-de-cables-blauline-2-ga.jpeg'
-
+import rackera_2_medios_pervoi_ctc1681_y_2_tweeter_piezo from '../assets/products_section_pictures/rackera-2-medios-pervoi-ctc1681-y-2-tweeter-piezo.jpeg'
+import rackera_2_medios_pervoi_ctc1681_2_drivers_jahro_n25 from '../assets/products_section_pictures/rackera-2-medios-pervoi-ctc1681-2-drivers-jahro-n25.jpeg'
 
 export const ALL_PRODUCTS = ([
+    {
+        name: 'Rackera 2 medios pervoi 6.5" de 105W RMS y 2 drivers Jahro N25',
+        category: CATEGORY_NAMES.RACKERAS,
+        brand: BRAND_NAMES.PERVOI,
+        image: rackera_2_medios_pervoi_ctc1681_2_drivers_jahro_n25,
+        description: 'Rackera 2 medios pervoi 6.5" de 105W RMS y 2 drivers Jahro N25 30W RMS',
+        badge: BADGE_NAMES.NEW,
+        price: '$103.000',
+        base_price: '$55.700',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
+    {
+        name: 'Rackera 2 medios pervoi 6.5" de 105W RMS y 2 tweeter Blauline 200W 8ohm',
+        category: CATEGORY_NAMES.RACKERAS,
+        brand: BRAND_NAMES.PERVOI,
+        image: rackera_2_medios_pervoi_ctc1681_y_2_tweeter_piezo,
+        description: 'Rackera 2 medios pervoi 6.5" de 105W RMS y 2 tweeter Blauline piezoeléctricos',
+        badge: BADGE_NAMES.NEW,
+        price: '$80.000',
+        base_price: '$48.700',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
     {
         name: 'Kit de cables blauline 2 GA',
         category: CATEGORY_NAMES.ACCESORIOS,
