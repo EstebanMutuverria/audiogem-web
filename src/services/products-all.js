@@ -16,7 +16,6 @@ import estereo_philco from '../assets/products_section_pictures/estereo-philco.j
 import rackera_2medios_2super from '../assets/products_section_pictures/rackera-2medios-2supertweeter.jpeg';
 import rackera_4drivers5041 from '../assets/products_section_pictures/rackera-4drivers5041.jpeg';
 import rackera_curva_completa_estereo from '../assets/products_section_pictures/rackera-curva-completa-estereo.jpeg';
-import rackera_2driver_2bomber_2tweeter from '../assets/products_section_pictures/rackera-2driver-2bomber-2tweeter.jpeg';
 import kit_instalacion_infinity_tech from '../assets/products_section_pictures/kit-de-cables-infinity-4g.jpeg';
 import rackera_2y2_chica from '../assets/products_section_pictures/rackera-2y2-chica.jpeg';
 import rackera_2driver_26x9pioneer from '../assets/products_section_pictures/rackera-2driver-26x9pioneer.jpeg';
@@ -62,7 +61,6 @@ import rackera_2driver_2tweeter_arwen from '../assets/products_section_pictures/
 import tweeter_bala_ds18_pro_twx2 from '../assets/products_section_pictures/tweeter-bala-ds18-pro-twx2.jpeg';
 import medios_de_8_pulgadas_ap from '../assets/products_section_pictures/medios-de-8-pulgadas-ap.jpeg';
 import medios_de_8_pulgadas_wild_sound from '../assets/products_section_pictures/medios-de-8-pulgadas-wild-sound.jpeg';
-import estereo_car_mp3_player from '../assets/products_section_pictures/estereo-car-mp3-player.jpeg';
 import rackera_2_medios_de_6_jahro_2_driver_jahro_5042 from '../assets/products_section_pictures/rackera-2-medios-de-6-jahro-2-driver-jahro-5042.jpeg';
 import driver_jahro_atq_250 from '../assets/products_section_pictures/driver-jahro-atq-250.jpeg';
 import rackera_2_medios_de_8_2_driver_5042 from '../assets/products_section_pictures/rackera-2-medios-de-8-2-driver-5042.jpeg';
@@ -70,7 +68,6 @@ import pantalla_pioneer_DMH_A5650BT from '../assets/products_section_pictures/pa
 import tweeter_jahro_yp307 from '../assets/products_section_pictures/tweeter-jahro-yp307.jpeg';
 import pote_nakamichi_100x4 from '../assets/products_section_pictures/pote-nakamichi-100.4.jpeg';
 import pote_mtx_1200x1 from '../assets/products_section_pictures/pote-mtx-1200x1.jpeg';
-import parlante_pioneer_6x9_500_watts from '../assets/products_section_pictures/parlante-6x9-pioneer-500-watts.jpeg';
 import parlantes_pioneer_6_coma_5_pulgadas_350_watts from '../assets/products_section_pictures/parlantes-pioneer-6-pulgadas-350-watts.jpeg';
 import parlantes_pioneer_6x9_450_watts from '../assets/products_section_pictures/parlantes-6x9-pioneer-450-watts.jpeg';
 import kit_de_cables_4_gau from '../assets/products_section_pictures/kit-de-cables-4-gau.jpeg';
@@ -91,7 +88,6 @@ import rackera_2_parlantes_6x9_bomber_y_2_super_tweeters from '../assets/product
 import rackera_4_medios_de_6_pervoi_bala from '../assets/products_section_pictures/rackera-4-medios-de-6-pervoi-bala.jpeg';
 import super_tweeters_jahro from '../assets/products_section_pictures/super-tweeters-jahro.jpeg';
 import medio_de_8_blauline from '../assets/products_section_pictures/medio-de-8-blauline.jpeg'
-import adaptador_de_imp_pipemans from '../assets/products_section_pictures/adaptador-imp-pipemans.jpeg'
 import kit_de_cables_pervoi_6_ga_ctc63a from '../assets/products_section_pictures/kit-de-cables-pervoi-6-ga-ctc63a.jpeg'
 import difusores_de_plastico_largos from '../assets/products_section_pictures/difusores-de-plastico-largos.jpeg'
 import estereo_jahro from '../assets/products_section_pictures/estereo-jahro.jpeg'
