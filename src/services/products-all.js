@@ -1731,7 +1731,7 @@ export const ALL_PRODUCTS = ([
         image: rackera_2y2_chica,
         description: 'Rackera 2 drivers Jahro N25 de 150W MAX y 2 tweeters Jahro piezo electrico 250W MAX',
         badge: BADGE_NAMES.NEW,
-        price: '$77.000',
+        price: '$79.000',
         base_price: '$47.000',
         state: true,
         weight: 3,
