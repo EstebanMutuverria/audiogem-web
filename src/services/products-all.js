@@ -133,7 +133,7 @@ import super_tweeter_bomber_stb350 from '../assets/products_section_pictures/sup
 import subwoofer_blauline_sw_15400_15_pulgadas from '../assets/products_section_pictures/subwoofer-blauline-sw-15400-15-pulgadas.jpeg'
 import medio_de_6_audiopipe_apmb_616pm from '../assets/products_section_pictures/medio-de-6-audiopipe-apmb-616pm.jpeg'
 import kit_de_cables_blauline_2_ga from '../assets/products_section_pictures/kit-de-cables-blauline-2-ga.jpeg'
-import rackera_2_medios_pervoi_ctc1681_y_2_tweeter_piezo from '../assets/products_section_pictures/rackera-2-medios-pervoi-ctc1681-y-2-tweeter-piezo.jpeg'
+import rackera_2_medios_pervoi_ctc1681_y_2_tweeter_piezo from '../assets/products_section_pictures/rackera-2-medios-pervoi-ctc1681-y-2tweeter-piezo.jpeg'
 import rackera_2_medios_pervoi_ctc1681_2_drivers_jahro_n25 from '../assets/products_section_pictures/rackera-2-medios-pervoi-ctc1681-2-drivers-jahro-n25.jpeg'
 
 export const ALL_PRODUCTS = ([
