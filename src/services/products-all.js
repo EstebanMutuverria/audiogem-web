@@ -141,7 +141,7 @@ export const ALL_PRODUCTS = ([
     {
         name: 'Rackera 2 6x9 Pervoi y 2 tweeters Blauline 150W MAX',
         category: CATEGORY_NAMES.RACKERAS,
-        brand: BRAND_NAMES.PERVOI,
+        brand: null,
         image: rackera_2_6x9_pervoi_2_tweeter_piezo,
         description: 'Rackera 2 6x9 Pervoi 150W RMS y 2 tweeters piezo Blauline 150W MAX',
         badge: BADGE_NAMES.NEW,
@@ -157,7 +157,7 @@ export const ALL_PRODUCTS = ([
     {
         name: 'Rackera 2 medios pervoi 6.5" de 105W RMS y 2 drivers Jahro N25',
         category: CATEGORY_NAMES.RACKERAS,
-        brand: BRAND_NAMES.PERVOI,
+        brand: null,
         image: rackera_2_medios_pervoi_ctc1681_2_drivers_jahro_n25,
         description: 'Rackera 2 medios pervoi 6.5" de 105W RMS y 2 drivers Jahro N25 30W RMS',
         badge: BADGE_NAMES.NEW,
@@ -173,7 +173,7 @@ export const ALL_PRODUCTS = ([
     {
         name: 'Rackera 2 medios pervoi 6.5" de 105W RMS y 2 tweeter Blauline 200W 8ohm',
         category: CATEGORY_NAMES.RACKERAS,
-        brand: BRAND_NAMES.PERVOI,
+        brand: null,
         image: rackera_2_medios_pervoi_ctc1681_y_2_tweeter_piezo,
         description: 'Rackera 2 medios pervoi 6.5" de 105W RMS y 2 tweeter Blauline piezoeléctricos',
         badge: BADGE_NAMES.NEW,
