@@ -149,9 +149,9 @@ export const ALL_PRODUCTS = ([
         base_price: '$65.000',
         state: true,
         weight: null,
-        height: null,
-        width: null,
-        depth: null,
+        height: 20,
+        width: 80,
+        depth: 12,
         isFeatured: false
     },
     {
@@ -165,9 +165,9 @@ export const ALL_PRODUCTS = ([
         base_price: '$55.700',
         state: true,
         weight: null,
-        height: null,
-        width: null,
-        depth: null,
+        height: 18,
+        width: 71,
+        depth: 22,
         isFeatured: false
     },
     {
@@ -181,9 +181,9 @@ export const ALL_PRODUCTS = ([
         base_price: '$48.700',
         state: true,
         weight: null,
-        height: null,
-        width: null,
-        depth: null,
+        height: 20,
+        width: 62,
+        depth: 23,
         isFeatured: false
     },
     {
