@@ -135,8 +135,25 @@ import medio_de_6_audiopipe_apmb_616pm from '../assets/products_section_pictures
 import kit_de_cables_blauline_2_ga from '../assets/products_section_pictures/kit-de-cables-blauline-2-ga.jpeg'
 import rackera_2_medios_pervoi_ctc1681_y_2_tweeter_piezo from '../assets/products_section_pictures/rackera-2-medios-pervoi-ctc1681-y-2-tweeter-piezo.jpeg'
 import rackera_2_medios_pervoi_ctc1681_2_drivers_jahro_n25 from '../assets/products_section_pictures/rackera-2-medios-pervoi-ctc1681-2-drivers-jahro-n25.jpeg'
+import rackera_2_6x9_pervoi_2_tweeter_piezo from '../assets/products_section_pictures/rackera-2-6x9-pervoi-2-tweeter-piezo.jpeg'
 
 export const ALL_PRODUCTS = ([
+    {
+        name: 'Rackera 2 6x9 Pervoi y 2 tweeters Blauline 150W MAX',
+        category: CATEGORY_NAMES.RACKERAS,
+        brand: BRAND_NAMES.PERVOI,
+        image: rackera_2_6x9_pervoi_2_tweeter_piezo,
+        description: 'Rackera 2 6x9 Pervoi 150W RMS y 2 tweeters piezo Blauline 150W MAX',
+        badge: BADGE_NAMES.NEW,
+        price: '$95.000',
+        base_price: '$65.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
     {
         name: 'Rackera 2 medios pervoi 6.5" de 105W RMS y 2 drivers Jahro N25',
         category: CATEGORY_NAMES.RACKERAS,
