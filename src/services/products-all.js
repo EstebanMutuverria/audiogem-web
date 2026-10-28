@@ -146,8 +146,94 @@ import subwoofer_de_10_pervoi_activo_ctc1018 from '../assets/products_section_pi
 import super_tweeter_bomber_detoner_piezo from '../assets/products_section_pictures/super-tweeter-bomber-detoner-piezo.jpeg';
 import tweeter_blauline_bt150 from '../assets/products_section_pictures/tweeter-blauline-bt150.jpeg';
 import pote_stetsom_400x1 from '../assets/products_section_pictures/pote-stetsom-400x1.jpeg';
+import rackera_2_driver_2_supertweeter_piezo_bomber from '../assets/products_section_pictures/rackera-2-driver-2-supertweeter-piezo-bomber.jpeg';
+import rackera_2_medios_de_8_jahro_2_tweeter_piezo from '../assets/products_section_pictures/rackera-2-medios-de-8-jahro-2-tweeter-piezo.jpeg';
+import rackera_2_medios_pervoi_ctc6566a_2_drivers from '../assets/products_section_pictures/rackera-2-medios-pervoi-ctc6566a-2-drivers.jpeg';
+import rackera_2_medios_pervoi_ctc6566a_2_tweeter_piezo from '../assets/products_section_pictures/rackera-2-medios-pervoi-ctc6566a-2-tweeter-piezo.jpeg';
+import rackera_6_drivers from '../assets/products_section_pictures/rackera-6-drivers.jpeg';
+
 
 export const ALL_PRODUCTS = ([
+    {
+        name: 'Rackera 6 drivers Jahro N25',
+        category: CATEGORY_NAMES.RACKERAS,
+        brand: BRAND_NAMES.JAHRO,
+        image: rackera_6_drivers,
+        description: '6 drivers Jahro N25 30W RMS',
+        badge: null,
+        price: '$139.000',
+        base_price: '$84.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
+    {
+        name: 'Rackera 2 medios de 6.5" Pervoi CTC6566A y 2 tweeter Blauline',
+        category: CATEGORY_NAMES.RACKERAS,
+        brand: BRAND_NAMES.PERVOI,
+        image: rackera_2_medios_pervoi_ctc6566a_2_tweeter_piezo,
+        description: '2 medios de 6.5" 80W RMS Pervoi CTC6566A y 2 tweeter Blauline 150W MAX',
+        badge: null,
+        price: '$83.000',
+        base_price: '$56.400',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
+    {
+        name: 'Rackera 2 medios de 6.5" Pervoi CTC6566A 2 drivers Jahro N25',
+        category: CATEGORY_NAMES.RACKERAS,
+        brand: BRAND_NAMES.PERVOI,
+        image: rackera_2_medios_pervoi_ctc6566a_2_drivers,
+        description: '2 medios de 6.5" 80W RMS Pervoi CTC6566A 2 drivers Jahro N25 30W RMS',
+        badge: null,
+        price: '$107.000',
+        base_price: '$70.400',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
+    {
+        name: 'Rackera 2 medios de 8" Jahro 2 tweeter Blauline',
+        category: CATEGORY_NAMES.RACKERAS,
+        brand: BRAND_NAMES.JAHRO,
+        image: rackera_2_medios_de_8_jahro_2_tweeter_piezo,
+        description: '2 medios de 8" Jahro 2 tweeter Blauline piezo 150W MAX',
+        badge: null,
+        price: '$124.000',
+        base_price: '$83.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
+    {
+        name: 'Rackera 2 drivers Jahro N25 y 2 super tweeter Bomber Detoner',
+        category: CATEGORY_NAMES.RACKERAS,
+        brand: BRAND_NAMES.BOMBER,
+        image: rackera_2_driver_2_supertweeter_piezo_bomber,
+        description: '2 drivers Jahro N25 30W RMS y 2 super tweeter Bomber Detoner 150W Piezo',
+        badge: BADGE_NAMES.NEW,
+        price: '$97.000',
+        base_price: '$62.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
     {
         name: 'Potencia Stetsom 400.1',
         category: CATEGORY_NAMES.POTENCIAS,
