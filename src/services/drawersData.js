@@ -16,8 +16,8 @@ const DRAWERS = ([
     },
     {
         name: "cajon 6 drivers",
-        price: "50.000",
-        base_price: "40.000",
+        price: "32.000",
+        base_price: "22.000",
     },
     {
         name: "cajon 2 drivers, 2 medios de 8 y 2 tweeters",
