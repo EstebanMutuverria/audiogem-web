@@ -495,7 +495,7 @@ export const ALL_PRODUCTS = ([
         category: CATEGORY_NAMES.SUBWOOFERS,
         brand: BRAND_NAMES.BLAULINE,
         image: subwoofer_blauline_sw_15400_15_pulgadas,
-        description: 'Subwoofer Blauline 15 pulgadas 400 watts',
+        description: 'Subwoofer Blauline 15 pulgadas 400 Watts MAX - 250W RMS',
         badge: null,
         price: '$102.000',
         base_price: '$73.000',
