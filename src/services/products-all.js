@@ -151,9 +151,26 @@ import rackera_2_medios_de_8_jahro_2_tweeter_piezo from '../assets/products_sect
 import rackera_2_medios_pervoi_ctc6566a_2_drivers from '../assets/products_section_pictures/rackera-2-medios-pervoi-ctc6566a-2-drivers.jpeg';
 import rackera_2_medios_pervoi_ctc6566a_2_tweeter_piezo from '../assets/products_section_pictures/rackera-2-medios-pervoi-ctc6566a-2-tweeter-piezo.jpeg';
 import rackera_6_drivers from '../assets/products_section_pictures/rackera-6-drivers.jpeg';
+import driver_blauline_bd_50 from '../assets/products_section_pictures/driver-blauline-bd-50.jpeg';
 
 
 export const ALL_PRODUCTS = ([
+    {
+        name: 'Driver Blauline BD50 50W MAX',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.BLAULINE,
+        image: driver_blauline_bd_50,
+        description: 'Driver Blauline BD 50W MAX piezo',
+        badge: null,
+        price: '$3.500',
+        base_price: '$2.500',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
     {
         name: 'Rackera 6 drivers Jahro N25',
         category: CATEGORY_NAMES.RACKERAS,
