@@ -34,7 +34,7 @@ const BargainBanner = ({ product }) => {
             >
                 <div className="hero__banner-media">
                     {product.image ? (
-                        <img src={product.image} alt="" loading="eager" />
+                        <img src={product.image} alt="" loading="eager" width={56} height={56} />
                     ) : (
                         <LuAudioLines />
                     )}

@@ -73,7 +73,7 @@ const BargainOfferModal = ({ product, isOpen, onClose }) => {
                         {/* Media */}
                         <div className="bargain-offer__media">
                             {product.image ? (
-                                <img src={product.image} alt={product.name} loading="lazy" />
+                                <img src={product.image} alt={product.name} loading="lazy" width={640} height={360} />
                             ) : (
                                 <div className="bargain-offer__media-placeholder">
                                     <LuAudioLines />

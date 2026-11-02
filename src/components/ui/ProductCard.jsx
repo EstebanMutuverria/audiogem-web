@@ -58,7 +58,7 @@ const ProductCard = ({ product }) => {
                 isNotCajones &&
                 <div className="product-card__image">
                     {image ? (
-                        <img src={image} alt={name} loading="lazy" />
+                        <img src={image} alt={name} loading="lazy" width={800} height={600} />
                     ) : (
                         <span className="product-card__image-placeholder" aria-hidden="true">
                             {icon}

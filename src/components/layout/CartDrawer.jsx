@@ -174,7 +174,7 @@ const CartDrawer = () => {
                                     <div key={id} className="cart-item">
                                         <div className="cart-item__image">
                                             {image ? (
-                                                <img src={image} alt={name} />
+                                                <img src={image} alt={name} loading="lazy" width={70} height={70} />
                                             ) : (
                                                 <span className="cart-item__placeholder">🎵</span>
                                             )}

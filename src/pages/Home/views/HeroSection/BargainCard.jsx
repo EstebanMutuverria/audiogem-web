@@ -45,7 +45,7 @@ const BargainCard = ({ product }) => {
                 >
                     <div className="hero__bargain-image">
                         {product.image ? (
-                            <img src={product.image} alt={product.name} loading="eager" />
+                            <img src={product.image} alt={product.name} loading="eager" width={370} height={190} />
                         ) : (
                             <div className="hero__bargain-image-placeholder">
                                 <LuAudioLines />
