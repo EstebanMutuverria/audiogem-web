@@ -6,19 +6,23 @@
 import ProductCard from '../../../../components/ui/ProductCard';
 import './ProductCatalog.css';
 
+/**
+ * @param {Object} props
+ * @param {Array<Object>} props.products - Productos publicados de la página actual
+ */
 const ProductCatalog = ({ products }) => {
     return (
         <div className="catalog">
             <div className="catalog__grid">
                 {products.length > 0 ? (
-                    products.filter((product) => product.state === true).map((product) => (
+                    products.map((product) => (
                         <ProductCard key={product.id} product={product} />
                     ))
                 ) : (
                     <div className="catalog__empty">
                         <span className="catalog__empty-icon">📂</span>
                         <h3 className="catalog__empty-title">No hay productos</h3>
-                        <p className="catalog__empty-text">No encontramos productos en esta categoría.</p>
+                        <p className="catalog__empty-text">No encontramos productos con esos filtros.</p>
                     </div>
                 )}
             </div>

@@ -186,6 +186,11 @@
     }
 }
 
+/* ── Catalog anchor (scroll target after page change) ────────── */
+.products-page__catalog {
+    scroll-margin-top: calc(var(--navbar-height) + var(--spacing-4));
+}
+
 /* ── Accessibility ───────────────────────────────────────────── */
 .visually-hidden {
     position: absolute;

@@ -3,61 +3,66 @@
  * Página de catálogo informativo con filtrado por categoría y búsqueda en tiempo real.
  */
 
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useRef } from 'react';
+import { FiSearch, FiX } from 'react-icons/fi';
 import { ALL_PRODUCTS } from '../../services/products-all.js';
 import { CATEGORIES } from '../../services/products-categories.js';
 import CATEGORY_NAMES from '../../constants/category_names.js';
 import { useAdmin } from '../../context/AdminContext';
+import Pagination from '../../components/ui/Pagination';
 import CategoryFilter from './views/CategoryFilter/CategoryFilter';
 import ProductCatalog from './views/ProductCatalog/ProductCatalog';
 import './ProductsPage.css';
 
 const ALL_FILTER = 'all';
 const CAJONES_FILTER = CATEGORY_NAMES.CAJONES;
+const PRODUCTS_PER_PAGE = 12;
 
-const SearchIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <circle cx="11" cy="11" r="8" />
-        <line x1="21" y1="21" x2="16.65" y2="16.65" />
-    </svg>
-);
+// Cajones solo son visibles para administradores
+const isCategoryAllowed = (categoryId, isAdmin) => categoryId !== CAJONES_FILTER || isAdmin;
 
-const ClearIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <line x1="18" y1="6" x2="6" y2="18" />
-        <line x1="6" y1="6" x2="18" y2="18" />
-    </svg>
-);
+// Mapa de etiquetas para la búsqueda por categoría (evita un find por producto)
+const CATEGORY_LABELS = new Map(CATEGORIES.map(category => [category.id, category.label]));
 
 const ProductsPage = () => {
     const [activeCategory, setActiveCategory] = useState(ALL_FILTER);
     const [searchQuery, setSearchQuery] = useState('');
+    const [currentPage, setCurrentPage] = useState(1);
+    const catalogRef = useRef(null);
     const { isAdmin } = useAdmin();
 
     // Filtrar categorías visibles: Cajones solo para admin
-    const visibleCategories = CATEGORIES.filter(cat => 
-        cat.id !== CAJONES_FILTER || isAdmin
+    const visibleCategories = useMemo(
+        () => CATEGORIES.filter(cat => isCategoryAllowed(cat.id, isAdmin)),
+        [isAdmin]
     );
 
     // Productos visibles según permisos de admin (cajones solo para admin)
     const adminVisibleProducts = useMemo(
-        () => ALL_PRODUCTS.filter(p => p.category !== CAJONES_FILTER || isAdmin),
+        () => ALL_PRODUCTS.filter(p => isCategoryAllowed(p.category, isAdmin)),
         [isAdmin]
     );
 
-    // Productos base filtrados por categoría activa
+    // Categoría efectiva: si la activa deja de estar permitida, se muestra "Todos"
+    const effectiveCategory = isCategoryAllowed(activeCategory, isAdmin)
+        ? activeCategory
+        : ALL_FILTER;
+
+    // Productos base filtrados por categoría activa (solo los publicados)
     const baseFilteredProducts = useMemo(() => {
-        return activeCategory === ALL_FILTER
+        const byCategory = effectiveCategory === ALL_FILTER
             ? adminVisibleProducts
-            : adminVisibleProducts.filter(p => p.category === activeCategory);
-    }, [activeCategory, adminVisibleProducts]);
+            : adminVisibleProducts.filter(p => p.category === effectiveCategory);
+
+        return byCategory.filter(p => p.state === true);
+    }, [effectiveCategory, adminVisibleProducts]);
 
     // Búsqueda en tiempo real por nombre, descripción y categoría
     const filteredProducts = useMemo(() => {
         if (!searchQuery.trim()) return baseFilteredProducts;
 
         const query = searchQuery.toLowerCase().trim();
-        
+
         return baseFilteredProducts.filter(product => {
             // Buscar en nombre (siempre existe)
             const nameMatch = product.name.toLowerCase().includes(query);
@@ -65,28 +70,42 @@ const ProductsPage = () => {
             const description = product.description ?? '';
             const descMatch = description.toLowerCase().includes(query);
             // Buscar en categoría (usar el label de la categoría)
-            const categoryInfo = CATEGORIES.find(c => c.id === product.category);
-            const categoryLabel = categoryInfo?.label ?? '';
-            const categoryMatch = categoryLabel.toLowerCase().includes(query);
-            
+            const categoryLabel = (CATEGORY_LABELS.get(product.category) ?? '').toLowerCase();
+            const categoryMatch = categoryLabel.includes(query);
+
             return nameMatch || descMatch || categoryMatch;
         });
     }, [baseFilteredProducts, searchQuery]);
 
+    const totalPages = Math.max(1, Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE));
+    // Clamp defensivo por si el listado se achica (filtro, búsqueda, permisos)
+    const activePage = Math.min(currentPage, totalPages);
+
+    const paginatedProducts = useMemo(() => {
+        const start = (activePage - 1) * PRODUCTS_PER_PAGE;
+        return filteredProducts.slice(start, start + PRODUCTS_PER_PAGE);
+    }, [activePage, filteredProducts]);
+
+    const handlePageChange = (page) => {
+        if (page < 1 || page > totalPages || page === activePage) return;
+        setCurrentPage(page);
+        catalogRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    const handleCategoryChange = (category) => {
+        setActiveCategory(category);
+        setCurrentPage(1);
+    };
+
     const handleSearchChange = (e) => {
         setSearchQuery(e.target.value);
+        setCurrentPage(1);
     };
 
     const handleClearSearch = () => {
         setSearchQuery('');
+        setCurrentPage(1);
     };
-
-    // Si se selecciona una categoría que no es visible (ej. cajones sin ser admin), resetear a 'all'
-    useEffect(() => {
-        if (activeCategory !== ALL_FILTER && !visibleCategories.some(c => c.id === activeCategory)) {
-            setActiveCategory(ALL_FILTER);
-        }
-    }, [activeCategory, visibleCategories, isAdmin]);
 
     return (
         <div className="container section">
@@ -103,7 +122,7 @@ const ProductsPage = () => {
                 <label htmlFor="product-search" className="visually-hidden">Buscar productos</label>
                 <div className="search-wrapper">
                     <span className="search-icon" aria-hidden="true">
-                        <SearchIcon />
+                        <FiSearch />
                     </span>
                     <input
                         type="search"
@@ -121,7 +140,7 @@ const ProductsPage = () => {
                             onClick={handleClearSearch}
                             aria-label="Limpiar búsqueda"
                         >
-                            <ClearIcon />
+                            <FiX />
                         </button>
                     )}
                 </div>
@@ -133,13 +152,24 @@ const ProductsPage = () => {
             </div>
 
             <CategoryFilter
-                activeCategory={activeCategory}
-                onCategoryChange={setActiveCategory}
+                activeCategory={effectiveCategory}
+                onCategoryChange={handleCategoryChange}
                 categories={visibleCategories}
                 allFilterValue={ALL_FILTER}
             />
 
-            <ProductCatalog products={filteredProducts} />
+            <div ref={catalogRef} className="products-page__catalog">
+                <ProductCatalog products={paginatedProducts} />
+            </div>
+
+            {totalPages > 1 && (
+                <Pagination
+                    currentPage={activePage}
+                    totalPages={totalPages}
+                    onPageChange={handlePageChange}
+                    label="Paginación del catálogo"
+                />
+            )}
         </div>
     );
 };

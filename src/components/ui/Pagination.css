@@ -1,0 +1,116 @@
+/* Pagination.css */
+
+.pagination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-3);
+    margin-top: var(--spacing-10);
+}
+
+.pagination__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-2);
+    flex-wrap: wrap;
+}
+
+.pagination__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-2);
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pagination__page,
+.pagination__arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 var(--spacing-2);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-muted);
+    background-color: var(--color-bg-surface);
+    border: 1.5px solid var(--color-bg-border);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition:
+        color var(--transition-fast),
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.pagination__page:hover,
+.pagination__arrow:hover:not(:disabled) {
+    color: var(--color-text);
+    background-color: var(--color-bg-card);
+    border-color: rgba(72, 149, 239, 0.35);
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-2px);
+}
+
+.pagination__page--active,
+.pagination__page--active:hover {
+    color: var(--color-white);
+    background: var(--gradient-primary);
+    border-color: transparent;
+    box-shadow: 0 0 12px rgba(72, 149, 239, 0.35);
+}
+
+.pagination__arrow:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.pagination__page:focus-visible,
+.pagination__arrow:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.pagination__ellipsis {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    height: 40px;
+    color: var(--color-text-faint);
+    user-select: none;
+}
+
+.pagination__status {
+    margin: 0;
+    font-size: var(--text-xs);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-faint);
+    letter-spacing: 0.02em;
+}
+
+@media (max-width: 480px) {
+    .pagination__controls,
+    .pagination__list {
+        gap: var(--spacing-1);
+    }
+
+    .pagination__page,
+    .pagination__arrow {
+        min-width: 36px;
+        height: 36px;
+    }
+
+    .pagination__ellipsis {
+        min-width: 16px;
+        height: 36px;
+    }
+}
