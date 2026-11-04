@@ -152,9 +152,111 @@ import rackera_2_medios_pervoi_ctc6566a_2_drivers from '../assets/products_secti
 import rackera_2_medios_pervoi_ctc6566a_2_tweeter_piezo from '../assets/products_section_pictures/rackera-2-medios-pervoi-ctc6566a-2-tweeter-piezo.jpeg';
 import rackera_6_drivers from '../assets/products_section_pictures/rackera-6-drivers.jpeg';
 import driver_blauline_bd_50 from '../assets/products_section_pictures/driver-blauline-bd-50.jpeg';
+import parlantes_4_pulgadas_fony from '../assets/products_section_pictures/parlantes-4-pulgadas-fony.jpeg';
+import parlantes_5_pulgadas_atbha from '../assets/products_section_pictures/parlantes-5-pulgadas-atbha.jpeg';
+import subwoofer_audiopipe_12_pulgadas from '../assets/products_section_pictures/subwoofer-audiopipe-12-pulgadas.jpeg';
+import subwoofer_bomber_carbon from '../assets/products_section_pictures/subwoofer-bomber-carbon.jpeg';
+import pote_maverick_800x1 from '../assets/products_section_pictures/pote-maverick-800x1.jpeg';
+
 
 
 export const ALL_PRODUCTS = ([
+    {
+        name: 'Potencia Maverick 800.1',
+        category: CATEGORY_NAMES.POTENCIAS,
+        brand: BADGE_NAMES.NEW,
+        image: pote_maverick_800x1,
+        description: 'Potencia Maverick 800.1 MAV-D1800 MINI',
+        badge: null,
+        price: '$178.000',
+        base_price: '$125.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
+    {
+        name: 'Subwoofer Bomber Carbon de 12" 250W',
+        category: CATEGORY_NAMES.SUBWOOFERS,
+        brand: null,
+        image: subwoofer_bomber_carbon,
+        description: 'Subwoofer Bomber Carbon de 12" 250W',
+        badge: null,
+        price: '$105.000',
+        base_price: '$82.300',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: true
+    },
+    {
+        name: 'Subwoofer AudioPipe de 12" 600W RMS',
+        category: CATEGORY_NAMES.SUBWOOFERS,
+        brand: null,
+        image: subwoofer_audiopipe_12_pulgadas,
+        description: 'Subwoofer AudioPipe de 12" 600W RMS TS-PP3-12-D4',
+        badge: null,
+        price: '$196.000',
+        base_price: '$140.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: true
+    },
+    {
+        name: 'Subwoofer AudioPipe de 12" 300W RMS',
+        category: CATEGORY_NAMES.SUBWOOFERS,
+        brand: null,
+        image: subwoofer_audiopipe_12_pulgadas,
+        description: 'Subwoofer AudioPipe de 12" 300W RMS TS-PP2-12-D4',
+        badge: null,
+        price: '$140.000',
+        base_price: '$100.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
+    {
+        name: 'Parlantes de 5" ATBHA CTC-505',
+        category: CATEGORY_NAMES.PARLANTES,
+        brand: null,
+        image: parlantes_5_pulgadas_atbha,
+        description: 'Parlantes para puerta de 5 pulgadas ATBHA',
+        badge: null,
+        price: '$20.000',
+        base_price: '$12.800',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
+    {
+        name: 'Parlantes de 4" Fony CTC-407 (el par)',
+        category: CATEGORY_NAMES.PARLANTES,
+        brand: null,
+        image: parlantes_4_pulgadas_fony,
+        description: 'Parlantes para puerta de 4 pulgadas Fony CTC-407',
+        badge: null,
+        price: '$16.000',
+        base_price: '$8.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
     {
         name: 'Driver Blauline BD50 50W MAX',
         category: CATEGORY_NAMES.COMPONENTES,
