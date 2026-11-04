@@ -164,10 +164,10 @@ export const ALL_PRODUCTS = ([
     {
         name: 'Potencia Maverick 800.1',
         category: CATEGORY_NAMES.POTENCIAS,
-        brand: BADGE_NAMES.NEW,
+        brand: BADGE_NAMES.MAVERICK,
         image: pote_maverick_800x1,
         description: 'Potencia Maverick 800.1 MAV-D1800 MINI',
-        badge: null,
+        badge: BADGE_NAMES.NEW,
         price: '$178.000',
         base_price: '$125.000',
         state: true,
