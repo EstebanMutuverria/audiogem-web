@@ -164,7 +164,7 @@ export const ALL_PRODUCTS = ([
     {
         name: 'Potencia Maverick 800.1',
         category: CATEGORY_NAMES.POTENCIAS,
-        brand: BADGE_NAMES.MAVERICK,
+        brand: BRAND_NAMES.MAVERICK,
         image: pote_maverick_800x1,
         description: 'Potencia Maverick 800.1 MAV-D1800 MINI',
         badge: BADGE_NAMES.NEW,
