@@ -180,7 +180,7 @@ export const ALL_PRODUCTS = ([
     {
         name: 'Subwoofer Bomber Carbon de 12" 250W',
         category: CATEGORY_NAMES.SUBWOOFERS,
-        brand: null,
+        brand: BRAND_NAMES.BOMBER,
         image: subwoofer_bomber_carbon,
         description: 'Subwoofer Bomber Carbon de 12" 250W',
         badge: null,
@@ -196,7 +196,7 @@ export const ALL_PRODUCTS = ([
     {
         name: 'Subwoofer AudioPipe de 12" 600W RMS',
         category: CATEGORY_NAMES.SUBWOOFERS,
-        brand: null,
+        brand: BRAND_NAMES.AUDIOPIPE,
         image: subwoofer_audiopipe_12_pulgadas,
         description: 'Subwoofer AudioPipe de 12" 600W RMS TS-PP3-12-D4',
         badge: null,
@@ -212,7 +212,7 @@ export const ALL_PRODUCTS = ([
     {
         name: 'Subwoofer AudioPipe de 12" 300W RMS',
         category: CATEGORY_NAMES.SUBWOOFERS,
-        brand: null,
+        brand: BRAND_NAMES.AUDIOPIPE,
         image: subwoofer_audiopipe_12_pulgadas,
         description: 'Subwoofer AudioPipe de 12" 300W RMS TS-PP2-12-D4',
         badge: null,
