@@ -21,13 +21,13 @@ const DRAWERS = ([
     },
     {
         name: "cajon 2 drivers, 2 medios de 8 y 2 tweeters",
-        price: "38.000",
-        base_price: "28.000",
+        price: "40.000",
+        base_price: "30.000",
     },
     {
-        name: "cajon curva 2 medios de 8, y 2 tweeters chicos",
-        price: "45.000",
-        base_price: "35.000",
+        name: "cajon 2 medios de 8, y 2 tweeters chicos",
+        price: "35.000",
+        base_price: "25.000",
     },
     {
         name: "2 6x9 y 2 tweeters",
@@ -51,13 +51,13 @@ const DRAWERS = ([
     },
     {
         name: "cajon 2 medios de 8 y 2 drivers",
-        price: "33.000",
-        base_price: "23.000",
+        price: "32.000",
+        base_price: "22.000",
     },
     {
         name: "cajon de sub de 10 slot mdf simple",
-        price: "35.000",
-        base_price: "25.000",
+        price: "37.000",
+        base_price: "22.000",
     },
     {
         name: "cajon de sub de 12 slot mdf simple",
@@ -66,22 +66,22 @@ const DRAWERS = ([
     },
     {
         name: "cajon de sub de 12 slot chato simple",
-        price: "55.000",
-        base_price: "45.000",
+        price: "43.000",
+        base_price: "28.000",
     },
     {
         name: "cajon de 12 chato GNC",
-        price: "50.000",
-        base_price: "40.000",
+        price: "40.000",
+        base_price: "23.000",
     },
     {
         name: "cajon de 12 sellado",
-        price: "55.000",
-        base_price: "45.000",
+        price: "42.000",
+        base_price: "27.000",
     },
     {
         name: "cajon de 15 slot simple",
-        price: "42.000",
+        price: "47.000",
         base_price: "32.000",
     },
     {
@@ -96,8 +96,8 @@ const DRAWERS = ([
     },
     {
         name: "cajon de 15 chato GNC slot",
-        price: "60.000",
-        base_price: "50.000",
+        price: "45.000",
+        base_price: "30.000",
     },
     {
         name: "cajon doble de 10 slot",
@@ -106,13 +106,13 @@ const DRAWERS = ([
     },
     {
         name: "cajon doble de 12 slot",
-        price: "65.000",
-        base_price: "55.000",
+        price: "64.000",
+        base_price: "49.000",
     },
     {
         name: "cajon doble de 15 slot",
-        price: "70.000",
-        base_price: "60.000",
+        price: "64.000",
+        base_price: "49.000",
     },
     {
         name: "cajon doble de 12 slot chato",
