@@ -4,6 +4,8 @@
  * Usada en FeaturedProducts (home) y ProductCatalog (página productos).
  */
 
+import { useState } from 'react';
+import { FiEye, FiEyeOff } from 'react-icons/fi';
 import './ProductCard.css';
 import StarBorder from '../animations/StarBorder';
 import { useAdmin } from '../../context/AdminContext';
@@ -22,13 +24,16 @@ const CATEGORY_ICONS = {
     [CATEGORY_NAMES.CAJONES]: '📦',
 };
 
+const FALLBACK_CATEGORY_ICON = CATEGORY_ICONS[CATEGORY_NAMES.ESTEREOS];
+
 /**
  * @param {Object} props
  * @param {Object} props.product - Objeto de producto de productsData.js
  */
 const ProductCard = ({ product }) => {
     const { name, category, brand, image, description, badge, price, base_price, weight, height, width, depth } = product;
-    const icon = CATEGORY_ICONS[category] ?? '🎵';
+    const icon = CATEGORY_ICONS[category] ?? FALLBACK_CATEGORY_ICON;
+    const [isBasePriceVisible, setIsBasePriceVisible] = useState(false);
     const { isAdmin } = useAdmin();
     const { addToCart } = useCart();
 
@@ -46,12 +51,11 @@ const ProductCard = ({ product }) => {
 
     return (
         <article className="product-card">
-            {badge && badge !== BADGE_NAMES.OUT_OF_STOCK && (
-                <span className={`product-card__badge ${badge === BADGE_NAMES.NEW ? 'new' : ''}`}>
+            {badge && (
+                <span className={`product-card__badge${badge === BADGE_NAMES.OUT_OF_STOCK ? ' out-of-stock' : badge === BADGE_NAMES.NEW ? ' new' : ''}`}>
                     {badge}
                 </span>
             )}
-            {badge && badge === BADGE_NAMES.OUT_OF_STOCK && <span className="product-card__badge out-of-stock">{badge}</span>}
 
             {/* Imagen / Placeholder */}
             {
@@ -72,12 +76,22 @@ const ProductCard = ({ product }) => {
                 <span className="product-card__category">{category}</span>
                 <h3 className="product-card__name">{name}</h3>
                 <div className="product-card__prices">
-                    <span className="product-card__price">{price}</span>
-                    {isAdmin && base_price && (
-                        <span className="product-card__base-price" title="Precio base (costo)">
-                            💰 Costo: {base_price}
-                        </span>
-                    )}
+                    <div className="product-card__price-row">
+                        <span className="product-card__price">{price}</span>
+                        {isAdmin && base_price && (
+                            <button
+                                type="button"
+                                className={`product-card__base-price-toggle${isBasePriceVisible ? ' is-visible' : ''}`}
+                                onClick={() => setIsBasePriceVisible(prev => !prev)}
+                                aria-expanded={isBasePriceVisible}
+                                aria-label={isBasePriceVisible ? `Ocultar precio base: ${base_price}` : 'Mostrar precio base'}
+                                title={isBasePriceVisible ? 'Ocultar precio base (costo)' : 'Mostrar precio base (costo)'}
+                            >
+                                {isBasePriceVisible ? <FiEyeOff aria-hidden="true" /> : <FiEye aria-hidden="true" />}
+                                {isBasePriceVisible && <span>Costo: {base_price}</span>}
+                            </button>
+                        )}
+                    </div>
                 </div>
                 <p className="product-card__description">{description}</p>
                 {specs.length > 0 && (
@@ -112,8 +126,9 @@ const ProductCard = ({ product }) => {
                             </StarBorder>
 
                             <button
+                                type="button"
                                 className="product-card__add-btn"
-                                onClick={() => !isOutOfStock && addToCart(product)}
+                                onClick={() => addToCart(product)}
                                 disabled={isOutOfStock}
                                 aria-label={isOutOfStock ? 'Producto sin stock' : `Agregar ${name} al carrito`}
                             >

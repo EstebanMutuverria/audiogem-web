@@ -111,39 +111,66 @@
     margin-bottom: var(--spacing-3);
 }
 
+.product-card__price-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-2);
+}
+
 .product-card__price {
     font-size: var(--text-sm);
     font-weight: var(--font-weight-semibold);
     color: var(--color-primary);
 }
 
-/* Precio base — solo visible para admins */
-.product-card__base-price {
-    font-size: var(--text-xs);
-    font-weight: var(--font-weight-semibold);
-    color: #f4a261;
-    letter-spacing: 0.02em;
-    padding: 2px 8px;
-    background: rgba(244, 162, 97, 0.1);
-    border: 1px solid rgba(244, 162, 97, 0.25);
-    border-radius: var(--radius-sm);
+/* Precio base (costo) — oculto por defecto, se revela con el ojito */
+.product-card__base-price-toggle {
     display: inline-flex;
     align-items: center;
     gap: var(--spacing-1);
     width: fit-content;
-    animation: basePriceFadeIn 0.3s ease forwards;
+    padding: 2px 8px;
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.5;
+    color: var(--color-text-faint);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--color-bg-border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition:
+        color var(--transition-fast),
+        background-color var(--transition-fast),
+        border-color var(--transition-fast);
 }
 
-@keyframes basePriceFadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-4px);
-    }
+.product-card__base-price-toggle svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.product-card__base-price-toggle:hover {
+    color: var(--color-text);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.14);
+}
+
+.product-card__base-price-toggle.is-visible {
+    color: #f4a261;
+    background: rgba(244, 162, 97, 0.1);
+    border-color: rgba(244, 162, 97, 0.25);
+}
+
+.product-card__base-price-toggle.is-visible:hover {
+    background: rgba(244, 162, 97, 0.16);
+}
+
+.product-card__base-price-toggle:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
 }
 
 .product-card__description {
