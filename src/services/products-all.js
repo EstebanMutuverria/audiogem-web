@@ -12,7 +12,6 @@ import rackera_2y2_para_pote from '../assets/products_section_pictures/rackera-2
 import pote_taramps_400x4 from '../assets/products_section_pictures/pote_taramps_400x4.jpeg';
 import estereo_crown_mustang from '../assets/products_section_pictures/estereo-crown-mustang.jpeg';
 import estereo_infinity_tech from '../assets/products_section_pictures/estereo-infinity-tech.jpeg';
-import estereo_philco from '../assets/products_section_pictures/estereo-philco.jpeg';
 import rackera_2medios_2super from '../assets/products_section_pictures/rackera-2medios-2supertweeter.jpeg';
 import rackera_4drivers5041 from '../assets/products_section_pictures/rackera-4drivers5041.jpeg';
 import rackera_curva_completa_estereo from '../assets/products_section_pictures/rackera-curva-completa-estereo.jpeg';
@@ -62,7 +61,6 @@ import tweeter_bala_ds18_pro_twx2 from '../assets/products_section_pictures/twee
 import medios_de_8_pulgadas_ap from '../assets/products_section_pictures/medios-de-8-pulgadas-ap.jpeg';
 import medios_de_8_pulgadas_wild_sound from '../assets/products_section_pictures/medios-de-8-pulgadas-wild-sound.jpeg';
 import rackera_2_medios_de_6_jahro_2_driver_jahro_5042 from '../assets/products_section_pictures/rackera-2-medios-de-6-jahro-2-driver-jahro-5042.jpeg';
-import driver_jahro_atq_250 from '../assets/products_section_pictures/driver-jahro-atq-250.jpeg';
 import rackera_2_medios_de_8_2_driver_5042 from '../assets/products_section_pictures/rackera-2-medios-de-8-2-driver-5042.jpeg';
 import pantalla_pioneer_DMH_A5650BT from '../assets/products_section_pictures/pantalla-pioneer-DMH-A5650BT.jpeg';
 import tweeter_jahro_yp307 from '../assets/products_section_pictures/tweeter-jahro-yp307.jpeg';
@@ -157,10 +155,59 @@ import parlantes_5_pulgadas_atbha from '../assets/products_section_pictures/parl
 import subwoofer_audiopipe_12_pulgadas from '../assets/products_section_pictures/subwoofer-audiopipe-12-pulgadas.jpeg';
 import subwoofer_bomber_carbon from '../assets/products_section_pictures/subwoofer-bomber-carbon.jpeg';
 import pote_maverick_800x1 from '../assets/products_section_pictures/pote-maverick-800x1.jpeg';
-
-
+import kit_de_termocontraibles from '../assets/products_section_pictures/kit-de-termocontraibles.jpeg'
+import parlantes_mercury_6_pulgadas from '../assets/products_section_pictures/parlantes-mercury-6-pulgadas.jpeg'
+import tweeter_pervoi_ctc30g from '../assets/products_section_pictures/tweeter-pervoi-ctc30g.jpeg'
 
 export const ALL_PRODUCTS = ([
+    {
+        name: 'Tweeter Pervoi bala CTC-30G ',
+        category: CATEGORY_NAMES.ACCESORIOS,
+        brand: BRAND_NAMES.PERVOI,
+        image: tweeter_pervoi_ctc30g,
+        description: 'Tweeter Pervoi bala CTC-30G 800W MAX 60W RMS',
+        badge: BADGE_NAMES.NEW,
+        price: '15.400',
+        base_price: '$10.400',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
+    {
+        name: 'Parlantes Mercury de 6.5" 100W MAX',
+        category: CATEGORY_NAMES.PARLANTES,
+        brand: BRAND_NAMES.MERCURY,
+        image: parlantes_mercury_6_pulgadas,
+        description: 'Parlantes Mercury de 6.5" 4 vias 100W MAX ',
+        badge: BADGE_NAMES.NEW,
+        price: '$37.000',
+        base_price: '$25.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
+    {
+        name: 'Kit de tubos termocontraibles',
+        category: CATEGORY_NAMES.ACCESORIOS,
+        brand: BRAND_NAMES.PERVOI,
+        image: kit_de_termocontraibles,
+        description: 'Kit de tubos termocontraibles multicolor',
+        badge: BADGE_NAMES.NEW,
+        price: '$10.000',
+        base_price: '$2.900',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
     {
         name: 'Potencia Maverick 800.1',
         category: CATEGORY_NAMES.POTENCIAS,
@@ -519,7 +566,7 @@ export const ALL_PRODUCTS = ([
         brand: null,
         image: rackera_2_6x9_pervoi_2_tweeter_piezo,
         description: 'Rackera 2 6x9 Pervoi 150W RMS y 2 tweeters piezo Blauline 150W MAX',
-        badge: BADGE_NAMES.OUT_OF_STOCK,
+        badge: null,
         price: '$95.000',
         base_price: '$65.000',
         state: true,
@@ -538,7 +585,7 @@ export const ALL_PRODUCTS = ([
         badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$103.000',
         base_price: '$55.700',
-        state: true,
+        state: false,
         weight: null,
         height: 18,
         width: 71,
@@ -554,7 +601,7 @@ export const ALL_PRODUCTS = ([
         badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$80.000',
         base_price: '$48.700',
-        state: true,
+        state: false,
         weight: null,
         height: 20,
         width: 62,
@@ -800,22 +847,6 @@ export const ALL_PRODUCTS = ([
         width: 99,
         depth: 23,
         isFeatured: true
-    },
-    {
-        name: 'Estereo philco CSP2950BT',
-        category: CATEGORY_NAMES.ESTEREOS,
-        brand: BRAND_NAMES.PHILCO,
-        image: estereo_philco,
-        description: 'Estereo Philco con Bluetooth, USB, Manos Libres',
-        badge: BADGE_NAMES.OUT_OF_STOCK,
-        price: '$50.000',
-        base_price: '$30.000',
-        state: true,
-        weight: null,
-        height: null,
-        width: null,
-        depth: null,
-        isFeatured: false
     },
     {
         name: 'Rackera 2 drivers y 2 parlantes 6x9 Pioneer',
@@ -1522,54 +1553,6 @@ export const ALL_PRODUCTS = ([
         isFeatured: false
     },
     {
-        name: 'Driver Jahro ATQ02 250W MAX',
-        category: CATEGORY_NAMES.COMPONENTES,
-        brand: BRAND_NAMES.JAHRO,
-        image: driver_jahro_atq_250,
-        description: 'Driver Jahro ATQ-250 de 250 Watts MAX - piezo eléctrico',
-        badge: BADGE_NAMES.OUT_OF_STOCK,
-        price: '$12.000',
-        base_price: '$8.500',
-        state: true,
-        weight: null,
-        height: null,
-        width: null,
-        depth: null,
-        isFeatured: false
-    },
-    {
-        name: 'Rackera 4 driver Jahro ATQ02 250W',
-        category: CATEGORY_NAMES.RACKERAS,
-        brand: null,
-        image: rackera_4drivers5041,
-        description: 'Rackera 4 driver Jahro ATQ02 250W MAX - Piezo Eléctrico',
-        badge: BADGE_NAMES.OUT_OF_STOCK,
-        price: '$80.000',
-        base_price: '$59.000',
-        state: true,
-        weight: 3.7,
-        height: 18,
-        width: 71,
-        depth: 22,
-        isFeatured: false
-    },
-    {
-        name: 'Rackera 2 driver Jahro ATQ02 250W y 2 Tweeter',
-        category: CATEGORY_NAMES.RACKERAS,
-        brand: null,
-        image: rackera_2y2_chica,
-        description: 'Rackera con 2 Driver JAhro ATQ02 piezoelectrico 250W y 2 Tweeter',
-        badge: BADGE_NAMES.OUT_OF_STOCK,
-        price: '$75.000',
-        base_price: '$48.000',
-        state: true,
-        weight: 3,
-        height: 18,
-        width: 60,
-        depth: 22,
-        isFeatured: false
-    },
-    {
         name: 'Rackera 2 medios de 8 y 2 driver 5042 Jahro',
         category: CATEGORY_NAMES.RACKERAS,
         brand: null,
@@ -1818,7 +1801,7 @@ export const ALL_PRODUCTS = ([
         badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$22.500',
         base_price: '$17.500',
-        state: true,
+        state: false,
         weight: null,
         height: null,
         width: null,
@@ -1898,7 +1881,7 @@ export const ALL_PRODUCTS = ([
         badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$150.000',
         base_price: '$110.000',
-        state: true,
+        state: false,
         weight: 7.9,
         height: 20,
         width: 62,
@@ -1946,7 +1929,7 @@ export const ALL_PRODUCTS = ([
         badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$140.000',
         base_price: '$95.000',
-        state: true,
+        state: false,
         weight: null,
         height: 18,
         width: 71,
@@ -1962,7 +1945,7 @@ export const ALL_PRODUCTS = ([
         badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$170.000',
         base_price: '$130.000',
-        state: true,
+        state: false,
         weight: 7,
         height: 18,
         width: 71,
@@ -1978,7 +1961,7 @@ export const ALL_PRODUCTS = ([
         badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$134.000',
         base_price: '$84.000',
-        state: true,
+        state: false,
         weight: 6,
         height: 18,
         width: 71,
@@ -2023,7 +2006,7 @@ export const ALL_PRODUCTS = ([
         brand: BRAND_NAMES.PERVOI,
         image: parlantes_6x9_pervoi,
         description: 'Parlantes 6x9 Pervoi de 1000W MAX - 150 RMS',
-        badge: BADGE_NAMES.OUT_OF_STOCK,
+        badge: null,
         price: '$50.000',
         base_price: '$35.000',
         state: true,
@@ -2231,7 +2214,7 @@ export const ALL_PRODUCTS = ([
         brand: BRAND_NAMES.PERVOI,
         image: kit_de_cables_8_gau_pervoi_ctc_69g,
         description: 'Kit de cables Pervoi de 8 gauges 500W',
-        badge: BADGE_NAMES.OUT_OF_STOCK,
+        badge: null,
         price: '$15.800',
         base_price: '$9.800',
         state: true,
@@ -2263,10 +2246,10 @@ export const ALL_PRODUCTS = ([
         brand: BRAND_NAMES.PERVOI,
         image: kit_de_cables_pervoi_4_gau_ctc_62a,
         description: 'Kit de cables Pervoi de 4 gauges',
-        badge: BADGE_NAMES.NEW,
+        badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$30.200',
         base_price: '$18.200',
-        state: true,
+        state: false,
         weight: null,
         height: null,
         width: null,
@@ -2502,7 +2485,7 @@ export const ALL_PRODUCTS = ([
         brand: null,
         image: rackera_4_medios_de_6_pervoi_bala_2_tweeters_bala_ds18,
         description: 'Rackera 4 medios de 6 Pervoi Bala 250W RMS c/u + 2 tweeters DS18',
-        badge: BADGE_NAMES.OUT_OF_STOCK,
+        badge: null,
         price: '$270.000',
         base_price: '$172.000',
         state: true,
@@ -2534,10 +2517,10 @@ export const ALL_PRODUCTS = ([
         brand: null,
         image: kit_de_cables_wis_huan_8_ga_bd_8,
         description: 'Kit de Cables Wis Huan 8 Gauge BD_8',
-        badge: null,
+        badge: BADGE_NAMES.OUT_OF_STOCK,
         price: '$10.000',
         base_price: '$4.900',
-        state: true,
+        state: false,
         weight: null,
         height: null,
         width: null,

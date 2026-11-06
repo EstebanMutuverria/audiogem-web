@@ -24,7 +24,8 @@ const BRAND_NAMES = {
     PERVOI: 'Pervoi',
     SPYDER: 'Spyder',
     MINGYUAN: 'Mingyuan',
-    ALPINE: 'Alpine'
+    ALPINE: 'Alpine',
+    MERCURY: 'Mercury'
 };
 
 export default BRAND_NAMES;
