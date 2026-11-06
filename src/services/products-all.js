@@ -158,8 +158,26 @@ import pote_maverick_800x1 from '../assets/products_section_pictures/pote-maveri
 import kit_de_termocontraibles from '../assets/products_section_pictures/kit-de-termocontraibles.jpeg'
 import parlantes_mercury_6_pulgadas from '../assets/products_section_pictures/parlantes-mercury-6-pulgadas.jpeg'
 import tweeter_pervoi_ctc30g from '../assets/products_section_pictures/tweeter-pervoi-ctc30g.jpeg'
+import pote_taramps_1200x4 from '../assets/products_section_pictures/pote-taramps-1200x4.jpeg'
+
 
 export const ALL_PRODUCTS = ([
+    {
+        name: 'Potencia Taramps TS 1200.4',
+        category: CATEGORY_NAMES.POTENCIAS,
+        brand: BRAND_NAMES.TARAMPS,
+        image: pote_taramps_1200x4,
+        description: 'Potencia Taramps TS 1200.4',
+        badge: BADGE_NAMES.NEW,
+        price: '$249.000',
+        base_price: '$190.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
     {
         name: 'Tweeter Pervoi bala CTC-30G ',
         category: CATEGORY_NAMES.ACCESORIOS,
