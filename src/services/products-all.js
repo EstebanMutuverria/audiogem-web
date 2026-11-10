@@ -195,7 +195,7 @@ export const ALL_PRODUCTS = ([
         isFeatured: false
     },
     {
-        name: 'Parlantes Mercury de 6.5" 100W MAX',
+        name: 'Parlantes Mercury de 6.5" 100W MAX (el par)',
         category: CATEGORY_NAMES.PARLANTES,
         brand: BRAND_NAMES.MERCURY,
         image: parlantes_mercury_6_pulgadas,
@@ -291,7 +291,7 @@ export const ALL_PRODUCTS = ([
         isFeatured: false
     },
     {
-        name: 'Parlantes de 5" ATBHA CTC-505',
+        name: 'Parlantes de 5" ATBHA CTC-505 (el par)',
         category: CATEGORY_NAMES.PARLANTES,
         brand: null,
         image: parlantes_5_pulgadas_atbha,
