@@ -66,6 +66,7 @@
         transform: scale(1) translateY(0);
         opacity: 0.5;
     }
+
     100% {
         transform: scale(1.1) translateY(-20px);
         opacity: 0.75;
@@ -107,15 +108,39 @@
     animation: equalizer 1.6s ease-in-out infinite alternate;
 }
 
-.hero__wave-bar:nth-child(1) { height: 40%; animation-delay: 0.1s; }
-.hero__wave-bar:nth-child(2) { height: 85%; animation-delay: 0.4s; }
-.hero__wave-bar:nth-child(3) { height: 60%; animation-delay: 0.2s; }
-.hero__wave-bar:nth-child(4) { height: 100%; animation-delay: 0.5s; }
-.hero__wave-bar:nth-child(5) { height: 50%; animation-delay: 0.3s; }
+.hero__wave-bar:nth-child(1) {
+    height: 40%;
+    animation-delay: 0.1s;
+}
+
+.hero__wave-bar:nth-child(2) {
+    height: 85%;
+    animation-delay: 0.4s;
+}
+
+.hero__wave-bar:nth-child(3) {
+    height: 60%;
+    animation-delay: 0.2s;
+}
+
+.hero__wave-bar:nth-child(4) {
+    height: 100%;
+    animation-delay: 0.5s;
+}
+
+.hero__wave-bar:nth-child(5) {
+    height: 50%;
+    animation-delay: 0.3s;
+}
 
 @keyframes equalizer {
-    0% { transform: scaleY(0.3); }
-    100% { transform: scaleY(1.1); }
+    0% {
+        transform: scaleY(0.3);
+    }
+
+    100% {
+        transform: scaleY(1.1);
+    }
 }
 
 /* ============================================================
@@ -185,8 +210,17 @@
 }
 
 @keyframes pulse-dot {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.4; transform: scale(0.75); }
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: scale(0.75);
+    }
 }
 
 .hero__label-icon {
@@ -421,8 +455,13 @@
 }
 
 @keyframes float-card {
-    0% { transform: translateY(0px); }
-    100% { transform: translateY(-10px); }
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
 }
 
 /* Bargain Header & Badges */
@@ -471,8 +510,13 @@
 }
 
 @keyframes spin-slow {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Glare & Image Wrapper */
@@ -681,6 +725,7 @@
         opacity: 0;
         transform: translateY(24px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -699,7 +744,9 @@
     }
 
     .hero__container {
-        grid-template-columns: 1fr;
+        /* minmax(0, 1fr) prevents the grid track from growing to the
+           min-content of the nowrap product name inside the BargainBanner */
+        grid-template-columns: minmax(0, 1fr);
         grid-template-areas:
             'content'
             'visual';
@@ -944,6 +991,15 @@
 @media (max-width: 768px) {
     .hero__banner {
         width: min(100%, 460px);
+    }
+
+    /* Actions get their own row so the product name keeps a readable width */
+    .hero__banner-actions {
+        width: 100%;
+    }
+
+    .hero__banner-btn {
+        flex: 1;
     }
 
     /* Hide the heavy BargainCard on mobile — Banner replaces it */
