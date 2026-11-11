@@ -215,7 +215,7 @@ export const ALL_PRODUCTS = ([
     },
     {
         name: 'Tweeter Pervoi bala CTC-30G ',
-        category: CATEGORY_NAMES.ACCESORIOS,
+        category: CATEGORY_NAMES.COMPONENTES,
         brand: BRAND_NAMES.PERVOI,
         image: tweeter_pervoi_ctc30g,
         description: 'Tweeter Pervoi bala CTC-30G 800W MAX 60W RMS',
