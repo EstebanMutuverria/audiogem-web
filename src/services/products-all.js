@@ -159,9 +159,44 @@ import kit_de_termocontraibles from '../assets/products_section_pictures/kit-de-
 import parlantes_mercury_6_pulgadas from '../assets/products_section_pictures/parlantes-mercury-6-pulgadas.jpeg'
 import tweeter_pervoi_ctc30g from '../assets/products_section_pictures/tweeter-pervoi-ctc30g.jpeg'
 import pote_taramps_1200x4 from '../assets/products_section_pictures/pote-taramps-1200x4.jpeg'
+import rackera_2_drivers_spyder_2_supertweeters_spyder from '../assets/products_section_pictures/rackera-2-drivers-spyder-2-supertweeters-spyder.jpeg'
+import rackera_2_medios_de_6_jahro_2_tweeters_piezo from '../assets/products_section_pictures/rackera-2-medios-de-6-jahro-2-tweeters-piezo.jpeg'
+
 
 
 export const ALL_PRODUCTS = ([
+    {
+        name: 'Rackera 2 medios de 6" Jahro y 2 tweeters Blauline',
+        category: CATEGORY_NAMES.RACKERAS,
+        brand: null,
+        image: rackera_2_medios_de_6_jahro_2_tweeters_piezo,
+        description: 'Rackera 2 medios de 6" Jahro y 2 tweeters Blauline piezoelectricos',
+        badge: BADGE_NAMES.SALE,
+        price: '$97.000',
+        base_price: '$62.000',
+        state: true,
+        weight: 6,
+        height: 18,
+        width: 60,
+        depth: 22,
+        isFeatured: false
+    },
+    {
+        name: 'Rackera 2 Drivers Spyder y 2 Supertweeters Syder',
+        category: CATEGORY_NAMES.RACKERAS,
+        brand: null,
+        image: rackera_2_drivers_spyder_2_supertweeters_spyder,
+        description: 'Rackera 2 Drivers Spyder de 100W RMS c/u y 2 Supertweeters Syder de 100W RMS c/u',
+        badge: BADGE_NAMES.NEW,
+        price: '$172.000',
+        base_price: '$117.000',
+        state: true,
+        weight: 8,
+        height: 20,
+        width: 62,
+        depth: 23,
+        isFeatured: false
+    },
     {
         name: 'Potencia Taramps TS 1200.4',
         category: CATEGORY_NAMES.POTENCIAS,
