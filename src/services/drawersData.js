@@ -1,5 +1,9 @@
 const DRAWERS = ([
     {
+        name: 'cajon 2 6x9, 2 drivers y 2 tweeters chicos',
+        price: '30.000'
+    },
+    {
         name: "cajon 4 drivers",
         price: "28.000",
         base_price: "18.000",
@@ -22,7 +26,7 @@ const DRAWERS = ([
     {
         name: "cajon 2 drivers, 2 medios de 8 y 2 tweeters",
         price: "40.000",
-        base_price: "30.000",
+        base_price: "28.000",
     },
     {
         name: "cajon 2 medios de 8, y 2 tweeters chicos",
