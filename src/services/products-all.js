@@ -161,10 +161,161 @@ import tweeter_pervoi_ctc30g from '../assets/products_section_pictures/tweeter-p
 import pote_taramps_1200x4 from '../assets/products_section_pictures/pote-taramps-1200x4.jpeg'
 import rackera_2_drivers_spyder_2_supertweeters_spyder from '../assets/products_section_pictures/rackera-2-drivers-spyder-2-supertweeters-spyder.jpeg'
 import rackera_2_medios_de_6_jahro_2_tweeters_piezo from '../assets/products_section_pictures/rackera-2-medios-de-6-jahro-2-tweeters-piezo.jpeg'
-
-
+import kit_de_cables_maverick_4_ga from '../assets/products_section_pictures/kit-de-cables-maverick-4-ga.jpeg'
+import medio_de_6_bala_pervoi_ctc6564a from '../assets/products_section_pictures/medio-de-6-bala-pervoi-ctc6564a.jpeg'
+import medio_de_6_blauline from '../assets/products_section_pictures/medio-de-6-blauline.jpeg'
+import medios_de_6_infinity_tech from '../assets/products_section_pictures/medios-de-6-infinity-tech.jpeg'
+import parlantes_de_6_alpine from '../assets/products_section_pictures/parlantes-de-6-alpine.jpeg'
+import reparo_para_driver_bomber_db200 from '../assets/products_section_pictures/reparo-para-driver-bomber-db200.jpeg'
+import woofer_de_10_blauline_bw_1025 from '../assets/products_section_pictures/woofer-de-10-blauline-bw-1025.jpeg'
+import adaptador_de_impedancia_pipeman from '../assets/products_section_pictures/adaptador-imp-pipemans.jpeg'
+import super_tweeter_bala_fiamon from '../assets/products_section_pictures/super-tweeter-bala-fiamon.jpeg'
 
 export const ALL_PRODUCTS = ([
+    {
+        name: 'Super Tweeter Bala Fiamon',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: BRAND_NAMES.FIAMON,
+        image: super_tweeter_bala_fiamon,
+        description: 'Super Tweeter Bala Fiamon 100W RMS',
+        badge: BADGE_NAMES.NEW,
+        price: '$35.000',
+        base_price: '$25.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
+    {
+        name: 'Adaptador de impedancia Pipeman´s',
+        category: CATEGORY_NAMES.ACCESORIOS,
+        brand: BRAND_NAMES.PIPEMANS,
+        image: adaptador_de_impedancia_pipeman,
+        description: 'Adaptador de impedancia de 2 canales Pipeman´s',
+        badge: BADGE_NAMES.NEW,
+        price: '$18.000',
+        base_price: '$9.500',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
+    {
+        name: 'Woofer Blauline de 10" 250W MAX',
+        category: CATEGORY_NAMES.SUBWOOFERS,
+        brand: null,
+        image: woofer_de_10_blauline_bw_1025,
+        description: 'Woofer Blauline de 10" 250W MAX',
+        badge: BADGE_NAMES.NEW,
+        price: '$53.200',
+        base_price: '$38.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
+    {
+        name: 'Reparo para driver Bomber DB-200 X',
+        category: CATEGORY_NAMES.ACCESORIOS,
+        brand: null,
+        image: reparo_para_driver_bomber_db200,
+        description: 'Reparo para driver Bomber DB-200 X',
+        badge: BADGE_NAMES.NEW,
+        price: '$10.000',
+        base_price: '$6.200',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
+    {
+        name: 'Parlantes Alpine de 6.5" 150W MAX',
+        category: CATEGORY_NAMES.PARLANTES,
+        brand: null,
+        image: parlantes_de_6_alpine,
+        description: 'Parlantes Alpine de 6.5" 150W MAX - 50W RMS',
+        badge: BADGE_NAMES.NEW,
+        price: '$95.000',
+        base_price: '$75.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
+    {
+        name: 'Medios de 6.5" Infinity Tech 300W MAX',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: null,
+        image: medios_de_6_infinity_tech,
+        description: 'Medios de 6.5" infinity Tech 300W MAX - 100W RMS',
+        badge: BADGE_NAMES.NEW,
+        price: '$95.000',
+        base_price: '$75.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
+    {
+        name: 'Medio de 6" Blauline 150W MAX',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: null,
+        image: medio_de_6_blauline,
+        description: 'Medio/Woofer de 6" Blauline 150W MAX BW-615',
+        badge: BADGE_NAMES.NEW,
+        price: '$32.000',
+        base_price: '$21.500',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
+    {
+        name: 'Medios Pervoi de 6.5" punta bala CTC-6564A (el par)',
+        category: CATEGORY_NAMES.COMPONENTES,
+        brand: null,
+        image: medio_de_6_bala_pervoi_ctc6564a,
+        description: 'Medios Pervoi de 6.5" punta bala 80W RMS CTC-6564A',
+        badge: BADGE_NAMES.NEW,
+        price: '$40.000',
+        base_price: '$24.200',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
+    {
+        name: 'kit de cables 4GA Maverick',
+        category: CATEGORY_NAMES.ACCESORIOS,
+        brand: null,
+        image: kit_de_cables_maverick_4_ga,
+        description: 'kit de cables 4GA Maverick 2500W',
+        badge: BADGE_NAMES.NEW,
+        price: '$49.000',
+        base_price: '$30.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
     {
         name: 'Rackera 2 medios de 6" Jahro y 2 tweeters Blauline',
         category: CATEGORY_NAMES.RACKERAS,
@@ -2358,12 +2509,12 @@ export const ALL_PRODUCTS = ([
         isFeatured: false
     },
     {
-        name: 'Parlantes Pervoi 6,5" CTC-1682 (el par)',
-        category: CATEGORY_NAMES.PARLANTES,
+        name: 'Medios Pervoi 6,5" CTC-1682 (el par)',
+        category: CATEGORY_NAMES.COMPONENTES,
         brand: BRAND_NAMES.PERVOI,
         image: parlantes_pervoi_6_pulgadas_y_media_ctc_1682,
-        description: 'Parlantes Pervoi 6,5" 105W RMS',
-        badge: BADGE_NAMES.OUT_OF_STOCK,
+        description: 'Medios Pervoi 6,5" 105W RMS',
+        badge: BADGE_NAMES.BEST_SELLER,
         price: '$40.000',
         base_price: '$22.700',
         state: true,

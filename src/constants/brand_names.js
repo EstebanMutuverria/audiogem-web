@@ -25,7 +25,9 @@ const BRAND_NAMES = {
     SPYDER: 'Spyder',
     MINGYUAN: 'Mingyuan',
     ALPINE: 'Alpine',
-    MERCURY: 'Mercury'
+    MERCURY: 'Mercury',
+    PIPEMANS: 'Pipemans',
+    FIAMON: 'Fiamon'
 };
 
 export default BRAND_NAMES;
