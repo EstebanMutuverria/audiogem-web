@@ -170,8 +170,25 @@ import reparo_para_driver_bomber_db200 from '../assets/products_section_pictures
 import woofer_de_10_blauline_bw_1025 from '../assets/products_section_pictures/woofer-de-10-blauline-bw-1025.jpeg'
 import adaptador_de_impedancia_pipeman from '../assets/products_section_pictures/adaptador-imp-pipemans.jpeg'
 import super_tweeter_bala_fiamon from '../assets/products_section_pictures/super-tweeter-bala-fiamon.jpeg'
+import parlantes_6x9_crownmustang from '../assets/products_section_pictures/parlantes-6x9-crownmustang.jpeg'
 
 export const ALL_PRODUCTS = ([
+    {
+        name: 'Parlantes 6x9 Crown Mustang (el par)',
+        category: CATEGORY_NAMES.PARLANTES,
+        brand: BRAND_NAMES.CROWN_MUSTANG,
+        image: parlantes_6x9_crownmustang,
+        description: 'Parlantes 6x9 Crown Mustang 400W MAX',
+        badge: BADGE_NAMES.NEW,
+        price: '$56.000',
+        base_price: '$40.000',
+        state: true,
+        weight: null,
+        height: null,
+        width: null,
+        depth: null,
+        isFeatured: false
+    },
     {
         name: 'Super Tweeter Bala Fiamon',
         category: CATEGORY_NAMES.COMPONENTES,
@@ -237,7 +254,7 @@ export const ALL_PRODUCTS = ([
         isFeatured: false
     },
     {
-        name: 'Parlantes Alpine de 6.5" 150W MAX',
+        name: 'Parlantes Alpine de 6.5" 150W MAX (el par)',
         category: CATEGORY_NAMES.PARLANTES,
         brand: null,
         image: parlantes_de_6_alpine,
@@ -253,7 +270,7 @@ export const ALL_PRODUCTS = ([
         isFeatured: false
     },
     {
-        name: 'Medios de 6.5" Infinity Tech 300W MAX',
+        name: 'Medios de 6.5" Infinity Tech 300W MAX (el par)',
         category: CATEGORY_NAMES.COMPONENTES,
         brand: null,
         image: medios_de_6_infinity_tech,
@@ -333,11 +350,11 @@ export const ALL_PRODUCTS = ([
         isFeatured: false
     },
     {
-        name: 'Rackera 2 Drivers Spyder y 2 Supertweeters Syder',
+        name: 'Rackera 2 Drivers Spyder y 2 Super Tweeters Spyder',
         category: CATEGORY_NAMES.RACKERAS,
         brand: null,
         image: rackera_2_drivers_spyder_2_supertweeters_spyder,
-        description: 'Rackera 2 Drivers Spyder de 100W RMS c/u y 2 Supertweeters Syder de 100W RMS c/u',
+        description: 'Rackera 2 Drivers Spyder de 100W RMS c/u y 2 Super Tweeters Spyder de 100W RMS c/u',
         badge: BADGE_NAMES.NEW,
         price: '$172.000',
         base_price: '$117.000',
